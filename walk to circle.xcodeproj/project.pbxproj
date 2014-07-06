@@ -12,6 +12,7 @@
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
 		2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB981968DC63005C4A47 /* Images.xcassets */; };
 		2BCCDBA51968DC63005C4A47 /* walk_to_circleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDBA41968DC63005C4A47 /* walk_to_circleTests.swift */; };
+		2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		2BCCDB9E1968DC63005C4A47 /* walk to circleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walk to circleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDBA31968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDBA41968DC63005C4A47 /* walk_to_circleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walk_to_circleTests.swift; sourceTree = "<group>"; };
+		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 		2BCCDB831968DC63005C4A47 = {
 			isa = PBXGroup;
 			children = (
+				2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */,
 				2BCCDB8E1968DC63005C4A47 /* walk to circle */,
 				2BCCDBA11968DC63005C4A47 /* walk to circleTests */,
 				2BCCDB8D1968DC63005C4A47 /* Products */,
