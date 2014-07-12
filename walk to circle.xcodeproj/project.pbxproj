@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0E49EC1970BE2700B276B2 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0E49EA1970BE2700B276B2 /* play.png */; };
+		2B0E49ED1970BE2700B276B2 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0E49EB1970BE2700B276B2 /* play@2x.png */; };
 		2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB911968DC63005C4A47 /* AppDelegate.swift */; };
 		2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* ViewController.swift */; };
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0E49EA1970BE2700B276B2 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		2B0E49EB1970BE2700B276B2 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		2BCCDB8C1968DC63005C4A47 /* walk to circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk to circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB911968DC63005C4A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0E49D91970B6FE00B276B2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2B0E49EA1970BE2700B276B2 /* play.png */,
+				2B0E49EB1970BE2700B276B2 /* play@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		2BCCDB831968DC63005C4A47 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,7 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
+				2B0E49D91970B6FE00B276B2 /* images */,
 				2BCCDB911968DC63005C4A47 /* AppDelegate.swift */,
 				2BCCDB931968DC63005C4A47 /* ViewController.swift */,
 				2BCCDB951968DC63005C4A47 /* Main.storyboard */,
@@ -195,6 +209,8 @@
 			files = (
 				2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */,
 				2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */,
+				2B0E49ED1970BE2700B276B2 /* play@2x.png in Resources */,
+				2B0E49EC1970BE2700B276B2 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +419,7 @@
 				2BCCDBAA1968DC63005C4A47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk to circleTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +428,7 @@
 				2BCCDBAD1968DC63005C4A47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
