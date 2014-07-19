@@ -14,22 +14,25 @@ class ViewController: UIViewController, MKMapViewDelegate {
   @IBOutlet var mapView: MKMapView
 
   var didInitiaZoom = false
+  var locationManager: CLLocationManager!;
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    locationManager = CLLocationManager()
+    if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
+      locationManager.requestAlwaysAuthorization()
+    }
+
 
     initMapView()
   }
 
   func initMapView() {
     mapView.delegate = self
-    mapView.showsUserLocation = true;
   }
 
   func doInitialZoom(userLocation: MKUserLocation) {
-    if didInitiaZoom { return }
-    didInitiaZoom = true
-    var region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 1000, 1000)
+    var region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 5000, 5000)
     mapView.setRegion(region, animated:false)
   }
 }
