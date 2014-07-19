@@ -18,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2B6D35CC197A56C3008DDAE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BCCDB8B1968DC63005C4A47;
+			remoteInfo = "walk to circle";
+		};
 		2BCCDB9F1968DC63005C4A47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
@@ -159,6 +166,7 @@
 			);
 			dependencies = (
 				2BCCDBA01968DC63005C4A47 /* PBXTargetDependency */,
+				2B6D35CD197A56C3008DDAE4 /* PBXTargetDependency */,
 			);
 			name = "walk to circleTests";
 			productName = "walk to circleTests";
@@ -244,6 +252,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2B6D35CD197A56C3008DDAE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
+			targetProxy = 2B6D35CC197A56C3008DDAE4 /* PBXContainerItemProxy */;
+		};
 		2BCCDBA01968DC63005C4A47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
