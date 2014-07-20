@@ -40,4 +40,38 @@ class GeoTests: XCTestCase {
 
     XCTAssertEqual(Int(destination.longitude * 100000), 14497326)
   }
+
+  func testRandomDistanceKm() {
+    for _ in 1...100 {
+      var result = geo.randomDistanceKm(min: 1, max: 5)
+
+      XCTAssertGreaterThanOrEqual(result, 1)
+      XCTAssertLessThanOrEqual(result, 5)
+    }
+  }
+
+  func testRandomBearinDegrees() {
+    for _ in 1...100 {
+      var result = geo.randomBearinDegrees()
+
+      XCTAssertGreaterThanOrEqual(result, 0)
+      XCTAssertLessThanOrEqual(result, 360)
+    }
+  }
+
+  func testRandomCoord() {
+    let start = CLLocationCoordinate2DMake(-37.817728, 144.968108)
+
+    for _ in 1...100 {
+      var newCoordinate = geo.randomCoordinate(start, minDistanceKm: 1, maxDistanceKm: 5)
+
+      var locationStart = CLLocation(latitude: start.latitude, longitude: start.longitude)
+      var locationEnd = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+
+      var distance = locationStart.distanceFromLocation(locationEnd)
+
+      XCTAssertGreaterThanOrEqual(distance, 1000)
+      XCTAssertLessThanOrEqual(distance, 5000)
+    }
+  }
 }

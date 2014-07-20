@@ -15,6 +15,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   var didInitiaZoom = false
   var locationManager: CLLocationManager!;
+  var isUserLocationDetected = false;
+  var playAfterLocatedDetected = false;
+
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,6 +32,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   func initMapView() {
     mapView.delegate = self
+    mapView.showsUserLocation = true
   }
 
   func doInitialZoom(userLocation: MKUserLocation) {
@@ -36,23 +40,34 @@ class ViewController: UIViewController, MKMapViewDelegate {
     mapView.setRegion(region, animated:false)
   }
 
+  func userLocationDetected() {
+    if isUserLocationDetected { return }
+    isUserLocationDetected = true
+
+    doInitialZoom(mapView.userLocation)
+
+    if playAfterLocatedDetected {
+      placeCircleOnMap()
+    }
+  }
+
+  func placeCircleOnMap() {
+    var geo = Geo()
+
+    var distanceKm = geo.randomDistanceKm(min: 1, max: 5)
+    var bearingDegrees = geo.randomBearinDegrees()
+
+    var circleCoordinate = geo.destination(mapView.userLocation.location.coordinate,
+      distanceKm: distanceKm,
+      bearingDegrees: bearingDegrees)
+  }
+
   @IBAction func onPlay() {
-//    var region = CLCircularRegion(center: center,
-//      radius: CLLocationDistance(100), identifier: id)
-//
-//    region.notifyOnEntry = true
-//    mapView.userLocation.location.co
-
-  }
-
-  func distinationWithDistanceAndBearing(fromCoord: CLLocationCoordinate2D,
-    atDistanceKm: Double,
-    atBearingDegrees: Double) {
-//      var fromLatRadians =
-  }
-
-  func degreesToRadians(degrees: Double) -> Double {
-    return (degrees / 180.0) * M_PI;
+    if !isUserLocationDetected {
+      playAfterLocatedDetected = true
+    } else {
+      placeCircleOnMap()
+    }
   }
 }
 
@@ -63,7 +78,7 @@ typealias VCExtensionMapViewDelegate = ViewController
 
 extension VCExtensionMapViewDelegate {
   func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
-    doInitialZoom(userLocation)
+    userLocationDetected()
   }
 }
 
