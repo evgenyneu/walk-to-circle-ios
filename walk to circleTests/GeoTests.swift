@@ -41,9 +41,9 @@ class GeoTests: XCTestCase {
     XCTAssertEqual(Int(destination.longitude * 100000), 14497326)
   }
 
-  func testRandomDistanceKm() {
+  func testRandomBetween() {
     for _ in 1...100 {
-      var result = geo.randomDistanceKm(min: 1, max: 5)
+      var result = geo.randomBetween(min: 1, max: 5)
 
       XCTAssertGreaterThanOrEqual(result, 1)
       XCTAssertLessThanOrEqual(result, 5)

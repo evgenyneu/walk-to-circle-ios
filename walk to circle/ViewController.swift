@@ -52,14 +52,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func placeCircleOnMap() {
-    var geo = Geo()
-
-    var distanceKm = geo.randomDistanceKm(min: 1, max: 5)
-    var bearingDegrees = geo.randomBearinDegrees()
-
-    var circleCoordinate = geo.destination(mapView.userLocation.location.coordinate,
-      distanceKm: distanceKm,
-      bearingDegrees: bearingDegrees)
   }
 
   @IBAction func onPlay() {

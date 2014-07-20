@@ -56,8 +56,8 @@ class Geo {
     return CLLocationCoordinate2DMake(radiansToDegrees(φ2), radiansToDegrees(λ2));
   }
 
-  /* Returns random distance in Km between min and max */
-  func randomDistanceKm(#min: Double, max: Double) -> Double {
+  /* Returns random value between min and max */
+  func randomBetween(#min: Double, max: Double) -> Double {
     return min + drand48() * (max - min)
   }
 
@@ -79,7 +79,7 @@ class Geo {
 
     var geo = Geo()
 
-    var distanceKm = geo.randomDistanceKm(min: minDistanceKm, max: maxDistanceKm)
+    var distanceKm = geo.randomBetween(min: minDistanceKm, max: maxDistanceKm)
     var bearingDegrees = geo.randomBearinDegrees()
 
     return geo.destination(start, distanceKm: distanceKm,
