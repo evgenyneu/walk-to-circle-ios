@@ -17,7 +17,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
   var locationManager: CLLocationManager!;
   var isUserLocationDetected = false;
   var playAfterLocatedDetected = false;
-
+  var annotations: Annotations!;
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,6 +26,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
       locationManager.requestAlwaysAuthorization()
     }
+
+    annotations = Annotations(mapView)
 
     initMapView()
   }
@@ -42,6 +44,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   func userLocationDetected() {
     if isUserLocationDetected { return }
+
+    var accuracy = mapView.userLocation.location.horizontalAccuracy
+    if accuracy < 0 || accuracy > 100 { return } // Not accurate enough
+
     isUserLocationDetected = true
 
     doInitialZoom(mapView.userLocation)
@@ -52,6 +58,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func placeCircleOnMap() {
+    annotations.removeAll()
+
+    var geo = Geo()
+    var coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
+      minDistanceKm: 1, maxDistanceKm: 5)
+
+    annotations.add(coordinate, id: "Walk Here")
   }
 
   @IBAction func onPlay() {
