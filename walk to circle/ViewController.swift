@@ -10,9 +10,8 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate {
-                            
-  @IBOutlet var mapView: MKMapView
 
+  @IBOutlet weak var mapView: MKMapView!
   var didInitiaZoom = false
   var locationManager: CLLocationManager!;
   var isUserLocationDetected = false;
