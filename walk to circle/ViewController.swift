@@ -38,7 +38,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func doInitialZoom(userLocation: MKUserLocation) {
-    var region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 5000, 5000)
+    var region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 3000, 3000)
     mapView.setRegion(region, animated:false)
   }
 
@@ -62,9 +62,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     var geo = Geo()
     var coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
-      minDistanceKm: 1, maxDistanceKm: 5)
+      minDistanceKm: 1, maxDistanceKm: 3)
 
-    annotations.add(coordinate, id: "Walk Here")
+    var annotation = annotations.add(coordinate, id: "Walk Here")
+    animateToAnnotation(annotation)
+  }
+
+  func animateToAnnotation(annotation: Annotation) {
+    var mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
+    if mapWidth < 2000 {
+
+    }
+    mapView.selectAnnotation(annotation, animated: true)
   }
 
   @IBAction func onPlay() {

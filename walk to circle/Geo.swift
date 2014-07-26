@@ -10,6 +10,7 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 class Geo {
   func degreesToRadians(degrees: Double) -> Double {
@@ -84,5 +85,25 @@ class Geo {
 
     return geo.destination(start, distanceKm: distanceKm,
       bearingDegrees: bearingDegrees)
+  }
+
+  func regionForCoordinates(coords: [CLLocationCoordinate2D]) -> MKCoordinateRegion {
+    var mapRect = MKMapRectNull;
+    for coord in coords {
+      var mapPoint = MKMapPointForCoordinate(coord)
+
+      var pointMapRect = MKMapRect(origin: mapPoint,
+        size: MKMapSize(width: 0, height: 0))
+
+      mapRect = MKMapRectUnion(mapRect, pointMapRect)
+    }
+    return MKCoordinateRegionForMapRect(mapRect)
+  }
+
+  func mapRectWidthInMeters(rect: MKMapRect) -> Double {
+    var eastMapPoint = MKMapPointMake(MKMapRectGetMinX(rect), MKMapRectGetMidY(rect))
+    var westMapPoint = MKMapPointMake(MKMapRectGetMaxX(rect), MKMapRectGetMidY(rect))
+
+    return MKMetersBetweenMapPoints(eastMapPoint, westMapPoint)
   }
 }
