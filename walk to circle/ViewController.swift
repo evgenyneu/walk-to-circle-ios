@@ -37,9 +37,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
     mapView.showsUserLocation = true
   }
 
-  func doInitialZoom(userLocation: MKUserLocation) {
-    var region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 3000, 3000)
-    mapView.setRegion(region, animated:false)
+  func zoomToLocation(userLocation: MKUserLocation, animated: Bool) {
+    var region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 3500, 3500)
+    mapView.setRegion(region, animated:animated)
   }
 
   func userLocationDetected() {
@@ -50,7 +50,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     isUserLocationDetected = true
 
-    doInitialZoom(mapView.userLocation)
+    zoomToLocation(mapView.userLocation, animated: false)
 
     if playAfterLocatedDetected {
       placeCircleOnMap()
@@ -64,16 +64,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
     var coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceKm: 1, maxDistanceKm: 3)
 
-    var annotation = annotations.add(coordinate, id: "Walk Here")
-    animateToAnnotation(annotation)
+    var mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
+
+    if mapWidth < 2500 || mapWidth > 6000 || !mapView.userLocationVisible {
+      zoomToLocation(mapView.userLocation, animated: true)
+      var time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
+      dispatch_after(time, dispatch_get_main_queue(), {
+        self.placeCircleOnMapAndAnimate(coordinate)
+      })
+    } else {
+      self.placeCircleOnMapAndAnimate(coordinate)
+    }
   }
 
-  func animateToAnnotation(annotation: Annotation) {
-    var mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
-    if mapWidth < 2000 {
-
-    }
-    mapView.selectAnnotation(annotation, animated: true)
+  func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
+    var annotation = annotations.add(coordinate, id: "Walk Here")
+    self.mapView.selectAnnotation(annotation, animated: true)
   }
 
   @IBAction func onPlay() {
