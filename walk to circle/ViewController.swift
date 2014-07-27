@@ -49,7 +49,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     isUserLocationDetected = true
 
+
     zoomToLocation(mapView.userLocation, animated: false)
+
+    mapView.userLocation.title = "You are here"
+    showCalloutAfterDelay(mapView.userLocation, {
+      self.hideCalloutAfterDelay(self.mapView.userLocation)
+    })
 
     if playAfterLocatedDetected {
       placeCircleOnMap()
@@ -77,8 +83,24 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
-    var annotation = annotations.add(coordinate, id: "Walk Here")
+    var annotation = annotations.add(coordinate, id: "Walk to circle")
     self.mapView.selectAnnotation(annotation, animated: true)
+    hideCalloutAfterDelay(annotation)
+  }
+
+  func showCalloutAfterDelay(annotation: MKAnnotation, callback: (() -> ())? = nil) {
+    var time = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+    dispatch_after(time, dispatch_get_main_queue(), {
+      self.mapView.selectAnnotation(annotation, animated: false)
+      callback?()
+    })
+  }
+
+  func hideCalloutAfterDelay(annotation: MKAnnotation) {
+    var time = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
+    dispatch_after(time, dispatch_get_main_queue(), {
+      self.mapView.deselectAnnotation(annotation, animated: false)
+    })
   }
 
   @IBAction func onPlay() {
