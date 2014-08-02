@@ -38,13 +38,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func zoomToLocation(userLocation: MKUserLocation, animated: Bool) {
-    var region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 3500, 3500)
+    let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 3500, 3500)
     mapView.setRegion(region, animated:animated)
   }
 
 
   func zoomToInitialLocation() {
-    var accuracy = mapView.userLocation.location.horizontalAccuracy
+    let accuracy = mapView.userLocation.location.horizontalAccuracy
     if accuracy < 0 || accuracy > 100 { return } // Not accurate enough
 
     if zoomedToInitialLocation { return }
@@ -52,11 +52,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     zoomToLocation(mapView.userLocation, animated: false)
 
-    mapView.userLocation.title = "You are here"
+    mapView.userLocation.title = NSLocalizedString("You are here",
+      comment: "Short message shown above user location on the map")
 
     showCalloutAfterDelay(mapView.userLocation, {
-      self.hideCalloutAfterDelay(self.mapView.userLocation)
-      })
+      self.hideCalloutAfterDelay(self.mapView.userLocation, delay: 3)
+    })
 
     if playAfterZoomedToInitialLocation {
       placeCircleOnMap()
@@ -66,11 +67,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
   func placeCircleOnMap() {
     annotations.removeAll()
 
-    var geo = Geo()
-    var coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
+    let geo = Geo()
+    let coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceKm: 1, maxDistanceKm: 3)
 
-    var mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
+    let mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
 
     if mapWidth < 2500 || mapWidth > 6000 || !mapView.userLocationVisible {
       doAfterRegionDidChange {
@@ -84,9 +85,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
-    var annotation = annotations.add(coordinate, id: "Memorize and walk here")
+    let annotationTitle = NSLocalizedString("Memorize & walk here",
+      comment: "Annotation title shown above the pin on the map")
+
+    let annotationSubtitle = NSLocalizedString("Closing in 60 sec",
+      comment: "Annotation title shown above the pin on the map")
+
+    let annotation = annotations.add(coordinate, id: annotationTitle,
+      subtitle: annotationSubtitle)
+
     self.mapView.selectAnnotation(annotation, animated: true)
-    hideCalloutAfterDelay(annotation)
+    hideCalloutAfterDelay(annotation, delay: 5)
   }
 
   func showCalloutAfterDelay(annotation: MKAnnotation, callback: (() -> ())? = nil) {
@@ -96,14 +105,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
   }
 
-  func hideCalloutAfterDelay(annotation: MKAnnotation) {
-    doAfterDelay(3) {
+  func hideCalloutAfterDelay(annotation: MKAnnotation, delay: Double) {
+    doAfterDelay(delay) {
       self.mapView.deselectAnnotation(annotation, animated: false)
     }
   }
 
   func doAfterDelay(delaySeconds: Double, callback: ()->()) {
-    var time = dispatch_time(DISPATCH_TIME_NOW, Int64(delaySeconds * Double(NSEC_PER_SEC)))
+    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delaySeconds * Double(NSEC_PER_SEC)))
     dispatch_after(time, dispatch_get_main_queue()) {
       callback();
     }

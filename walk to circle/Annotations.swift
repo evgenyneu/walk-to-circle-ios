@@ -18,12 +18,12 @@ class Annotations {
     self.mapView = mapView
   }
 
-  func add(coordinate: CLLocationCoordinate2D, id: String) -> Annotation {
+  func add(coordinate: CLLocationCoordinate2D, id: String, subtitle: String) -> Annotation {
     if all[id] { return all[id]! }
 
-    var annotation = Annotation(centerCoordinate: coordinate, radius: 130)
+    let annotation = Annotation(centerCoordinate: coordinate, radius: 130)
     annotation.title = id
-    annotation.subtitle = "Map will close in 60 seconds"
+    annotation.subtitle = subtitle
     all[id] = annotation
     mapView.addAnnotation(annotation)
     mapView.addOverlay(annotation)

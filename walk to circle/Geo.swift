@@ -64,8 +64,8 @@ class Geo {
 
   /* Returns random bearing between 0 and 360 degress */
   func randomBearinDegrees() -> Double {
-    var min = 0.0
-    var max = 360.0
+    let min = 0.0
+    let max = 360.0
 
     return min + drand48() * (max - min)
   }
@@ -78,10 +78,10 @@ class Geo {
     minDistanceKm: Double,
     maxDistanceKm: Double) -> CLLocationCoordinate2D {
 
-    var geo = Geo()
+    let geo = Geo()
 
-    var distanceKm = geo.randomBetween(min: minDistanceKm, max: maxDistanceKm)
-    var bearingDegrees = geo.randomBearinDegrees()
+    let distanceKm = geo.randomBetween(min: minDistanceKm, max: maxDistanceKm)
+    let bearingDegrees = geo.randomBearinDegrees()
 
     return geo.destination(start, distanceKm: distanceKm,
       bearingDegrees: bearingDegrees)
@@ -90,9 +90,9 @@ class Geo {
   func regionForCoordinates(coords: [CLLocationCoordinate2D]) -> MKCoordinateRegion {
     var mapRect = MKMapRectNull;
     for coord in coords {
-      var mapPoint = MKMapPointForCoordinate(coord)
+      let mapPoint = MKMapPointForCoordinate(coord)
 
-      var pointMapRect = MKMapRect(origin: mapPoint,
+      let pointMapRect = MKMapRect(origin: mapPoint,
         size: MKMapSize(width: 0, height: 0))
 
       mapRect = MKMapRectUnion(mapRect, pointMapRect)
@@ -101,8 +101,8 @@ class Geo {
   }
 
   func mapRectWidthInMeters(rect: MKMapRect) -> Double {
-    var eastMapPoint = MKMapPointMake(MKMapRectGetMinX(rect), MKMapRectGetMidY(rect))
-    var westMapPoint = MKMapPointMake(MKMapRectGetMaxX(rect), MKMapRectGetMidY(rect))
+    let eastMapPoint = MKMapPointMake(MKMapRectGetMinX(rect), MKMapRectGetMidY(rect))
+    let westMapPoint = MKMapPointMake(MKMapRectGetMaxX(rect), MKMapRectGetMidY(rect))
 
     return MKMetersBetweenMapPoints(eastMapPoint, westMapPoint)
   }

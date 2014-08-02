@@ -23,7 +23,7 @@ extension Ext_MapViewDelegate_Overlay {
     MKOverlayRenderer! {
 
       if overlay.isKindOfClass(Annotation) {
-        var aRenderer =  MKCircleRenderer(circle: overlay as Annotation)
+        let aRenderer =  MKCircleRenderer(circle: overlay as Annotation)
         aRenderer.fillColor =  UIColor.redColor().colorWithAlphaComponent(0.2)
         aRenderer.strokeColor = UIColor.greenColor().colorWithAlphaComponent(0.7)
         aRenderer.lineWidth = 3;
