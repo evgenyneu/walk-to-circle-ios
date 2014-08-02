@@ -14,8 +14,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
   @IBOutlet weak var mapView: MKMapView!
   var didInitiaZoom = false
   var locationManager: CLLocationManager!
-  var isUserLocationDetected = false
-  var playAfterLocatedDetected = false
+  var zoomedToInitialLocation = false
+  var playAfterZoomedToInitialLocation = false
   var annotations: Annotations!
   var callbackAfterRegionDidChange: (()->())?
 
@@ -42,14 +42,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
     mapView.setRegion(region, animated:animated)
   }
 
-  func userLocationDetected() {
-    if isUserLocationDetected { return }
 
+  func zoomToInitialLocation() {
     var accuracy = mapView.userLocation.location.horizontalAccuracy
     if accuracy < 0 || accuracy > 100 { return } // Not accurate enough
 
-    isUserLocationDetected = true
-
+    if zoomedToInitialLocation { return }
+    zoomedToInitialLocation = true
 
     zoomToLocation(mapView.userLocation, animated: false)
 
@@ -57,9 +56,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     showCalloutAfterDelay(mapView.userLocation, {
       self.hideCalloutAfterDelay(self.mapView.userLocation)
-    })
+      })
 
-    if playAfterLocatedDetected {
+    if playAfterZoomedToInitialLocation {
       placeCircleOnMap()
     }
   }
@@ -111,8 +110,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   @IBAction func onPlay() {
-    if !isUserLocationDetected {
-      playAfterLocatedDetected = true
+    if !zoomedToInitialLocation {
+      playAfterZoomedToInitialLocation = true
     } else {
       placeCircleOnMap()
     }
@@ -126,7 +125,7 @@ typealias VCExtensionMapViewDelegate = ViewController
 
 extension VCExtensionMapViewDelegate {
   func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
-    userLocationDetected()
+    zoomToInitialLocation()
   }
 
   func mapView(mapView: MKMapView!, regionWillChangeAnimated animated: Bool) {
