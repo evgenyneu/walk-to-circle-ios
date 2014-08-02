@@ -23,6 +23,7 @@ class Annotations {
 
     var annotation = Annotation(centerCoordinate: coordinate, radius: 130)
     annotation.title = id
+    annotation.subtitle = "Map will close in 60 seconds"
     all[id] = annotation
     mapView.addAnnotation(annotation)
     mapView.addOverlay(annotation)

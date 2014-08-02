@@ -84,7 +84,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
-    var annotation = annotations.add(coordinate, id: "Walk to circle")
+    var annotation = annotations.add(coordinate, id: "Memorize and walk here")
     self.mapView.selectAnnotation(annotation, animated: true)
     hideCalloutAfterDelay(annotation)
   }
