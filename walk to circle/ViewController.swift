@@ -17,6 +17,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
   var zoomedToInitialLocation = false
   var playAfterZoomedToInitialLocation = false
   var annotations: Annotations!
+  @IBOutlet weak var startButton: UIButton!
   var callbackAfterRegionDidChange: (()->())?
 
   override func viewDidLoad() {
@@ -55,8 +56,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
     mapView.userLocation.title = NSLocalizedString("You are here",
       comment: "Short message shown above user location on the map")
 
-    showCalloutAfterDelay(mapView.userLocation, {
+    showCalloutAfterDelay(mapView.userLocation, delay: 1, {
       self.hideCalloutAfterDelay(self.mapView.userLocation, delay: 3)
+      self.startButton.hidden = false;
     })
 
     if playAfterZoomedToInitialLocation {
@@ -88,7 +90,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let annotationTitle = NSLocalizedString("Memorize & walk here",
       comment: "Annotation title shown above the pin on the map")
 
-    let annotationSubtitle = NSLocalizedString("Closing in 60 sec",
+    let annotationSubtitle = NSLocalizedString("The map will close in 60 sec",
       comment: "Annotation title shown above the pin on the map")
 
     let annotation = annotations.add(coordinate, id: annotationTitle,
@@ -98,8 +100,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     hideCalloutAfterDelay(annotation, delay: 5)
   }
 
-  func showCalloutAfterDelay(annotation: MKAnnotation, callback: (() -> ())? = nil) {
-    doAfterDelay(2) {
+  func showCalloutAfterDelay(annotation: MKAnnotation, delay: Double, callback: (() -> ())? = nil) {
+    doAfterDelay(delay) {
       self.mapView.selectAnnotation(annotation, animated: false)
       callback?()
     }

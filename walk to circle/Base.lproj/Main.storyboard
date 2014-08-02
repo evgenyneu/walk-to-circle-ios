@@ -20,7 +20,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-cz-MaM">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi3-vr-KeT">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi3-vr-KeT">
                                 <rect key="frame" x="254" y="490" width="92" height="92"/>
                                 <state key="normal" image="play.png">
                                     <color key="titleShadowColor" red="0.86164588399078923" green="0.84820883035008698" blue="0.92454362623762376" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,6 +42,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="ncc-cz-MaM" id="dci-eB-mPf"/>
+                        <outlet property="startButton" destination="Xi3-vr-KeT" id="O30-7a-b5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
