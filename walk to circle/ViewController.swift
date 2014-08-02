@@ -13,10 +13,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   @IBOutlet weak var mapView: MKMapView!
   var didInitiaZoom = false
-  var locationManager: CLLocationManager!;
-  var isUserLocationDetected = false;
-  var playAfterLocatedDetected = false;
-  var annotations: Annotations!;
+  var locationManager: CLLocationManager!
+  var isUserLocationDetected = false
+  var playAfterLocatedDetected = false
+  var annotations: Annotations!
+  var callbackAfterRegionDidChange: (()->())?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -53,6 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     zoomToLocation(mapView.userLocation, animated: false)
 
     mapView.userLocation.title = "You are here"
+
     showCalloutAfterDelay(mapView.userLocation, {
       self.hideCalloutAfterDelay(self.mapView.userLocation)
     })
@@ -72,11 +74,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
     var mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
 
     if mapWidth < 2500 || mapWidth > 6000 || !mapView.userLocationVisible {
-      zoomToLocation(mapView.userLocation, animated: true)
-      var time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
-      dispatch_after(time, dispatch_get_main_queue(), {
+      doAfterRegionDidChange {
         self.placeCircleOnMapAndAnimate(coordinate)
-      })
+      }
+
+      zoomToLocation(mapView.userLocation, animated: true)
     } else {
       self.placeCircleOnMapAndAnimate(coordinate)
     }
@@ -89,18 +91,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func showCalloutAfterDelay(annotation: MKAnnotation, callback: (() -> ())? = nil) {
-    var time = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
-    dispatch_after(time, dispatch_get_main_queue(), {
+    doAfterDelay(2) {
       self.mapView.selectAnnotation(annotation, animated: false)
       callback?()
-    })
+    }
   }
 
   func hideCalloutAfterDelay(annotation: MKAnnotation) {
-    var time = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
-    dispatch_after(time, dispatch_get_main_queue(), {
+    doAfterDelay(3) {
       self.mapView.deselectAnnotation(annotation, animated: false)
-    })
+    }
+  }
+
+  func doAfterDelay(delaySeconds: Double, callback: ()->()) {
+    var time = dispatch_time(DISPATCH_TIME_NOW, Int64(delaySeconds * Double(NSEC_PER_SEC)))
+    dispatch_after(time, dispatch_get_main_queue()) {
+      callback();
+    }
   }
 
   @IBAction func onPlay() {
@@ -120,6 +127,24 @@ typealias VCExtensionMapViewDelegate = ViewController
 extension VCExtensionMapViewDelegate {
   func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
     userLocationDetected()
+  }
+
+  func mapView(mapView: MKMapView!, regionWillChangeAnimated animated: Bool) {
+    if (animated) { return }
+
+    if let cb = callbackAfterRegionDidChange {
+      doAfterDelay(0.3) { cb () }
+    }
+    callbackAfterRegionDidChange = nil
+  }
+
+  func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
+    callbackAfterRegionDidChange?()
+    callbackAfterRegionDidChange = nil
+  }
+
+  func doAfterRegionDidChange(callback: ()->()) {
+    callbackAfterRegionDidChange = callback
   }
 }
 
