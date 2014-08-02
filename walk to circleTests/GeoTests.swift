@@ -23,18 +23,18 @@ class GeoTests: XCTestCase {
   }
 
   func testDegreesToRadians() {
-    var radians = geo.degreesToRadians(90)
+    let radians = geo.degreesToRadians(90)
     XCTAssertEqual(radians, M_PI / 2)
   }
 
   func testRadiansToDegrees() {
-    var degress = geo.radiansToDegrees(M_PI)
+    let degress = geo.radiansToDegrees(M_PI)
     XCTAssertEqual(degress, 180.0)
   }
 
   func testDestinationWithDistanceAndBearing() {
     let coord = CLLocationCoordinate2DMake(-37.817728, 144.968108)
-    var destination = geo.destination(coord, distanceKm: 0.5, bearingDegrees: 65)
+    let destination = geo.destination(coord, distanceKm: 0.5, bearingDegrees: 65)
 
     XCTAssertEqual(Int(destination.latitude * 100000), -3781582)
 
@@ -43,7 +43,7 @@ class GeoTests: XCTestCase {
 
   func testRandomBetween() {
     for _ in 1...100 {
-      var result = geo.randomBetween(min: 1, max: 5)
+      let result = geo.randomBetween(min: 1, max: 5)
 
       XCTAssertGreaterThanOrEqual(result, 1)
       XCTAssertLessThanOrEqual(result, 5)
@@ -52,7 +52,7 @@ class GeoTests: XCTestCase {
 
   func testRandomBearinDegrees() {
     for _ in 1...100 {
-      var result = geo.randomBearinDegrees()
+      let result = geo.randomBearinDegrees()
 
       XCTAssertGreaterThanOrEqual(result, 0)
       XCTAssertLessThanOrEqual(result, 360)
@@ -63,12 +63,12 @@ class GeoTests: XCTestCase {
     let start = CLLocationCoordinate2DMake(-37.817728, 144.968108)
 
     for _ in 1...100 {
-      var newCoordinate = geo.randomCoordinate(start, minDistanceKm: 1, maxDistanceKm: 5)
+      let newCoordinate = geo.randomCoordinate(start, minDistanceKm: 1, maxDistanceKm: 5)
 
-      var locationStart = CLLocation(latitude: start.latitude, longitude: start.longitude)
-      var locationEnd = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+      let locationStart = CLLocation(latitude: start.latitude, longitude: start.longitude)
+      let locationEnd = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
 
-      var distance = locationStart.distanceFromLocation(locationEnd)
+      let distance = locationStart.distanceFromLocation(locationEnd)
 
       XCTAssertGreaterThanOrEqual(distance, 1000)
       XCTAssertLessThanOrEqual(distance, 5000)
