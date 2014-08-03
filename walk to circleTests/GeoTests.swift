@@ -74,4 +74,22 @@ class GeoTests: XCTestCase {
       XCTAssertLessThanOrEqual(distance, 5000)
     }
   }
+
+  func testInitialBearing_one() {
+    let start = CLLocationCoordinate2DMake(-37.847480, 144.969737)
+    let end = CLLocationCoordinate2DMake(-37.861644, 144.986903)
+
+    let result = geo.initialBearing(start: start, end: end)
+
+    XCTAssertEqual(136, Int(result))
+  }
+
+  func testInitialBearing_two() {
+    let start = CLLocationCoordinate2DMake(-37.847480, 144.969737)
+    let end = CLLocationCoordinate2DMake(-37.879057, 144.924075)
+
+    let result = geo.initialBearing(start: start, end: end)
+
+    XCTAssertEqual(228, Int(result))
+  }
 }

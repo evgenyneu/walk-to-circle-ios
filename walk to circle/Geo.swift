@@ -93,4 +93,45 @@ class Geo {
 
     return MKMetersBetweenMapPoints(eastMapPoint, westMapPoint)
   }
+
+  /*
+    Returns initial bearing in degrees from 0° to 360°
+    which if followed in a straight line
+    along a great-circle arc will take you from the start point to the end point.
+
+
+    Formula:
+  
+      θ = atan2( sin Δλ ⋅ cos φ2 , cos φ1 ⋅ sin φ2 − sin φ1 ⋅ cos φ2 ⋅ cos Δλ )
+  
+    Where:
+      φ is latitude,
+      λ is longitude,
+      θ is the bearing (in radians, clockwise from north),
+      Δλ =  λ2 - λ1
+  
+    Since atan2 returns values in the range -π ... +π (that is, -180° ... +180°),
+    to normalise the result to a compass bearing (in the range 0° ... 360°,
+    with −ve values transformed into the range 180° ... 360°),
+    convert to degrees and then use (θ+360) % 360,
+    where % is (floating point) modulo.
+
+    Source: http://www.movable-type.co.uk/scripts/latlong.html
+  */
+  func initialBearing(#start: CLLocationCoordinate2D,
+    end: CLLocationCoordinate2D) -> Double {
+
+    var φ1 = degreesToRadians(start.latitude)
+    var φ2 = degreesToRadians(end.latitude)
+
+    var λ1 = degreesToRadians(start.longitude)
+    var λ2 = degreesToRadians(end.longitude)
+
+    let Δλ = λ2 - λ1
+
+    let θ = atan2( sin(Δλ) * cos(φ2),
+                   cos(φ1) * sin(φ2) - sin(φ1) * cos(φ2) * cos(Δλ))
+
+    return (radiansToDegrees(θ) + 360) % 360
+  }
 }
