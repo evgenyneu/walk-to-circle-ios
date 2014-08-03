@@ -1,5 +1,5 @@
-/* Annotation title shown above the pin on the map */
-"Closing in 60 sec" = "Закроется через 60 сек";
+/* Year of birth */
+"%@ was born in %d" = "%1$@ родился в %2$d";
 
 /* Annotation title shown above the pin on the map */
 "Memorize & walk here" = "Запомните и идите сюда";

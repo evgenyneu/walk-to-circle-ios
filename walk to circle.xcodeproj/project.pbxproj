@@ -22,6 +22,8 @@
 		2BD86EFB198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86EFD198C8B7E00CDA9F5 /* InfoPlist.strings */; };
 		2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F02198C8B7E00CDA9F5 /* Localizable.strings */; };
 		2BD86F05198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F07198C8B7E00CDA9F5 /* InfoPlist.strings */; };
+		2BD86F22198CCCD300CDA9F5 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F20198CCCD300CDA9F5 /* rewind.png */; };
+		2BD86F23198CCCD300CDA9F5 /* rewind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F21198CCCD300CDA9F5 /* rewind@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		2BD86EFC198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BD86F01198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BD86F06198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BD86F20198CCCD300CDA9F5 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
+		2BD86F21198CCCD300CDA9F5 /* rewind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		2B0E49D91970B6FE00B276B2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2BD86F20198CCCD300CDA9F5 /* rewind.png */,
+				2BD86F21198CCCD300CDA9F5 /* rewind@2x.png */,
 				2B0E49EA1970BE2700B276B2 /* play.png */,
 				2B0E49EB1970BE2700B276B2 /* play@2x.png */,
 			);
@@ -269,6 +275,8 @@
 			files = (
 				2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */,
 				2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */,
+				2BD86F22198CCCD300CDA9F5 /* rewind.png in Resources */,
+				2BD86F23198CCCD300CDA9F5 /* rewind@2x.png in Resources */,
 				2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */,
 				2B0E49ED1970BE2700B276B2 /* play@2x.png in Resources */,
 				2B0E49EC1970BE2700B276B2 /* play.png in Resources */,

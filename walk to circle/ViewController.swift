@@ -58,7 +58,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     showCalloutAfterDelay(mapView.userLocation, delay: 1, {
       self.hideCalloutAfterDelay(self.mapView.userLocation, delay: 3)
-      self.startButton.hidden = false;
+//      self.startButton.hidden = false;
     })
 
     if playAfterZoomedToInitialLocation {

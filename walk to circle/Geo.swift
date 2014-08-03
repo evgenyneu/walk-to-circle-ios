@@ -87,19 +87,6 @@ class Geo {
       bearingDegrees: bearingDegrees)
   }
 
-  func regionForCoordinates(coords: [CLLocationCoordinate2D]) -> MKCoordinateRegion {
-    var mapRect = MKMapRectNull;
-    for coord in coords {
-      let mapPoint = MKMapPointForCoordinate(coord)
-
-      let pointMapRect = MKMapRect(origin: mapPoint,
-        size: MKMapSize(width: 0, height: 0))
-
-      mapRect = MKMapRectUnion(mapRect, pointMapRect)
-    }
-    return MKCoordinateRegionForMapRect(mapRect)
-  }
-
   func mapRectWidthInMeters(rect: MKMapRect) -> Double {
     let eastMapPoint = MKMapPointMake(MKMapRectGetMinX(rect), MKMapRectGetMidY(rect))
     let westMapPoint = MKMapPointMake(MKMapRectGetMaxX(rect), MKMapRectGetMidY(rect))

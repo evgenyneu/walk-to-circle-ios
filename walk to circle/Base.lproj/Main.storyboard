@@ -20,24 +20,43 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-cz-MaM">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </mapView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi3-vr-KeT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi3-vr-KeT">
                                 <rect key="frame" x="254" y="490" width="92" height="92"/>
-                                <state key="normal" image="play.png">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="gjJ-nt-8RA"/>
+                                    <constraint firstAttribute="width" constant="92" id="u51-cX-nOp"/>
+                                </constraints>
+                                <state key="normal" title="rewind" image="rewind.png">
                                     <color key="titleShadowColor" red="0.86164588399078923" green="0.84820883035008698" blue="0.92454362623762376" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="baE-0K-IL1"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-aQ-r2V">
+                                <rect key="frame" x="254" y="490" width="92" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="KKi-ii-jio"/>
+                                    <constraint firstAttribute="width" constant="92" id="pPQ-W2-iPN"/>
+                                </constraints>
+                                <state key="normal" title="play" image="play.png">
+                                    <color key="titleShadowColor" red="0.86164588399999997" green="0.84820883039999995" blue="0.92454362619999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dbr-ba-6nu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ncc-cz-MaM" firstAttribute="centerX" secondItem="pzT-aQ-r2V" secondAttribute="centerX" id="83t-wE-11z"/>
                             <constraint firstItem="Xi3-vr-KeT" firstAttribute="top" secondItem="ncc-cz-MaM" secondAttribute="bottom" constant="-110" id="OEo-38-dmC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ncc-cz-MaM" secondAttribute="bottom" id="QhD-qL-hb6"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="top" id="RMX-Gi-TyK"/>
                             <constraint firstItem="Xi3-vr-KeT" firstAttribute="centerX" secondItem="ncc-cz-MaM" secondAttribute="centerX" id="Vup-an-OLa"/>
                             <constraint firstAttribute="trailing" secondItem="ncc-cz-MaM" secondAttribute="trailing" id="sYv-c8-Qlv"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wnF-Z3-eZu"/>
+                            <constraint firstItem="pzT-aQ-r2V" firstAttribute="top" secondItem="ncc-cz-MaM" secondAttribute="bottom" constant="-110" id="yIt-FS-X50"/>
                         </constraints>
                     </view>
                     <connections>
@@ -51,5 +70,6 @@
     </scenes>
     <resources>
         <image name="play.png" width="92" height="92"/>
+        <image name="rewind.png" width="92" height="92"/>
     </resources>
 </document>
