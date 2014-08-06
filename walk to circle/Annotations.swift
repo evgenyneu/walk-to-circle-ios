@@ -19,7 +19,7 @@ class Annotations {
   }
 
   func add(coordinate: CLLocationCoordinate2D, id: String, subtitle: String) -> Annotation {
-    if all[id] { return all[id]! }
+    if all[id] != nil { return all[id]! }
 
     let annotation = Annotation(centerCoordinate: coordinate, radius: 130)
     annotation.title = id
@@ -32,7 +32,7 @@ class Annotations {
   }
 
   func remove(id: String) {
-    if all[id] {
+    if all[id] != nil {
       mapView.removeAnnotation(all[id])
       mapView.removeOverlay(all[id])
       all[id] = nil

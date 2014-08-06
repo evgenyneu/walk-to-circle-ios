@@ -84,6 +84,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
     } else {
       self.placeCircleOnMapAndAnimate(coordinate)
     }
+
+//    println("button frame: \(startButton.frame)")
+//    var coordinateRegion = mapView.convertRect(startButton.frame,
+//                                                toRegionFromView: mapView)
+//
+//    println("coordinate region, center: \(coordinateRegion.center.latitude), \(coordinateRegion.center.longitude), span: \(coordinateRegion.span.latitudeDelta), \(coordinateRegion.span.longitudeDelta)")
+
+//    println("visible map view origin \(mapView.visibleMapRect.origin.x), \(mapView.visibleMapRect.origin.y) size: \(mapView.visibleMapRect.size.height), \(mapView.visibleMapRect.size.width)")
   }
 
   func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
