@@ -91,8 +91,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //    println("point: \(point.x),\(point.y)")
 //    println("button frame: \(startButton.frame)")
 
-//    var overlaps = ButtonOverlap().buttonOverlapsPin(startButton.frame, withAnnotation: point)
-//    println("button overlaps?: \(overlaps)")
+    var yCorrection = ButtonOverlap().verticalCorrection(startButton.frame, pinCoordinate: point)
+    println("vertical correction: \(yCorrection)")
+    
 //    var coordinateRegion = mapView.convertRect(startButton.frame,
 //                                                toRegionFromView: mapView)
 //
