@@ -22,6 +22,9 @@
 		2B9BA3AE199703F3009C0DE0 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA3A4199703F3009C0DE0 /* rewind.png */; };
 		2B9BA3AF199703F3009C0DE0 /* rewind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA3A5199703F3009C0DE0 /* rewind@2x.png */; };
 		2B9BA3B0199703F3009C0DE0 /* colors.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3A6199703F3009C0DE0 /* colors.md */; };
+		2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
+		2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
+		2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */; };
 		2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB911968DC63005C4A47 /* AppDelegate.swift */; };
 		2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* ViewController.swift */; };
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
@@ -96,6 +99,8 @@
 		2B9BA3A4199703F3009C0DE0 /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
 		2B9BA3A5199703F3009C0DE0 /* rewind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind@2x.png"; sourceTree = "<group>"; };
 		2B9BA3A6199703F3009C0DE0 /* colors.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = colors.md; sourceTree = "<group>"; };
+		2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlap.swift; sourceTree = "<group>"; };
+		2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlapTests.swift; sourceTree = "<group>"; };
 		2BCCDB8C1968DC63005C4A47 /* walk to circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk to circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB911968DC63005C4A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,11 +194,11 @@
 		2BCCDB831968DC63005C4A47 = {
 			isa = PBXGroup;
 			children = (
-				2B9BA399199703F3009C0DE0 /* graphics */,
 				2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */,
 				2BCCDB8E1968DC63005C4A47 /* walk to circle */,
 				2BCCDBA11968DC63005C4A47 /* walk to circleTests */,
 				2BCCDB8D1968DC63005C4A47 /* Products */,
+				2B9BA399199703F3009C0DE0 /* graphics */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +223,7 @@
 				2BCCDB981968DC63005C4A47 /* Images.xcassets */,
 				2BCCDB8F1968DC63005C4A47 /* Supporting Files */,
 				2B6D35D2197A581D008DDAE4 /* Geo.swift */,
+				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
 			);
 			path = "walk to circle";
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				2B6D35D0197A5782008DDAE4 /* GeoTests.swift */,
+				2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */,
 				2BCCDBA21968DC63005C4A47 /* Supporting Files */,
 			);
 			path = "walk to circleTests";
@@ -374,6 +381,7 @@
 				2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
+				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* Geo.swift in Sources */,
 			);
@@ -385,6 +393,8 @@
 			files = (
 				2B6D35D1197A5782008DDAE4 /* GeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* Geo.swift in Sources */,
+				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
+				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

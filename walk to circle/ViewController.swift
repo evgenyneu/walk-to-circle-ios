@@ -75,21 +75,30 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     let mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
 
-    if mapWidth < 2500 || mapWidth > 6000 || !mapView.userLocationVisible {
-      doAfterRegionDidChange {
-        self.placeCircleOnMapAndAnimate(coordinate)
-      }
+//    if mapWidth < 2500 || mapWidth > 8000 || !mapView.userLocationVisible {
+//      doAfterRegionDidChange {
+//        self.placeCircleOnMapAndAnimate(coordinate)
+//      }
+//
+//      zoomToLocation(mapView.userLocation, animated: true)
+//    } else {
+//      self.placeCircleOnMapAndAnimate(coordinate)
+//    }
 
-      zoomToLocation(mapView.userLocation, animated: true)
-    } else {
-      self.placeCircleOnMapAndAnimate(coordinate)
-    }
+    self.placeCircleOnMapAndAnimate(coordinate)
 
+    var point = mapView.convertCoordinate(coordinate, toPointToView: mapView)
+//    println("point: \(point.x),\(point.y)")
 //    println("button frame: \(startButton.frame)")
+
+//    var overlaps = ButtonOverlap().buttonOverlapsPin(startButton.frame, withAnnotation: point)
+//    println("button overlaps?: \(overlaps)")
 //    var coordinateRegion = mapView.convertRect(startButton.frame,
 //                                                toRegionFromView: mapView)
 //
 //    println("coordinate region, center: \(coordinateRegion.center.latitude), \(coordinateRegion.center.longitude), span: \(coordinateRegion.span.latitudeDelta), \(coordinateRegion.span.longitudeDelta)")
+
+
 
 //    println("visible map view origin \(mapView.visibleMapRect.origin.x), \(mapView.visibleMapRect.origin.y) size: \(mapView.visibleMapRect.size.height), \(mapView.visibleMapRect.size.width)")
   }
