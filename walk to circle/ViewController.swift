@@ -92,11 +92,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
     if scrollDelta.width != 0 || scrollDelta.height != 0 {
       var coordinateSpan = ScrollToAnnotation().convertDistance(scrollDelta, toCoordinateSpanForMapView: mapView)
 
-      mapView.region.center.latitude += coordinateSpan.latitudeDelta
-      mapView.region.center.longitude += coordinateSpan.longitudeDelta
+      var newCenter = CLLocationCoordinate2D(
+        latitude: mapView.region.center.latitude + coordinateSpan.latitudeDelta,
+        longitude: mapView.region.center.longitude + coordinateSpan.longitudeDelta)
+
+      UIView.animateWithDuration(0.2, animations: {
+        self.mapView.region.center = newCenter
+      })
     }
 
     placeCircleOnMapAndAnimate(coordinate)
+
   }
 
   func showCorrection(coordinate: CLLocationCoordinate2D) {
@@ -115,7 +121,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let annotation = annotations.add(coordinate, id: annotationTitle,
       subtitle: annotationSubtitle)
 
-//    self.mapView.selectAnnotation(annotation, animated: true)
+    self.mapView.selectAnnotation(annotation, animated: true)
     hideCalloutAfterDelay(annotation, delay: 5)
   }
 
