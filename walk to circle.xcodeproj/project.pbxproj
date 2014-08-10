@@ -25,6 +25,9 @@
 		2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
 		2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
 		2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */; };
+		2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */; };
+		2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */; };
+		2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */; };
 		2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB911968DC63005C4A47 /* AppDelegate.swift */; };
 		2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* ViewController.swift */; };
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
@@ -101,6 +104,8 @@
 		2B9BA3A6199703F3009C0DE0 /* colors.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = colors.md; sourceTree = "<group>"; };
 		2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlap.swift; sourceTree = "<group>"; };
 		2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlapTests.swift; sourceTree = "<group>"; };
+		2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollToAnnotationTests.swift; sourceTree = "<group>"; };
+		2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollToAnnotation.swift; sourceTree = "<group>"; };
 		2BCCDB8C1968DC63005C4A47 /* walk to circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk to circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB911968DC63005C4A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +229,7 @@
 				2BCCDB8F1968DC63005C4A47 /* Supporting Files */,
 				2B6D35D2197A581D008DDAE4 /* Geo.swift */,
 				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
+				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
 			);
 			path = "walk to circle";
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 			children = (
 				2B6D35D0197A5782008DDAE4 /* GeoTests.swift */,
 				2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */,
+				2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */,
 				2BCCDBA21968DC63005C4A47 /* Supporting Files */,
 			);
 			path = "walk to circleTests";
@@ -377,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2B9BA3B0199703F3009C0DE0 /* colors.md in Sources */,
 				2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
@@ -395,6 +403,8 @@
 				2B6D35DA197A5970008DDAE4 /* Geo.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,
+				2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */,
+				2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -85,23 +85,24 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //      self.placeCircleOnMapAndAnimate(coordinate)
 //    }
 
-    self.placeCircleOnMapAndAnimate(coordinate)
 
+    let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
+    let scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size, annotationCoordinate: coordinateInView)
+
+    if scrollDelta.width != 0 || scrollDelta.height != 0 {
+      var coordinateSpan = ScrollToAnnotation().convertDistance(scrollDelta, toCoordinateSpanForMapView: mapView)
+
+      mapView.region.center.latitude += coordinateSpan.latitudeDelta
+      mapView.region.center.longitude += coordinateSpan.longitudeDelta
+    }
+
+    placeCircleOnMapAndAnimate(coordinate)
+  }
+
+  func showCorrection(coordinate: CLLocationCoordinate2D) {
     var point = mapView.convertCoordinate(coordinate, toPointToView: mapView)
-//    println("point: \(point.x),\(point.y)")
-//    println("button frame: \(startButton.frame)")
-
     var yCorrection = ButtonOverlap().verticalCorrection(startButton.frame, pinCoordinate: point)
     println("vertical correction: \(yCorrection)")
-    
-//    var coordinateRegion = mapView.convertRect(startButton.frame,
-//                                                toRegionFromView: mapView)
-//
-//    println("coordinate region, center: \(coordinateRegion.center.latitude), \(coordinateRegion.center.longitude), span: \(coordinateRegion.span.latitudeDelta), \(coordinateRegion.span.longitudeDelta)")
-
-
-
-//    println("visible map view origin \(mapView.visibleMapRect.origin.x), \(mapView.visibleMapRect.origin.y) size: \(mapView.visibleMapRect.size.height), \(mapView.visibleMapRect.size.width)")
   }
 
   func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
@@ -114,7 +115,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let annotation = annotations.add(coordinate, id: annotationTitle,
       subtitle: annotationSubtitle)
 
-    self.mapView.selectAnnotation(annotation, animated: true)
+//    self.mapView.selectAnnotation(annotation, animated: true)
     hideCalloutAfterDelay(annotation, delay: 5)
   }
 
