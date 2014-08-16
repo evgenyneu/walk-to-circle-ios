@@ -85,7 +85,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
 //      self.placeCircleOnMapAndAnimate(coordinate)
 //    }
 
+    ensureCoordinateVisibility(coordinate) {
+      self.placeCircleOnMapAndAnimate(coordinate)
+    }
+  }
 
+  // Make sure `coordinate` is visibile. If not - scroll the map.
+  func ensureCoordinateVisibility(coordinate: CLLocationCoordinate2D, doAfter: ()->()) {
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
     let scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size, annotationCoordinate: coordinateInView)
 
@@ -96,19 +102,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         latitude: mapView.region.center.latitude + coordinateSpan.latitudeDelta,
         longitude: mapView.region.center.longitude + coordinateSpan.longitudeDelta)
 
-      UIView.animateWithDuration(0.2, animations: {
+      UIView.animateWithDuration(0.2,
+      animations: {
         self.mapView.region.center = newCenter
+      },
+      completion: { finished in
+          doAfter()
       })
+    } else {
+      doAfter()
     }
-
-    placeCircleOnMapAndAnimate(coordinate)
-
-  }
-
-  func showCorrection(coordinate: CLLocationCoordinate2D) {
-    var point = mapView.convertCoordinate(coordinate, toPointToView: mapView)
-    var yCorrection = ButtonOverlap().verticalCorrection(startButton.frame, pinCoordinate: point)
-    println("vertical correction: \(yCorrection)")
   }
 
   func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
