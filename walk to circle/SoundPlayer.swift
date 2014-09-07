@@ -12,7 +12,7 @@ import AVFoundation
 class SoundPlayer {
   lazy var bubbleSound: SystemSoundID = {
     var soundID: SystemSoundID = 0
-    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "bubble", "mp3", nil)
+    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "ball_bounce", "wav", nil)
     AudioServicesCreateSystemSoundID(soundURL, &soundID)
     return soundID
   }()
