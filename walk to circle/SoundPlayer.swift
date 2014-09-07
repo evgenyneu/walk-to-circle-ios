@@ -12,6 +12,7 @@ import AVFoundation
 enum SoundType: String {
   case ballBounce = "ball_bounce.wav"
   case fall = "fall.wav"
+  case blop = "blop.wav"
 }
 
 class SoundPlayer {

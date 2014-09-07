@@ -74,7 +74,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   func showStartButton() {
     startButton.hidden = false
-    soundPlayer.play(SoundType.ballBounce)
+    soundPlayer.play(SoundType.blop, atVolume: 0.1)
     Animator().bounce(startButton)
   }
 
@@ -87,16 +87,20 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     let mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
 
-//    if mapWidth < 2500 || mapWidth > 8000 || !mapView.userLocationVisible {
-//      doAfterRegionDidChange {
-//        self.placeCircleOnMapAndAnimate(coordinate)
-//      }
-//
-//      zoomToLocation(mapView.userLocation, animated: true)
-//    } else {
-//      self.placeCircleOnMapAndAnimate(coordinate)
-//    }
+    if mapWidth < 1500 || mapWidth > 8000 || !mapView.userLocationVisible {
+      doAfterRegionDidChange {
+        self.doAfterDelay(0.3) {
+          self.placePin(coordinate)
+        }
+      }
 
+      zoomToLocation(mapView.userLocation, animated: true)
+    } else {
+      self.placePin(coordinate)
+    }
+  }
+
+  func placePin(coordinate: CLLocationCoordinate2D) {
     ensureCoordinateVisibility(coordinate) {
       self.placeCircleOnMapAndAnimate(coordinate)
     }
@@ -185,7 +189,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
 
     doAfterDelay(showPinAfterDelay) {
-      self.soundPlayer.play(SoundType.ballBounce)
+      self.soundPlayer.play(SoundType.ballBounce, atVolume: 0.5)
     }
   }
 }
