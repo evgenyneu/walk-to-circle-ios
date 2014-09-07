@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import QuartzCore
 
 class ViewController: UIViewController, MKMapViewDelegate {
 
@@ -58,12 +59,18 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     showCalloutAfterDelay(mapView.userLocation, delay: 1, {
       self.hideCalloutAfterDelay(self.mapView.userLocation, delay: 3)
-      self.startButton.hidden = false;
+
+      self.showStartButton()
     })
 
     if playAfterZoomedToInitialLocation {
       placeCircleOnMap()
     }
+  }
+
+  func showStartButton() {
+    startButton.hidden = false
+    Animator().bounce(startButton)
   }
 
   func placeCircleOnMap() {
@@ -103,12 +110,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         longitude: mapView.region.center.longitude + coordinateSpan.longitudeDelta)
 
       UIView.animateWithDuration(0.2,
-      animations: {
-        self.mapView.region.center = newCenter
-      },
-      completion: { finished in
+        animations: {
+          self.mapView.region.center = newCenter
+        },
+        completion: { finished in
           doAfter()
-      })
+        }
+      )
     } else {
       doAfter()
     }

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5E726C199F3F4C00779AC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5E726B199F3F4C00779AC2 /* QuartzCore.framework */; };
 		2B6D35D1197A5782008DDAE4 /* GeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D0197A5782008DDAE4 /* GeoTests.swift */; };
 		2B6D35D3197A581D008DDAE4 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* Geo.swift */; };
 		2B6D35DA197A5970008DDAE4 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* Geo.swift */; };
+		2B99483119BBE4B800CB08AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* Animator.swift */; };
+		2B99483319BBE51100CB08AA /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483219BBE51100CB08AA /* SoundPlayer.swift */; };
+		2B99483619BBE59300CB08AA /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483519BBE59300CB08AA /* bubble.mp3 */; };
 		2B9BA39619970317009C0DE0 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA39519970317009C0DE0 /* play@2x.png */; };
 		2B9BA39819970325009C0DE0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA39719970325009C0DE0 /* play.png */; };
 		2B9BA3A7199703F3009C0DE0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA39B199703F3009C0DE0 /* play.png */; };
@@ -88,8 +92,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B5E726B199F3F4C00779AC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2B6D35D0197A5782008DDAE4 /* GeoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoTests.swift; sourceTree = "<group>"; };
 		2B6D35D2197A581D008DDAE4 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		2B99483019BBE4B800CB08AA /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		2B99483219BBE51100CB08AA /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		2B99483519BBE59300CB08AA /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
 		2B9BA39519970317009C0DE0 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		2B9BA39719970325009C0DE0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		2B9BA39B199703F3009C0DE0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5E726C199F3F4C00779AC2 /* QuartzCore.framework in Frameworks */,
 				2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +162,14 @@
 				2BD86F21198CCCD300CDA9F5 /* rewind@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		2B99483419BBE56E00CB08AA /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2B99483519BBE59300CB08AA /* bubble.mp3 */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 		2B9BA399199703F3009C0DE0 /* graphics */ = {
@@ -199,6 +216,7 @@
 		2BCCDB831968DC63005C4A47 = {
 			isa = PBXGroup;
 			children = (
+				2B5E726B199F3F4C00779AC2 /* QuartzCore.framework */,
 				2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */,
 				2BCCDB8E1968DC63005C4A47 /* walk to circle */,
 				2BCCDBA11968DC63005C4A47 /* walk to circleTests */,
@@ -219,6 +237,7 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
+				2B99483419BBE56E00CB08AA /* sounds */,
 				2B0E49D91970B6FE00B276B2 /* images */,
 				2BCCDB911968DC63005C4A47 /* AppDelegate.swift */,
 				2BD21DBB197B5E3B00EBB29A /* Annotation.swift */,
@@ -230,6 +249,8 @@
 				2B6D35D2197A581D008DDAE4 /* Geo.swift */,
 				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
 				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
+				2B99483019BBE4B800CB08AA /* Animator.swift */,
+				2B99483219BBE51100CB08AA /* SoundPlayer.swift */,
 			);
 			path = "walk to circle";
 			sourceTree = "<group>";
@@ -351,6 +372,7 @@
 			files = (
 				2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */,
 				2B9BA39819970325009C0DE0 /* play.png in Resources */,
+				2B99483619BBE59300CB08AA /* bubble.mp3 in Resources */,
 				2B9BA3A8199703F3009C0DE0 /* Data in Resources */,
 				2B9BA3A9199703F3009C0DE0 /* metadata in Resources */,
 				2B9BA3A7199703F3009C0DE0 /* play.png in Resources */,
@@ -384,12 +406,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B99483319BBE51100CB08AA /* SoundPlayer.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2B9BA3B0199703F3009C0DE0 /* colors.md in Sources */,
 				2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
+				2B99483119BBE4B800CB08AA /* Animator.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* Geo.swift in Sources */,
 			);

@@ -40,7 +40,7 @@ extension Ext_MapViewDelegate_Overlay {
     if annotation.isKindOfClass(MKUserLocation) { return nil }
 
     var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("MapVC")
-    if !annotationView {
+    if annotationView == nil {
       annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "MapVC")
       (annotationView as MKPinAnnotationView).animatesDrop = true
       annotationView.canShowCallout = true
