@@ -14,6 +14,7 @@
 		2B99483119BBE4B800CB08AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* Animator.swift */; };
 		2B99483319BBE51100CB08AA /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483219BBE51100CB08AA /* SoundPlayer.swift */; };
 		2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483919BBEA2100CB08AA /* ball_bounce.wav */; };
+		2B99483C19BBF74D00CB08AA /* fall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483B19BBF74D00CB08AA /* fall.wav */; };
 		2B9BA39619970317009C0DE0 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA39519970317009C0DE0 /* play@2x.png */; };
 		2B9BA39819970325009C0DE0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA39719970325009C0DE0 /* play.png */; };
 		2B9BA3A7199703F3009C0DE0 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA39B199703F3009C0DE0 /* play.png */; };
@@ -98,6 +99,7 @@
 		2B99483019BBE4B800CB08AA /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		2B99483219BBE51100CB08AA /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		2B99483919BBEA2100CB08AA /* ball_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ball_bounce.wav; sourceTree = "<group>"; };
+		2B99483B19BBF74D00CB08AA /* fall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fall.wav; sourceTree = "<group>"; };
 		2B9BA39519970317009C0DE0 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		2B9BA39719970325009C0DE0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		2B9BA39B199703F3009C0DE0 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		2B99483419BBE56E00CB08AA /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				2B99483B19BBF74D00CB08AA /* fall.wav */,
 				2B99483919BBEA2100CB08AA /* ball_bounce.wav */,
 			);
 			name = sounds;
@@ -381,6 +384,7 @@
 				2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */,
 				2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */,
 				2B9BA3AF199703F3009C0DE0 /* rewind@2x.png in Resources */,
+				2B99483C19BBF74D00CB08AA /* fall.wav in Resources */,
 				2BD86F22198CCCD300CDA9F5 /* rewind.png in Resources */,
 				2BD86F23198CCCD300CDA9F5 /* rewind@2x.png in Resources */,
 				2B9BA3AA199703F3009C0DE0 /* Preview.png in Resources */,

@@ -10,7 +10,6 @@ import UIKit
 
 class Animator {
   func bounce(view: UIView) {
-    SoundPlayer().playBubble()
     view.transform = CGAffineTransformMakeScale(0.1, 0.1)
 
     UIView.animateWithDuration(2.0,

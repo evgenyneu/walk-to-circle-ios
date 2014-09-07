@@ -9,15 +9,41 @@
 import UIKit
 import AVFoundation
 
-class SoundPlayer {
-  lazy var bubbleSound: SystemSoundID = {
-    var soundID: SystemSoundID = 0
-    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "ball_bounce", "wav", nil)
-    AudioServicesCreateSystemSoundID(soundURL, &soundID)
-    return soundID
-  }()
+enum SoundType: String {
+  case ballBounce = "ball_bounce.wav"
+  case fall = "fall.wav"
+}
 
-  func playBubble() {
-    AudioServicesPlaySystemSound(bubbleSound)
+class SoundPlayer {
+
+  var player: AVAudioPlayer?
+
+  init() { }
+
+  func play(soundType: SoundType, atVolume volume: Float = 1.0) {
+    play(soundType.toRaw(), atVolume: volume)
+  }
+
+  func play(fileName: String, atVolume volume: Float = 1.0) {
+    stop()
+
+    let error: NSErrorPointer = nil
+    let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
+
+    player = AVAudioPlayer(contentsOfURL: soundURL, error: error)
+    play(atVolume: volume)
+  }
+
+  private func play(atVolume volume: Float = 1.0) {
+    if let currentPlayer = player {
+      currentPlayer.volume = volume
+      currentPlayer.play()
+    }
+  }
+
+  private func stop() {
+    if let currentPlayer = player {
+      currentPlayer.stop()
+    }
   }
 }

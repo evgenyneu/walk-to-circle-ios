@@ -13,7 +13,7 @@ class ScrollToAnnotation {
   // Returns the scroll amount (in view coordinates) to make the annotation visible
   func getScroll(mapSize: CGSize, annotationCoordinate: CGPoint) -> CGSize {
     var scroll = CGSize(width: 0, height: 0)
-    let margin:CGFloat = 50 // additional scroll amount to show gap between annotatino and screen edge
+    let margin:CGFloat = 50 // additional scroll amount to show gap between annotation and screen edge
     let topMargin:CGFloat = 125
 
     if annotationCoordinate.x > (mapSize.width - margin)  {

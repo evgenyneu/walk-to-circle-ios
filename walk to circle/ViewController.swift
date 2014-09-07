@@ -21,6 +21,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
   @IBOutlet weak var startButton: UIButton!
   var callbackAfterRegionDidChange: (()->())?
 
+  var pindDropHeight: CGFloat = 0
+
+  let soundPlayer = SoundPlayer()
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -70,6 +74,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   func showStartButton() {
     startButton.hidden = false
+    soundPlayer.play(SoundType.ballBounce)
     Animator().bounce(startButton)
   }
 
@@ -100,7 +105,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
   // Make sure `coordinate` is visibile. If not - scroll the map.
   func ensureCoordinateVisibility(coordinate: CLLocationCoordinate2D, doAfter: ()->()) {
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
+
     let scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size, annotationCoordinate: coordinateInView)
+
+    pindDropHeight = coordinateInView.y - scrollDelta.height
 
     if scrollDelta.width != 0 || scrollDelta.height != 0 {
       var coordinateSpan = ScrollToAnnotation().convertDistance(scrollDelta, toCoordinateSpanForMapView: mapView)
@@ -132,7 +140,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let annotation = annotations.add(coordinate, id: annotationTitle,
       subtitle: annotationSubtitle)
 
-    self.mapView.selectAnnotation(annotation, animated: true)
+    mapView.selectAnnotation(annotation, animated: true)
     hideCalloutAfterDelay(annotation, delay: 5)
   }
 
@@ -163,6 +171,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
       placeCircleOnMap()
     }
   }
+
+  private func playPinDropSound() {
+    if pindDropHeight == 0 { return }
+
+
+    if pindDropHeight > 200 {
+      soundPlayer.play(SoundType.fall, atVolume: 0.01)
+    }
+
+    var showPinAfterDelay = Double(pindDropHeight) / 1200.0
+
+    if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
+
+    doAfterDelay(showPinAfterDelay) {
+      self.soundPlayer.play(SoundType.ballBounce)
+    }
+  }
 }
 
 // MapView Delegate
@@ -191,6 +216,12 @@ extension VCExtensionMapViewDelegate {
 
   func doAfterRegionDidChange(callback: ()->()) {
     callbackAfterRegionDidChange = callback
+  }
+
+  func mapView(mapView: MKMapView!,
+    didSelectAnnotationView view: MKAnnotationView!) {
+
+    playPinDropSound()
   }
 }
 
