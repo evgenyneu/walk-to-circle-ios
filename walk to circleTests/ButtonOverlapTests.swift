@@ -13,6 +13,18 @@ class ButtonOverlapTests: XCTestCase {
 
   let obj = ButtonOverlap()
 
+  func testDeltaCorrection() {
+    let buttonRect = CGRect(x: 100, y: 100, width: 50, height: 50)
+    let point = CGPoint(x: 114, y: 123)
+    let delta = CGSize(width: 10, height: 10)
+
+    let result = obj.scollCorrection(delta, buttonRect: buttonRect, pinCoordinate: point)
+
+    XCTAssertEqual(10, result.width)
+    XCTAssertEqual(43, result.height)
+
+  }
+
   func testVerticalCorrection() {
     let rect = CGRect(x: 100, y: 100, width: 50, height: 50)
     let point = CGPoint(x: 110, y: 130)

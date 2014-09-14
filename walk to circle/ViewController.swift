@@ -111,20 +111,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
 
-    let scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size,
+    var scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size,
       annotationCoordinate: coordinateInView)
 
-    let coordinateCorrected = CGPoint(
-      x: coordinateInView.x - scrollDelta.width,
-      y: coordinateInView.y - scrollDelta.height)
-
-    let vericalCorrection = ButtonOverlap().verticalCorrection(startButton.frame,
-      pinCoordinate: coordinateCorrected)
-
-    println("Button vertical correction: \(vericalCorrection)")
-    println("scroll delta before \(scrollDelta.height)")
-    let deltaScrollHeightCorrected = scrollDelta.height + vericalCorrection
-    println("scroll delta after \(deltaScrollHeightCorrected)")
+    scrollDelta = ButtonOverlap().scollCorrection(scrollDelta,
+      buttonRect: startButton.frame, pinCoordinate: coordinateInView)
 
     pindDropHeight = coordinateInView.y - scrollDelta.height
 
