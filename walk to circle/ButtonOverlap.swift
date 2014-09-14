@@ -14,34 +14,45 @@ class ButtonOverlap {
   // Returns the amount of scrolling needed for the map view
   // to prevent `pinCoordinate` from overlaping with `buttonRect`.
   // `delta` is the current scoll correction of the map view.
-  func scollCorrection(currentScrollCorrection: CGSize,
+  func scollCorrection(delta: CGSize,
     buttonRect: CGRect, pinCoordinate: CGPoint) -> CGSize {
 
-    var resultCorrection = currentScrollCorrection
+    var resultCorrection = delta
 
     let coordinateCorrected = CGPoint(
-      x: pinCoordinate.x - currentScrollCorrection.width,
-      y: pinCoordinate.y - currentScrollCorrection.height)
+      x: pinCoordinate.x - delta.width,
+      y: pinCoordinate.y - delta.height)
 
-    let vericalCorrection = verticalCorrection(buttonRect, pinCoordinate: coordinateCorrected)
+    let correction = scollCorrection(buttonRect, pinCoordinate: coordinateCorrected)
 
-    if vericalCorrection != 0 {
-      resultCorrection.height -= vericalCorrection
-      println("Button overlap detected! \(vericalCorrection)")
+    resultCorrection.width -= correction.width
+    resultCorrection.height -= correction.height
+
+    if correction.width != 0 || correction.height != 0 {
+      println("Button overlap! \(correction)")
     }
 
     return resultCorrection
   }
 
-  // Returns vertical offest in pixels to prevent button from ovelaping with the pin
-  func verticalCorrection(buttonRect: CGRect, pinCoordinate: CGPoint) -> CGFloat {
-    if buttonOverlapsPin(buttonRect, pinCoordinate: pinCoordinate) {
-      let offset = buttonRect.origin.y - pinCoordinate.y - 20
+  // Returns the amount of scrolling needed for the map view
+  // to prevent `pinCoordinate` from overlaping with `buttonRect`.
+  func scollCorrection(buttonRect: CGRect, pinCoordinate: CGPoint) -> CGSize {
+    var correction = CGSize()
 
-      if offset < 0 { return CGFloat(offset); }
+    if buttonOverlapsPin(buttonRect, pinCoordinate: pinCoordinate) {
+
+      if buttonRect.origin.x >= 200 {
+        // correct horizontally
+        correction.width = buttonRect.origin.x - pinCoordinate.x - 100
+      } else {
+        // correct vertically
+        correction.height = buttonRect.origin.y - pinCoordinate.y - 20
+      }
+      
     }
 
-    return 0;
+    return correction
   }
 
   // Returns true if annotation overlaps with the button

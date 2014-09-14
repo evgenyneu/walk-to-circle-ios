@@ -22,15 +22,24 @@ class ButtonOverlapTests: XCTestCase {
 
     XCTAssertEqual(10, result.width)
     XCTAssertEqual(43, result.height)
-
   }
 
-  func testVerticalCorrection() {
+  func testVerticalCorrection_correctVeritically() {
     let rect = CGRect(x: 100, y: 100, width: 50, height: 50)
     let point = CGPoint(x: 110, y: 130)
 
-    let result = obj.verticalCorrection(rect, pinCoordinate: point)
-    XCTAssertEqual(-50, result)
+    let result = obj.scollCorrection(rect, pinCoordinate: point)
+    XCTAssertEqual(0, result.width)
+    XCTAssertEqual(-50, result.height)
+  }
+
+  func testVerticalCorrection_correctHorizontally() {
+    let rect = CGRect(x: 200, y: 200, width: 50, height: 50)
+    let point = CGPoint(x: 210, y: 230)
+
+    let result = obj.scollCorrection(rect, pinCoordinate: point)
+    XCTAssertEqual(-110, result.width)
+    XCTAssertEqual(0, result.height)
   }
 
   func testButtonOverlapsPin_YES() {
