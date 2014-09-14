@@ -114,8 +114,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
     var scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size,
       annotationCoordinate: coordinateInView)
 
+    let userLocationInView =  mapView.convertCoordinate(mapView.userLocation.coordinate,
+      toPointToView: mapView)
+
+    let scollToRightOnHorizontalCorrection = userLocationInView.x < coordinateInView.x
+
     scrollDelta = ButtonOverlap().scollCorrection(scrollDelta,
-      buttonRect: startButton.frame, pinCoordinate: coordinateInView)
+      buttonRect: startButton.frame, pinCoordinate: coordinateInView,
+      scrollToRightOnHorizontalCorrection: scollToRightOnHorizontalCorrection)
 
     pindDropHeight = coordinateInView.y - scrollDelta.height
 

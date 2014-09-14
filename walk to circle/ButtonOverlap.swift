@@ -15,7 +15,8 @@ class ButtonOverlap {
   // to prevent `pinCoordinate` from overlaping with `buttonRect`.
   // `delta` is the current scoll correction of the map view.
   func scollCorrection(delta: CGSize,
-    buttonRect: CGRect, pinCoordinate: CGPoint) -> CGSize {
+    buttonRect: CGRect, pinCoordinate: CGPoint,
+    scrollToRightOnHorizontalCorrection: Bool) -> CGSize {
 
     var resultCorrection = delta
 
@@ -23,28 +24,32 @@ class ButtonOverlap {
       x: pinCoordinate.x - delta.width,
       y: pinCoordinate.y - delta.height)
 
-    let correction = scollCorrection(buttonRect, pinCoordinate: coordinateCorrected)
+    let correction = scollCorrection(buttonRect, pinCoordinate: coordinateCorrected,
+        scrollToRightOnHorizontalCorrection: scrollToRightOnHorizontalCorrection)
 
     resultCorrection.width -= correction.width
     resultCorrection.height -= correction.height
-
-    if correction.width != 0 || correction.height != 0 {
-      println("Button overlap! \(correction)")
-    }
 
     return resultCorrection
   }
 
   // Returns the amount of scrolling needed for the map view
   // to prevent `pinCoordinate` from overlaping with `buttonRect`.
-  func scollCorrection(buttonRect: CGRect, pinCoordinate: CGPoint) -> CGSize {
+  func scollCorrection(buttonRect: CGRect, pinCoordinate: CGPoint,
+    scrollToRightOnHorizontalCorrection: Bool) -> CGSize {
+
     var correction = CGSize()
 
     if buttonOverlapsPin(buttonRect, pinCoordinate: pinCoordinate) {
 
       if buttonRect.origin.x >= 200 {
         // correct horizontally
-        correction.width = buttonRect.origin.x - pinCoordinate.x - 100
+        if scrollToRightOnHorizontalCorrection {
+          correction.width = buttonRect.maxX - pinCoordinate.x + 100
+          println("Scroll to right \(correction)")
+        } else {
+          correction.width = buttonRect.origin.x - pinCoordinate.x - 100
+        }
       } else {
         // correct vertically
         correction.height = buttonRect.origin.y - pinCoordinate.y - 20
@@ -58,9 +63,9 @@ class ButtonOverlap {
   // Returns true if annotation overlaps with the button
   func buttonOverlapsPin(buttonRect: CGRect, pinCoordinate: CGPoint) -> Bool {
     let rectExpanded = CGRect(
-      x: (buttonRect.origin.x - 10),
+      x: (buttonRect.origin.x - 80),
       y: buttonRect.origin.y,
-      width: buttonRect.size.width + 20,
+      width: buttonRect.size.width + 160,
       height: buttonRect.size.height + 50)
 
     return rectExpanded.contains(pinCoordinate)
