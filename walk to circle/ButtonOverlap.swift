@@ -13,7 +13,12 @@ class ButtonOverlap {
 
   // Returns the amount of scrolling needed for the map view
   // to prevent `pinCoordinate` from overlaping with `buttonRect`.
-  // `delta` is the current scoll correction of the map view.
+  //
+  // Parameters:
+  //
+  //    delta: current scoll correction of the map view.
+  //    scrollToRightOnHorizontalCorrection: scroll to the right when horizontal scrolling is needed
+  //
   func scollCorrection(delta: CGSize,
     buttonRect: CGRect, pinCoordinate: CGPoint,
     scrollToRightOnHorizontalCorrection: Bool) -> CGSize {
@@ -35,6 +40,11 @@ class ButtonOverlap {
 
   // Returns the amount of scrolling needed for the map view
   // to prevent `pinCoordinate` from overlaping with `buttonRect`.
+  //
+  // Parameters:
+  //
+  //    scrollToRightOnHorizontalCorrection: scroll to the right when horizontal scrolling is needed
+  //
   func scollCorrection(buttonRect: CGRect, pinCoordinate: CGPoint,
     scrollToRightOnHorizontalCorrection: Bool) -> CGSize {
 
