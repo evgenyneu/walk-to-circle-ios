@@ -108,14 +108,30 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   // Make sure `coordinate` is visibile. If not - scroll the map.
   func ensureCoordinateVisibility(coordinate: CLLocationCoordinate2D, doAfter: ()->()) {
+
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
 
-    let scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size, annotationCoordinate: coordinateInView)
+    let scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size,
+      annotationCoordinate: coordinateInView)
+
+    let coordinateCorrected = CGPoint(
+      x: coordinateInView.x - scrollDelta.width,
+      y: coordinateInView.y - scrollDelta.height)
+
+    let vericalCorrection = ButtonOverlap().verticalCorrection(startButton.frame,
+      pinCoordinate: coordinateCorrected)
+
+    println("Button vertical correction: \(vericalCorrection)")
+    println("scroll delta before \(scrollDelta.height)")
+    let deltaScrollHeightCorrected = scrollDelta.height + vericalCorrection
+    println("scroll delta after \(deltaScrollHeightCorrected)")
 
     pindDropHeight = coordinateInView.y - scrollDelta.height
 
     if scrollDelta.width != 0 || scrollDelta.height != 0 {
-      var coordinateSpan = ScrollToAnnotation().convertDistance(scrollDelta, toCoordinateSpanForMapView: mapView)
+
+      var coordinateSpan = ScrollToAnnotation().convertDistance(scrollDelta,
+        toCoordinateSpanForMapView: mapView)
 
       var newCenter = CLLocationCoordinate2D(
         latitude: mapView.region.center.latitude + coordinateSpan.latitudeDelta,

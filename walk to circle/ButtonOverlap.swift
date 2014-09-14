@@ -10,11 +10,11 @@ import UIKit
 
 class ButtonOverlap {
   // Returns vertical offest in pixels to prevent button from ovelaping with the pin
-  func verticalCorrection(buttonRect: CGRect, pinCoordinate: CGPoint) -> Double {
+  func verticalCorrection(buttonRect: CGRect, pinCoordinate: CGPoint) -> CGFloat {
     if buttonOverlapsPin(buttonRect, pinCoordinate: pinCoordinate) {
       let offset = buttonRect.origin.y - pinCoordinate.y - 20
 
-      if offset < 0 { return Double(offset); }
+      if offset < 0 { return CGFloat(offset); }
     }
 
     return 0;
