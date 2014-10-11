@@ -89,30 +89,29 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceKm: 1, maxDistanceKm: 3)
 
+    if needZoomingBeforePlay {
+      doAfterRegionDidChange {
+        self.doAfterDelay(0.3) {
+          self.placePin(coordinate)
+        }
+      }
 
-
-    mapZoomNormal()
-
-//    if mapWidth < 1500 || mapWidth > 8000 || !mapView.userLocationVisible {
-//      doAfterRegionDidChange {
-//        self.doAfterDelay(0.3) {
-//          self.placePin(coordinate)
-//        }
-//      }
-//
-//      zoomToLocation(mapView.userLocation, animated: true)
-//    } else {
-    self.placePin(coordinate)
-//    }
+      zoomToLocation(mapView.userLocation, animated: true)
+    } else {
+      self.placePin(coordinate)
+    }
   }
 
-  func mapZoomNormal() -> Bool {
-    let mapSize = Geo().mapSizeInMeters(mapView.visibleMapRect)
+  var needZoomingBeforePlay: Bool {
+    return !(ViewController.isZoomLevelOk(mapView.visibleMapRect) && mapView.userLocationVisible)
+  }
+
+  private class func isZoomLevelOk(mapRect: MKMapRect) -> Bool {
+    let mapSize = Geo().mapSizeInMeters(mapRect)
     let maxSize = max(mapSize.width, mapSize.height)
     let minSize = min(mapSize.width, mapSize.height)
 
-    println("max \(maxSize) min \(minSize)")
-    return true
+    return minSize < 6_000 && maxSize > 3_000
   }
 
   func placePin(coordinate: CLLocationCoordinate2D) {
