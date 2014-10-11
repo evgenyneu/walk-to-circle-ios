@@ -26,8 +26,6 @@ class SoundPlayer {
   }
 
   func play(fileName: String, atVolume volume: Float = 1.0) {
-    stop()
-
     let error: NSErrorPointer = nil
     let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
 
@@ -39,12 +37,6 @@ class SoundPlayer {
     if let currentPlayer = player {
       currentPlayer.volume = volume
       currentPlayer.play()
-    }
-  }
-
-  private func stop() {
-    if let currentPlayer = player {
-      currentPlayer.stop()
     }
   }
 }

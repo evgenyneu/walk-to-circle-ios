@@ -12,6 +12,7 @@
 		2B6D35D3197A581D008DDAE4 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* Geo.swift */; };
 		2B6D35DA197A5970008DDAE4 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* Geo.swift */; };
 		2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B770A5F19E8D7E100C28177 /* Launch Screen.xib */; };
+		2B770A6319E8E09800C28177 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
 		2B99483119BBE4B800CB08AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* Animator.swift */; };
 		2B99483319BBE51100CB08AA /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483219BBE51100CB08AA /* SoundPlayer.swift */; };
 		2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483919BBEA2100CB08AA /* ball_bounce.wav */; };
@@ -99,6 +100,7 @@
 		2B6D35D0197A5782008DDAE4 /* GeoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoTests.swift; sourceTree = "<group>"; };
 		2B6D35D2197A581D008DDAE4 /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
 		2B770A5F19E8D7E100C28177 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "walk to circle/Launch Screen.xib"; sourceTree = "<group>"; };
+		2B770A6219E8E09800C28177 /* iiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiQ.swift; sourceTree = "<group>"; };
 		2B99483019BBE4B800CB08AA /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		2B99483219BBE51100CB08AA /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		2B99483919BBEA2100CB08AA /* ball_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ball_bounce.wav; sourceTree = "<group>"; };
@@ -166,6 +168,15 @@
 				2BD86F21198CCCD300CDA9F5 /* rewind@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		2B770A6119E8E07300C28177 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B770A6219E8E09800C28177 /* iiQ.swift */,
+				2B99483219BBE51100CB08AA /* SoundPlayer.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		2B99483419BBE56E00CB08AA /* sounds */ = {
@@ -245,6 +256,7 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
+				2B770A6119E8E07300C28177 /* Utils */,
 				2B99483419BBE56E00CB08AA /* sounds */,
 				2B0E49D91970B6FE00B276B2 /* images */,
 				2BCCDB911968DC63005C4A47 /* AppDelegate.swift */,
@@ -258,7 +270,6 @@
 				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
 				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
 				2B99483019BBE4B800CB08AA /* Animator.swift */,
-				2B99483219BBE51100CB08AA /* SoundPlayer.swift */,
 			);
 			path = "walk to circle";
 			sourceTree = "<group>";
@@ -422,6 +433,7 @@
 				2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
+				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* Animator.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,

@@ -50,6 +50,7 @@ extension Ext_MapViewDelegate_Overlay {
       annotationView.canShowCallout = true
     }
     annotationView.annotation = annotation
+    annotationView.setSelected(false, animated: false)
     return annotationView
   }
 }

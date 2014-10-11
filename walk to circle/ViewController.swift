@@ -206,12 +206,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
   private func playPinDropSound() {
     if pindDropHeight == 0 { return }
 
-
     if pindDropHeight > 200 {
       soundPlayer.play(SoundType.fall, atVolume: 0.01)
     }
 
-    var showPinAfterDelay = Double(pindDropHeight) / 1200.0
+    var showPinAfterDelay = pow(Double(pindDropHeight) / 1200.0, 2)
 
     if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
 
@@ -249,9 +248,7 @@ extension VCExtensionMapViewDelegate {
     callbackAfterRegionDidChange = callback
   }
 
-  func mapView(mapView: MKMapView!,
-    didSelectAnnotationView view: MKAnnotationView!) {
-
+  func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
     playPinDropSound()
   }
 }
