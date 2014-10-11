@@ -87,11 +87,16 @@ class Geo {
       bearingDegrees: bearingDegrees)
   }
 
-  func mapRectWidthInMeters(rect: MKMapRect) -> Double {
+  func mapSizeInMeters(rect: MKMapRect) -> CGSize {
     let eastMapPoint = MKMapPointMake(MKMapRectGetMinX(rect), MKMapRectGetMidY(rect))
     let westMapPoint = MKMapPointMake(MKMapRectGetMaxX(rect), MKMapRectGetMidY(rect))
 
-    return MKMetersBetweenMapPoints(eastMapPoint, westMapPoint)
+    let northMapPoint = MKMapPointMake(MKMapRectGetMidX(rect), MKMapRectGetMinY(rect))
+    let southMapPoint = MKMapPointMake(MKMapRectGetMidX(rect), MKMapRectGetMaxY(rect))
+
+    return CGSize(
+      width: MKMetersBetweenMapPoints(eastMapPoint, westMapPoint),
+      height: MKMetersBetweenMapPoints(northMapPoint, southMapPoint))
   }
 
   /*

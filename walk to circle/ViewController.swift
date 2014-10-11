@@ -21,6 +21,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
   @IBOutlet weak var startButton: UIButton!
   var callbackAfterRegionDidChange: (()->())?
 
+  let MAP_SIZE_METERS = CLLocationDistance(3_000)
+
   var pindDropHeight: CGFloat = 0
 
   let soundPlayer = SoundPlayer()
@@ -44,7 +46,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
   }
 
   func zoomToLocation(userLocation: MKUserLocation, animated: Bool) {
-    let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 3500, 3500)
+    let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
+      MAP_SIZE_METERS, MAP_SIZE_METERS)
+
     mapView.setRegion(region, animated:animated)
   }
 
@@ -85,19 +89,30 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceKm: 1, maxDistanceKm: 3)
 
-    let mapWidth = Geo().mapRectWidthInMeters(mapView.visibleMapRect)
 
-    if mapWidth < 1500 || mapWidth > 8000 || !mapView.userLocationVisible {
-      doAfterRegionDidChange {
-        self.doAfterDelay(0.3) {
-          self.placePin(coordinate)
-        }
-      }
 
-      zoomToLocation(mapView.userLocation, animated: true)
-    } else {
-      self.placePin(coordinate)
-    }
+    mapZoomNormal()
+
+//    if mapWidth < 1500 || mapWidth > 8000 || !mapView.userLocationVisible {
+//      doAfterRegionDidChange {
+//        self.doAfterDelay(0.3) {
+//          self.placePin(coordinate)
+//        }
+//      }
+//
+//      zoomToLocation(mapView.userLocation, animated: true)
+//    } else {
+    self.placePin(coordinate)
+//    }
+  }
+
+  func mapZoomNormal() -> Bool {
+    let mapSize = Geo().mapSizeInMeters(mapView.visibleMapRect)
+    let maxSize = max(mapSize.width, mapSize.height)
+    let minSize = min(mapSize.width, mapSize.height)
+
+    println("max \(maxSize) min \(minSize)")
+    return true
   }
 
   func placePin(coordinate: CLLocationCoordinate2D) {

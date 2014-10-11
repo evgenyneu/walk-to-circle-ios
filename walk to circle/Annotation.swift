@@ -24,9 +24,9 @@ extension Ext_MapViewDelegate_Overlay {
 
       if overlay.isKindOfClass(Annotation) {
         let aRenderer =  MKCircleRenderer(circle: overlay as Annotation)
-        aRenderer.fillColor =  UIColor.redColor().colorWithAlphaComponent(0.2)
-        aRenderer.strokeColor = UIColor.greenColor().colorWithAlphaComponent(0.7)
-        aRenderer.lineWidth = 3;
+        aRenderer.fillColor =  UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
+        aRenderer.strokeColor = UIColor.whiteColor()
+        aRenderer.lineWidth = 2;
 
         return aRenderer;
       }
@@ -42,7 +42,11 @@ extension Ext_MapViewDelegate_Overlay {
     var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("MapVC")
     if annotationView == nil {
       annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "MapVC")
-      (annotationView as MKPinAnnotationView).animatesDrop = true
+
+      if let pinAnnoration = annotationView as? MKPinAnnotationView {
+        pinAnnoration.animatesDrop = true
+      }
+
       annotationView.canShowCallout = true
     }
     annotationView.annotation = annotation

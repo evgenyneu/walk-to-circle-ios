@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
-		2B5A5D7019BC02E700E07F37 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6F19BC02E700E07F37 /* README.md */; };
 		2B6D35D1197A5782008DDAE4 /* GeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D0197A5782008DDAE4 /* GeoTests.swift */; };
 		2B6D35D3197A581D008DDAE4 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* Geo.swift */; };
 		2B6D35DA197A5970008DDAE4 /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* Geo.swift */; };
@@ -27,7 +26,6 @@
 		2B9BA3AD199703F3009C0DE0 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA3A3199703F3009C0DE0 /* play@2x.png */; };
 		2B9BA3AE199703F3009C0DE0 /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA3A4199703F3009C0DE0 /* rewind.png */; };
 		2B9BA3AF199703F3009C0DE0 /* rewind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA3A5199703F3009C0DE0 /* rewind@2x.png */; };
-		2B9BA3B0199703F3009C0DE0 /* colors.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3A6199703F3009C0DE0 /* colors.md */; };
 		2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
 		2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
 		2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */; };
@@ -417,14 +415,12 @@
 			files = (
 				2B99483319BBE51100CB08AA /* SoundPlayer.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
-				2B9BA3B0199703F3009C0DE0 /* colors.md in Sources */,
 				2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* Animator.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
-				2B5A5D7019BC02E700E07F37 /* README.md in Sources */,
 				2B6D35D3197A581D008DDAE4 /* Geo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

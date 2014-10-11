@@ -22,7 +22,7 @@ class SoundPlayer {
   init() { }
 
   func play(soundType: SoundType, atVolume volume: Float = 1.0) {
-    play(soundType.toRaw(), atVolume: volume)
+    play(soundType.rawValue, atVolume: volume)
   }
 
   func play(fileName: String, atVolume volume: Float = 1.0) {
