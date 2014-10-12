@@ -76,23 +76,9 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     pindDropHeight =  coordinateInView.y - scrollNeeded.height
 
     ScrollToAnnotation.scrollMap(scrollNeeded, mapView: mapView) {
-      self.placeCircleOnMapAndAnimate(coordinate)
+      DropPin.placeCircleOnMapAndAnimate(self.mapView, coordinate: coordinate,
+        annotations: self.annotations)
     }
-  }
-
-  // Extract: Place pin
-  func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
-    let annotationTitle = NSLocalizedString("Memorize & walk here",
-      comment: "Annotation title shown above the pin on the map")
-
-    let annotationSubtitle = NSLocalizedString("The map will close in 60 sec",
-      comment: "Annotation title shown above the pin on the map")
-
-    let annotation = annotations.add(coordinate, id: annotationTitle,
-      subtitle: annotationSubtitle)
-
-    mapView.selectAnnotation(annotation, animated: true)
-    Annotation.hideCalloutAfterDelay(mapView, annotation: annotation, delay: 5)
   }
 
   @IBAction func onPlay() {
