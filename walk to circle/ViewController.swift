@@ -81,7 +81,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceKm: 1, maxDistanceKm: 3)
 
-    if needZoomingBeforePlay {
+    if InitialMapZoom.needZoomingBeforePlay(mapView) {
       doAfterRegionDidChange {
         iiQ.runAfterDelay(0.3) {
           self.placePin(coordinate)
@@ -92,11 +92,6 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     } else {
       self.placePin(coordinate)
     }
-  }
-
-  // Extract: Zoom to location
-  var needZoomingBeforePlay: Bool {
-    return !(InitialMapZoom.isZoomLevelOk(mapView.visibleMapRect) && mapView.userLocationVisible)
   }
 
   // Extract: Place pin
