@@ -17,6 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-cz-MaM">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </mapView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVb-gS-cVf">
+                                <rect key="frame" x="15" y="28.5" width="100" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-Gm-ry7">
                                 <rect key="frame" x="254" y="488" width="92" height="92"/>
                                 <state key="normal" image="play.png">
@@ -26,24 +35,15 @@
                                     <action selector="onPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KB-vS-YAx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVb-gS-cVf">
-                                <rect key="frame" x="15" y="28" width="100" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-cz-MaM">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BVb-gS-cVf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0oK-Na-J73"/>
-                            <constraint firstItem="WD4-Gm-ry7" firstAttribute="top" secondItem="ncc-cz-MaM" secondAttribute="bottom" constant="-112" id="BCt-s4-IFC"/>
+                            <constraint firstAttribute="centerX" secondItem="WD4-Gm-ry7" secondAttribute="centerX" id="6gQ-VF-eTE"/>
                             <constraint firstItem="BVb-gS-cVf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Cto-05-NU2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ncc-cz-MaM" secondAttribute="bottom" id="QhD-qL-hb6"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="top" id="RMX-Gi-TyK"/>
-                            <constraint firstItem="ncc-cz-MaM" firstAttribute="centerX" secondItem="WD4-Gm-ry7" secondAttribute="centerX" id="U8x-Sv-6tE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WD4-Gm-ry7" secondAttribute="bottom" constant="20" id="gL0-5G-U0v"/>
                             <constraint firstAttribute="trailing" secondItem="ncc-cz-MaM" secondAttribute="trailing" id="sYv-c8-Qlv"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wnF-Z3-eZu"/>
                         </constraints>
