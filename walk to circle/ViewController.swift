@@ -110,8 +110,6 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     return !(InitialMapZoom.isZoomLevelOk(mapView.visibleMapRect) && mapView.userLocationVisible)
   }
 
-  
-
   // Extract: Place pin
   func placePin(coordinate: CLLocationCoordinate2D) {
     let scrollNeeded = ScrollToAnnotation.scrollNeededToSeeAnnotation(mapView,
