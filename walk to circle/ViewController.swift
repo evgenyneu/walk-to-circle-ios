@@ -23,8 +23,6 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   var annotations: Annotations!
   var callbackAfterRegionDidChange: (()->())?
 
-  let MAP_SIZE_METERS:CLLocationDistance = 3_000
-
   var pindDropHeight: CGFloat = 0
 
   override func viewDidLoad() {
@@ -46,15 +44,6 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   }
 
   // Extract: Zoom to location
-  func zoomToLocation(userLocation: MKUserLocation, animated: Bool) {
-    let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
-      MAP_SIZE_METERS, MAP_SIZE_METERS)
-
-    mapView.setRegion(region, animated:animated)
-  }
-
-
-  // Extract: Zoom to location
   func zoomToInitialLocation() {
     let accuracy = mapView.userLocation.location.horizontalAccuracy
     if accuracy < 0 || accuracy > 100 { return } // Not accurate enough
@@ -62,7 +51,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     if zoomedToInitialLocation { return }
     zoomedToInitialLocation = true
 
-    zoomToLocation(mapView.userLocation, animated: false)
+    InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: false)
 
     mapView.userLocation.title = NSLocalizedString("You are here",
       comment: "Short message shown above user location on the map")
@@ -99,7 +88,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
         }
       }
 
-      zoomToLocation(mapView.userLocation, animated: true)
+      InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: true)
     } else {
       self.placePin(coordinate)
     }
