@@ -16,14 +16,12 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   @IBOutlet weak var outputLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
 
-  var didInitiaZoom = false
-  var locationManager: CLLocationManager!
-  var zoomedToInitialLocation = false
-  var playAfterZoomedToInitialLocation = false
-  var annotations: Annotations!
-  var callbackAfterRegionDidChange: (()->())?
+  private var locationManager: CLLocationManager!
+  private var zoomedToInitialLocation = false
+  private var annotations: Annotations!
+  private var callbackAfterRegionDidChange: (()->())?
 
-  var pindDropHeight: CGFloat = 0
+  private var pindDropHeight: CGFloat = 0
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,37 +36,12 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     initMapView()
   }
 
-  func initMapView() {
+  private func initMapView() {
     mapView.delegate = self
     mapView.showsUserLocation = true
   }
 
-  // Extract: Zoom to location
-  func zoomToInitialLocation() {
-    let accuracy = mapView.userLocation.location.horizontalAccuracy
-    if accuracy < 0 || accuracy > 100 { return } // Not accurate enough
-
-    if zoomedToInitialLocation { return }
-    zoomedToInitialLocation = true
-
-    InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: false)
-
-    mapView.userLocation.title = NSLocalizedString("You are here",
-      comment: "Short message shown above user location on the map")
-
-    Annotation.showCalloutAfterDelay(mapView, annotation: mapView.userLocation, delay: 1) {
-      Annotation.hideCalloutAfterDelay(self.mapView,
-        annotation: self.mapView.userLocation, delay: 3)
-
-      self.showStartButton()
-    }
-
-    if playAfterZoomedToInitialLocation {
-      placeCircleOnMap()
-    }
-  }
-
-  func showStartButton() {
+  private func showStartButton() {
     startButton.hidden = false
     iiSounds.shared.play(iiSoundType.blop, atVolume: 0.1)
     Animator().bounce(startButton)
@@ -123,11 +96,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   }
 
   @IBAction func onPlay() {
-    if !zoomedToInitialLocation {
-      playAfterZoomedToInitialLocation = true
-    } else {
-      placeCircleOnMap()
-    }
+    placeCircleOnMap()
   }
 
   private func playPinDropSound() {
@@ -143,6 +112,15 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     iiQ.runAfterDelay(showPinAfterDelay) {
       iiSounds.shared.play(iiSoundType.ballBounce, atVolume: 0.5)
+    }
+  }
+
+  private func zoomToInitialLocation() {
+    if zoomedToInitialLocation { return }
+
+    InitialMapZoom.zoomToInitialLocation(mapView) {
+      self.zoomedToInitialLocation = true
+      self.showStartButton()
     }
   }
 }
