@@ -23,7 +23,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   var annotations: Annotations!
   var callbackAfterRegionDidChange: (()->())?
 
-  let MAP_SIZE_METERS = CLLocationDistance(3_000)
+  let MAP_SIZE_METERS:CLLocationDistance = 3_000
 
   var pindDropHeight: CGFloat = 0
 
@@ -121,8 +121,8 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
   // Extract: Place pin
   func placePin(coordinate: CLLocationCoordinate2D) {
-    let scrollNeeded = ScrollToAnnotation.scrollNeededToSeePin(mapView, startButton: startButton,
-      willDropAt: coordinate)
+    let scrollNeeded = ScrollToAnnotation.scrollNeededToSeeAnnotation(mapView,
+      startButton: startButton, willDropAt: coordinate)
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
     pindDropHeight =  coordinateInView.y - scrollNeeded.height

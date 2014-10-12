@@ -1,7 +1,7 @@
 //
 //  ScrollToAnnotation.swift
 //
-//  Helper functions for scrolling map view to view pin.
+//  Helper functions for scrolling map view to view map annotation.
 //
 //  Created by Evgenii Neumerzhitckii on 10/08/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
@@ -13,6 +13,7 @@ import MapKit
 class ScrollToAnnotation {
   // Returns the scroll amount (in view coordinates) to make the annotation visible
   class func getScroll(mapSize: CGSize, annotationCoordinate: CGPoint) -> CGSize {
+
     var scroll = CGSize(width: 0, height: 0)
     let margin:CGFloat = 50 // additional scroll amount to show gap between annotation and screen edge
     let topMargin:CGFloat = 125
@@ -33,7 +34,9 @@ class ScrollToAnnotation {
   }
 
   // converts distance (in pixels) in UIView to coordinate span (latitude and longitude)
-  class func convertDistance(distance: CGSize, toCoordinateSpanForMapView mapView: MKMapView) -> MKCoordinateSpan {
+  class func convertDistance(distance: CGSize,
+    toCoordinateSpanForMapView mapView: MKMapView) -> MKCoordinateSpan {
+
     var distanceAbs = CGSize(width: fabs(distance.width), height: fabs(distance.height))
     var rect = CGRect(origin: CGPoint(x: 0, y: 0), size: distance)
     let region = mapView.convertRect(rect, toRegionFromView: mapView)
@@ -47,10 +50,10 @@ class ScrollToAnnotation {
     return MKCoordinateSpan(latitudeDelta: latitudeDelta, longitudeDelta: longitudeDelta)
   }
 
-  // Make sure the pin and its annotation is clearly visibile.
-  // Return the amount the map needs to be scrolled
-  // in order to see the pin clearly.
-  class func scrollNeededToSeePin(mapView: MKMapView, startButton: UIView,
+  // Make sure annotation and its callout view is fully visible.
+  // Return the amount of scolling needed
+  // in order to display annotation and its callout.
+  class func scrollNeededToSeeAnnotation(mapView: MKMapView, startButton: UIView,
     willDropAt coordinate: CLLocationCoordinate2D) -> CGSize {
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
@@ -63,6 +66,7 @@ class ScrollToAnnotation {
 
     let scollToRightOnHorizontalCorrection = userLocationInView.x < coordinateInView.x
 
+    // Make sure annotation does not overlap with the button
     return ButtonOverlap().scollCorrection(scrollDelta,
       buttonRect: startButton.frame, pinCoordinate: coordinateInView,
       scrollToRightOnHorizontalCorrection: scollToRightOnHorizontalCorrection)
