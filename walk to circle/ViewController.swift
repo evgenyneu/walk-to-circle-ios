@@ -20,7 +20,6 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   private var zoomedToInitialLocation = false
   private var annotations: Annotations!
   private var callbackAfterRegionDidChange: (()->())?
-
   private var pindDropHeight: CGFloat = 0
 
   override func viewDidLoad() {
@@ -85,22 +84,6 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     placeCircleOnMap()
   }
 
-  private func playPinDropSound() {
-    if pindDropHeight == 0 { return }
-
-    if pindDropHeight > 200 {
-      iiSounds.shared.play(iiSoundType.fall, atVolume: 0.01)
-    }
-
-    var showPinAfterDelay = pow(Double(pindDropHeight) / 1200.0, 2.5)
-
-    if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
-
-    iiQ.runAfterDelay(showPinAfterDelay) {
-      iiSounds.shared.play(iiSoundType.ballBounce, atVolume: 0.5)
-    }
-  }
-
   private func zoomToInitialLocation() {
     if zoomedToInitialLocation { return }
 
@@ -140,7 +123,7 @@ extension VCExtensionMapViewDelegate {
   }
 
   func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-    playPinDropSound()
+    DropPin.playPinDropSound(pindDropHeight)
   }
 }
 
