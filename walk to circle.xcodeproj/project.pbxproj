@@ -271,17 +271,17 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
-				2B770A6119E8E07300C28177 /* Utils */,
-				2B99483419BBE56E00CB08AA /* sounds */,
 				2B0E49D91970B6FE00B276B2 /* images */,
+				2B99483419BBE56E00CB08AA /* sounds */,
+				2B770A6119E8E07300C28177 /* Utils */,
 				2BCCDB911968DC63005C4A47 /* AppDelegate.swift */,
 				2BD21DBB197B5E3B00EBB29A /* Annotation.swift */,
 				2BD21DBD197B5E5D00EBB29A /* Annotations.swift */,
-				2BCCDB931968DC63005C4A47 /* ViewController.swift */,
 				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
-				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
-				2BCFEF3F19EA504A00062A99 /* InitialMapZoom.swift */,
 				2BCFEF4119EA542B00062A99 /* DropPin.swift */,
+				2BCFEF3F19EA504A00062A99 /* InitialMapZoom.swift */,
+				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
+				2BCCDB931968DC63005C4A47 /* ViewController.swift */,
 				2BCCDB951968DC63005C4A47 /* Main.storyboard */,
 				2BCCDB981968DC63005C4A47 /* Images.xcassets */,
 				2BCCDB8F1968DC63005C4A47 /* Supporting Files */,
