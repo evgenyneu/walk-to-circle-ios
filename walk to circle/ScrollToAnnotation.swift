@@ -11,7 +11,7 @@ import MapKit
 
 class ScrollToAnnotation {
   // Returns the scroll amount (in view coordinates) to make the annotation visible
-  func getScroll(mapSize: CGSize, annotationCoordinate: CGPoint) -> CGSize {
+  class func getScroll(mapSize: CGSize, annotationCoordinate: CGPoint) -> CGSize {
     var scroll = CGSize(width: 0, height: 0)
     let margin:CGFloat = 50 // additional scroll amount to show gap between annotation and screen edge
     let topMargin:CGFloat = 125
@@ -32,7 +32,7 @@ class ScrollToAnnotation {
   }
 
   // converts distance (in pixels) in UIView to coordinate span (latitude and longitude)
-  func convertDistance(distance: CGSize, toCoordinateSpanForMapView mapView: MKMapView) -> MKCoordinateSpan {
+  class func convertDistance(distance: CGSize, toCoordinateSpanForMapView mapView: MKMapView) -> MKCoordinateSpan {
     var distanceAbs = CGSize(width: fabs(distance.width), height: fabs(distance.height))
     var rect = CGRect(origin: CGPoint(x: 0, y: 0), size: distance)
     let region = mapView.convertRect(rect, toRegionFromView: mapView)

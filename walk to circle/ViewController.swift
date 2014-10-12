@@ -128,7 +128,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
 
-    var scrollDelta = ScrollToAnnotation().getScroll(mapView.frame.size,
+    var scrollDelta = ScrollToAnnotation.getScroll(mapView.frame.size,
       annotationCoordinate: coordinateInView)
 
     let userLocationInView =  mapView.convertCoordinate(mapView.userLocation.coordinate,
@@ -144,7 +144,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     if scrollDelta.width != 0 || scrollDelta.height != 0 {
 
-      var coordinateSpan = ScrollToAnnotation().convertDistance(scrollDelta,
+      var coordinateSpan = ScrollToAnnotation.convertDistance(scrollDelta,
         toCoordinateSpanForMapView: mapView)
 
       var newCenter = CLLocationCoordinate2D(
