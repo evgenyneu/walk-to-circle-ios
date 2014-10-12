@@ -1,6 +1,7 @@
 //
 //  ScrollToAnnotation.swift
-//  walk to circle
+//
+//  Helper functions for scrolling map view to view pin.
 //
 //  Created by Evgenii Neumerzhitckii on 10/08/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
@@ -44,6 +45,53 @@ class ScrollToAnnotation {
     if distance.width < 0 { longitudeDelta *= -1 }
 
     return MKCoordinateSpan(latitudeDelta: latitudeDelta, longitudeDelta: longitudeDelta)
+  }
+
+  // Make sure the pin and its annotation is clearly visibile.
+  // Return the amount the map needs to be scrolled
+  // in order to see the pin clearly.
+  class func scrollNeededToSeePin(mapView: MKMapView, startButton: UIView,
+    willDropAt coordinate: CLLocationCoordinate2D) -> CGSize {
+
+    let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
+
+    var scrollDelta = ScrollToAnnotation.getScroll(mapView.frame.size,
+      annotationCoordinate: coordinateInView)
+
+    let userLocationInView =  mapView.convertCoordinate(mapView.userLocation.coordinate,
+      toPointToView: mapView)
+
+    let scollToRightOnHorizontalCorrection = userLocationInView.x < coordinateInView.x
+
+    return ButtonOverlap().scollCorrection(scrollDelta,
+      buttonRect: startButton.frame, pinCoordinate: coordinateInView,
+      scrollToRightOnHorizontalCorrection: scollToRightOnHorizontalCorrection)
+  }
+
+  // Scroll map view by given amount
+  class func scrollMap(scollBy: CGSize, mapView: MKMapView, onFinishedScrolling: ()->()) {
+
+    if scollBy.width == 0 && scollBy.height == 0 { // no need to scroll
+      onFinishedScrolling()
+      return
+    }
+
+    // convert scroll amount from pixels to map coordinates
+    var coordinateSpan = ScrollToAnnotation.convertDistance(scollBy,
+      toCoordinateSpanForMapView: mapView)
+
+    var newCenter = CLLocationCoordinate2D(
+      latitude: mapView.region.center.latitude + coordinateSpan.latitudeDelta,
+      longitude: mapView.region.center.longitude + coordinateSpan.longitudeDelta)
+
+    UIView.animateWithDuration(0.2,
+      animations: {
+        mapView.region.center = newCenter
+      },
+      completion: { finished in
+        onFinishedScrolling()
+      }
+    )
   }
 }
 

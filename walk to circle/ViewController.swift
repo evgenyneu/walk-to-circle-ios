@@ -117,57 +117,15 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     return minSize < 6_000 && maxSize > 3_000
   }
 
-  func placePin(coordinate: CLLocationCoordinate2D) {
-    pindDropHeight = ensureCoordinateVisibility(coordinate) {
-      self.placeCircleOnMapAndAnimate(coordinate)
-    }
-  }
-
-  // Make sure the pin `coordinate` is visibile. If not - scroll the map.
-  class func scrollAmountBeforePinDrop(mapView: MKMapView, startButton: UIView,
-    willDropAt coordinate: CLLocationCoordinate2D) -> CGSize {
+  private func placePin(coordinate: CLLocationCoordinate2D) {
+    let scrollNeeded = ScrollToAnnotation.scrollNeededToSeePin(mapView, startButton: startButton,
+      willDropAt: coordinate)
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
+    pindDropHeight =  coordinateInView.y - scrollNeeded.height
 
-    var scrollDelta = ScrollToAnnotation.getScroll(mapView.frame.size,
-      annotationCoordinate: coordinateInView)
-
-    let userLocationInView =  mapView.convertCoordinate(mapView.userLocation.coordinate,
-      toPointToView: mapView)
-
-    let scollToRightOnHorizontalCorrection = userLocationInView.x < coordinateInView.x
-
-//      return coordinateInView.y - scrollDelta.height
-
-
-    return ButtonOverlap().scollCorrection(scrollDelta,
-      buttonRect: startButton.frame, pinCoordinate: coordinateInView,
-      scrollToRightOnHorizontalCorrection: scollToRightOnHorizontalCorrection)
-  }
-
-  // Scroll map view by given amount of pixels
-  class func scrollMap(scollBy: CGSize, mapView: MKMapView, startButton: UIView,
-    doAfter: ()->()) -> CGFloat {
-
-    if scollBy.width != 0 || scollBy.height != 0 {
-
-      var coordinateSpan = ScrollToAnnotation.convertDistance(scollBy,
-        toCoordinateSpanForMapView: mapView)
-
-      var newCenter = CLLocationCoordinate2D(
-        latitude: mapView.region.center.latitude + coordinateSpan.latitudeDelta,
-        longitude: mapView.region.center.longitude + coordinateSpan.longitudeDelta)
-
-      UIView.animateWithDuration(0.2,
-        animations: {
-          mapView.region.center = newCenter
-        },
-        completion: { finished in
-          doAfter()
-        }
-      )
-    } else {
-      doAfter()
+    ScrollToAnnotation.scrollMap(scrollNeeded, mapView: mapView) {
+      self.placeCircleOnMapAndAnimate(coordinate)
     }
   }
 
