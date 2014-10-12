@@ -14,13 +14,13 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var outputLabel: UILabel!
+  @IBOutlet weak var startButton: UIButton!
 
   var didInitiaZoom = false
   var locationManager: CLLocationManager!
   var zoomedToInitialLocation = false
   var playAfterZoomedToInitialLocation = false
   var annotations: Annotations!
-  @IBOutlet weak var startButton: UIButton!
   var callbackAfterRegionDidChange: (()->())?
 
   let MAP_SIZE_METERS = CLLocationDistance(3_000)
@@ -118,13 +118,14 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   }
 
   func placePin(coordinate: CLLocationCoordinate2D) {
-    ensureCoordinateVisibility(coordinate) {
+    pindDropHeight = ensureCoordinateVisibility(coordinate) {
       self.placeCircleOnMapAndAnimate(coordinate)
     }
   }
 
-  // Make sure `coordinate` is visibile. If not - scroll the map.
-  func ensureCoordinateVisibility(coordinate: CLLocationCoordinate2D, doAfter: ()->()) {
+  // Make sure the pin `coordinate` is visibile. If not - scroll the map.
+  class func scrollAmountBeforePinDrop(mapView: MKMapView, startButton: UIView,
+    willDropAt coordinate: CLLocationCoordinate2D) -> CGSize {
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
 
@@ -136,15 +137,21 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     let scollToRightOnHorizontalCorrection = userLocationInView.x < coordinateInView.x
 
-    scrollDelta = ButtonOverlap().scollCorrection(scrollDelta,
+//      return coordinateInView.y - scrollDelta.height
+
+
+    return ButtonOverlap().scollCorrection(scrollDelta,
       buttonRect: startButton.frame, pinCoordinate: coordinateInView,
       scrollToRightOnHorizontalCorrection: scollToRightOnHorizontalCorrection)
+  }
 
-    pindDropHeight = coordinateInView.y - scrollDelta.height
+  // Scroll map view by given amount of pixels
+  class func scrollMap(scollBy: CGSize, mapView: MKMapView, startButton: UIView,
+    doAfter: ()->()) -> CGFloat {
 
-    if scrollDelta.width != 0 || scrollDelta.height != 0 {
+    if scollBy.width != 0 || scollBy.height != 0 {
 
-      var coordinateSpan = ScrollToAnnotation.convertDistance(scrollDelta,
+      var coordinateSpan = ScrollToAnnotation.convertDistance(scollBy,
         toCoordinateSpanForMapView: mapView)
 
       var newCenter = CLLocationCoordinate2D(
@@ -153,7 +160,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
       UIView.animateWithDuration(0.2,
         animations: {
-          self.mapView.region.center = newCenter
+          mapView.region.center = newCenter
         },
         completion: { finished in
           doAfter()
