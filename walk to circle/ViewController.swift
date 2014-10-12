@@ -91,7 +91,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     if needZoomingBeforePlay {
       doAfterRegionDidChange {
-        self.doAfterDelay(0.3) {
+        iiQ.runAfterDelay(0.3) {
           self.placePin(coordinate)
         }
       }
@@ -176,22 +176,15 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   }
 
   func showCalloutAfterDelay(annotation: MKAnnotation, delay: Double, callback: (() -> ())? = nil) {
-    doAfterDelay(delay) {
+    iiQ.runAfterDelay(delay) {
       self.mapView.selectAnnotation(annotation, animated: false)
       callback?()
     }
   }
 
   func hideCalloutAfterDelay(annotation: MKAnnotation, delay: Double) {
-    doAfterDelay(delay) {
+    iiQ.runAfterDelay(delay) {
       self.mapView.deselectAnnotation(annotation, animated: false)
-    }
-  }
-
-  func doAfterDelay(delaySeconds: Double, callback: ()->()) {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delaySeconds * Double(NSEC_PER_SEC)))
-    dispatch_after(time, dispatch_get_main_queue()) {
-      callback();
     }
   }
 
@@ -214,7 +207,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
 
-    doAfterDelay(showPinAfterDelay) {
+    iiQ.runAfterDelay(showPinAfterDelay) {
       iiSounds.shared.play(iiSoundType.ballBounce, atVolume: 0.5)
     }
   }
@@ -234,7 +227,7 @@ extension VCExtensionMapViewDelegate {
     if (animated) { return }
 
     if let cb = callbackAfterRegionDidChange {
-      doAfterDelay(0.3) { cb () }
+      iiQ.runAfterDelay(0.3, cb)
     }
     callbackAfterRegionDidChange = nil
   }
