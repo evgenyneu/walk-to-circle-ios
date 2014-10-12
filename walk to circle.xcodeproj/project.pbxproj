@@ -14,7 +14,6 @@
 		2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B770A5F19E8D7E100C28177 /* Launch Screen.xib */; };
 		2B770A6319E8E09800C28177 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
 		2B99483119BBE4B800CB08AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* Animator.swift */; };
-		2B99483319BBE51100CB08AA /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483219BBE51100CB08AA /* SoundPlayer.swift */; };
 		2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483919BBEA2100CB08AA /* ball_bounce.wav */; };
 		2B99483C19BBF74D00CB08AA /* fall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483B19BBF74D00CB08AA /* fall.wav */; };
 		2B9BA39619970317009C0DE0 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9BA39519970317009C0DE0 /* play@2x.png */; };
@@ -39,6 +38,10 @@
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
 		2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB981968DC63005C4A47 /* Images.xcassets */; };
 		2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */; };
+		2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */; };
+		2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */; };
+		2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3919EA000600062A99 /* iiTickTock.swift */; };
+		2BCFEF3C19EA010800062A99 /* iiOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3B19EA010800062A99 /* iiOutputView.swift */; };
 		2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD21DBB197B5E3B00EBB29A /* Annotation.swift */; };
 		2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD21DBD197B5E5D00EBB29A /* Annotations.swift */; };
 		2BD86EFB198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86EFD198C8B7E00CDA9F5 /* InfoPlist.strings */; };
@@ -102,7 +105,6 @@
 		2B770A5F19E8D7E100C28177 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "walk to circle/Launch Screen.xib"; sourceTree = "<group>"; };
 		2B770A6219E8E09800C28177 /* iiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiQ.swift; sourceTree = "<group>"; };
 		2B99483019BBE4B800CB08AA /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		2B99483219BBE51100CB08AA /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		2B99483919BBEA2100CB08AA /* ball_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ball_bounce.wav; sourceTree = "<group>"; };
 		2B99483B19BBF74D00CB08AA /* fall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fall.wav; sourceTree = "<group>"; };
 		2B9BA39519970317009C0DE0 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
@@ -130,6 +132,10 @@
 		2BCCDB9E1968DC63005C4A47 /* walk to circleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walk to circleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDBA31968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayer.swift; sourceTree = "<group>"; };
+		2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSounds.swift; sourceTree = "<group>"; };
+		2BCFEF3919EA000600062A99 /* iiTickTock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiTickTock.swift; sourceTree = "<group>"; };
+		2BCFEF3B19EA010800062A99 /* iiOutputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiOutputView.swift; sourceTree = "<group>"; };
 		2BD21DBB197B5E3B00EBB29A /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		2BD21DBD197B5E5D00EBB29A /* Annotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
 		2BD86EF8198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -174,7 +180,10 @@
 			isa = PBXGroup;
 			children = (
 				2B770A6219E8E09800C28177 /* iiQ.swift */,
-				2B99483219BBE51100CB08AA /* SoundPlayer.swift */,
+				2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */,
+				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
+				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
+				2BCFEF3B19EA010800062A99 /* iiOutputView.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -428,11 +437,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B99483319BBE51100CB08AA /* SoundPlayer.swift in Sources */,
+				2BCFEF3C19EA010800062A99 /* iiOutputView.swift in Sources */,
+				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
+				2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */,
+				2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */,
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* Animator.swift in Sources */,

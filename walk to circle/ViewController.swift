@@ -10,9 +10,11 @@ import UIKit
 import MapKit
 import QuartzCore
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewController {
 
   @IBOutlet weak var mapView: MKMapView!
+  @IBOutlet weak var outputLabel: UILabel!
+
   var didInitiaZoom = false
   var locationManager: CLLocationManager!
   var zoomedToInitialLocation = false
@@ -24,8 +26,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
   let MAP_SIZE_METERS = CLLocationDistance(3_000)
 
   var pindDropHeight: CGFloat = 0
-
-  let soundPlayer = SoundPlayer()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -78,7 +78,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
   func showStartButton() {
     startButton.hidden = false
-    soundPlayer.play(SoundType.blop, atVolume: 0.1)
+    iiSounds.shared.play(iiSoundType.blop, atVolume: 0.1)
     Animator().bounce(startButton)
   }
 
@@ -207,7 +207,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     if pindDropHeight == 0 { return }
 
     if pindDropHeight > 200 {
-      soundPlayer.play(SoundType.fall, atVolume: 0.01)
+      iiSounds.shared.play(iiSoundType.fall, atVolume: 0.01)
     }
 
     var showPinAfterDelay = pow(Double(pindDropHeight) / 1200.0, 2)
@@ -215,7 +215,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
 
     doAfterDelay(showPinAfterDelay) {
-      self.soundPlayer.play(SoundType.ballBounce, atVolume: 0.5)
+      iiSounds.shared.play(iiSoundType.ballBounce, atVolume: 0.5)
     }
   }
 }
