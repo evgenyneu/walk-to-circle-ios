@@ -107,17 +107,10 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
   // Extract: Zoom to location
   var needZoomingBeforePlay: Bool {
-    return !(ViewController.isZoomLevelOk(mapView.visibleMapRect) && mapView.userLocationVisible)
+    return !(InitialMapZoom.isZoomLevelOk(mapView.visibleMapRect) && mapView.userLocationVisible)
   }
 
-  // Extract: Zoom to location
-  private class func isZoomLevelOk(mapRect: MKMapRect) -> Bool {
-    let mapSize = iiGeo.mapSizeInMeters(mapRect)
-    let maxSize = max(mapSize.width, mapSize.height)
-    let minSize = min(mapSize.width, mapSize.height)
-
-    return minSize < 6_000 && maxSize > 3_000
-  }
+  
 
   // Extract: Place pin
   func placePin(coordinate: CLLocationCoordinate2D) {
