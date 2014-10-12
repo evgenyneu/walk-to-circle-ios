@@ -210,7 +210,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
       iiSounds.shared.play(iiSoundType.fall, atVolume: 0.01)
     }
 
-    var showPinAfterDelay = pow(Double(pindDropHeight) / 1200.0, 2)
+    var showPinAfterDelay = pow(Double(pindDropHeight) / 1200.0, 2.5)
 
     if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
 
