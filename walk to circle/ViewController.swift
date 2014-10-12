@@ -40,14 +40,28 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     mapView.showsUserLocation = true
   }
 
+  @IBAction func onPlay() {
+    placeCircleOnMap()
+  }
+
+  private func zoomToInitialLocation() {
+    if zoomedToInitialLocation { return }
+
+    InitialMapZoom.zoomToInitialLocation(mapView) {
+      self.zoomedToInitialLocation = true
+      self.showStartButton()
+    }
+  }
+
   private func showStartButton() {
     startButton.hidden = false
     iiSounds.shared.play(iiSoundType.blop, atVolume: 0.1)
-    Animator().bounce(startButton)
+    iiAnimator.bounce(startButton)
   }
 
-  // Extract: Place pin: 1
-  func placeCircleOnMap() {
+  // Place pin on the map
+  // ---------------
+  private func placeCircleOnMap() {
     annotations.removeAll()
 
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
@@ -66,8 +80,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     }
   }
 
-  // Extract: Place pin
-  func placePin(coordinate: CLLocationCoordinate2D) {
+  private func placePin(coordinate: CLLocationCoordinate2D) {
     let scrollNeeded = ScrollToAnnotation.scrollNeededToSeeAnnotation(mapView,
       startButton: startButton, willDropAt: coordinate)
 
@@ -80,17 +93,8 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     }
   }
 
-  @IBAction func onPlay() {
-    placeCircleOnMap()
-  }
-
-  private func zoomToInitialLocation() {
-    if zoomedToInitialLocation { return }
-
-    InitialMapZoom.zoomToInitialLocation(mapView) {
-      self.zoomedToInitialLocation = true
-      self.showStartButton()
-    }
+  private func doAfterRegionDidChange(callback: ()->()) {
+    callbackAfterRegionDidChange = callback
   }
 }
 
@@ -104,22 +108,9 @@ extension VCExtensionMapViewDelegate {
     zoomToInitialLocation()
   }
 
-  func mapView(mapView: MKMapView!, regionWillChangeAnimated animated: Bool) {
-    if (animated) { return }
-
-    if let cb = callbackAfterRegionDidChange {
-      iiQ.runAfterDelay(0.3, cb)
-    }
-    callbackAfterRegionDidChange = nil
-  }
-
   func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
     callbackAfterRegionDidChange?()
     callbackAfterRegionDidChange = nil
-  }
-
-  func doAfterRegionDidChange(callback: ()->()) {
-    callbackAfterRegionDidChange = callback
   }
 
   func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {

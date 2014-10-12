@@ -1,6 +1,7 @@
 //
 //  ButtonAnimator.swift
-//  walk to circle
+//  
+//  Helper functions for animation.
 //
 //  Created by Evgenii Neumerzhitckii on 7/09/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
@@ -8,8 +9,8 @@
 
 import UIKit
 
-class Animator {
-  func bounce(view: UIView) {
+class iiAnimator {
+  class func bounce(view: UIView) {
     view.transform = CGAffineTransformMakeScale(0.1, 0.1)
 
     UIView.animateWithDuration(2.0,

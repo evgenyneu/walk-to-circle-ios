@@ -1,6 +1,7 @@
 //
 //  PlacePin.swift
-//  walk to circle
+//
+//  Class function that place pin on the map
 //
 //  Created by Evgenii Neumerzhitckii on 12/10/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
