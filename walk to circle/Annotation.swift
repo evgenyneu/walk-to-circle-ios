@@ -10,6 +10,21 @@ import MapKit
 import CoreLocation
 
 class Annotation: MKCircle {
+  class func showCalloutAfterDelay(mapView: MKMapView,
+    annotation: MKAnnotation, delay: Double, callback: (() -> ())? = nil) {
+
+    iiQ.runAfterDelay(delay) {
+      mapView.selectAnnotation(annotation, animated: false)
+      callback?()
+    }
+  }
+
+  class func hideCalloutAfterDelay(mapView: MKMapView, annotation: MKAnnotation, delay: Double) {
+    iiQ.runAfterDelay(delay) {
+
+      mapView.deselectAnnotation(annotation, animated: false)
+    }
+  }
 
 }
 

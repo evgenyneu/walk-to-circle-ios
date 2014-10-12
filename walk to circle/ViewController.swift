@@ -67,11 +67,12 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     mapView.userLocation.title = NSLocalizedString("You are here",
       comment: "Short message shown above user location on the map")
 
-    showCalloutAfterDelay(mapView.userLocation, delay: 1, {
-      self.hideCalloutAfterDelay(self.mapView.userLocation, delay: 3)
+    Annotation.showCalloutAfterDelay(mapView, annotation: mapView.userLocation, delay: 1) {
+      Annotation.hideCalloutAfterDelay(self.mapView,
+        annotation: self.mapView.userLocation, delay: 3)
 
       self.showStartButton()
-    })
+    }
 
     if playAfterZoomedToInitialLocation {
       placeCircleOnMap()
@@ -84,6 +85,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     Animator().bounce(startButton)
   }
 
+  // Extract: Place pin: 1
   func placeCircleOnMap() {
     annotations.removeAll()
 
@@ -117,7 +119,8 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     return minSize < 6_000 && maxSize > 3_000
   }
 
-  private func placePin(coordinate: CLLocationCoordinate2D) {
+  // Extract: Place pin
+  func placePin(coordinate: CLLocationCoordinate2D) {
     let scrollNeeded = ScrollToAnnotation.scrollNeededToSeePin(mapView, startButton: startButton,
       willDropAt: coordinate)
 
@@ -129,6 +132,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     }
   }
 
+  // Extract: Place pin
   func placeCircleOnMapAndAnimate(coordinate: CLLocationCoordinate2D) {
     let annotationTitle = NSLocalizedString("Memorize & walk here",
       comment: "Annotation title shown above the pin on the map")
@@ -140,20 +144,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
       subtitle: annotationSubtitle)
 
     mapView.selectAnnotation(annotation, animated: true)
-    hideCalloutAfterDelay(annotation, delay: 5)
-  }
-
-  func showCalloutAfterDelay(annotation: MKAnnotation, delay: Double, callback: (() -> ())? = nil) {
-    iiQ.runAfterDelay(delay) {
-      self.mapView.selectAnnotation(annotation, animated: false)
-      callback?()
-    }
-  }
-
-  func hideCalloutAfterDelay(annotation: MKAnnotation, delay: Double) {
-    iiQ.runAfterDelay(delay) {
-      self.mapView.deselectAnnotation(annotation, animated: false)
-    }
+    Annotation.hideCalloutAfterDelay(mapView, annotation: annotation, delay: 5)
   }
 
   @IBAction func onPlay() {
