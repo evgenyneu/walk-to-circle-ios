@@ -18,8 +18,8 @@ class scrollToAnnotationTests: XCTestCase {
     let annotationCoordinate = CGPoint(x: 100, y: 400)
     var result = obj.getScroll(mapSize, annotationCoordinate: annotationCoordinate)
 
-    XCTAssertEqual(0, result.width)
-    XCTAssertEqual(0, result.height)
+    XCTAssertEqual(CGFloat(0), result.width)
+    XCTAssertEqual(CGFloat(0), result.height)
   }
 
   func testGetScroll_Positive() {
@@ -27,8 +27,8 @@ class scrollToAnnotationTests: XCTestCase {
     let annotationCoordinate = CGPoint(x: 378, y: 514)
     var result = obj.getScroll(mapSize, annotationCoordinate: annotationCoordinate)
 
-    XCTAssertEqual(128, result.width)
-    XCTAssertEqual(64, result.height)
+    XCTAssertEqual(CGFloat(128), result.width)
+    XCTAssertEqual(CGFloat(64), result.height)
   }
 
   func testGetScroll_Negative() {
@@ -36,7 +36,7 @@ class scrollToAnnotationTests: XCTestCase {
     let annotationCoordinate = CGPoint(x: -11, y: -43)
     var result = obj.getScroll(mapSize, annotationCoordinate: annotationCoordinate)
 
-    XCTAssertEqual(-61, result.width)
-    XCTAssertEqual(-168, result.height)
+    XCTAssertEqual(CGFloat(-61), result.width)
+    XCTAssertEqual(CGFloat(-168), result.height)
   }
 }

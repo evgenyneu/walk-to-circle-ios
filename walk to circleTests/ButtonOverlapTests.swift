@@ -21,8 +21,8 @@ class ButtonOverlapTests: XCTestCase {
     let result = obj.scollCorrection(delta, buttonRect: buttonRect, pinCoordinate: point,
       scrollToRightOnHorizontalCorrection: true)
 
-    XCTAssertEqual(10, result.width)
-    XCTAssertEqual(43, result.height)
+    XCTAssertEqual(CGFloat(10), result.width)
+    XCTAssertEqual(CGFloat(43), result.height)
   }
 
   // scollCorrection
@@ -35,8 +35,8 @@ class ButtonOverlapTests: XCTestCase {
     let result = obj.scollCorrection(rect, pinCoordinate: point,
       scrollToRightOnHorizontalCorrection: false)
 
-    XCTAssertEqual(0, result.width)
-    XCTAssertEqual(-50, result.height)
+    XCTAssertEqual(CGFloat(0), result.width)
+    XCTAssertEqual(CGFloat(-50), result.height)
   }
 
   func testVerticalCorrection_correctHorizontally_left() {
@@ -46,8 +46,8 @@ class ButtonOverlapTests: XCTestCase {
     let result = obj.scollCorrection(rect, pinCoordinate: point,
       scrollToRightOnHorizontalCorrection: false)
 
-    XCTAssertEqual(-110, result.width)
-    XCTAssertEqual(0, result.height)
+    XCTAssertEqual(CGFloat(-110), result.width)
+    XCTAssertEqual(CGFloat(0), result.height)
   }
 
   func testVerticalCorrection_correctHorizontally_right() {
@@ -57,8 +57,8 @@ class ButtonOverlapTests: XCTestCase {
     let result = obj.scollCorrection(rect, pinCoordinate: point,
       scrollToRightOnHorizontalCorrection: true)
 
-    XCTAssertEqual(140, result.width)
-    XCTAssertEqual(0, result.height)
+    XCTAssertEqual(CGFloat(140), result.width)
+    XCTAssertEqual(CGFloat(0), result.height)
   }
 
   // buttonOverlapsPin

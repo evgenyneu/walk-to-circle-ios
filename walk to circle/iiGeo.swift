@@ -12,12 +12,12 @@ import Foundation
 import CoreLocation
 import MapKit
 
-class Geo {
-  func degreesToRadians(degrees: Double) -> Double {
+class iiGeo {
+  class func degreesToRadians(degrees: Double) -> Double {
     return (degrees / 180) * M_PI
   }
 
-  func radiansToDegrees(radians: Double) -> Double {
+  class func radiansToDegrees(radians: Double) -> Double {
     return radians * 180 / M_PI
   }
 
@@ -39,7 +39,7 @@ class Geo {
   
     Source: http://www.movable-type.co.uk/scripts/latlong.html
   */
-  func destination(
+  class func destination(
     start: CLLocationCoordinate2D,
     distanceKm: Double,
     bearingDegrees: Double) -> CLLocationCoordinate2D {
@@ -58,12 +58,12 @@ class Geo {
   }
 
   /* Returns random value between min and max */
-  func randomBetween(#min: Double, max: Double) -> Double {
+  class func randomBetween(#min: Double, max: Double) -> Double {
     return min + drand48() * (max - min)
   }
 
   /* Returns random bearing between 0 and 360 degress */
-  func randomBearinDegrees() -> Double {
+  class func randomBearinDegrees() -> Double {
     let min = 0.0
     let max = 360.0
 
@@ -74,20 +74,18 @@ class Geo {
     Returns random coordinate
     which is between minDistanceKm and maxDistanceKm from the start point.
   */
-  func randomCoordinate(start: CLLocationCoordinate2D,
+  class func randomCoordinate(start: CLLocationCoordinate2D,
     minDistanceKm: Double,
     maxDistanceKm: Double) -> CLLocationCoordinate2D {
 
-    let geo = Geo()
+    let distanceKm = iiGeo.randomBetween(min: minDistanceKm, max: maxDistanceKm)
+    let bearingDegrees = iiGeo.randomBearinDegrees()
 
-    let distanceKm = geo.randomBetween(min: minDistanceKm, max: maxDistanceKm)
-    let bearingDegrees = geo.randomBearinDegrees()
-
-    return geo.destination(start, distanceKm: distanceKm,
+    return iiGeo.destination(start, distanceKm: distanceKm,
       bearingDegrees: bearingDegrees)
   }
 
-  func mapSizeInMeters(rect: MKMapRect) -> CGSize {
+  class func mapSizeInMeters(rect: MKMapRect) -> CGSize {
     let eastMapPoint = MKMapPointMake(MKMapRectGetMinX(rect), MKMapRectGetMidY(rect))
     let westMapPoint = MKMapPointMake(MKMapRectGetMaxX(rect), MKMapRectGetMidY(rect))
 
@@ -123,7 +121,7 @@ class Geo {
 
     Source: http://www.movable-type.co.uk/scripts/latlong.html
   */
-  func initialBearing(#start: CLLocationCoordinate2D,
+  class func initialBearing(#start: CLLocationCoordinate2D,
     end: CLLocationCoordinate2D) -> Double {
 
     var φ1 = degreesToRadians(start.latitude)

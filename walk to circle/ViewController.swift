@@ -45,6 +45,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     mapView.showsUserLocation = true
   }
 
+  // Extract: Zoom to location
   func zoomToLocation(userLocation: MKUserLocation, animated: Bool) {
     let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
       MAP_SIZE_METERS, MAP_SIZE_METERS)
@@ -53,6 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   }
 
 
+  // Extract: Zoom to location
   func zoomToInitialLocation() {
     let accuracy = mapView.userLocation.location.horizontalAccuracy
     if accuracy < 0 || accuracy > 100 { return } // Not accurate enough
@@ -85,8 +87,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   func placeCircleOnMap() {
     annotations.removeAll()
 
-    let geo = Geo()
-    let coordinate = geo.randomCoordinate(mapView.userLocation.coordinate,
+    let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceKm: 1, maxDistanceKm: 3)
 
     if needZoomingBeforePlay {
@@ -102,12 +103,14 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     }
   }
 
+  // Extract: Zoom to location
   var needZoomingBeforePlay: Bool {
     return !(ViewController.isZoomLevelOk(mapView.visibleMapRect) && mapView.userLocationVisible)
   }
 
+  // Extract: Zoom to location
   private class func isZoomLevelOk(mapRect: MKMapRect) -> Bool {
-    let mapSize = Geo().mapSizeInMeters(mapRect)
+    let mapSize = iiGeo.mapSizeInMeters(mapRect)
     let maxSize = max(mapSize.width, mapSize.height)
     let minSize = min(mapSize.width, mapSize.height)
 

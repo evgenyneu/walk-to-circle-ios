@@ -1,5 +1,5 @@
 //
-//  GeoTests.swift
+//  iiGeoTests.swift
 //  walk to circle
 //
 //  Created by Evgenii Neumerzhitckii on 19/07/2014.
@@ -9,9 +9,7 @@
 import XCTest
 import CoreLocation
 
-class GeoTests: XCTestCase {
-
-  let geo = Geo()
+class iiGeoTests: XCTestCase {
 
   override func setUp() {
     super.setUp()
@@ -23,18 +21,18 @@ class GeoTests: XCTestCase {
   }
 
   func testDegreesToRadians() {
-    let radians = geo.degreesToRadians(90)
+    let radians = iiGeo.degreesToRadians(90)
     XCTAssertEqual(radians, M_PI / 2)
   }
 
   func testRadiansToDegrees() {
-    let degress = geo.radiansToDegrees(M_PI)
+    let degress = iiGeo.radiansToDegrees(M_PI)
     XCTAssertEqual(degress, 180.0)
   }
 
   func testDestinationWithDistanceAndBearing() {
     let coord = CLLocationCoordinate2DMake(-37.817728, 144.968108)
-    let destination = geo.destination(coord, distanceKm: 0.5, bearingDegrees: 65)
+    let destination = iiGeo.destination(coord, distanceKm: 0.5, bearingDegrees: 65)
 
     XCTAssertEqual(Int(destination.latitude * 100000), -3781582)
 
@@ -43,7 +41,7 @@ class GeoTests: XCTestCase {
 
   func testRandomBetween() {
     for _ in 1...100 {
-      let result = geo.randomBetween(min: 1, max: 5)
+      let result = iiGeo.randomBetween(min: 1, max: 5)
 
       XCTAssertGreaterThanOrEqual(result, 1)
       XCTAssertLessThanOrEqual(result, 5)
@@ -52,7 +50,7 @@ class GeoTests: XCTestCase {
 
   func testRandomBearinDegrees() {
     for _ in 1...100 {
-      let result = geo.randomBearinDegrees()
+      let result = iiGeo.randomBearinDegrees()
 
       XCTAssertGreaterThanOrEqual(result, 0)
       XCTAssertLessThanOrEqual(result, 360)
@@ -63,7 +61,7 @@ class GeoTests: XCTestCase {
     let start = CLLocationCoordinate2DMake(-37.817728, 144.968108)
 
     for _ in 1...100 {
-      let newCoordinate = geo.randomCoordinate(start, minDistanceKm: 1, maxDistanceKm: 5)
+      let newCoordinate = iiGeo.randomCoordinate(start, minDistanceKm: 1, maxDistanceKm: 5)
 
       let locationStart = CLLocation(latitude: start.latitude, longitude: start.longitude)
       let locationEnd = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
@@ -79,7 +77,7 @@ class GeoTests: XCTestCase {
     let start = CLLocationCoordinate2DMake(-37.847480, 144.969737)
     let end = CLLocationCoordinate2DMake(-37.861644, 144.986903)
 
-    let result = geo.initialBearing(start: start, end: end)
+    let result = iiGeo.initialBearing(start: start, end: end)
 
     XCTAssertEqual(136, Int(result))
   }
@@ -88,7 +86,7 @@ class GeoTests: XCTestCase {
     let start = CLLocationCoordinate2DMake(-37.847480, 144.969737)
     let end = CLLocationCoordinate2DMake(-37.879057, 144.924075)
 
-    let result = geo.initialBearing(start: start, end: end)
+    let result = iiGeo.initialBearing(start: start, end: end)
 
     XCTAssertEqual(228, Int(result))
   }
