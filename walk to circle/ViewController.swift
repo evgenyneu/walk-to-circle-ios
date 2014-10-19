@@ -15,6 +15,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var outputLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
+  @IBOutlet weak var rewindButton: UIButton!
 
   private var locationManager: CLLocationManager!
   private var zoomedToInitialLocation = false
@@ -54,6 +55,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   }
 
   private func showStartButton() {
+    startButton.setTitle("", forState: UIControlState.Normal)
     startButton.hidden = false
     iiSounds.shared.play(iiSoundType.blop, atVolume: 0.1)
     iiAnimator.bounce(startButton)
