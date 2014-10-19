@@ -56,7 +56,6 @@ class ButtonOverlap {
         // correct horizontally
         if scrollToRightOnHorizontalCorrection {
           correction.width = buttonRect.maxX - pinCoordinate.x + 100
-          println("Scroll to right \(correction)")
         } else {
           correction.width = buttonRect.origin.x - pinCoordinate.x - 100
         }

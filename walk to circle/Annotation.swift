@@ -63,7 +63,16 @@ extension Ext_MapViewDelegate_Overlay {
       }
 
       annotationView.canShowCallout = true
+    } else {
+      // Sometimes the reused pin annotation view already has a callout subview
+      // which results in displaying two or more callouts above the pin.
+      // To prevent it - remove all existing subviews from annotation.
+      for view in annotationView.subviews {
+        view.removeFromSuperview()
+      }
     }
+
+
     annotationView.annotation = annotation
     annotationView.setSelected(false, animated: false)
     return annotationView
