@@ -43,6 +43,14 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
   @IBAction func onPlay() {
     placeCircleOnMap()
+
+    showRewindButton()
+
+    iiAnimator.rotate3dOut(startButton)
+    iiAnimator.fadeOut(startButton)
+
+    iiAnimator.rotate3dIn(rewindButton)
+    iiAnimator.fadeIn(rewindButton)
   }
 
   private func zoomToInitialLocation() {
@@ -55,10 +63,17 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   }
 
   private func showStartButton() {
+    if !startButton.hidden { return }
     startButton.setTitle("", forState: UIControlState.Normal)
     startButton.hidden = false
     iiSounds.shared.play(iiSoundType.blop, atVolume: 0.1)
     iiAnimator.bounce(startButton)
+  }
+
+  private func showRewindButton() {
+    if !rewindButton.hidden { return }
+    rewindButton.setTitle("", forState: UIControlState.Normal)
+    rewindButton.hidden = false
   }
 
   // Place pin on the map

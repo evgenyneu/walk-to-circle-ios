@@ -48,11 +48,11 @@
                             <constraint firstAttribute="centerX" secondItem="WD4-Gm-ry7" secondAttribute="centerX" id="6gQ-VF-eTE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jC3-dd-eb2" secondAttribute="bottom" constant="20" id="AsP-JS-Fbm"/>
                             <constraint firstItem="BVb-gS-cVf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Cto-05-NU2"/>
-                            <constraint firstItem="ncc-cz-MaM" firstAttribute="centerX" secondItem="jC3-dd-eb2" secondAttribute="centerX" id="EkG-ib-ov2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ncc-cz-MaM" secondAttribute="bottom" id="QhD-qL-hb6"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="top" id="RMX-Gi-TyK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WD4-Gm-ry7" secondAttribute="bottom" constant="20" id="gL0-5G-U0v"/>
                             <constraint firstAttribute="trailing" secondItem="ncc-cz-MaM" secondAttribute="trailing" id="sYv-c8-Qlv"/>
+                            <constraint firstAttribute="centerX" secondItem="jC3-dd-eb2" secondAttribute="centerX" id="uaQ-ID-Lxp"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wnF-Z3-eZu"/>
                         </constraints>
                     </view>
