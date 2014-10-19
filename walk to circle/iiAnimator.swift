@@ -46,32 +46,26 @@ class iiAnimator {
   }
 
   class func rotate3dOut(view: UIView) {
-    view.userInteractionEnabled = false
-
-    var transform = CATransform3DIdentity
-    transform.m34 = -1.0/100.0
-
-    view.layer.transform = CATransform3DRotate(transform, CGFloat(M_PI), 1, 0, 0)
-
-    var rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
-    rotationAnimation.fromValue = NSNumber(double: 0)
-    rotationAnimation.toValue = NSNumber(double: M_PI)
-    rotationAnimation.duration = iiButtonRotateAnimationDuration;
-    view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation1")
+    rotateX3d(view, fromAngle: 0, toAngle: M_PI)
     view.layer.zPosition = 1000
   }
 
   class func rotate3dIn(view: UIView) {
+    rotateX3d(view, fromAngle: -M_PI, toAngle: 0)
+    view.layer.zPosition = 999
+  }
+
+  class func rotateX3d(view: UIView, fromAngle: Double, toAngle: Double) {
     view.userInteractionEnabled = false
 
     var transform = CATransform3DIdentity
     transform.m34 = -1.0/100.0
 
-    view.layer.transform = CATransform3DRotate(transform, CGFloat(0), 1, 0, 0)
+    view.layer.transform = CATransform3DRotate(transform, CGFloat(toAngle), 1, 0, 0)
 
     var rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
-    rotationAnimation.fromValue = NSNumber(double: -M_PI)
-    rotationAnimation.toValue = NSNumber(double: 0)
+    rotationAnimation.fromValue = NSNumber(double: fromAngle)
+    rotationAnimation.toValue = NSNumber(double: toAngle)
     rotationAnimation.duration = iiButtonRotateAnimationDuration;
     view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation2")
     view.layer.zPosition = 999

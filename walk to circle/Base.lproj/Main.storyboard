@@ -35,7 +35,7 @@
                                     <action selector="onPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KB-vS-YAx"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2" customClass="RewindButton" customModule="walk_to_circle" customModuleProvider="target">
                                 <rect key="frame" x="253.5" y="488" width="92" height="92"/>
                                 <state key="normal" title="Rewind" image="rewind.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
