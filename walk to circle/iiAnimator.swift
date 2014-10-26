@@ -8,10 +8,9 @@
 //
 
 import UIKit
+import QuartzCore
 
-let iiButtonRotateAnimationDuration = 1.0
-let iiButtonFadeAnimationDuration = 0.5
-
+let iiButtonRotateAnimationDuration = 0.5
 
 class iiAnimator {
   class func bounce(view: UIView) {
@@ -45,17 +44,17 @@ class iiAnimator {
     }
   }
 
-  class func rotate3dOut(view: UIView) {
-    rotateX3d(view, fromAngle: 0, toAngle: M_PI)
+  class func rotate3dOut(view: UIView, onFinished: (()->())? = nil) {
+    rotateX3d(view, fromAngle: 0, toAngle: M_PI, onFinished)
     view.layer.zPosition = 1000
   }
 
-  class func rotate3dIn(view: UIView) {
-    rotateX3d(view, fromAngle: -M_PI, toAngle: 0)
+  class func rotate3dIn(view: UIView, onFinished: (()->())? = nil) {
+    rotateX3d(view, fromAngle: -M_PI, toAngle: 0, onFinished)
     view.layer.zPosition = 999
   }
 
-  class func rotateX3d(view: UIView, fromAngle: Double, toAngle: Double) {
+  class func rotateX3d(view: UIView, fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
     view.userInteractionEnabled = false
 
     var transform = CATransform3DIdentity
@@ -63,12 +62,13 @@ class iiAnimator {
 
     view.layer.transform = CATransform3DRotate(transform, CGFloat(toAngle), 1, 0, 0)
 
+    CATransaction.begin()
     var rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
     rotationAnimation.fromValue = NSNumber(double: fromAngle)
     rotationAnimation.toValue = NSNumber(double: toAngle)
     rotationAnimation.duration = iiButtonRotateAnimationDuration;
-    view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation2")
-    view.layer.zPosition = 999
+    CATransaction.setCompletionBlock(onFinished)
+    view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
+    CATransaction.commit()
   }
-
 }

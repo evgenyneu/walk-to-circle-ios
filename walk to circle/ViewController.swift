@@ -46,10 +46,16 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     showRewindButton()
 
-    iiAnimator.rotate3dOut(startButton)
+    iiAnimator.rotate3dOut(startButton) {
+      println("Rotate Out finished")
+    }
+
     iiAnimator.fadeOut(startButton)
 
-    iiAnimator.rotate3dIn(rewindButton)
+    iiAnimator.rotate3dIn(rewindButton) {
+      println("Rotate In finished")
+    }
+    
     iiAnimator.fadeIn(rewindButton)
   }
 
