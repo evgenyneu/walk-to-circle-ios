@@ -45,16 +45,16 @@ class iiAnimator {
   }
 
   class func rotate3dOut(view: UIView, onFinished: (()->())? = nil) {
-    rotateX3d(view, fromAngle: 0, toAngle: M_PI, onFinished)
+    springRotateX3d(view, fromAngle: 0, toAngle: M_PI, onFinished)
     view.layer.zPosition = 1000
   }
 
   class func rotate3dIn(view: UIView, onFinished: (()->())? = nil) {
-    rotateX3d(view, fromAngle: -M_PI, toAngle: 0, onFinished)
+    springRotateX3d(view, fromAngle: -M_PI, toAngle: 0, onFinished)
     view.layer.zPosition = 999
   }
 
-  class func rotateX3d(view: UIView, fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
+  class func springRotateX3d(view: UIView, fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
     view.userInteractionEnabled = false
 
     var transform = CATransform3DIdentity
@@ -62,13 +62,13 @@ class iiAnimator {
 
     view.layer.transform = CATransform3DRotate(transform, CGFloat(toAngle), 1, 0, 0)
 
-    CATransaction.begin()
-    var rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.x")
-    rotationAnimation.fromValue = NSNumber(double: fromAngle)
-    rotationAnimation.toValue = NSNumber(double: toAngle)
-    rotationAnimation.duration = iiButtonRotateAnimationDuration;
-    CATransaction.setCompletionBlock(onFinished)
-    view.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
-    CATransaction.commit()
+    SpringAnimation.animateLayer(view.layer,
+      keypath: "transform.rotation.x",
+      duration: 2.0,
+      usingSpringWithDamping: 0.7,
+      initialSpringVelocity: 1.8,
+      fromValue: fromAngle,
+      toValue: toAngle,
+      onFinished: onFinished)
   }
 }

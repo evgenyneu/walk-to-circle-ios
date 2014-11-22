@@ -14,6 +14,7 @@
 		2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* iiGeo.swift */; };
 		2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B770A5F19E8D7E100C28177 /* Launch Screen.xib */; };
 		2B770A6319E8E09800C28177 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
+		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* iiAnimator.swift */; };
 		2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483919BBEA2100CB08AA /* ball_bounce.wav */; };
 		2B99483C19BBF74D00CB08AA /* fall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483B19BBF74D00CB08AA /* fall.wav */; };
@@ -108,6 +109,7 @@
 		2B6D35D2197A581D008DDAE4 /* iiGeo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiGeo.swift; sourceTree = "<group>"; };
 		2B770A5F19E8D7E100C28177 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		2B770A6219E8E09800C28177 /* iiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiQ.swift; sourceTree = "<group>"; };
+		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B99483019BBE4B800CB08AA /* iiAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiAnimator.swift; sourceTree = "<group>"; };
 		2B99483919BBEA2100CB08AA /* ball_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ball_bounce.wav; sourceTree = "<group>"; };
 		2B99483B19BBF74D00CB08AA /* fall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fall.wav; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				2BCFEF3F19EA504A00062A99 /* InitialMapZoom.swift */,
 				2B3347E719F3775D008710E7 /* RewindButton.swift */,
 				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
+				2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */,
 				2BCCDB931968DC63005C4A47 /* ViewController.swift */,
 				2BCCDB951968DC63005C4A47 /* Main.storyboard */,
 				2BCCDB981968DC63005C4A47 /* Images.xcassets */,
@@ -461,6 +464,7 @@
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* InitialMapZoom.swift in Sources */,
+				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
