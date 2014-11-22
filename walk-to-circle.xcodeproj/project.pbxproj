@@ -127,13 +127,13 @@
 		2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlapTests.swift; sourceTree = "<group>"; };
 		2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollToAnnotationTests.swift; sourceTree = "<group>"; };
 		2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollToAnnotation.swift; sourceTree = "<group>"; };
-		2BCCDB8C1968DC63005C4A47 /* walk to circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk to circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk-to-circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB911968DC63005C4A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BCCDB931968DC63005C4A47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2BCCDB961968DC63005C4A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BCCDB981968DC63005C4A47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2BCCDB9E1968DC63005C4A47 /* walk to circleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walk to circleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCCDB9E1968DC63005C4A47 /* walk-to-circleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walk-to-circleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDBA31968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayer.swift; sourceTree = "<group>"; };
@@ -263,8 +263,8 @@
 		2BCCDB8D1968DC63005C4A47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BCCDB8C1968DC63005C4A47 /* walk to circle.app */,
-				2BCCDB9E1968DC63005C4A47 /* walk to circleTests.xctest */,
+				2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */,
+				2BCCDB9E1968DC63005C4A47 /* walk-to-circleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,9 +325,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BCCDB8B1968DC63005C4A47 /* walk to circle */ = {
+		2BCCDB8B1968DC63005C4A47 /* walk-to-circle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk to circle" */;
+			buildConfigurationList = 2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circle" */;
 			buildPhases = (
 				2BCCDB881968DC63005C4A47 /* Sources */,
 				2BCCDB891968DC63005C4A47 /* Frameworks */,
@@ -337,14 +337,14 @@
 			);
 			dependencies = (
 			);
-			name = "walk to circle";
+			name = "walk-to-circle";
 			productName = "walk to circle";
-			productReference = 2BCCDB8C1968DC63005C4A47 /* walk to circle.app */;
+			productReference = 2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2BCCDB9D1968DC63005C4A47 /* walk to circleTests */ = {
+		2BCCDB9D1968DC63005C4A47 /* walk-to-circleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk to circleTests" */;
+			buildConfigurationList = 2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circleTests" */;
 			buildPhases = (
 				2BCCDB9A1968DC63005C4A47 /* Sources */,
 				2BCCDB9B1968DC63005C4A47 /* Frameworks */,
@@ -360,9 +360,9 @@
 				2B6D35D7197A5943008DDAE4 /* PBXTargetDependency */,
 				2B6D35D9197A594A008DDAE4 /* PBXTargetDependency */,
 			);
-			name = "walk to circleTests";
+			name = "walk-to-circleTests";
 			productName = "walk to circleTests";
-			productReference = 2BCCDB9E1968DC63005C4A47 /* walk to circleTests.xctest */;
+			productReference = 2BCCDB9E1968DC63005C4A47 /* walk-to-circleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -383,7 +383,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "walk to circle" */;
+			buildConfigurationList = 2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "walk-to-circle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -396,8 +396,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BCCDB8B1968DC63005C4A47 /* walk to circle */,
-				2BCCDB9D1968DC63005C4A47 /* walk to circleTests */,
+				2BCCDB8B1968DC63005C4A47 /* walk-to-circle */,
+				2BCCDB9D1968DC63005C4A47 /* walk-to-circleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -483,32 +483,32 @@
 /* Begin PBXTargetDependency section */
 		2B6D35CD197A56C3008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
 			targetProxy = 2B6D35CC197A56C3008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35CF197A56C3008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
 			targetProxy = 2B6D35CE197A56C3008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35D5197A58D8008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
 			targetProxy = 2B6D35D4197A58D8008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35D7197A5943008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
 			targetProxy = 2B6D35D6197A5943008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35D9197A594A008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
 			targetProxy = 2B6D35D8197A594A008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2BCCDBA01968DC63005C4A47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk to circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
 			targetProxy = 2BCCDB9F1968DC63005C4A47 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -636,7 +636,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "walk-to-circle";
 			};
 			name = Debug;
 		};
@@ -647,14 +647,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "walk-to-circle";
 			};
 			name = Release;
 		};
 		2BCCDBAC1968DC63005C4A47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/walk to circle.app/walk to circle";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -666,15 +666,15 @@
 				INFOPLIST_FILE = "walk to circleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				PRODUCT_NAME = "walk-to-circleTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/walk-to-circle.app/walk-to-circle";
 			};
 			name = Debug;
 		};
 		2BCCDBAD1968DC63005C4A47 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/walk to circle.app/walk to circle";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -682,15 +682,15 @@
 				INFOPLIST_FILE = "walk to circleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				PRODUCT_NAME = "walk-to-circleTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/walk-to-circle.app/walk-to-circle";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "walk to circle" */ = {
+		2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "walk-to-circle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BCCDBA61968DC63005C4A47 /* Debug */,
@@ -699,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk to circle" */ = {
+		2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BCCDBA91968DC63005C4A47 /* Debug */,
@@ -708,7 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk to circleTests" */ = {
+		2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BCCDBAC1968DC63005C4A47 /* Debug */,
