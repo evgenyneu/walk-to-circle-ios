@@ -111,7 +111,7 @@ extension VCExtensionMapViewDelegate {
   }
 }
 
-// ButtonsDeelgate Delegate
+// ButtonsDelgate
 // ------------------------------
 
 typealias ButtonsDelegateImplementation = ViewController
