@@ -54,7 +54,9 @@ class iiAnimator {
     view.layer.zPosition = 999
   }
 
-  class func springRotateX3d(view: UIView, fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
+  class func springRotateX3d(view: UIView,
+    fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
+      
     view.userInteractionEnabled = false
 
     var transform = CATransform3DIdentity
@@ -62,7 +64,7 @@ class iiAnimator {
 
     view.layer.transform = CATransform3DRotate(transform, CGFloat(toAngle), 1, 0, 0)
 
-    SpringAnimation.animateLayer(view.layer,
+    SpringAnimation.animate(view.layer,
       keypath: "transform.rotation.x",
       duration: 2.0,
       usingSpringWithDamping: 0.7,

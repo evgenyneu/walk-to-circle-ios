@@ -1,7 +1,7 @@
 //
 //  SpringAnimationValues.swift
 //
-//  Returns array of values for CAKeyframeAnimation to achieve spring animation effect
+//  Animates CALayer with spring dumping effect.
 //
 //  Created by Evgenii Neumerzhitckii on 22/11/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
@@ -10,7 +10,8 @@
 import UIKit
 
 class SpringAnimation {
-  class func animateLayer(layer: CALayer,
+  // Animates layer with spring animation.
+  class func animate(layer: CALayer,
     keypath: String,
     duration: CFTimeInterval,
     usingSpringWithDamping: Double,
@@ -19,18 +20,19 @@ class SpringAnimation {
     toValue: Double,
     onFinished: (()->())?) {
 
-    CATransaction.begin()
-    CATransaction.setCompletionBlock(onFinished)
+      CATransaction.begin()
+      CATransaction.setCompletionBlock(onFinished)
 
-    let animation = create(keypath, duration: duration,
-      usingSpringWithDamping: usingSpringWithDamping,
-      initialSpringVelocity: initialSpringVelocity,
-      fromValue: fromValue, toValue: toValue)
+      let animation = create(keypath, duration: duration,
+        usingSpringWithDamping: usingSpringWithDamping,
+        initialSpringVelocity: initialSpringVelocity,
+        fromValue: fromValue, toValue: toValue)
 
-    layer.addAnimation(animation, forKey: keypath + " spring animation")
-    CATransaction.commit()
+      layer.addAnimation(animation, forKey: keypath + " spring animation")
+      CATransaction.commit()
   }
 
+  // Creates CAKeyframeAnimation object.
   class func create(keypath: String,
     duration: CFTimeInterval,
     usingSpringWithDamping: Double,
@@ -38,22 +40,22 @@ class SpringAnimation {
     fromValue: Double,
     toValue: Double) -> CAKeyframeAnimation {
 
-    let dampingMultiplier = Double(10)
-    let velocityMultiplier = Double(10)
+      let dampingMultiplier = Double(10)
+      let velocityMultiplier = Double(10)
 
-    let values = animationValues(fromValue, toValue: toValue,
-      damping: dampingMultiplier * usingSpringWithDamping,
-      initialVelocity: velocityMultiplier * initialSpringVelocity)
+      let values = animationValues(fromValue, toValue: toValue,
+        usingSpringWithDamping: dampingMultiplier * usingSpringWithDamping,
+        initialSpringVelocity: velocityMultiplier * initialSpringVelocity)
 
-    let animation = CAKeyframeAnimation(keyPath: keypath)
-    animation.values = values
-    animation.duration = duration
-    
-    return animation
+      let animation = CAKeyframeAnimation(keyPath: keypath)
+      animation.values = values
+      animation.duration = duration
+
+      return animation
   }
 
   class func animationValues(fromValue: Double, toValue: Double,
-    damping: Double, initialVelocity: Double) -> [Double]{
+    usingSpringWithDamping: Double, initialSpringVelocity: Double) -> [Double]{
 
       let numOfPoints = 500
       var values = [Double](count: numOfPoints, repeatedValue: 0.0)
@@ -63,7 +65,7 @@ class SpringAnimation {
       for point in (0..<numOfPoints) {
         let x = Double(point) / Double(numOfPoints)
         let valueNormalized = animationValuesNormalized(x,
-          damping: damping, initialVelocity: initialVelocity)
+          usingSpringWithDamping: usingSpringWithDamping, initialSpringVelocity: initialSpringVelocity)
 
         let value = toValue - distanceBetweenValues * valueNormalized
         values[point] = value
@@ -72,11 +74,11 @@ class SpringAnimation {
       return values
   }
 
-  private class func animationValuesNormalized(x: Double, damping: Double,
-    initialVelocity: Double) -> Double {
-
-    return pow(M_E, -damping * x) * cos(initialVelocity * x)
+  private class func animationValuesNormalized(x: Double, usingSpringWithDamping: Double,
+    initialSpringVelocity: Double) -> Double {
+      
+      return pow(M_E, -usingSpringWithDamping * x) * cos(initialSpringVelocity * x)
   }
-
-
+  
+  
 }
