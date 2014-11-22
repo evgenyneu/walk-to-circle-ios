@@ -28,18 +28,18 @@ class iiAnimator {
     )
   }
 
-  class func fadeIn(view: UIView) {
+  class func fadeIn(view: UIView, duration: Double) {
     view.alpha = 0
 
-    UIView.animateWithDuration(iiButtonRotateAnimationDuration) {
+    UIView.animateWithDuration(duration) {
       view.alpha = 1
     }
   }
 
-  class func fadeOut(view: UIView) {
+  class func fadeOut(view: UIView, duration: Double) {
     view.alpha = 1
 
-    UIView.animateWithDuration(iiButtonRotateAnimationDuration) {
+    UIView.animateWithDuration(duration) {
       view.alpha = 0
     }
   }
@@ -56,8 +56,6 @@ class iiAnimator {
 
   class func springRotateX3d(view: UIView,
     fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
-
-    view.userInteractionEnabled = false
 
     var transform = CATransform3DIdentity
     transform.m34 = -1.0/100.0

@@ -15,6 +15,8 @@
 		2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B770A5F19E8D7E100C28177 /* Launch Screen.xib */; };
 		2B770A6319E8E09800C28177 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
+		2B87D7FD1A20672000CCE0B6 /* MapButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* MapButtons.swift */; };
+		2B87D8001A206C1000CCE0B6 /* ButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* ButtonsDelegate.swift */; };
 		2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* iiAnimator.swift */; };
 		2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483919BBEA2100CB08AA /* ball_bounce.wav */; };
 		2B99483C19BBF74D00CB08AA /* fall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483B19BBF74D00CB08AA /* fall.wav */; };
@@ -110,6 +112,8 @@
 		2B770A5F19E8D7E100C28177 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		2B770A6219E8E09800C28177 /* iiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiQ.swift; sourceTree = "<group>"; };
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		2B87D7FC1A20672000CCE0B6 /* MapButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapButtons.swift; sourceTree = "<group>"; };
+		2B87D7FF1A206C1000CCE0B6 /* ButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsDelegate.swift; sourceTree = "<group>"; };
 		2B99483019BBE4B800CB08AA /* iiAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiAnimator.swift; sourceTree = "<group>"; };
 		2B99483919BBEA2100CB08AA /* ball_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ball_bounce.wav; sourceTree = "<group>"; };
 		2B99483B19BBF74D00CB08AA /* fall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fall.wav; sourceTree = "<group>"; };
@@ -198,6 +202,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		2B87D7FE1A206BFD00CCE0B6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				2B87D7FF1A206C1000CCE0B6 /* ButtonsDelegate.swift */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		2B99483419BBE56E00CB08AA /* sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +286,7 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
+				2B87D7FE1A206BFD00CCE0B6 /* Delegates */,
 				2B0E49D91970B6FE00B276B2 /* images */,
 				2B99483419BBE56E00CB08AA /* sounds */,
 				2B770A6119E8E07300C28177 /* Utils */,
@@ -283,6 +296,7 @@
 				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
 				2BCFEF4119EA542B00062A99 /* DropPin.swift */,
 				2BCFEF3F19EA504A00062A99 /* InitialMapZoom.swift */,
+				2B87D7FC1A20672000CCE0B6 /* MapButtons.swift */,
 				2B3347E719F3775D008710E7 /* RewindButton.swift */,
 				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
 				2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */,
@@ -450,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCFEF3C19EA010800062A99 /* iiOutputView.swift in Sources */,
+				2B87D8001A206C1000CCE0B6 /* ButtonsDelegate.swift in Sources */,
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
@@ -457,6 +472,7 @@
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
 				2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */,
+				2B87D7FD1A20672000CCE0B6 /* MapButtons.swift in Sources */,
 				2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */,
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,

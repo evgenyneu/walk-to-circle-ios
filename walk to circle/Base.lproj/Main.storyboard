@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -26,20 +26,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-Gm-ry7">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-Gm-ry7">
                                 <rect key="frame" x="254" y="488" width="92" height="92"/>
+                                <color key="backgroundColor" red="1" green="0.89707423050000001" blue="0.1886660412" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Play" image="play.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onPlay" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KB-vS-YAx"/>
+                                    <action selector="onStartTapped:" destination="PLy-sW-1Nd" eventType="touchUpInside" id="JYm-PW-8wx"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2" customClass="RewindButton" customModule="walk_to_circle" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2" customClass="RewindButton" customModule="walk_to_circle" customModuleProvider="target">
                                 <rect key="frame" x="253.5" y="488" width="92" height="92"/>
+                                <color key="backgroundColor" red="1" green="0.89707423050000001" blue="0.1886660412" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Rewind" image="rewind.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onRewindTapped:" destination="PLy-sW-1Nd" eventType="touchUpInside" id="Eub-Ki-yxg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -57,13 +62,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttons" destination="PLy-sW-1Nd" id="nAW-e0-Kka"/>
                         <outlet property="mapView" destination="ncc-cz-MaM" id="dci-eB-mPf"/>
                         <outlet property="outputLabel" destination="BVb-gS-cVf" id="qAw-hC-DvE"/>
-                        <outlet property="rewindButton" destination="jC3-dd-eb2" id="P0t-r2-Jyj"/>
-                        <outlet property="startButton" destination="WD4-Gm-ry7" id="ll8-f0-uAk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="PLy-sW-1Nd" customClass="MapButtons" customModule="walk_to_circle" customModuleProvider="target">
+                    <connections>
+                        <outlet property="rewindButton" destination="jC3-dd-eb2" id="bOl-KC-kM9"/>
+                        <outlet property="startButton" destination="WD4-Gm-ry7" id="3dy-oT-cv7"/>
+                    </connections>
+                </customObject>
             </objects>
         </scene>
     </scenes>

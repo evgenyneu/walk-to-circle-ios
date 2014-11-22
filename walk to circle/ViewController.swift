@@ -10,18 +10,18 @@ import UIKit
 import MapKit
 import QuartzCore
 
-class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewController {
+class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewController, ButtonsDelegate {
 
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var outputLabel: UILabel!
-  @IBOutlet weak var startButton: UIButton!
-  @IBOutlet weak var rewindButton: UIButton!
 
   private var locationManager: CLLocationManager!
   private var zoomedToInitialLocation = false
   private var annotations: Annotations!
   private var callbackAfterRegionDidChange: (()->())?
   private var pindDropHeight: CGFloat = 0
+
+  @IBOutlet var buttons: MapButtons!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,6 +34,8 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     annotations = Annotations(mapView)
 
     initMapView()
+    buttons.viewDidLoad()
+    buttons.delegate = self
   }
 
   private func initMapView() {
@@ -41,45 +43,13 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     mapView.showsUserLocation = true
   }
 
-  @IBAction func onPlay() {
-    placeCircleOnMap()
-
-    showRewindButton()
-
-    iiAnimator.rotate3dOut(startButton) {
-      println("Rotate Out finished")
-    }
-
-    iiAnimator.fadeOut(startButton)
-
-    iiAnimator.rotate3dIn(rewindButton) {
-      println("Rotate In finished")
-    }
-    
-    iiAnimator.fadeIn(rewindButton)
-  }
-
   private func zoomToInitialLocation() {
     if zoomedToInitialLocation { return }
 
     InitialMapZoom.zoomToInitialLocation(mapView) {
       self.zoomedToInitialLocation = true
-      self.showStartButton()
+      self.buttons.showStartButton()
     }
-  }
-
-  private func showStartButton() {
-    if !startButton.hidden { return }
-    startButton.setTitle("", forState: UIControlState.Normal)
-    startButton.hidden = false
-    iiSounds.shared.play(iiSoundType.blop, atVolume: 0.1)
-    iiAnimator.bounce(startButton)
-  }
-
-  private func showRewindButton() {
-    if !rewindButton.hidden { return }
-    rewindButton.setTitle("", forState: UIControlState.Normal)
-    rewindButton.hidden = false
   }
 
   // Place pin on the map
@@ -105,7 +75,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
   private func placePin(coordinate: CLLocationCoordinate2D) {
     let scrollNeeded = ScrollToAnnotation.scrollNeededToSeeAnnotation(mapView,
-      startButton: startButton, willDropAt: coordinate)
+      startButton: buttons.startButton, willDropAt: coordinate)
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
     pindDropHeight =  coordinateInView.y - scrollNeeded.height
@@ -138,6 +108,17 @@ extension VCExtensionMapViewDelegate {
 
   func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
     DropPin.playPinDropSound(pindDropHeight)
+  }
+}
+
+// ButtonsDeelgate Delegate
+// ------------------------------
+
+typealias ButtonsDelegateImplementation = ViewController
+
+extension ButtonsDelegateImplementation {
+  func buttonsDelegateInStart() {
+    placeCircleOnMap()
   }
 }
 
