@@ -1,7 +1,7 @@
 //
 //  SpringAnimationValues.swift
 //
-//  Animates CALayer with spring dumping effect.
+//  Animates CALayer with spring damping effect.
 //
 //  Created by Evgenii Neumerzhitckii on 22/11/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
@@ -10,7 +10,7 @@
 import UIKit
 
 class SpringAnimation {
-  // Animates layer with spring animation.
+  // Animates layer with spring effect.
   class func animate(layer: CALayer,
     keypath: String,
     duration: CFTimeInterval,
@@ -32,7 +32,7 @@ class SpringAnimation {
       CATransaction.commit()
   }
 
-  // Creates CAKeyframeAnimation object.
+  // Creates CAKeyframeAnimation object
   class func create(keypath: String,
     duration: CFTimeInterval,
     usingSpringWithDamping: Double,
@@ -79,6 +79,4 @@ class SpringAnimation {
       
       return pow(M_E, -usingSpringWithDamping * x) * cos(initialSpringVelocity * x)
   }
-  
-  
 }

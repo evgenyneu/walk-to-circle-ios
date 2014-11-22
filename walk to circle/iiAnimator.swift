@@ -56,7 +56,7 @@ class iiAnimator {
 
   class func springRotateX3d(view: UIView,
     fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
-      
+
     view.userInteractionEnabled = false
 
     var transform = CATransform3DIdentity
