@@ -21,9 +21,12 @@
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */; };
 		2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */; };
-		2B8A6DF61A21B29F006351BA /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6DF31A21B29F006351BA /* rewind.png */; };
-		2B8A6DF71A21B29F006351BA /* rewind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6DF41A21B29F006351BA /* rewind@2x.png */; };
-		2B8A6DF81A21B29F006351BA /* rewind@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6DF51A21B29F006351BA /* rewind@3x.png */; };
+		2B8A6E501A21BAFD006351BA /* rewind.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E4D1A21BAFD006351BA /* rewind.png */; };
+		2B8A6E511A21BAFD006351BA /* rewind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E4E1A21BAFD006351BA /* rewind@2x.png */; };
+		2B8A6E521A21BAFD006351BA /* rewind@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E4F1A21BAFD006351BA /* rewind@3x.png */; };
+		2B8A6E571A21BB87006351BA /* rewind_arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E541A21BB87006351BA /* rewind_arrows.png */; };
+		2B8A6E581A21BB87006351BA /* rewind_arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E551A21BB87006351BA /* rewind_arrows@2x.png */; };
+		2B8A6E591A21BB87006351BA /* rewind_arrows@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E561A21BB87006351BA /* rewind_arrows@3x.png */; };
 		2B966A821A21A5AC00AAE8A4 /* YiiMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */; };
 		2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* iiAnimator.swift */; };
 		2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483919BBEA2100CB08AA /* ball_bounce.wav */; };
@@ -113,9 +116,12 @@
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtons.swift; sourceTree = "<group>"; };
 		2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtonsDelegate.swift; sourceTree = "<group>"; };
-		2B8A6DF31A21B29F006351BA /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
-		2B8A6DF41A21B29F006351BA /* rewind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind@2x.png"; sourceTree = "<group>"; };
-		2B8A6DF51A21B29F006351BA /* rewind@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind@3x.png"; sourceTree = "<group>"; };
+		2B8A6E4D1A21BAFD006351BA /* rewind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind.png; sourceTree = "<group>"; };
+		2B8A6E4E1A21BAFD006351BA /* rewind@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind@2x.png"; sourceTree = "<group>"; };
+		2B8A6E4F1A21BAFD006351BA /* rewind@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind@3x.png"; sourceTree = "<group>"; };
+		2B8A6E541A21BB87006351BA /* rewind_arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewind_arrows.png; sourceTree = "<group>"; };
+		2B8A6E551A21BB87006351BA /* rewind_arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind_arrows@2x.png"; sourceTree = "<group>"; };
+		2B8A6E561A21BB87006351BA /* rewind_arrows@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind_arrows@3x.png"; sourceTree = "<group>"; };
 		2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiMap.swift; sourceTree = "<group>"; };
 		2B99483019BBE4B800CB08AA /* iiAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiAnimator.swift; sourceTree = "<group>"; };
 		2B99483919BBEA2100CB08AA /* ball_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ball_bounce.wav; sourceTree = "<group>"; };
@@ -179,9 +185,9 @@
 		2B080B4C1A21B1A30073E1E3 /* Rewind */ = {
 			isa = PBXGroup;
 			children = (
-				2B8A6DF31A21B29F006351BA /* rewind.png */,
-				2B8A6DF41A21B29F006351BA /* rewind@2x.png */,
-				2B8A6DF51A21B29F006351BA /* rewind@3x.png */,
+				2B8A6E4D1A21BAFD006351BA /* rewind.png */,
+				2B8A6E4E1A21BAFD006351BA /* rewind@2x.png */,
+				2B8A6E4F1A21BAFD006351BA /* rewind@3x.png */,
 			);
 			name = Rewind;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 			children = (
 				2B080B4B1A21B19C0073E1E3 /* Play */,
 				2B080B4C1A21B1A30073E1E3 /* Rewind */,
+				2B8A6E531A21BB67006351BA /* Rewind arrows */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -216,6 +223,16 @@
 				2B080B3B1A21A9960073E1E3 /* YiiMapDelegate.swift */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		2B8A6E531A21BB67006351BA /* Rewind arrows */ = {
+			isa = PBXGroup;
+			children = (
+				2B8A6E541A21BB87006351BA /* rewind_arrows.png */,
+				2B8A6E551A21BB87006351BA /* rewind_arrows@2x.png */,
+				2B8A6E561A21BB87006351BA /* rewind_arrows@3x.png */,
+			);
+			name = "Rewind arrows";
 			sourceTree = "<group>";
 		};
 		2B99483419BBE56E00CB08AA /* sounds */ = {
@@ -395,15 +412,18 @@
 				2B080B421A21B0C40073E1E3 /* play.png in Resources */,
 				2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */,
 				2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */,
-				2B8A6DF81A21B29F006351BA /* rewind@3x.png in Resources */,
+				2B8A6E521A21BAFD006351BA /* rewind@3x.png in Resources */,
 				2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */,
 				2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */,
+				2B8A6E581A21BB87006351BA /* rewind_arrows@2x.png in Resources */,
 				2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */,
-				2B8A6DF71A21B29F006351BA /* rewind@2x.png in Resources */,
+				2B8A6E571A21BB87006351BA /* rewind_arrows.png in Resources */,
+				2B8A6E511A21BAFD006351BA /* rewind@2x.png in Resources */,
 				2B99483C19BBF74D00CB08AA /* fall.wav in Resources */,
 				2B080B431A21B0C40073E1E3 /* play@2x.png in Resources */,
+				2B8A6E591A21BB87006351BA /* rewind_arrows@3x.png in Resources */,
 				2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */,
-				2B8A6DF61A21B29F006351BA /* rewind.png in Resources */,
+				2B8A6E501A21BAFD006351BA /* rewind.png in Resources */,
 				2BD86EFB198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
