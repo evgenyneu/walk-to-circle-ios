@@ -12,7 +12,7 @@ class YiiButtons: NSObject {
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var rewindButton: RewindButton!
 
-  var delegate: ButtonsDelegate?
+  var delegate: YiiButtonsDelegate?
 
   @IBAction func onStartTapped(sender: AnyObject) {
     start()
@@ -51,12 +51,12 @@ class YiiButtons: NSObject {
   }
 
   private func rewind() {
-    delegate?.buttonsDelegateStart()
+    delegate?.yiiButtonsDelegate_start()
     iiAnimator.rotate3d360(rewindButton)
   }
 
   private func start() {
-    delegate?.buttonsDelegateStart()
+    delegate?.yiiButtonsDelegate_start()
 
     showRewindButton()
 

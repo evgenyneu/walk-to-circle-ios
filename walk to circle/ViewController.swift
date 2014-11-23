@@ -10,8 +10,8 @@ import UIKit
 import MapKit
 import QuartzCore
 
-class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewController, ButtonsDelegate,
-  YiiMapDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewController,
+  YiiButtonsDelegate, YiiMapDelegate {
 
   @IBOutlet weak var outputLabel: UILabel!
 
@@ -20,8 +20,8 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   private var callbackAfterRegionDidChange: (()->())?
   private var pindDropHeight: CGFloat = 0
 
+  @IBOutlet var yiiButtons: YiiButtons!
   @IBOutlet var yiiMap: YiiMap!
-  @IBOutlet var buttons: YiiButtons!
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,8 +36,8 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
     yiiMap.viewDidLoad()
     yiiMap.delegate = self
 
-    buttons.viewDidLoad()
-    buttons.delegate = self
+    yiiButtons.viewDidLoad()
+    yiiButtons.delegate = self
   }
 
   // Place pin on the map
@@ -82,10 +82,10 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 // ButtonsDelgate
 // ------------------------------
 
-typealias ButtonsDelegateImplementation = ViewController
+typealias YiiButtonsDelegateImplementation = ViewController
 
-extension ButtonsDelegateImplementation {
-  func buttonsDelegateStart() {
+extension YiiButtonsDelegateImplementation {
+  func yiiButtonsDelegate_start() {
     placeCircleOnMap()
   }
 }
@@ -97,7 +97,7 @@ typealias YiiMapDelegateImplementation = ViewController
 
 extension YiiMapDelegateImplementation {
   func yiiMapDelegate_mapIsReady() {
-    buttons.showStartButton()
+    yiiButtons.showStartButton()
   }
 }
 

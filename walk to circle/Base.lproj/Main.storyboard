@@ -62,8 +62,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttons" destination="PLy-sW-1Nd" id="nAW-e0-Kka"/>
                         <outlet property="outputLabel" destination="BVb-gS-cVf" id="qAw-hC-DvE"/>
+                        <outlet property="yiiButtons" destination="PLy-sW-1Nd" id="FVP-7l-ZXn"/>
                         <outlet property="yiiMap" destination="Vk7-nD-YCd" id="N7s-oE-Phq"/>
                     </connections>
                 </viewController>
