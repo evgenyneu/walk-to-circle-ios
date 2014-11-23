@@ -73,4 +73,32 @@ class iiAnimator {
       toValue: toAngle,
       onFinished: onFinished)
   }
+
+  class func addInfiniteAnimation(layer: CALayer, keyPath: String,
+    fromVaue: Double, toValue: Double, duration: Double,
+    autoreverses: Bool = false, cumulative: Bool = false) -> CABasicAnimation {
+
+    let animation = createInfiniteAnimation(keyPath, fromVaue: fromVaue, toValue: toValue,
+      duration: duration, autoreverses: autoreverses, cumulative: cumulative)
+
+    layer.addAnimation(animation, forKey: keyPath)
+
+    return animation
+  }
+
+  class func createInfiniteAnimation(keyPath: String,
+    fromVaue: Double, toValue: Double, duration: Double,
+    autoreverses: Bool = false, cumulative: Bool = false) -> CABasicAnimation {
+
+    let animation = CABasicAnimation(keyPath: keyPath)
+    animation.fromValue = fromVaue
+    animation.toValue = toValue
+    animation.duration = duration
+    animation.autoreverses = autoreverses
+    animation.fillMode = kCAFillModeForwards
+    animation.cumulative = cumulative
+    animation.repeatCount = Float.infinity
+
+    return animation
+  }
 }
