@@ -67,8 +67,8 @@ class iiAnimator {
     SpringAnimation.animate(view.layer,
       keypath: "transform.rotation.x",
       duration: duration,
-      usingSpringWithDamping: 0.6,
-      initialSpringVelocity: 0.5,
+      usingSpringWithDamping: 0.5,
+      initialSpringVelocity: 0.7,
       fromValue: fromAngle,
       toValue: toAngle,
       onFinished: onFinished)

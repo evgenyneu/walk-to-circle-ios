@@ -42,6 +42,7 @@ typealias YiiButtonsDelegateImplementation = ViewController
 
 extension YiiButtonsDelegateImplementation {
   func yiiButtonsDelegate_start() {
+    self.yiiButtons.rewindButton.startCountdown()
     yiiMap.placeCircleOnMap()
   }
 }

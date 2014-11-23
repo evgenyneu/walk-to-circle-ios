@@ -13,6 +13,14 @@ class RewindButton: UIButton {
 
   private let countdownLabel = UILabel()
 
+  private let iiFont = UIFont.systemFontOfSize(40)
+  private let iiColor = UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
+  private let countdownStartFrom = 60
+  private var delayTimer:NSTimer?
+  private var timer: NSTimer?
+
+  private(set) var countdown = 0
+
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
 
@@ -20,18 +28,26 @@ class RewindButton: UIButton {
     showArrows()
   }
 
-  private func initLabel() {
-    let font = UIFont.systemFontOfSize(40)
-    let textColor = UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
+  func startCountdown() {
+    stopTimer()
+    countdown = countdownStartFrom
+    updateText()
+    startDelayTimer()
+  }
 
-    let attributedText = NSAttributedString(string: "60", attributes: [
-      NSForegroundColorAttributeName: textColor,
-      NSFontAttributeName: font,
+  private func updateText() {
+    let attributedText = NSAttributedString(string: String(countdown), attributes: [
+      NSForegroundColorAttributeName: iiColor,
+      NSFontAttributeName: iiFont,
       NSTextEffectAttributeName: NSTextEffectLetterpressStyle
       ])
 
     countdownLabel.attributedText = attributedText
+  }
+
+  private func initLabel() {
     countdownLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+
     RewindButton.positionContdownLabel(self, label: countdownLabel)
   }
 
@@ -47,11 +63,7 @@ class RewindButton: UIButton {
   private class func rotateArrows(layer: CALayer) {
     iiAnimator.addInfiniteAnimation(layer, keyPath: "transform.rotation.z",
       fromVaue: 0, toValue: -M_PI, duration: 1, autoreverses: false)
-
-    iiAnimator.addInfiniteAnimation(layer, keyPath: "transform.rotation.y",
-      fromVaue: 0, toValue: M_PI / 6, duration: 1.3, autoreverses: true)
   }
-
 
   private class func positionContdownLabel(superview: UIView, label: UILabel) {
     superview.addSubview(label)
@@ -73,5 +85,38 @@ class RewindButton: UIButton {
       attribute: NSLayoutAttribute.CenterY,
       multiplier: 1,
       constant: 0))
+  }
+
+  private func startTimer() {
+    stopTimer()
+    timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
+      selector: "timerFired:", userInfo: nil, repeats: true)
+  }
+
+  private func stopTimer() {
+    if let currentTimer = timer {
+      currentTimer.invalidate()
+      timer = nil
+    }
+  }
+
+  func timerFired(timer: NSTimer) {
+    countdown--
+    if countdown <= 0 { countdown = countdownStartFrom }
+    updateText()
+  }
+
+  private func startDelayTimer() {
+    if let currentDelayTimer = delayTimer {
+      currentDelayTimer.invalidate()
+      delayTimer = nil
+    }
+
+    delayTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
+      selector: "delayTimerFired:", userInfo: nil, repeats: false)
+  }
+
+  func delayTimerFired(timer: NSTimer) {
+    startTimer()
   }
 }
