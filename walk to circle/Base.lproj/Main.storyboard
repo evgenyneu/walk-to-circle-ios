@@ -63,8 +63,8 @@
                     </view>
                     <connections>
                         <outlet property="buttons" destination="PLy-sW-1Nd" id="nAW-e0-Kka"/>
-                        <outlet property="mapView" destination="ncc-cz-MaM" id="dci-eB-mPf"/>
                         <outlet property="outputLabel" destination="BVb-gS-cVf" id="qAw-hC-DvE"/>
+                        <outlet property="yiiMap" destination="Vk7-nD-YCd" id="N7s-oE-Phq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,6 +72,11 @@
                     <connections>
                         <outlet property="rewindButton" destination="jC3-dd-eb2" id="bOl-KC-kM9"/>
                         <outlet property="startButton" destination="WD4-Gm-ry7" id="3dy-oT-cv7"/>
+                    </connections>
+                </customObject>
+                <customObject id="Vk7-nD-YCd" customClass="YiiMap" customModule="walk_to_circle" customModuleProvider="target">
+                    <connections>
+                        <outlet property="mapView" destination="ncc-cz-MaM" id="cle-9Q-NuZ"/>
                     </connections>
                 </customObject>
             </objects>

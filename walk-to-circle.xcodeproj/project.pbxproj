@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B080B3B1A21A9960073E1E3 /* YiiMapDelegate.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
 		2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */; };
@@ -104,6 +105,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B080B3B1A21A9960073E1E3 /* YiiMapDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiMapDelegate.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		2B5A5D6F19BC02E700E07F37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				2B87D7FF1A206C1000CCE0B6 /* ButtonsDelegate.swift */,
+				2B080B3B1A21A9960073E1E3 /* YiiMapDelegate.swift */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -298,12 +301,12 @@
 				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
 				2BCFEF4119EA542B00062A99 /* DropPin.swift */,
 				2BCFEF3F19EA504A00062A99 /* InitialMapZoom.swift */,
-				2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */,
-				2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */,
 				2B3347E719F3775D008710E7 /* RewindButton.swift */,
 				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
 				2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */,
 				2BCCDB931968DC63005C4A47 /* ViewController.swift */,
+				2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */,
+				2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */,
 				2BCCDB951968DC63005C4A47 /* Main.storyboard */,
 				2BCCDB981968DC63005C4A47 /* Images.xcassets */,
 				2B770A5F19E8D7E100C28177 /* Launch Screen.xib */,
@@ -480,6 +483,7 @@
 				2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */,
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
+				2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
