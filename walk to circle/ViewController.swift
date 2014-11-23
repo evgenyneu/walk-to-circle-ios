@@ -21,7 +21,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
   private var callbackAfterRegionDidChange: (()->())?
   private var pindDropHeight: CGFloat = 0
 
-  @IBOutlet var buttons: MapButtons!
+  @IBOutlet var buttons: YiiButtons!
 
   override func viewDidLoad() {
     super.viewDidLoad()

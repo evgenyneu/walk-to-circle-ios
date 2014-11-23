@@ -68,7 +68,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="PLy-sW-1Nd" customClass="MapButtons" customModule="walk_to_circle" customModuleProvider="target">
+                <customObject id="PLy-sW-1Nd" customClass="YiiButtons" customModule="walk_to_circle" customModuleProvider="target">
                     <connections>
                         <outlet property="rewindButton" destination="jC3-dd-eb2" id="bOl-KC-kM9"/>
                         <outlet property="startButton" destination="WD4-Gm-ry7" id="3dy-oT-cv7"/>

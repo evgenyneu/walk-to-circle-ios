@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MapButtons: NSObject {
+class YiiButtons: NSObject {
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var rewindButton: RewindButton!
 
@@ -23,8 +23,8 @@ class MapButtons: NSObject {
   }
 
   func viewDidLoad() {
-    MapButtons.initButton(startButton)
-    MapButtons.initButton(rewindButton)
+    YiiButtons.initButton(startButton)
+    YiiButtons.initButton(rewindButton)
   }
 
   private class func initButton(button: UIButton) {
