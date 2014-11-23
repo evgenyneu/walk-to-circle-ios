@@ -51,16 +51,11 @@ class MapButtons: NSObject {
   }
 
   private func rewind() {
-    disableButtonsInteraction()
     delegate?.buttonsDelegateStart()
-
-    iiAnimator.rotate3d360(rewindButton) {
-      self.rewindButton.userInteractionEnabled = true
-    }
+    iiAnimator.rotate3d360(rewindButton)
   }
 
   private func start() {
-    disableButtonsInteraction()
     delegate?.buttonsDelegateStart()
 
     showRewindButton()
@@ -73,10 +68,7 @@ class MapButtons: NSObject {
     // Rotate rewind button
     rewindButton.layer.zPosition = 999
 
-    iiAnimator.rotate3dIn(rewindButton) {
-      self.rewindButton.userInteractionEnabled = true
-    }
-
+    iiAnimator.rotate3dIn(rewindButton)
     iiAnimator.fadeIn(rewindButton, duration: 0.1)
   }
 }
