@@ -1,6 +1,5 @@
 //
-//  iiMap.swift
-//  walk-to-circle
+//  Show map where user drops a pin.
 //
 //  Created by Evgenii Neumerzhitckii on 23/11/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
