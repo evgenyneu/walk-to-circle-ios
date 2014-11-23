@@ -45,28 +45,30 @@ class iiAnimator {
   }
 
   class func rotate3dOut(view: UIView, onFinished: (()->())? = nil) {
-    springRotateX3d(view, fromAngle: 0, toAngle: M_PI, onFinished)
-    view.layer.zPosition = 1000
+    springRotateX3d(view, fromAngle: 0, toAngle: M_PI, duration: 1, onFinished)
   }
 
   class func rotate3dIn(view: UIView, onFinished: (()->())? = nil) {
-    springRotateX3d(view, fromAngle: -M_PI, toAngle: 0, onFinished)
-    view.layer.zPosition = 999
+    springRotateX3d(view, fromAngle: -M_PI, toAngle: 0, duration: 1, onFinished)
+  }
+
+  class func rotate3d360(view: UIView, onFinished: (()->())? = nil) {
+    springRotateX3d(view, fromAngle: 0, toAngle: 2 * M_PI, duration: 2, onFinished)
   }
 
   class func springRotateX3d(view: UIView,
-    fromAngle: Double, toAngle: Double, onFinished: (()->())? = nil) {
+    fromAngle: Double, toAngle: Double, duration: Double, onFinished: (()->())? = nil) {
 
     var transform = CATransform3DIdentity
-    transform.m34 = -1.0/100.0
+    transform.m34 = -1.0/110.0
 
     view.layer.transform = CATransform3DRotate(transform, CGFloat(toAngle), 1, 0, 0)
 
     SpringAnimation.animate(view.layer,
       keypath: "transform.rotation.x",
-      duration: 2.0,
-      usingSpringWithDamping: 0.7,
-      initialSpringVelocity: 1.8,
+      duration: duration,
+      usingSpringWithDamping: 0.6,
+      initialSpringVelocity: 0.5,
       fromValue: fromAngle,
       toValue: toAngle,
       onFinished: onFinished)

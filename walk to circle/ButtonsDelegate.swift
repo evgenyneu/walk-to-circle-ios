@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ButtonsDelegate {
-  func buttonsDelegateInStart()
+  func buttonsDelegateStart()
 }

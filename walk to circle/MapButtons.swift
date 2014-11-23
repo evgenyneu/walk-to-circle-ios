@@ -19,7 +19,7 @@ class MapButtons: NSObject {
   }
 
   @IBAction func onRewindTapped(sender: AnyObject) {
-    println("On rewind button tapped")
+    rewind()
   }
 
   func viewDidLoad() {
@@ -45,16 +45,33 @@ class MapButtons: NSObject {
     rewindButton.hidden = false
   }
 
-  func start() {
-    delegate?.buttonsDelegateInStart()
+  private func disableButtonsInteraction() {
+    startButton.userInteractionEnabled = false
+    rewindButton.userInteractionEnabled = false
+  }
+
+  private func rewind() {
+    disableButtonsInteraction()
+    delegate?.buttonsDelegateStart()
+
+    iiAnimator.rotate3d360(rewindButton) {
+      self.rewindButton.userInteractionEnabled = true
+    }
+  }
+
+  private func start() {
+    disableButtonsInteraction()
+    delegate?.buttonsDelegateStart()
 
     showRewindButton()
 
-    startButton.userInteractionEnabled = false
-    rewindButton.userInteractionEnabled = false
-
+    // Rotate start button
+    startButton.layer.zPosition = 1000
     iiAnimator.rotate3dOut(startButton)
     iiAnimator.fadeOut(startButton, duration: 0.1)
+
+    // Rotate rewind button
+    rewindButton.layer.zPosition = 999
 
     iiAnimator.rotate3dIn(rewindButton) {
       self.rewindButton.userInteractionEnabled = true

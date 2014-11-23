@@ -117,7 +117,7 @@ extension VCExtensionMapViewDelegate {
 typealias ButtonsDelegateImplementation = ViewController
 
 extension ButtonsDelegateImplementation {
-  func buttonsDelegateInStart() {
+  func buttonsDelegateStart() {
     placeCircleOnMap()
   }
 }
