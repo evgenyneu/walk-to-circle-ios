@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol YiiMapDelegate {
   func yiiMapDelegate_mapIsReady()
+  var yiiMapDelegate_startButton: UIView? {get}
 }
