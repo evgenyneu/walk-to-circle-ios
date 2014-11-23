@@ -31,7 +31,7 @@ class Annotation: MKCircle {
 // MapView Delegate
 // ------------------------------
 
-typealias Ext_MapViewDelegate_Overlay = ViewController
+typealias Ext_MapViewDelegate_Overlay = YiiMap
 
 extension Ext_MapViewDelegate_Overlay {
   func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) ->
