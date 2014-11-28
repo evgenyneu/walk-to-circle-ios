@@ -11,13 +11,15 @@ import MapKit
 import QuartzCore
 
 class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewController,
-  YiiButtonsDelegate, YiiMapDelegate {
+  YiiButtonsDelegate, YiiMapDelegate, CountdownDelegate {
 
   @IBOutlet weak var outputLabel: UILabel!
   private var locationManager: CLLocationManager!
 
   @IBOutlet var yiiButtons: YiiButtons!
   @IBOutlet var yiiMap: YiiMap!
+
+  let countdown = Countdown()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,6 +34,8 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 
     yiiButtons.viewDidLoad()
     yiiButtons.delegate = self
+
+    countdown.delegate = self
   }
 }
 
@@ -42,7 +46,7 @@ typealias YiiButtonsDelegateImplementation = ViewController
 
 extension YiiButtonsDelegateImplementation {
   func yiiButtonsDelegate_start() {
-    self.yiiButtons.rewindButton.startCountdown()
+    countdown.start()
     yiiMap.placeCircleOnMap()
   }
 }
@@ -59,6 +63,17 @@ extension YiiMapDelegateImplementation {
 
   var yiiMapDelegate_startButton: UIView? {
     return yiiButtons.startButton
+  }
+}
+
+// CountdownDelegate
+// ------------------------------
+
+typealias CountdownDelegateImplementation = ViewController
+
+extension CountdownDelegateImplementation {
+  func contdownDelegate_tick(value: Int) {
+    yiiButtons.rewindButton.updateText(String(value))
   }
 }
 

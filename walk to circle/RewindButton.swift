@@ -15,11 +15,6 @@ class RewindButton: UIButton {
 
   private let iiFont = UIFont.systemFontOfSize(40)
   private let iiColor = UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
-  private let countdownStartFrom = 60
-  private var delayTimer:NSTimer?
-  private var timer: NSTimer?
-
-  private(set) var countdown = 0
 
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -28,15 +23,8 @@ class RewindButton: UIButton {
     showArrows()
   }
 
-  func startCountdown() {
-    stopTimer()
-    countdown = countdownStartFrom
-    updateText()
-    startDelayTimer()
-  }
-
-  private func updateText() {
-    let attributedText = NSAttributedString(string: String(countdown), attributes: [
+  func updateText(text: String) {
+    let attributedText = NSAttributedString(string: text, attributes: [
       NSForegroundColorAttributeName: iiColor,
       NSFontAttributeName: iiFont,
       NSTextEffectAttributeName: NSTextEffectLetterpressStyle
@@ -85,38 +73,5 @@ class RewindButton: UIButton {
       attribute: NSLayoutAttribute.CenterY,
       multiplier: 1,
       constant: 0))
-  }
-
-  private func startTimer() {
-    stopTimer()
-    timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
-      selector: "timerFired:", userInfo: nil, repeats: true)
-  }
-
-  private func stopTimer() {
-    if let currentTimer = timer {
-      currentTimer.invalidate()
-      timer = nil
-    }
-  }
-
-  func timerFired(timer: NSTimer) {
-    countdown--
-    if countdown <= 0 { countdown = countdownStartFrom }
-    updateText()
-  }
-
-  private func startDelayTimer() {
-    if let currentDelayTimer = delayTimer {
-      currentDelayTimer.invalidate()
-      delayTimer = nil
-    }
-
-    delayTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
-      selector: "delayTimerFired:", userInfo: nil, repeats: false)
-  }
-
-  func delayTimerFired(timer: NSTimer) {
-    startTimer()
   }
 }
