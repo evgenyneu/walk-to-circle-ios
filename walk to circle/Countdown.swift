@@ -32,6 +32,10 @@ class Countdown: NSObject {
     delegate?.contdownDelegate_tick(countdown)
   }
 
+  private func reportDidFinish() {
+    delegate?.contdownDelegate_didFinish()
+  }
+
   private func startTimer() {
     stopTimer()
     timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
@@ -47,10 +51,15 @@ class Countdown: NSObject {
 
   func timerFired(timer: NSTimer) {
     countdown--
+
     if countdown <= 0 {
       countdown = 0
       stopTimer()
+      reportTick()
+      reportDidFinish()
+      return
     }
+
     reportTick()
   }
 

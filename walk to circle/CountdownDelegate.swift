@@ -10,4 +10,5 @@ import Foundation
 
 protocol CountdownDelegate {
   func contdownDelegate_tick(value: Int)
+  func contdownDelegate_didFinish()
 }

@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import QuartzCore
 
-class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewController,
+class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewController,
   YiiButtonsDelegate, YiiMapDelegate, CountdownDelegate {
 
   @IBOutlet weak var outputLabel: UILabel!
@@ -42,7 +42,7 @@ class ViewController: UIViewController, MKMapViewDelegate, iiOutputViewControlle
 // ButtonsDelgate
 // ------------------------------
 
-typealias YiiButtonsDelegateImplementation = ViewController
+typealias YiiButtonsDelegateImplementation = MapViewController
 
 extension YiiButtonsDelegateImplementation {
   func yiiButtonsDelegate_start() {
@@ -54,7 +54,7 @@ extension YiiButtonsDelegateImplementation {
 // ButtonsDelgate
 // ------------------------------
 
-typealias YiiMapDelegateImplementation = ViewController
+typealias YiiMapDelegateImplementation = MapViewController
 
 extension YiiMapDelegateImplementation {
   func yiiMapDelegate_mapIsReady() {
@@ -69,11 +69,16 @@ extension YiiMapDelegateImplementation {
 // CountdownDelegate
 // ------------------------------
 
-typealias CountdownDelegateImplementation = ViewController
+typealias CountdownDelegateImplementation = MapViewController
 
 extension CountdownDelegateImplementation {
   func contdownDelegate_tick(value: Int) {
     yiiButtons.rewindButton.updateText(String(value))
+  }
+
+  func contdownDelegate_didFinish() {
+    yiiMap.mapView.showsUserLocation = false
+    iiPresentViewController.present(self, viewControllerId: "walk view controller")
   }
 }
 

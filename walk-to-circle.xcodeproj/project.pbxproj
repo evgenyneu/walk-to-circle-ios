@@ -40,8 +40,10 @@
 		2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */; };
 		2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */; };
 		2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */; };
+		2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */; };
+		2BAD4F3B1A33C13400C3B5BD /* TegPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F3A1A33C13400C3B5BD /* TegPresentViewController.swift */; };
 		2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB911968DC63005C4A47 /* AppDelegate.swift */; };
-		2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* ViewController.swift */; };
+		2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* MapViewController.swift */; };
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
 		2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB981968DC63005C4A47 /* Images.xcassets */; };
 		2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */; };
@@ -136,10 +138,12 @@
 		2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlapTests.swift; sourceTree = "<group>"; };
 		2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollToAnnotationTests.swift; sourceTree = "<group>"; };
 		2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollToAnnotation.swift; sourceTree = "<group>"; };
+		2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
+		2BAD4F3A1A33C13400C3B5BD /* TegPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegPresentViewController.swift; sourceTree = "<group>"; };
 		2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk-to-circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB911968DC63005C4A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BCCDB931968DC63005C4A47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BCCDB931968DC63005C4A47 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2BCCDB961968DC63005C4A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BCCDB981968DC63005C4A47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2BCCDB9E1968DC63005C4A47 /* walk-to-circleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walk-to-circleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,14 +202,14 @@
 			name = Rewind;
 			sourceTree = "<group>";
 		};
-		2B0E49D91970B6FE00B276B2 /* images */ = {
+		2B0E49D91970B6FE00B276B2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				2B080B4B1A21B19C0073E1E3 /* Play */,
 				2B080B4C1A21B1A30073E1E3 /* Rewind */,
 				2B8A6E531A21BB67006351BA /* Rewind arrows */,
 			);
-			name = images;
+			name = Images;
 			sourceTree = "<group>";
 		};
 		2B770A6119E8E07300C28177 /* Utils */ = {
@@ -219,6 +223,8 @@
 				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
 				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
 				2B8A6E601A21BD09006351BA /* iiLayer.swift */,
+				2BAD4F3A1A33C13400C3B5BD /* TegPresentViewController.swift */,
+				2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -243,14 +249,49 @@
 			name = "Rewind arrows";
 			sourceTree = "<group>";
 		};
-		2B99483419BBE56E00CB08AA /* sounds */ = {
+		2B99483419BBE56E00CB08AA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
 				2B5A5D6D19BC01D100E07F37 /* blop.wav */,
 				2B99483B19BBF74D00CB08AA /* fall.wav */,
 				2B99483919BBEA2100CB08AA /* ball_bounce.wav */,
 			);
-			name = sounds;
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		2BAD4F351A33BDCF00C3B5BD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2BAD4F361A33BDE400C3B5BD /* Map */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		2BAD4F361A33BDE400C3B5BD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				2B87D7FE1A206BFD00CCE0B6 /* Delegates */,
+				2BD21DBB197B5E3B00EBB29A /* Annotation.swift */,
+				2BD21DBD197B5E5D00EBB29A /* Annotations.swift */,
+				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
+				2B8A353C1A292CE00086634F /* Countdown.swift */,
+				2BCFEF4119EA542B00062A99 /* DropPin.swift */,
+				2BCFEF3F19EA504A00062A99 /* InitialMapZoom.swift */,
+				2B3347E719F3775D008710E7 /* RewindButton.swift */,
+				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
+				2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */,
+				2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		2BAD4F371A33BE2E00C3B5BD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2BCCDB931968DC63005C4A47 /* MapViewController.swift */,
+				2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		2BCCDB831968DC63005C4A47 = {
@@ -277,23 +318,12 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
-				2B87D7FE1A206BFD00CCE0B6 /* Delegates */,
-				2B0E49D91970B6FE00B276B2 /* images */,
-				2B99483419BBE56E00CB08AA /* sounds */,
+				2B0E49D91970B6FE00B276B2 /* Images */,
+				2BAD4F351A33BDCF00C3B5BD /* Screens */,
+				2B99483419BBE56E00CB08AA /* Sounds */,
 				2B770A6119E8E07300C28177 /* Utils */,
+				2BAD4F371A33BE2E00C3B5BD /* ViewControllers */,
 				2BCCDB911968DC63005C4A47 /* AppDelegate.swift */,
-				2BD21DBB197B5E3B00EBB29A /* Annotation.swift */,
-				2BD21DBD197B5E5D00EBB29A /* Annotations.swift */,
-				2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */,
-				2BCFEF4119EA542B00062A99 /* DropPin.swift */,
-				2B8A353C1A292CE00086634F /* Countdown.swift */,
-				2BCFEF3F19EA504A00062A99 /* InitialMapZoom.swift */,
-				2B3347E719F3775D008710E7 /* RewindButton.swift */,
-				2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */,
-				2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */,
-				2BCCDB931968DC63005C4A47 /* ViewController.swift */,
-				2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */,
-				2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */,
 				2BCCDB951968DC63005C4A47 /* Main.storyboard */,
 				2BCCDB981968DC63005C4A47 /* Images.xcassets */,
 				2B770A5F19E8D7E100C28177 /* Launch Screen.xib */,
@@ -457,8 +487,9 @@
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
-				2BCCDB941968DC63005C4A47 /* ViewController.swift in Sources */,
+				2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */,
 				2B8A353F1A292E820086634F /* CountdownDelegate.swift in Sources */,
+				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
 				2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */,
@@ -468,6 +499,7 @@
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */,
+				2BAD4F3B1A33C13400C3B5BD /* TegPresentViewController.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
