@@ -9,7 +9,7 @@
 import UIKit
 
 class Countdown: NSObject {
-  private let countdownStartFrom = 10
+  private let countdownStartFrom = 5
   private var delayTimer:NSTimer?
   private var timer: NSTimer?
 
