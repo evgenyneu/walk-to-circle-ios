@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CountdownDelegate {
+protocol CountdownDelegate: class {
   func contdownDelegate_tick(value: Int)
   func contdownDelegate_didFinish()
 }

@@ -11,7 +11,7 @@ import MapKit
 class YiiMap: NSObject, MKMapViewDelegate {
   @IBOutlet weak var mapView: MKMapView!
 
-  var delegate: YiiMapDelegate?
+  weak var delegate: YiiMapDelegate?
 
   private var annotations: Annotations!
   private var callbackAfterRegionDidChange: (()->())?

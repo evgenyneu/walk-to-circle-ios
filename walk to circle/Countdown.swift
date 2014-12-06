@@ -13,7 +13,7 @@ class Countdown: NSObject {
   private var delayTimer:NSTimer?
   private var timer: NSTimer?
 
-  var delegate: CountdownDelegate?
+  weak var delegate: CountdownDelegate?
 
   private(set) var countdown = 0
 

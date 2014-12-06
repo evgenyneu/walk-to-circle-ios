@@ -11,7 +11,7 @@ class YiiButtons: NSObject {
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var rewindButton: RewindButton!
 
-  var delegate: YiiButtonsDelegate?
+  weak var delegate: YiiButtonsDelegate?
 
   @IBAction func onStartTapped(sender: AnyObject) {
     start()

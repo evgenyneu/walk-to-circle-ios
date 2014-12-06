@@ -77,8 +77,7 @@ extension CountdownDelegateImplementation {
   }
 
   func contdownDelegate_didFinish() {
-    yiiMap.mapView.showsUserLocation = false
-    iiPresentViewController.present(self, viewControllerId: "walk view controller")
+    iiPresentViewController.replaceRootViewController(self, viewControllerId: "walk view controller")
   }
 }
 

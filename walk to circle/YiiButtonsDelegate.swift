@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol YiiButtonsDelegate {
+protocol YiiButtonsDelegate: class {
   func yiiButtonsDelegate_start()
 }

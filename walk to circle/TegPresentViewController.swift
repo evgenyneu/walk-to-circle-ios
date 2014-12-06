@@ -13,8 +13,7 @@ class iiPresentViewController {
   class func present(viewController: UIViewController, viewControllerId: String)
     -> UIViewController? {
 
-    if let unwrapedViewController =
-      instantiateViewControllerWithIdentifier(viewController, viewControllerId: viewControllerId) {
+    if let unwrapedViewController = instantiateViewControllerWithIdentifier(viewControllerId) {
       
       viewController.presentViewController(unwrapedViewController, animated: true, completion: nil)
 
@@ -27,8 +26,7 @@ class iiPresentViewController {
   class func pushToNavigationController(viewController: UIViewController,
     viewControllerId: String) -> UIViewController? {
       
-    let newViewController = instantiateViewControllerWithIdentifier(viewController,
-      viewControllerId: viewControllerId)
+    let newViewController = instantiateViewControllerWithIdentifier(viewControllerId)
       
     if let unwrapedNewViewController = newViewController {
       viewController.navigationController?.pushViewController(unwrapedNewViewController,
@@ -38,8 +36,7 @@ class iiPresentViewController {
     return newViewController
   }
   
-  class func instantiateViewControllerWithIdentifier(viewController: UIViewController,
-    viewControllerId: String) -> UIViewController? {
+  class func instantiateViewControllerWithIdentifier(viewControllerId: String) -> UIViewController? {
       
     let bundle = NSBundle.mainBundle()
     if let storyboardName = bundle.objectForInfoDictionaryKey("UIMainStoryboardFile" ) as? NSString {
@@ -49,5 +46,28 @@ class iiPresentViewController {
     }
       
     return nil
+  }
+
+  class func replaceRootViewController(fromViewController: UIViewController,
+    viewControllerId: String) {
+
+    let window = UIApplication.sharedApplication().windows[0] as UIWindow
+
+    if let currentRootViewController = window.rootViewController {
+      if currentRootViewController != fromViewController {
+        return
+      }
+
+      if let newViewController = instantiateViewControllerWithIdentifier(viewControllerId) {
+        UIView.transitionFromView(
+          currentRootViewController.view,
+          toView: newViewController.view,
+          duration: 0.65,
+          options: .TransitionCrossDissolve,
+          completion: { finished in
+            window.rootViewController = newViewController
+        })
+      }
+    }
   }
 }

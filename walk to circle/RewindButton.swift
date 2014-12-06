@@ -10,7 +10,6 @@ import UIKit
 import QuartzCore
 
 class RewindButton: UIButton {
-
   private let countdownLabel = UILabel()
 
   private let iiFont = UIFont.systemFontOfSize(40)
