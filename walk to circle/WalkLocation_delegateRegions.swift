@@ -13,8 +13,6 @@ typealias WalkLocation_delegateRegions = WalkLocation
 
 extension WalkLocation_delegateRegions {
   func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
-
-    
     WalkNotification.showNow("You reached your circle. Congrats!")
   }
 }

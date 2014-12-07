@@ -16,7 +16,9 @@ class CongratsViewController: UIViewController {
   }
 
   @IBAction func onDoneTapped(sender: AnyObject) {
-    iiPresentViewController.replaceRootViewController(self,
-      viewControllerId: "map view controller", options: .TransitionFlipFromBottom)
+    iiPresentViewController.replaceRootViewController(WalkViewControllerIds.Map.rawValue,
+      options: .TransitionFlipFromBottom,
+      duration: WalkConstants.viewControllerTransitionDuration
+    )
   }
 }

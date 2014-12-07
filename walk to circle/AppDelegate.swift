@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
+
     WalkLocation.shared.requestAuthorization()
+
+    iiPresentViewController.setRootViewController(WalkViewControllerIds.Map.rawValue)
+
     return true
   }
 

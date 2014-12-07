@@ -80,6 +80,7 @@
                     </connections>
                 </customObject>
             </objects>
+            <point key="canvasLocation" x="328" y="350"/>
         </scene>
         <!--Walk View Controller-->
         <scene sceneID="Zub-f6-YBr">
@@ -120,12 +121,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHS-kU-p0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="350"/>
+            <point key="canvasLocation" x="1022" y="350"/>
         </scene>
         <!--Congrats View Controller-->
         <scene sceneID="Rdg-2i-QIg">
             <objects>
-                <viewController id="yeR-ET-AoZ" customClass="CongratsViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="congrats view controller" id="yeR-ET-AoZ" customClass="CongratsViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2os-PS-uYQ"/>
                         <viewControllerLayoutGuide type="bottom" id="hhZ-1D-leP"/>
@@ -148,12 +149,6 @@
                                 <connections>
                                     <action selector="onDoneTapped:" destination="yeR-ET-AoZ" eventType="touchUpInside" id="UCs-xV-9xy"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNC-m6-jlx">
-                                <rect key="frame" x="253" y="162" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

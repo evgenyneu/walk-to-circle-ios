@@ -10,32 +10,6 @@
 import UIKit
 
 class iiPresentViewController {
-  class func present(viewController: UIViewController, viewControllerId: String)
-    -> UIViewController? {
-
-    if let unwrapedViewController = instantiateViewControllerWithIdentifier(viewControllerId) {
-      
-      viewController.presentViewController(unwrapedViewController, animated: true, completion: nil)
-
-      return unwrapedViewController
-    }
-
-    return nil
-  }
-  
-  class func pushToNavigationController(viewController: UIViewController,
-    viewControllerId: String) -> UIViewController? {
-      
-    let newViewController = instantiateViewControllerWithIdentifier(viewControllerId)
-      
-    if let unwrapedNewViewController = newViewController {
-      viewController.navigationController?.pushViewController(unwrapedNewViewController,
-        animated: true)
-    }
-      
-    return newViewController
-  }
-  
   class func instantiateViewControllerWithIdentifier(viewControllerId: String) -> UIViewController? {
       
     let bundle = NSBundle.mainBundle()
@@ -48,22 +22,18 @@ class iiPresentViewController {
     return nil
   }
 
-  class func replaceRootViewController(fromViewController: UIViewController,
-    viewControllerId: String, options: UIViewAnimationOptions) -> UIViewController? {
+  class func replaceRootViewController(
+    viewControllerId: String, options: UIViewAnimationOptions, duration: NSTimeInterval) -> UIViewController? {
 
     let window = UIApplication.sharedApplication().windows[0] as UIWindow
 
     if let currentRootViewController = window.rootViewController {
-      if currentRootViewController != fromViewController {
-        // Only replace the view controller if it is root
-        return nil
-      }
 
       if let newViewController = instantiateViewControllerWithIdentifier(viewControllerId) {
-        UIView.transitionFromView(
+        UIView.transitionFromView (
           currentRootViewController.view,
           toView: newViewController.view,
-          duration: 1,
+          duration: duration,
           options: options,
           completion: { finished in
             window.rootViewController = newViewController
@@ -75,4 +45,13 @@ class iiPresentViewController {
 
     return nil
   }
+
+  class func setRootViewController(viewControllerId: String) {
+    if let newViewController = instantiateViewControllerWithIdentifier(viewControllerId) {
+      let window = UIApplication.sharedApplication().windows[0] as UIWindow
+      window.rootViewController = newViewController
+      window.makeKeyAndVisible()
+    }
+  }
+
 }
