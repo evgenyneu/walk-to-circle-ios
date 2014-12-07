@@ -102,17 +102,72 @@
                                     <action selector="onCancelTapped:" destination="weP-hj-53b" eventType="touchUpInside" id="wbz-wP-Tet"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk to your circle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MG-D7n">
+                                <rect key="frame" x="229" y="104" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HFa-MG-D7n" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="84" id="7cC-4w-JwZ"/>
                             <constraint firstItem="0Ja-nW-5eG" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="16" id="Fvq-oY-A9Q"/>
+                            <constraint firstAttribute="centerX" secondItem="HFa-MG-D7n" secondAttribute="centerX" id="i5A-a9-txz"/>
                             <constraint firstAttribute="centerX" secondItem="0Ja-nW-5eG" secondAttribute="centerX" id="zxa-0G-RXy"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHS-kU-p0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176" y="264"/>
+            <point key="canvasLocation" x="1102" y="350"/>
+        </scene>
+        <!--Congrats View Controller-->
+        <scene sceneID="Rdg-2i-QIg">
+            <objects>
+                <viewController id="yeR-ET-AoZ" customClass="CongratsViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2os-PS-uYQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhZ-1D-leP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YYO-j7-YFO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-cv-6Fg">
+                                <rect key="frame" x="233" y="63" width="132.5" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YG-WS-Jdx">
+                                <rect key="frame" x="243" y="152" width="114" height="30"/>
+                                <state key="normal" title="Start a new walk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDoneTapped:" destination="yeR-ET-AoZ" eventType="touchUpInside" id="UCs-xV-9xy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNC-m6-jlx">
+                                <rect key="frame" x="253" y="162" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NKT-cv-6Fg" firstAttribute="top" secondItem="2os-PS-uYQ" secondAttribute="bottom" constant="43" id="VLO-hJ-Jf1"/>
+                            <constraint firstAttribute="centerX" secondItem="0YG-WS-Jdx" secondAttribute="centerX" id="aQZ-LB-WBD"/>
+                            <constraint firstItem="0YG-WS-Jdx" firstAttribute="top" secondItem="NKT-cv-6Fg" secondAttribute="bottom" constant="52" id="oMH-hZ-lDs"/>
+                            <constraint firstAttribute="centerX" secondItem="NKT-cv-6Fg" secondAttribute="centerX" id="ySq-cu-uuF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSR-m6-pYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="350"/>
         </scene>
     </scenes>
     <resources>

@@ -1,5 +1,5 @@
 //
-//  WalkViewController.swift
+//  CongratsViewController.swift
 //  walk-to-circle
 //
 //  Created by Evgenii Neumerzhitckii on 7/12/2014.
@@ -9,18 +9,13 @@
 import UIKit
 import CoreLocation
 
-class WalkViewController: UIViewController {
+class CongratsViewController: UIViewController {
+
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    if let currentApp = AppDelegate.current {
-      if let regionCoordinate = currentApp.circleCoordinate {
-        WalkRegions.startMonitoringForCoordinate(regionCoordinate)
-      }
-    }
   }
-  
-  @IBAction func onCancelTapped(sender: AnyObject) {
+
+  @IBAction func onDoneTapped(sender: AnyObject) {
     iiPresentViewController.replaceRootViewController(self,
       viewControllerId: "map view controller", options: .TransitionFlipFromBottom)
   }
