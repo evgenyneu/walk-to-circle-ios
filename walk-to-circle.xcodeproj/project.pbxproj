@@ -12,6 +12,7 @@
 		2B080B431A21B0C40073E1E3 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B401A21B0C40073E1E3 /* play@2x.png */; };
 		2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B411A21B0C40073E1E3 /* play@3x.png */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
+		2B4E67CA1A34249C0072301A /* WalkRegionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E67C91A34249C0072301A /* WalkRegionMonitor.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
 		2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */; };
 		2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* iiGeo.swift */; };
@@ -112,6 +113,7 @@
 		2B080B401A21B0C40073E1E3 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		2B080B411A21B0C40073E1E3 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
+		2B4E67C91A34249C0072301A /* WalkRegionMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkRegionMonitor.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		2B5A5D6F19BC02E700E07F37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2B5E726B199F3F4C00779AC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -300,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */,
+				2B4E67C91A34249C0072301A /* WalkRegionMonitor.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				2BAD4F3B1A33C13400C3B5BD /* TegPresentViewController.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
+				2B4E67CA1A34249C0072301A /* WalkRegionMonitor.swift in Sources */,
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
 				2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,

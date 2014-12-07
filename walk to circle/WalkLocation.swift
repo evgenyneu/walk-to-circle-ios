@@ -24,4 +24,23 @@ class WalkLocation {
       locationManager.requestAlwaysAuthorization()
     }
   }
+
+  // Regions
+  // ------------
+
+  func startMonitoringForRegion(region: CLRegion) {
+    stopMonitoringForAllRegions()
+
+    iiQ.runAfterDelay(1) {
+      self.locationManager.startMonitoringForRegion(region)
+    }
+  }
+
+  func stopMonitoringForAllRegions() {
+    for monitoredRegion in locationManager.monitoredRegions {
+      if let currentMonitoredRegion = monitoredRegion as? CLRegion {
+        locationManager.stopMonitoringForRegion(currentMonitoredRegion)
+      }
+    }
+  }
 }

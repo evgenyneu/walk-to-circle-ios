@@ -14,6 +14,12 @@ class WalkViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    if let currentApp = AppDelegate.current {
+      if let regionCoordinate = currentApp.circleCoordinate {
+        WalkRegionMonitor.startMonitoringForRegion(regionCoordinate)
+      }
+    }
   }
   
   @IBAction func onCancelTapped(sender: AnyObject) {

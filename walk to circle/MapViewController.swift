@@ -31,6 +31,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
 
     countdown.delegate = self
   }
+
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    WalkLocation.shared.stopMonitoringForAllRegions()
+  }
 }
 
 // ButtonsDelgate
