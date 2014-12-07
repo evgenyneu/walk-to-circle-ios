@@ -15,10 +15,34 @@ enum WalkViewControllers: String {
   case Congrats = "congrats view controller"
 
   func show() {
-    let options = self == WalkViewControllers.Map ? UIViewAnimationOptions.TransitionFlipFromBottom : UIViewAnimationOptions.TransitionFlipFromTop
+    let options = self == WalkViewControllers.Map ?
+      UIViewAnimationOptions.TransitionFlipFromBottom : UIViewAnimationOptions.TransitionFlipFromTop
 
-    iiPresentViewController.replaceRootViewController(self.rawValue,
+    iiPresentViewController.replaceRootViewController(rawValue,
       options: options,
       duration: WalkConstants.viewControllerTransitionDuration)
+
+    WalkViewControllers.current = self
+  }
+
+  static var current: WalkViewControllers {
+    get {
+      let userDefaults = NSUserDefaults.standardUserDefaults()
+      let defaultViewController = WalkViewControllers.Map
+
+      if let currentViewControllerName =
+        userDefaults.valueForKey(WalkConstants.userDefaultsKey_currentViewControllerId) as? String {
+
+        return WalkViewControllers(rawValue: currentViewControllerName) ?? defaultViewController
+      }
+
+      return defaultViewController
+    }
+
+    set {
+      let userDefaults = NSUserDefaults.standardUserDefaults()
+      userDefaults.setValue(newValue.rawValue, forKey: WalkConstants.userDefaultsKey_currentViewControllerId)
+      userDefaults.synchronize()
+    }
   }
 }
