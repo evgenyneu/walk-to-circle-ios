@@ -23,7 +23,7 @@
 		2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B702F1A342B010026CDA9 /* WalkNotification.swift */; };
 		2B7B70331A342E010026CDA9 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70321A342E010026CDA9 /* CongratsViewController.swift */; };
 		2B7B70371A3431780026CDA9 /* WalkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70361A3431780026CDA9 /* WalkConstants.swift */; };
-		2B7B70391A3432450026CDA9 /* WalkViewControllerIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70381A3432450026CDA9 /* WalkViewControllerIds.swift */; };
+		2B7B70391A3432450026CDA9 /* WalkViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */; };
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */; };
 		2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */; };
@@ -130,7 +130,7 @@
 		2B7B702F1A342B010026CDA9 /* WalkNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkNotification.swift; sourceTree = "<group>"; };
 		2B7B70321A342E010026CDA9 /* CongratsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
 		2B7B70361A3431780026CDA9 /* WalkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkConstants.swift; sourceTree = "<group>"; };
-		2B7B70381A3432450026CDA9 /* WalkViewControllerIds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewControllerIds.swift; sourceTree = "<group>"; };
+		2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewControllers.swift; sourceTree = "<group>"; };
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtons.swift; sourceTree = "<group>"; };
 		2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtonsDelegate.swift; sourceTree = "<group>"; };
@@ -325,7 +325,7 @@
 				2B7B70311A342B040026CDA9 /* Location */,
 				2B7B702F1A342B010026CDA9 /* WalkNotification.swift */,
 				2B7B70361A3431780026CDA9 /* WalkConstants.swift */,
-				2B7B70381A3432450026CDA9 /* WalkViewControllerIds.swift */,
+				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -531,7 +531,7 @@
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
-				2B7B70391A3432450026CDA9 /* WalkViewControllerIds.swift in Sources */,
+				2B7B70391A3432450026CDA9 /* WalkViewControllers.swift in Sources */,
 				2B7B70371A3431780026CDA9 /* WalkConstants.swift in Sources */,
 				2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */,
 				2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */,

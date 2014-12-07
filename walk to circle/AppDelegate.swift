@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     WalkLocation.shared.requestAuthorization()
 
-    iiPresentViewController.setRootViewController(WalkViewControllerIds.Map.rawValue)
+    iiPresentViewController.setRootViewController(WalkViewControllers.Map.rawValue)
 
     return true
   }

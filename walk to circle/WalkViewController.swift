@@ -21,8 +21,6 @@ class WalkViewController: UIViewController {
   }
   
   @IBAction func onCancelTapped(sender: AnyObject) {
-    iiPresentViewController.replaceRootViewController(WalkViewControllerIds.Map.rawValue,
-      options: .TransitionFlipFromBottom,
-      duration: WalkConstants.viewControllerTransitionDuration)
+    WalkViewControllers.Map.show()
   }
 }
