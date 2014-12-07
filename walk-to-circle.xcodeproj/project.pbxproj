@@ -42,6 +42,7 @@
 		2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */; };
 		2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */; };
 		2BAD4F3B1A33C13400C3B5BD /* TegPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F3A1A33C13400C3B5BD /* TegPresentViewController.swift */; };
+		2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */; };
 		2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB911968DC63005C4A47 /* AppDelegate.swift */; };
 		2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* MapViewController.swift */; };
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
@@ -140,6 +141,7 @@
 		2B9BA3E719974654009C0DE0 /* ScrollToAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollToAnnotation.swift; sourceTree = "<group>"; };
 		2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
 		2BAD4F3A1A33C13400C3B5BD /* TegPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegPresentViewController.swift; sourceTree = "<group>"; };
+		2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkLocation.swift; sourceTree = "<group>"; };
 		2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk-to-circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB911968DC63005C4A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -294,6 +296,14 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		2BAD4F3E1A33D29D00C3B5BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		2BCCDB831968DC63005C4A47 = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +328,7 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
+				2BAD4F3E1A33D29D00C3B5BD /* Core */,
 				2B0E49D91970B6FE00B276B2 /* Images */,
 				2BAD4F351A33BDCF00C3B5BD /* Screens */,
 				2B99483419BBE56E00CB08AA /* Sounds */,
@@ -487,6 +498,7 @@
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
+				2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */,
 				2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */,
 				2B8A353F1A292E820086634F /* CountdownDelegate.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,

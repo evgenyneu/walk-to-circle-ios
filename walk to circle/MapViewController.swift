@@ -14,7 +14,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
   YiiButtonsDelegate, YiiMapDelegate, CountdownDelegate {
 
   @IBOutlet weak var outputLabel: UILabel!
-  private var locationManager: CLLocationManager!
 
   @IBOutlet var yiiButtons: YiiButtons!
   @IBOutlet var yiiMap: YiiMap!
@@ -23,11 +22,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    locationManager = CLLocationManager()
-    if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
-      locationManager.requestAlwaysAuthorization()
-    }
 
     yiiMap.viewDidLoad()
     yiiMap.delegate = self
