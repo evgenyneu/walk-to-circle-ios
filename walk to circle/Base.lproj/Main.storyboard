@@ -8,7 +8,7 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map view controller" id="BYZ-38-t0r" customClass="MapViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -92,12 +92,27 @@
                     <view key="view" contentMode="scaleToFill" id="gp9-hz-YNi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ja-nW-5eG">
+                                <rect key="frame" x="276" y="36" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCancelTapped:" destination="weP-hj-53b" eventType="touchUpInside" id="wbz-wP-Tet"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Ja-nW-5eG" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="16" id="Fvq-oY-A9Q"/>
+                            <constraint firstAttribute="centerX" secondItem="0Ja-nW-5eG" secondAttribute="centerX" id="zxa-0G-RXy"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHS-kU-p0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="350"/>
+            <point key="canvasLocation" x="1176" y="264"/>
         </scene>
     </scenes>
     <resources>

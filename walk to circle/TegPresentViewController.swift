@@ -49,13 +49,14 @@ class iiPresentViewController {
   }
 
   class func replaceRootViewController(fromViewController: UIViewController,
-    viewControllerId: String) {
+    viewControllerId: String, options: UIViewAnimationOptions) -> UIViewController? {
 
     let window = UIApplication.sharedApplication().windows[0] as UIWindow
 
     if let currentRootViewController = window.rootViewController {
       if currentRootViewController != fromViewController {
-        return
+        // Only replace the view controller if it is root
+        return nil
       }
 
       if let newViewController = instantiateViewControllerWithIdentifier(viewControllerId) {
@@ -63,11 +64,15 @@ class iiPresentViewController {
           currentRootViewController.view,
           toView: newViewController.view,
           duration: 0.65,
-          options: .TransitionCrossDissolve,
+          options: options,
           completion: { finished in
             window.rootViewController = newViewController
         })
+
+        return newViewController
       }
     }
+
+    return nil
   }
 }

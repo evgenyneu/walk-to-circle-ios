@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
   var window: UIWindow?
 
+  var circleCoordinate: CLLocationCoordinate2D?
+
+  class var current: AppDelegate? {
+    return UIApplication.sharedApplication().delegate as? AppDelegate
+  }
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
     // Override point for customization after application launch.

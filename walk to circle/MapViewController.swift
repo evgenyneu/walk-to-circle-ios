@@ -77,7 +77,8 @@ extension CountdownDelegateImplementation {
   }
 
   func contdownDelegate_didFinish() {
-    iiPresentViewController.replaceRootViewController(self, viewControllerId: "walk view controller")
+    iiPresentViewController.replaceRootViewController(self,
+      viewControllerId: "walk view controller", options: .TransitionFlipFromTop)
   }
 }
 

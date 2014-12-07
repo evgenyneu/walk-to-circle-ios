@@ -19,6 +19,7 @@ class YiiMap: NSObject, MKMapViewDelegate {
   private var zoomedToInitialLocation = false
   private var pindDropHeight: CGFloat = 0
 
+
   func viewDidLoad() {
     annotations = Annotations(mapView)
 
@@ -40,6 +41,8 @@ class YiiMap: NSObject, MKMapViewDelegate {
 
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceKm: 1, maxDistanceKm: 3)
+     
+    AppDelegate.current?.circleCoordinate = coordinate
 
     if InitialMapZoom.needZoomingBeforePlay(mapView) {
       doAfterRegionDidChange {

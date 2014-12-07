@@ -7,7 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WalkViewController: UIViewController {
+  var circleCoordinate: CLLocationCoordinate2D?
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  @IBAction func onCancelTapped(sender: AnyObject) {
+    iiPresentViewController.replaceRootViewController(self,
+      viewControllerId: "map view controller", options: .TransitionFlipFromBottom)
+  }
 }
