@@ -19,7 +19,8 @@
 		2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* iiGeo.swift */; };
 		2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B770A5F19E8D7E100C28177 /* Launch Screen.xib */; };
 		2B770A6319E8E09800C28177 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
-		2B7B702E1A3428E30026CDA9 /* WalkLocationRegionsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B702D1A3428E30026CDA9 /* WalkLocationRegionsExtension.swift */; };
+		2B7B702E1A3428E30026CDA9 /* WalkLocation_delegateRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B702D1A3428E30026CDA9 /* WalkLocation_delegateRegions.swift */; };
+		2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B702F1A342B010026CDA9 /* WalkNotification.swift */; };
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */; };
 		2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */; };
@@ -122,7 +123,8 @@
 		2B6D35D2197A581D008DDAE4 /* iiGeo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiGeo.swift; sourceTree = "<group>"; };
 		2B770A5F19E8D7E100C28177 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		2B770A6219E8E09800C28177 /* iiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiQ.swift; sourceTree = "<group>"; };
-		2B7B702D1A3428E30026CDA9 /* WalkLocationRegionsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkLocationRegionsExtension.swift; sourceTree = "<group>"; };
+		2B7B702D1A3428E30026CDA9 /* WalkLocation_delegateRegions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkLocation_delegateRegions.swift; sourceTree = "<group>"; };
+		2B7B702F1A342B010026CDA9 /* WalkNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkNotification.swift; sourceTree = "<group>"; };
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtons.swift; sourceTree = "<group>"; };
 		2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtonsDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +237,16 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		2B7B70311A342B040026CDA9 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */,
+				2B7B702D1A3428E30026CDA9 /* WalkLocation_delegateRegions.swift */,
+				2B4E67C91A34249C0072301A /* WalkRegions.swift */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 		2B87D7FE1A206BFD00CCE0B6 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,9 +315,8 @@
 		2BAD4F3E1A33D29D00C3B5BD /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */,
-				2B7B702D1A3428E30026CDA9 /* WalkLocationRegionsExtension.swift */,
-				2B4E67C91A34249C0072301A /* WalkRegions.swift */,
+				2B7B70311A342B040026CDA9 /* Location */,
+				2B7B702F1A342B010026CDA9 /* WalkNotification.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -499,7 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B7B702E1A3428E30026CDA9 /* WalkLocationRegionsExtension.swift in Sources */,
+				2B7B702E1A3428E30026CDA9 /* WalkLocation_delegateRegions.swift in Sources */,
 				2BCFEF3C19EA010800062A99 /* iiOutputView.swift in Sources */,
 				2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */,
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
@@ -525,6 +536,7 @@
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
 				2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
+				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* InitialMapZoom.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */,
