@@ -63,7 +63,7 @@ class iiPresentViewController {
         UIView.transitionFromView(
           currentRootViewController.view,
           toView: newViewController.view,
-          duration: 0.65,
+          duration: 1,
           options: options,
           completion: { finished in
             window.rootViewController = newViewController
