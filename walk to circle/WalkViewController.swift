@@ -17,7 +17,7 @@ class WalkViewController: UIViewController {
 
     if let currentApp = AppDelegate.current {
       if let regionCoordinate = currentApp.circleCoordinate {
-        WalkRegionMonitor.startMonitoringForRegion(regionCoordinate)
+        WalkRegions.startMonitoringForCoordinate(regionCoordinate)
       }
     }
   }

@@ -34,7 +34,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
 
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    WalkLocation.shared.stopMonitoringForAllRegions()
+    WalkRegions.stopMonitoringForAllRegions()
   }
 }
 
