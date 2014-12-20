@@ -9,7 +9,29 @@
 import UIKit
 
 class LocationDeniedViewController: UIViewController {
+  @IBOutlet weak var openAppSettingsButton: UIButton!
+  @IBOutlet weak var settingsInstructionLabel: UILabel!
+
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    if canOpenAppSettings {
+      settingsInstructionLabel.text = "Please allow it to access location."
+    } else {
+      settingsInstructionLabel.text = "Please enable location services in Settings > Privacy > Location Services."
+      openAppSettingsButton.removeFromSuperview()
+    }
+  }
+
+  @IBAction func onOpenAppSettingsTapped(sender: AnyObject) {
+    if !canOpenAppSettings { return }
+
+    if let appSettingsUrl = NSURL(string: UIApplicationOpenSettingsURLString) {
+      UIApplication.sharedApplication().openURL(appSettingsUrl)
+    }
+  }
+
+  private var canOpenAppSettings: Bool {
+    return iiOsVersion.version >= 8
   }
 }

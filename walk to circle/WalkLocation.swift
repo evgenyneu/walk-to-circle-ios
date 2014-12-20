@@ -7,6 +7,7 @@
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
 //
 
+import UIKit
 import CoreLocation
 
 let iiWalkLocation = WalkLocation()
@@ -34,7 +35,7 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
       
     case .Denied, .Restricted:
       WalkViewControllers.LocationDenied.show()
-
+      
     case .NotDetermined:
       if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
         locationManager.requestAlwaysAuthorization()

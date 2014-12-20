@@ -12,6 +12,7 @@
 		2B080B431A21B0C40073E1E3 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B401A21B0C40073E1E3 /* play@2x.png */; };
 		2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B411A21B0C40073E1E3 /* play@3x.png */; };
 		2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276321A45019000F6ED44 /* LocationDeniedViewController.swift */; };
+		2B1276351A450DA000F6ED44 /* iiOsVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276341A450DA000F6ED44 /* iiOsVersion.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B4E67CA1A34249C0072301A /* WalkRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E67C91A34249C0072301A /* WalkRegions.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
@@ -119,6 +120,7 @@
 		2B080B401A21B0C40073E1E3 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		2B080B411A21B0C40073E1E3 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
 		2B1276321A45019000F6ED44 /* LocationDeniedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDeniedViewController.swift; sourceTree = "<group>"; };
+		2B1276341A450DA000F6ED44 /* iiOsVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiOsVersion.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
 		2B4E67C91A34249C0072301A /* WalkRegions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkRegions.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				2B99483019BBE4B800CB08AA /* iiAnimator.swift */,
+				2B1276341A450DA000F6ED44 /* iiOsVersion.swift */,
 				2B6D35D2197A581D008DDAE4 /* iiGeo.swift */,
 				2BCFEF3B19EA010800062A99 /* iiOutputView.swift */,
 				2B770A6219E8E09800C28177 /* iiQ.swift */,
@@ -528,6 +531,7 @@
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
 				2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
+				2B1276351A450DA000F6ED44 /* iiOsVersion.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */,
 				2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */,
