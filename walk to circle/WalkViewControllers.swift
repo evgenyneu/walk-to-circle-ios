@@ -16,6 +16,8 @@ enum WalkViewControllers: String {
   case LocationDenied = "location denied controller"
 
   func show() {
+    if WalkViewControllers.current == self { return }
+
     let options = self == WalkViewControllers.Map ?
       UIViewAnimationOptions.TransitionFlipFromBottom : UIViewAnimationOptions.TransitionFlipFromTop
 
