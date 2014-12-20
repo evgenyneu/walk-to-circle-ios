@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -81,6 +82,38 @@
                 </customObject>
             </objects>
             <point key="canvasLocation" x="328" y="350"/>
+        </scene>
+        <!--Location Denied View Controller-->
+        <scene sceneID="ASP-ke-ysi">
+            <objects>
+                <viewController storyboardIdentifier="location denied controller" id="Vij-1u-SNl" customClass="LocationDeniedViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZdH-oa-Yb3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zjk-lt-O4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q6C-jQ-pz2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOQ-av-wGk">
+                                <rect key="frame" x="16" y="279" width="568" height="41"/>
+                                <string key="text">"Walk to Circle" app needs your permission to determine your location. Please enable location services in Settings &gt; Privacy &gt; Location Services</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qOQ-av-wGk" firstAttribute="leading" secondItem="q6C-jQ-pz2" secondAttribute="leadingMargin" id="cVQ-Lp-0ac"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qOQ-av-wGk" secondAttribute="trailing" id="lFE-QL-SKs"/>
+                            <constraint firstAttribute="centerY" secondItem="qOQ-av-wGk" secondAttribute="centerY" id="v6d-7p-UY4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gmq-fq-nXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="1078"/>
         </scene>
         <!--Walk View Controller-->
         <scene sceneID="Zub-f6-YBr">

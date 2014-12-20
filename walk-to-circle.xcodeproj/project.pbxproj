@@ -11,6 +11,7 @@
 		2B080B421A21B0C40073E1E3 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B3F1A21B0C40073E1E3 /* play.png */; };
 		2B080B431A21B0C40073E1E3 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B401A21B0C40073E1E3 /* play@2x.png */; };
 		2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B411A21B0C40073E1E3 /* play@3x.png */; };
+		2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276321A45019000F6ED44 /* LocationDeniedViewController.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B4E67CA1A34249C0072301A /* WalkRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E67C91A34249C0072301A /* WalkRegions.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
@@ -117,6 +118,7 @@
 		2B080B3F1A21B0C40073E1E3 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		2B080B401A21B0C40073E1E3 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		2B080B411A21B0C40073E1E3 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
+		2B1276321A45019000F6ED44 /* LocationDeniedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDeniedViewController.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
 		2B4E67C91A34249C0072301A /* WalkRegions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkRegions.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				2B7B70321A342E010026CDA9 /* CongratsViewController.swift */,
+				2B1276321A45019000F6ED44 /* LocationDeniedViewController.swift */,
 				2BCCDB931968DC63005C4A47 /* MapViewController.swift */,
 				2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */,
 			);
@@ -523,6 +526,7 @@
 				2BCFEF3C19EA010800062A99 /* iiOutputView.swift in Sources */,
 				2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */,
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
+				2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */,

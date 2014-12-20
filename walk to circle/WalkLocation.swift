@@ -23,9 +23,38 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
     locationManager.delegate = self
   }
 
-  func requestAuthorization() {
-    if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
-      locationManager.requestAlwaysAuthorization()
+  func start() {
+    checkAuthorizationStatus(CLLocationManager.authorizationStatus())
+  }
+
+  func checkAuthorizationStatus(status: CLAuthorizationStatus) {
+    switch status {
+    case .Authorized:
+      WalkViewControllers.Map.show()
+      
+    case .Denied, .Restricted:
+      WalkViewControllers.LocationDenied.show()
+
+    case .NotDetermined:
+      if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
+        locationManager.requestAlwaysAuthorization()
+      }
+    default:
+      let none = 0
     }
+  }
+}
+
+// CLLocationManagerDelegate
+// ------------------------------
+
+typealias WalkLocation_LocationManagerDelegate_Implementation = WalkLocation
+
+extension WalkLocation_LocationManagerDelegate_Implementation {
+
+  func locationManager(manager: CLLocationManager!,
+    didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+
+    checkAuthorizationStatus(status)
   }
 }

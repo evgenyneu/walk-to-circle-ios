@@ -13,6 +13,7 @@ enum WalkViewControllers: String {
   case Map = "map view controller"
   case Walk = "walk view controller"
   case Congrats = "congrats view controller"
+  case LocationDenied = "location denied controller"
 
   func show() {
     let options = self == WalkViewControllers.Map ?
