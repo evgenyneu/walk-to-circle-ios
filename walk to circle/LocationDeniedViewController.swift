@@ -16,7 +16,7 @@ class LocationDeniedViewController: UIViewController {
     super.viewDidLoad()
 
     if canOpenAppSettings {
-      settingsInstructionLabel.text = "Please allow it to access location."
+      settingsInstructionLabel.text = "Please allow location access in Settings."
     } else {
       settingsInstructionLabel.text = "Please enable location services in Settings > Privacy > Location Services."
       openAppSettingsButton.removeFromSuperview()
