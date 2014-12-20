@@ -14,6 +14,7 @@ enum WalkViewControllers: String {
   case Walk = "walk view controller"
   case Congrats = "congrats view controller"
   case LocationDenied = "location denied controller"
+  case RegionMonitoringUnavailable = "region monitoring unavailable controller"
 
   func show() {
     if WalkViewControllers.current == self { return }

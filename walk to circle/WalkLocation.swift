@@ -29,6 +29,14 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
   }
 
   func checkAuthorizationStatus(status: CLAuthorizationStatus) {
+
+    if !CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion) {
+      // Region monitoring is not available on the hardware,
+      // which means that our app is not functional on this device.
+      WalkViewControllers.RegionMonitoringUnavailable.show()
+      return
+    }
+
     switch status {
     case .Authorized:
       WalkViewControllers.Map.show()

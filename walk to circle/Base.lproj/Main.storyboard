@@ -95,24 +95,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Walk to Circle&quot; app needs permission to determine your location. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOQ-av-wGk">
-                                <rect key="frame" x="16" y="270" width="568" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOQ-av-wGk">
+                                <rect key="frame" x="16" y="219" width="568" height="82.5"/>
+                                <string key="text">"Walk to Circle" needs access to your location in order to notify you when you reach a circle on the map.
+
+Your location info never leaves your phone and stays private.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-8X-uyD">
-                                <rect key="frame" x="251" y="340" width="98" height="30"/>
-                                <state key="normal" title="Open Settings">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-8X-uyD">
+                                <rect key="frame" x="239" y="401.5" width="121" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Change settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="onOpenAppSettingsTapped:" destination="Vij-1u-SNl" eventType="touchUpInside" id="WGu-j4-vrL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-Ln-TdQ">
-                                <rect key="frame" x="16" y="300" width="568" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enable location services in Settings &gt; Privacy &gt; Location Services." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-Ln-TdQ">
+                                <rect key="frame" x="16" y="331" width="568" height="40.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -120,13 +124,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="9FK-8X-uyD" secondAttribute="centerX" id="D9H-ZY-cAm"/>
-                            <constraint firstItem="p6h-Ln-TdQ" firstAttribute="top" secondItem="qOQ-av-wGk" secondAttribute="bottom" constant="10" id="IPT-cq-4I3"/>
+                            <constraint firstItem="p6h-Ln-TdQ" firstAttribute="top" secondItem="qOQ-av-wGk" secondAttribute="bottom" constant="30" id="IPT-cq-4I3"/>
                             <constraint firstItem="p6h-Ln-TdQ" firstAttribute="leading" secondItem="q6C-jQ-pz2" secondAttribute="leadingMargin" id="Nyi-Um-paX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p6h-Ln-TdQ" secondAttribute="trailing" id="bp6-Wn-XxI"/>
                             <constraint firstItem="qOQ-av-wGk" firstAttribute="leading" secondItem="q6C-jQ-pz2" secondAttribute="leadingMargin" id="cVQ-Lp-0ac"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qOQ-av-wGk" secondAttribute="trailing" id="lFE-QL-SKs"/>
-                            <constraint firstAttribute="centerY" secondItem="qOQ-av-wGk" secondAttribute="centerY" constant="20" id="v6d-7p-UY4"/>
-                            <constraint firstItem="9FK-8X-uyD" firstAttribute="top" secondItem="p6h-Ln-TdQ" secondAttribute="bottom" constant="20" id="wOO-aM-QW3"/>
+                            <constraint firstAttribute="centerY" secondItem="qOQ-av-wGk" secondAttribute="centerY" constant="40" id="v6d-7p-UY4"/>
+                            <constraint firstItem="9FK-8X-uyD" firstAttribute="top" secondItem="p6h-Ln-TdQ" secondAttribute="bottom" constant="30" id="wOO-aM-QW3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -178,6 +182,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHS-kU-p0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1022" y="350"/>
+        </scene>
+        <!--Region Monitoring Unavailable-->
+        <scene sceneID="tUa-sL-pbp">
+            <objects>
+                <viewController storyboardIdentifier="region monitoring unavailable controller" id="KX9-bf-t40" customClass="RegionMonitoringUnavailable" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6QA-Ti-7EF"/>
+                        <viewControllerLayoutGuide type="bottom" id="CuG-r5-v5q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BJm-Xs-fur">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unfortunately the app won't work on your device because it can not monitor geo regions. I am sorry for that. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-pU-kPR">
+                                <rect key="frame" x="16" y="279" width="568" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3pm-pU-kPR" secondAttribute="trailing" id="AfX-2T-MaJ"/>
+                            <constraint firstItem="3pm-pU-kPR" firstAttribute="leading" secondItem="BJm-Xs-fur" secondAttribute="leadingMargin" id="JX6-4Z-cDl"/>
+                            <constraint firstAttribute="centerY" secondItem="3pm-pU-kPR" secondAttribute="centerY" id="ZGR-SQ-WGX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qvs-vk-lo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="1078"/>
         </scene>
         <!--Congrats View Controller-->
         <scene sceneID="Rdg-2i-QIg">

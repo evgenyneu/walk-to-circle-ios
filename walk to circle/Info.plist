@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Your location is used to determine when you reach the circle.</string>
+	<string>The app will notify you when you walk into a circle on the map.</string>
 	<key>NSLocationUsageDescription</key>
-	<string>Your location is used to determine when you reach the circle.</string>
+	<string>The app will notify you when you walk into a circle on the map.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
