@@ -10,7 +10,19 @@ import Foundation
 import CoreLocation
 
 let iiWalkRegionId = "walk to circle region"
-let iiWalkRegionSize = CLLocationDistance(100)
+
+
+// These values were determined experimentally.
+// When we monitor for a region of 100m radius, it sends 'region enter'
+// when we are about 130m from its center.
+// So we monitor for 100m but draw the overlay of 130m meters on the map
+
+// Region enter even location may still vary plus/minus 30m in a city,
+// because region monitoring is using WiFi location techniques.
+
+let iiWalkRegionCircleRadiusMeters = CLLocationDistance(100)
+let iiWalkRegionOverlayCircleRadiusMeters = CLLocationDistance(130)
+
 
 class WalkRegions {
   class func startMonitoringForCoordinate(coordinate: CLLocationCoordinate2D) {
@@ -41,7 +53,7 @@ class WalkRegions {
 
   private class func createRegion(coordinate: CLLocationCoordinate2D) -> CLCircularRegion {
     return CLCircularRegion(center: coordinate,
-      radius: iiWalkRegionSize, identifier: iiWalkRegionId)
+      radius: iiWalkRegionCircleRadiusMeters, identifier: iiWalkRegionId)
   }
 
   class var locationManager: CLLocationManager {
