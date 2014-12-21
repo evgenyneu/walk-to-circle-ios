@@ -40,7 +40,8 @@ class YiiMap: NSObject, MKMapViewDelegate {
     annotations.removeAll()
 
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
-      minDistanceKm: 0.4, maxDistanceKm: 0.4)
+      minDistanceMeters: iiPlaceCircleDistanceMeters,
+      maxDistanceMeters: iiPlaceCircleDistanceMeters)
      
     AppDelegate.current?.circleCoordinate = coordinate
 

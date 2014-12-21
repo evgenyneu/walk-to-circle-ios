@@ -21,7 +21,7 @@ class Annotations {
   func add(coordinate: CLLocationCoordinate2D, id: String, subtitle: String) -> Annotation {
     if all[id] != nil { return all[id]! }
 
-    let annotation = Annotation(centerCoordinate: coordinate, radius: 130)
+    let annotation = Annotation(centerCoordinate: coordinate, radius: iiWalkRegionSize)
     annotation.title = id
     annotation.subtitle = subtitle
     all[id] = annotation

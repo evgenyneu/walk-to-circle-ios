@@ -41,15 +41,15 @@ class iiGeo {
   */
   class func destination(
     start: CLLocationCoordinate2D,
-    distanceKm: Double,
+    distanceMeters: Double,
     bearingDegrees: Double) -> CLLocationCoordinate2D {
 
     let φ1 = degreesToRadians(start.latitude)
     let λ1 = degreesToRadians(start.longitude)
 
     let θ = degreesToRadians(bearingDegrees)
-    let R = 6_371.0; // Earth mean radius
-    let δ = distanceKm / R
+    let R = 6_371_000.0; // Earth mean radius
+    let δ = distanceMeters / R
 
     let φ2 = asin( sin(φ1) * cos(δ) + cos(φ1) * sin(δ) * cos(θ) )
     let λ2 = λ1 + atan2( sin(θ) * sin(δ) * cos(φ1), cos(δ) - sin(φ1) * sin(φ2) )
@@ -72,16 +72,16 @@ class iiGeo {
 
   /*
     Returns random coordinate
-    which is between minDistanceKm and maxDistanceKm from the start point.
+    which is between minDistanceMeters and maxDistanceMeters from the start point.
   */
   class func randomCoordinate(start: CLLocationCoordinate2D,
-    minDistanceKm: Double,
-    maxDistanceKm: Double) -> CLLocationCoordinate2D {
+    minDistanceMeters: Double,
+    maxDistanceMeters: Double) -> CLLocationCoordinate2D {
 
-    let distanceKm = iiGeo.randomBetween(min: minDistanceKm, max: maxDistanceKm)
+    let distanceMeters = iiGeo.randomBetween(min: minDistanceMeters, max: maxDistanceMeters)
     let bearingDegrees = iiGeo.randomBearinDegrees()
 
-    return iiGeo.destination(start, distanceKm: distanceKm,
+    return iiGeo.destination(start, distanceMeters: distanceMeters,
       bearingDegrees: bearingDegrees)
   }
 

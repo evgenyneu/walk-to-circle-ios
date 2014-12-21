@@ -10,12 +10,13 @@
 import UIKit
 import MapKit
 
-private let iiMAP_SIZE_METERS:CLLocationDistance = 3_000
+let iiPlaceCircleDistanceMeters:CLLocationDistance = 400
+private let iiMapSizeMeters:CLLocationDistance = iiPlaceCircleDistanceMeters * 2
 
 class InitialMapZoom {
   class func zoomToLocation(mapView: MKMapView, userLocation: MKUserLocation, animated: Bool) {
     let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
-      iiMAP_SIZE_METERS, iiMAP_SIZE_METERS)
+      iiMapSizeMeters, iiMapSizeMeters)
 
     mapView.setRegion(region, animated:animated)
   }
@@ -44,9 +45,11 @@ class InitialMapZoom {
 
   private class func isZoomLevelOk(mapRect: MKMapRect) -> Bool {
     let mapSize = iiGeo.mapSizeInMeters(mapRect)
-    let maxSize = max(mapSize.width, mapSize.height)
     let minSize = min(mapSize.width, mapSize.height)
 
-    return minSize < 6_000 && maxSize > 3_000
+    // Zoom level is ok if it less than two times bigger or more than two times smaller
+    // than initial zoom size.
+    return minSize < CGFloat(iiMapSizeMeters * 2)
+      && minSize > CGFloat(iiMapSizeMeters / 2)
   }
 }
