@@ -30,11 +30,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
     yiiButtons.delegate = self
 
     countdown.delegate = self
+
+    showCurrentPin()
   }
 
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     WalkRegions.stopMonitoringForAllRegions()
+  }
+
+  private func showCurrentPin() {
+    if let currentCoordinate = WalkCoordinate.current {
+      yiiMap.showCurrentPin(currentCoordinate)
+    }
   }
 }
 
@@ -46,7 +54,7 @@ typealias YiiButtonsDelegateImplementation = MapViewController
 extension YiiButtonsDelegateImplementation {
   func yiiButtonsDelegate_start() {
     countdown.start()
-    yiiMap.placeCircleOnMap()
+    yiiMap.dropNewPin()
   }
 }
 

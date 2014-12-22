@@ -10,6 +10,8 @@ import MapKit
 import CoreLocation
 
 class Annotation: MKCircle {
+  var newPin: Bool = false
+
   class func showCalloutAfterDelay(mapView: MKMapView,
     annotation: MKAnnotation, delay: Double, callback: (() -> ())? = nil) {
 
@@ -26,6 +28,10 @@ class Annotation: MKCircle {
     }
   }
 
+  var animatesDrop: Bool {
+    return newPin
+  }
+
 }
 
 // MapView Delegate
@@ -37,16 +43,16 @@ extension Ext_MapViewDelegate_Overlay {
   func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) ->
     MKOverlayRenderer! {
 
-      if overlay.isKindOfClass(Annotation) {
-        let aRenderer =  MKCircleRenderer(circle: overlay as Annotation)
-        aRenderer.fillColor =  UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
-        aRenderer.strokeColor = UIColor.whiteColor()
-        aRenderer.lineWidth = 2;
+    if overlay.isKindOfClass(Annotation) {
+      let aRenderer =  MKCircleRenderer(circle: overlay as Annotation)
+      aRenderer.fillColor =  UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
+      aRenderer.strokeColor = UIColor.whiteColor()
+      aRenderer.lineWidth = 2;
 
-        return aRenderer;
-      }
-      
-      return nil
+      return aRenderer;
+    }
+    
+    return nil
   }
 
   func mapView(mapView: MKMapView!,
@@ -55,13 +61,9 @@ extension Ext_MapViewDelegate_Overlay {
     if annotation.isKindOfClass(MKUserLocation) { return nil }
 
     var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("MapVC")
+
     if annotationView == nil {
       annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "MapVC")
-
-      if let pinAnnoration = annotationView as? MKPinAnnotationView {
-        pinAnnoration.animatesDrop = true
-      }
-
       annotationView.canShowCallout = true
     } else {
       // Sometimes the reused pin annotation view already has a callout subview
@@ -72,6 +74,11 @@ extension Ext_MapViewDelegate_Overlay {
       }
     }
 
+    if let pinAnnoration = annotationView as? MKPinAnnotationView {
+      if let currentAnnotation = annotation as? Annotation {
+        pinAnnoration.animatesDrop = currentAnnotation.animatesDrop
+      }
+    }
 
     annotationView.annotation = annotation
     annotationView.setSelected(false, animated: false)

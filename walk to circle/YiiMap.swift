@@ -36,7 +36,7 @@ class YiiMap: NSObject, MKMapViewDelegate {
     }
   }
 
-  func placeCircleOnMap() {
+  func dropNewPin() {
     annotations.removeAll()
 
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
@@ -58,6 +58,10 @@ class YiiMap: NSObject, MKMapViewDelegate {
     }
   }
 
+  func showCurrentPin(coordinate: CLLocationCoordinate2D) {
+    DropPin.showCurrentPin(mapView, coordinate: coordinate, annotations: annotations)
+  }
+
   private func placePin(coordinate: CLLocationCoordinate2D) {
     if let startButtonView = delegate?.yiiMapDelegate_startButton {
       let scrollNeeded = ScrollToAnnotation.scrollNeededToSeeAnnotation(mapView,
@@ -67,7 +71,7 @@ class YiiMap: NSObject, MKMapViewDelegate {
       pindDropHeight =  coordinateInView.y - scrollNeeded.height
 
       ScrollToAnnotation.scrollMap(scrollNeeded, mapView: mapView) {
-        DropPin.placeCircleOnMapAndAnimate(self.mapView, coordinate: coordinate,
+        DropPin.dropNewPinAndAnimate(self.mapView, coordinate: coordinate,
           annotations: self.annotations)
       }
     }

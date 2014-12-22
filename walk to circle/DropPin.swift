@@ -11,20 +11,25 @@ import UIKit
 import MapKit
 
 class DropPin {
-  class func placeCircleOnMapAndAnimate(mapView: MKMapView, coordinate: CLLocationCoordinate2D,
+  class func dropNewPinAndAnimate(mapView: MKMapView, coordinate: CLLocationCoordinate2D,
     annotations: Annotations) {
 
-    let annotationTitle = NSLocalizedString("Memorize & walk here",
+    let annotationTitle = NSLocalizedString("Walk to circle",
       comment: "Annotation title shown above the pin on the map")
 
-    let annotationSubtitle = NSLocalizedString("The map will close in 60 sec",
-      comment: "Annotation title shown above the pin on the map")
-
-    let annotation = annotations.add(coordinate, id: annotationTitle,
-      subtitle: annotationSubtitle)
+    let annotation = annotations.add(coordinate, title: annotationTitle, newPin: true)
 
     mapView.selectAnnotation(annotation, animated: true)
     Annotation.hideCalloutAfterDelay(mapView, annotation: annotation, delay: 5)
+  }
+
+  class func showCurrentPin(mapView: MKMapView, coordinate: CLLocationCoordinate2D,
+    annotations: Annotations) {
+
+    let annotationTitle = NSLocalizedString("Previous circle",
+      comment: "Annotation title for current pin")
+
+    annotations.add(coordinate, title: annotationTitle, newPin: false)
   }
 
   class func playPinDropSound(pindDropHeight: CGFloat) {

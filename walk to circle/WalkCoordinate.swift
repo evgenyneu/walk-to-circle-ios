@@ -28,7 +28,7 @@ class WalkCoordinate {
     set {
       if let currentLocation = newValue {
         WalkUserDefaults.currentCircleCoordinateLatitude.save(currentLocation.latitude)
-        WalkUserDefaults.currentCircleCoordinateLatitude.save(currentLocation.longitude)
+        WalkUserDefaults.currentCircleCoordinateLongitude.save(currentLocation.longitude)
       }
     }
   }

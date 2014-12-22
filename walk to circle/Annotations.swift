@@ -18,15 +18,16 @@ class Annotations {
     self.mapView = mapView
   }
 
-  func add(coordinate: CLLocationCoordinate2D, id: String, subtitle: String) -> Annotation {
-    if all[id] != nil { return all[id]! }
+  func add(coordinate: CLLocationCoordinate2D, title: String, newPin: Bool) -> Annotation {
+    if all[title] != nil { return all[title]! }
 
     let annotation = Annotation(centerCoordinate: coordinate,
       radius: iiWalkRegionOverlayCircleRadiusMeters)
+
+    annotation.newPin = newPin
     
-    annotation.title = id
-    annotation.subtitle = subtitle
-    all[id] = annotation
+    annotation.title = title
+    all[title] = annotation
     mapView.addAnnotation(annotation)
     mapView.addOverlay(annotation)
 
