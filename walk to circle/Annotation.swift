@@ -37,11 +37,11 @@ class Annotation: MKCircle {
   }
 
   var overlayFillColor: UIColor {
-    return UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
+    return newPin ? WalkColors.NewPinOverlay.uiColor : WalkColors.CurrentPinOverlay.uiColor
   }
 
   var overlayStrokeColor: UIColor {
-    return UIColor.whiteColor()
+    return newPin ? WalkColors.NewPinStroke.uiColor : WalkColors.CurrentPinStroke.uiColor
   }
 }
 
