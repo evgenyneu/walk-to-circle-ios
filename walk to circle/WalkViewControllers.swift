@@ -31,12 +31,9 @@ enum WalkViewControllers: String {
 
   static var current: WalkViewControllers {
     get {
-      let userDefaults = NSUserDefaults.standardUserDefaults()
       let defaultViewController = WalkViewControllers.Map
 
-      if let currentViewControllerName =
-        userDefaults.valueForKey(WalkConstants.userDefaultsKey_currentViewControllerId) as? String {
-
+      if let currentViewControllerName = WalkUserDefaults.currentViewControllerId.value as? String {
         return WalkViewControllers(rawValue: currentViewControllerName) ?? defaultViewController
       }
 
@@ -44,9 +41,7 @@ enum WalkViewControllers: String {
     }
 
     set {
-      let userDefaults = NSUserDefaults.standardUserDefaults()
-      userDefaults.setValue(newValue.rawValue, forKey: WalkConstants.userDefaultsKey_currentViewControllerId)
-      userDefaults.synchronize()
+      WalkUserDefaults.currentViewControllerId.save(newValue.rawValue)
     }
   }
 }

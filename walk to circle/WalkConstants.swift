@@ -10,5 +10,4 @@ import Foundation
 
 struct WalkConstants {
   static let viewControllerTransitionDuration: NSTimeInterval = 1
-  static let userDefaultsKey_currentViewControllerId = "current view controller name"
 }
