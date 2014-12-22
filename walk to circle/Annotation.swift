@@ -32,6 +32,17 @@ class Annotation: MKCircle {
     return newPin
   }
 
+  var pinColor: MKPinAnnotationColor {
+    return newPin ? MKPinAnnotationColor.Red : MKPinAnnotationColor.Green
+  }
+
+  var overlayFillColor: UIColor {
+    return UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
+  }
+
+  var overlayStrokeColor: UIColor {
+    return UIColor.whiteColor()
+  }
 }
 
 // MapView Delegate
@@ -43,10 +54,10 @@ extension Ext_MapViewDelegate_Overlay {
   func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) ->
     MKOverlayRenderer! {
 
-    if overlay.isKindOfClass(Annotation) {
-      let aRenderer =  MKCircleRenderer(circle: overlay as Annotation)
-      aRenderer.fillColor =  UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
-      aRenderer.strokeColor = UIColor.whiteColor()
+    if let currentAnnotation = overlay as? Annotation {
+      let aRenderer =  MKCircleRenderer(circle: currentAnnotation)
+      aRenderer.fillColor = currentAnnotation.overlayFillColor
+      aRenderer.strokeColor = currentAnnotation.overlayStrokeColor
       aRenderer.lineWidth = 2;
 
       return aRenderer;
@@ -77,6 +88,7 @@ extension Ext_MapViewDelegate_Overlay {
     if let pinAnnoration = annotationView as? MKPinAnnotationView {
       if let currentAnnotation = annotation as? Annotation {
         pinAnnoration.animatesDrop = currentAnnotation.animatesDrop
+        pinAnnoration.pinColor = currentAnnotation.pinColor
       }
     }
 
