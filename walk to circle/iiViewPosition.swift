@@ -1,6 +1,4 @@
 //
-//  TegViewPosition.swift
-//
 //  Helper functions to deal with view positioning.
 //
 //  Created by Evgenii Neumerzhitckii on 23/12/2014.

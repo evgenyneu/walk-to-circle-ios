@@ -1,6 +1,4 @@
 //
-//  TegAlign.swift
-//
 //  Collection of shortcuts to create autolayout constraints.
 //
 //  Created by Evgenii Neumerzhitckii on 27/10/2014.

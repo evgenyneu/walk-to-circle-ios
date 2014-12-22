@@ -18,6 +18,9 @@
 		2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12763A1A45450500F6ED44 /* iiAutolayoutConstraints.swift */; };
 		2B12763D1A47D93F00F6ED44 /* WalkCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12763C1A47D93F00F6ED44 /* WalkCoordinate.swift */; };
 		2B12763F1A47D9F900F6ED44 /* WalkUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */; };
+		2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276401A47EB2400F6ED44 /* iiUIColor.swift */; };
+		2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276421A47EB4B00F6ED44 /* WalkColors.swift */; };
+		2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B4E67CA1A34249C0072301A /* WalkRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E67C91A34249C0072301A /* WalkRegions.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
@@ -131,6 +134,9 @@
 		2B12763A1A45450500F6ED44 /* iiAutolayoutConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiAutolayoutConstraints.swift; sourceTree = "<group>"; };
 		2B12763C1A47D93F00F6ED44 /* WalkCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinate.swift; sourceTree = "<group>"; };
 		2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkUserDefaults.swift; sourceTree = "<group>"; };
+		2B1276401A47EB2400F6ED44 /* iiUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColor.swift; sourceTree = "<group>"; };
+		2B1276421A47EB4B00F6ED44 /* WalkColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkColors.swift; sourceTree = "<group>"; };
+		2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColorTests.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
 		2B4E67C91A34249C0072301A /* WalkRegions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkRegions.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
@@ -168,13 +174,13 @@
 		2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
 		2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiPresentViewController.swift; sourceTree = "<group>"; };
 		2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkLocation.swift; sourceTree = "<group>"; };
-		2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walk-to-circle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCCDB8C1968DC63005C4A47 /* WalkToCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkToCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB911968DC63005C4A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BCCDB931968DC63005C4A47 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2BCCDB961968DC63005C4A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BCCDB981968DC63005C4A47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2BCCDB9E1968DC63005C4A47 /* walk-to-circleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "walk-to-circleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BCCDB9E1968DC63005C4A47 /* WalkToCircleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkToCircleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDBA31968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayer.swift; sourceTree = "<group>"; };
@@ -240,6 +246,14 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		2B1276441A47ECC000F6ED44 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		2B770A6119E8E07300C28177 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +266,7 @@
 				2B770A6219E8E09800C28177 /* iiQ.swift */,
 				2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */,
 				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
+				2B1276401A47EB2400F6ED44 /* iiUIColor.swift */,
 				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
 				2B1276381A45448100F6ED44 /* iiViewPosition.swift */,
 				2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */,
@@ -347,6 +362,7 @@
 				2B12763C1A47D93F00F6ED44 /* WalkCoordinate.swift */,
 				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
 				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
+				2B1276421A47EB4B00F6ED44 /* WalkColors.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -366,8 +382,8 @@
 		2BCCDB8D1968DC63005C4A47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */,
-				2BCCDB9E1968DC63005C4A47 /* walk-to-circleTests.xctest */,
+				2BCCDB8C1968DC63005C4A47 /* WalkToCircle.app */,
+				2BCCDB9E1968DC63005C4A47 /* WalkToCircleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -403,9 +419,10 @@
 		2BCCDBA11968DC63005C4A47 /* walk to circleTests */ = {
 			isa = PBXGroup;
 			children = (
-				2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */,
 				2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */,
+				2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */,
 				2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */,
+				2B1276441A47ECC000F6ED44 /* Utils */,
 				2BCCDBA21968DC63005C4A47 /* Supporting Files */,
 			);
 			path = "walk to circleTests";
@@ -423,9 +440,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BCCDB8B1968DC63005C4A47 /* walk-to-circle */ = {
+		2BCCDB8B1968DC63005C4A47 /* WalkToCircle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circle" */;
+			buildConfigurationList = 2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "WalkToCircle" */;
 			buildPhases = (
 				2BCCDB881968DC63005C4A47 /* Sources */,
 				2BCCDB891968DC63005C4A47 /* Frameworks */,
@@ -435,14 +452,14 @@
 			);
 			dependencies = (
 			);
-			name = "walk-to-circle";
+			name = WalkToCircle;
 			productName = "walk to circle";
-			productReference = 2BCCDB8C1968DC63005C4A47 /* walk-to-circle.app */;
+			productReference = 2BCCDB8C1968DC63005C4A47 /* WalkToCircle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2BCCDB9D1968DC63005C4A47 /* walk-to-circleTests */ = {
+		2BCCDB9D1968DC63005C4A47 /* WalkToCircleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circleTests" */;
+			buildConfigurationList = 2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "WalkToCircleTests" */;
 			buildPhases = (
 				2BCCDB9A1968DC63005C4A47 /* Sources */,
 				2BCCDB9B1968DC63005C4A47 /* Frameworks */,
@@ -458,9 +475,9 @@
 				2B6D35D7197A5943008DDAE4 /* PBXTargetDependency */,
 				2B6D35D9197A594A008DDAE4 /* PBXTargetDependency */,
 			);
-			name = "walk-to-circleTests";
+			name = WalkToCircleTests;
 			productName = "walk to circleTests";
-			productReference = 2BCCDB9E1968DC63005C4A47 /* walk-to-circleTests.xctest */;
+			productReference = 2BCCDB9E1968DC63005C4A47 /* WalkToCircleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -481,7 +498,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "walk-to-circle" */;
+			buildConfigurationList = 2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "WalkToCircle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -494,8 +511,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BCCDB8B1968DC63005C4A47 /* walk-to-circle */,
-				2BCCDB9D1968DC63005C4A47 /* walk-to-circleTests */,
+				2BCCDB8B1968DC63005C4A47 /* WalkToCircle */,
+				2BCCDB9D1968DC63005C4A47 /* WalkToCircleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -574,9 +591,11 @@
 				2B4E67CA1A34249C0072301A /* WalkRegions.swift in Sources */,
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
 				2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */,
+				2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* InitialMapZoom.swift in Sources */,
+				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */,
 				2B12763F1A47D9F900F6ED44 /* WalkUserDefaults.swift in Sources */,
@@ -590,6 +609,7 @@
 				2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
+				2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */,
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,
 				2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */,
@@ -601,32 +621,32 @@
 /* Begin PBXTargetDependency section */
 		2B6D35CD197A56C3008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
 			targetProxy = 2B6D35CC197A56C3008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35CF197A56C3008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
 			targetProxy = 2B6D35CE197A56C3008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35D5197A58D8008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
 			targetProxy = 2B6D35D4197A58D8008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35D7197A5943008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
 			targetProxy = 2B6D35D6197A5943008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2B6D35D9197A594A008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
 			targetProxy = 2B6D35D8197A594A008DDAE4 /* PBXContainerItemProxy */;
 		};
 		2BCCDBA01968DC63005C4A47 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BCCDB8B1968DC63005C4A47 /* walk-to-circle */;
+			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
 			targetProxy = 2BCCDB9F1968DC63005C4A47 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -754,7 +774,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "walk-to-circle";
+				PRODUCT_NAME = WalkToCircle;
 			};
 			name = Debug;
 		};
@@ -765,7 +785,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "walk-to-circle";
+				PRODUCT_NAME = WalkToCircle;
 			};
 			name = Release;
 		};
@@ -784,8 +804,8 @@
 				INFOPLIST_FILE = "walk to circleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "walk-to-circleTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/walk-to-circle.app/walk-to-circle";
+				PRODUCT_NAME = WalkToCircleTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkToCircle.app/WalkToCircle";
 			};
 			name = Debug;
 		};
@@ -800,15 +820,15 @@
 				INFOPLIST_FILE = "walk to circleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "walk-to-circleTests";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/walk-to-circle.app/walk-to-circle";
+				PRODUCT_NAME = WalkToCircleTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkToCircle.app/WalkToCircle";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "walk-to-circle" */ = {
+		2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "WalkToCircle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BCCDBA61968DC63005C4A47 /* Debug */,
@@ -817,7 +837,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circle" */ = {
+		2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "WalkToCircle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BCCDBA91968DC63005C4A47 /* Debug */,
@@ -826,7 +846,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "walk-to-circleTests" */ = {
+		2BCCDBAB1968DC63005C4A47 /* Build configuration list for PBXNativeTarget "WalkToCircleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BCCDBAC1968DC63005C4A47 /* Debug */,

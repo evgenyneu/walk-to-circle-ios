@@ -1,5 +1,3 @@
-//
-//  TegPresentViewController.swift
 //  
 //  Present view controller modally using its storyboard ID.
 //
