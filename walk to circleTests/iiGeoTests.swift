@@ -32,7 +32,7 @@ class iiGeoTests: XCTestCase {
 
   func testDestinationWithDistanceAndBearing() {
     let coord = CLLocationCoordinate2DMake(-37.817728, 144.968108)
-    let destination = iiGeo.destination(coord, distanceKm: 0.5, bearingDegrees: 65)
+    let destination = iiGeo.destination(coord, distanceMeters: 500, bearingDegrees: 65)
 
     XCTAssertEqual(Int(destination.latitude * 100000), -3781582)
 
@@ -61,7 +61,8 @@ class iiGeoTests: XCTestCase {
     let start = CLLocationCoordinate2DMake(-37.817728, 144.968108)
 
     for _ in 1...100 {
-      let newCoordinate = iiGeo.randomCoordinate(start, minDistanceKm: 1, maxDistanceKm: 5)
+      let newCoordinate = iiGeo.randomCoordinate(start,
+        minDistanceMeters: 1000, maxDistanceMeters: 5000)
 
       let locationStart = CLLocation(latitude: start.latitude, longitude: start.longitude)
       let locationEnd = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
