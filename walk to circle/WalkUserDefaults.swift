@@ -10,7 +10,8 @@ import Foundation
 
 enum WalkUserDefaults: String {
   case currentViewControllerId = "current view controller name"
-  case currentCircleCoordinate = "current circle coordinate"
+  case currentCircleCoordinateLatitude = "current circle coordinate latitude"
+  case currentCircleCoordinateLongitude = "current circle coordinate longitude"
 
   var value: AnyObject? {
     get {
@@ -21,7 +22,13 @@ enum WalkUserDefaults: String {
 
   func save(value: AnyObject?) {
     let userDefaults = NSUserDefaults.standardUserDefaults()
-    userDefaults.setValue(value, forKey: self.rawValue)
+
+    if let currentValue: AnyObject = value {
+      userDefaults.setValue(value, forKey: self.rawValue)
+    } else {
+      userDefaults.removeObjectForKey(self.rawValue)
+    }
+    
     userDefaults.synchronize()
   }
 }

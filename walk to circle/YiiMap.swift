@@ -42,8 +42,8 @@ class YiiMap: NSObject, MKMapViewDelegate {
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceMeters: iiPlaceCircleDistanceMeters,
       maxDistanceMeters: iiPlaceCircleDistanceMeters)
-     
-    AppDelegate.current?.circleCoordinate = coordinate
+
+    WalkCoordinate.current = coordinate
 
     if InitialMapZoom.needZoomingBeforePlay(mapView) {
       doAfterRegionDidChange {

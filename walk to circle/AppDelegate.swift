@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
   var window: UIWindow?
 
-  var circleCoordinate: CLLocationCoordinate2D?
-
   class var current: AppDelegate? {
     return UIApplication.sharedApplication().delegate as? AppDelegate
   }

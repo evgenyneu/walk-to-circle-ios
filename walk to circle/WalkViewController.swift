@@ -13,10 +13,8 @@ class WalkViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    if let currentApp = AppDelegate.current {
-      if let regionCoordinate = currentApp.circleCoordinate {
-        WalkRegions.startMonitoringForCoordinate(regionCoordinate)
-      }
+    if let currentCoordinate = WalkCoordinate.current {
+      WalkRegions.startMonitoringForCoordinate(currentCoordinate)
     }
   }
   
