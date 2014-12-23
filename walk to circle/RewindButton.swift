@@ -13,12 +13,23 @@ class RewindButton: UIButton {
   private let countdownLabel = UILabel()
 
   private let iiFont = UIFont.systemFontOfSize(40)
+  private let arrowsLayer = CALayer()
 
   required init(coder aDecoder: NSCoder) {
+
     super.init(coder: aDecoder)
 
     initLabel()
-    showArrows()
+    initArrows()
+    animateArrows()
+
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+  }
+
+  func applicationWillEnterForeground(notification: NSNotification) {
+    // Animation was removed when application was in background
+    // Recreate arrow animation
+    animateArrows()
   }
 
   func updateText(text: String) {
@@ -37,18 +48,18 @@ class RewindButton: UIButton {
     RewindButton.positionContdownLabel(self, label: countdownLabel)
   }
 
-  private func showArrows() {
-    let arrowsLayer = CALayer()
+  private func initArrows() {
     iiLayer.loadImage(inLayer: arrowsLayer, imageName: "rewind_arrows")
     iiLayer.centerInParent_withSizeOfParent(arrowsLayer, parentBounds: bounds)
     self.layer.addSublayer(arrowsLayer)
+  }
 
+  private func animateArrows() {
     RewindButton.rotateArrows(arrowsLayer)
   }
 
   private class func rotateArrows(layer: CALayer) {
-    let keyPath = "transform.rotation.z"
-    iiAnimator.addInfiniteAnimation(layer, keyPath: keyPath,
+    iiAnimator.addInfiniteAnimation(layer, keyPath: "transform.rotation.z",
       fromVaue: 0, toValue: -M_PI, duration: 1, autoreverses: false)
   }
 
