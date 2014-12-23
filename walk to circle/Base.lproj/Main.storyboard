@@ -203,6 +203,16 @@ Your location info never leaves your phone and stays private.</string>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uls-x2-LLy">
+                                <rect key="frame" x="254" y="488" width="92" height="92"/>
+                                <state key="normal" image="stop.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="stop_highlighted.png"/>
+                                <connections>
+                                    <action selector="onStartTapped:" destination="PLy-sW-1Nd" eventType="touchUpInside" id="aGU-eT-yeG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -212,7 +222,9 @@ Your location info never leaves your phone and stays private.</string>
                             <constraint firstItem="0Ja-nW-5eG" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="16" id="Fvq-oY-A9Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tzg-S6-Tfr" secondAttribute="trailing" constant="10" id="iI3-21-JJR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HFa-MG-D7n" secondAttribute="trailing" constant="10" id="icS-cz-wC0"/>
+                            <constraint firstAttribute="centerX" secondItem="uls-x2-LLy" secondAttribute="centerX" id="qXe-zb-YE1"/>
                             <constraint firstItem="tzg-S6-Tfr" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" constant="10" id="rwX-7N-JhC"/>
+                            <constraint firstItem="NP5-O1-VLo" firstAttribute="top" secondItem="uls-x2-LLy" secondAttribute="bottom" constant="20" id="trx-5z-ZEh"/>
                             <constraint firstAttribute="centerX" secondItem="0Ja-nW-5eG" secondAttribute="centerX" id="zxa-0G-RXy"/>
                         </constraints>
                     </view>
@@ -297,5 +309,7 @@ Your location info never leaves your phone and stays private.</string>
     <resources>
         <image name="play.png" width="92" height="92"/>
         <image name="rewind.png" width="92" height="92"/>
+        <image name="stop.png" width="92" height="92"/>
+        <image name="stop_highlighted.png" width="92" height="92"/>
     </resources>
 </document>
