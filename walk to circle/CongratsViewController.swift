@@ -15,6 +15,11 @@ class CongratsViewController: UIViewController {
     super.viewDidLoad()
   }
 
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    WalkRegions.stopMonitoringForAllRegions()
+  }
+
   @IBAction func onDoneTapped(sender: AnyObject) {
     WalkViewControllers.Map.show()
   }
