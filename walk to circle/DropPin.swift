@@ -18,7 +18,6 @@ class DropPin {
       comment: "Annotation title shown above the pin on the map")
 
     let annotation = annotations.add(coordinate, title: annotationTitle, newPin: true)
-
     mapView.selectAnnotation(annotation, animated: true)
     Annotation.hideCalloutAfterDelay(mapView, annotation: annotation, delay: 5)
   }

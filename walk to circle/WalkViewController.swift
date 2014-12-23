@@ -12,10 +12,6 @@ import CoreLocation
 class WalkViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    if let currentCoordinate = WalkCoordinate.current {
-      WalkRegions.startMonitoringForCoordinate(currentCoordinate)
-    }
   }
   
   @IBAction func onCancelTapped(sender: AnyObject) {
