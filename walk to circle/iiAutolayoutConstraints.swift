@@ -8,6 +8,26 @@
 import UIKit
 
 class iiAutolayoutConstraints {
+  class func fillParent(view: UIView, parentView: UIView, margin: CGFloat = 0, vertically: Bool = false) {
+    var marginFormat = ""
+
+    if margin != 0 {
+      marginFormat = "-\(margin)-"
+    }
+
+    var format = "|\(marginFormat)[view]\(marginFormat)|"
+
+    if vertically {
+      format = "V:" + format
+    }
+
+    let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format,
+      options: nil, metrics: nil,
+      views: ["view": view])
+
+    parentView.addConstraints(constraints)
+  }
+
   class func height(view: UIView, value: CGFloat) -> [NSLayoutConstraint] {
     let constraint = NSLayoutConstraint(
       item: view,
