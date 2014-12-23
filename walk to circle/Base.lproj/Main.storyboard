@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TQL-qV-S3z">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="LHM-lh-aW3">
+            <objects>
+                <viewController id="TQL-qV-S3z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0rg-T5-ctT"/>
+                        <viewControllerLayoutGuide type="bottom" id="175-QF-hRf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2eI-8U-YjA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intial dummy view controller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xjs-pv-wF4">
+                                <rect key="frame" x="183" y="64" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omQ-Fn-hmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="-320"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="map view controller" id="BYZ-38-t0r" customClass="MapViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map view controller" id="BYZ-38-t0r" customClass="MapViewController" customModule="WalkToCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,7 +63,7 @@
                                     <action selector="onStartTapped:" destination="PLy-sW-1Nd" eventType="touchUpInside" id="JYm-PW-8wx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2" customClass="RewindButton" customModule="walk_to_circle" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2" customClass="RewindButton" customModule="WalkToCircle" customModuleProvider="target">
                                 <rect key="frame" x="253.5" y="488" width="92" height="92"/>
                                 <color key="backgroundColor" red="1" green="0.89707423050000001" blue="0.1886660412" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Rewind" image="rewind.png">
@@ -69,13 +95,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="PLy-sW-1Nd" customClass="YiiButtons" customModule="walk_to_circle" customModuleProvider="target">
+                <customObject id="PLy-sW-1Nd" customClass="YiiButtons" customModule="WalkToCircle" customModuleProvider="target">
                     <connections>
                         <outlet property="rewindButton" destination="jC3-dd-eb2" id="bOl-KC-kM9"/>
                         <outlet property="startButton" destination="WD4-Gm-ry7" id="3dy-oT-cv7"/>
                     </connections>
                 </customObject>
-                <customObject id="Vk7-nD-YCd" customClass="YiiMap" customModule="walk_to_circle" customModuleProvider="target">
+                <customObject id="Vk7-nD-YCd" customClass="YiiMap" customModule="WalkToCircle" customModuleProvider="target">
                     <connections>
                         <outlet property="mapView" destination="ncc-cz-MaM" id="cle-9Q-NuZ"/>
                     </connections>
@@ -86,7 +112,7 @@
         <!--Location Denied View Controller-->
         <scene sceneID="ASP-ke-ysi">
             <objects>
-                <viewController storyboardIdentifier="location denied controller" id="Vij-1u-SNl" customClass="LocationDeniedViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="location denied controller" id="Vij-1u-SNl" customClass="LocationDeniedViewController" customModule="WalkToCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZdH-oa-Yb3"/>
                         <viewControllerLayoutGuide type="bottom" id="Zjk-lt-O4F"/>
@@ -145,7 +171,7 @@ Your location info never leaves your phone and stays private.</string>
         <!--Walk View Controller-->
         <scene sceneID="Zub-f6-YBr">
             <objects>
-                <viewController storyboardIdentifier="walk view controller" id="weP-hj-53b" customClass="WalkViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk view controller" id="weP-hj-53b" customClass="WalkViewController" customModule="WalkToCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5GM-qE-7fe"/>
                         <viewControllerLayoutGuide type="bottom" id="NP5-O1-VLo"/>
@@ -186,7 +212,7 @@ Your location info never leaves your phone and stays private.</string>
         <!--Region Monitoring Unavailable-->
         <scene sceneID="tUa-sL-pbp">
             <objects>
-                <viewController storyboardIdentifier="region monitoring unavailable controller" id="KX9-bf-t40" customClass="RegionMonitoringUnavailable" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="region monitoring unavailable controller" id="KX9-bf-t40" customClass="RegionMonitoringUnavailable" customModule="WalkToCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6QA-Ti-7EF"/>
                         <viewControllerLayoutGuide type="bottom" id="CuG-r5-v5q"/>
@@ -217,7 +243,7 @@ Your location info never leaves your phone and stays private.</string>
         <!--Congrats View Controller-->
         <scene sceneID="Rdg-2i-QIg">
             <objects>
-                <viewController storyboardIdentifier="congrats view controller" id="yeR-ET-AoZ" customClass="CongratsViewController" customModule="walk_to_circle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="congrats view controller" id="yeR-ET-AoZ" customClass="CongratsViewController" customModule="WalkToCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2os-PS-uYQ"/>
                         <viewControllerLayoutGuide type="bottom" id="hhZ-1D-leP"/>

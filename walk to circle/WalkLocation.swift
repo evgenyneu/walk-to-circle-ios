@@ -39,7 +39,7 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
 
     switch status {
     case .Authorized:
-      WalkViewControllers.Map.show()
+      WalkViewControllers.currentNonError.show()
       
     case .Denied, .Restricted:
       WalkViewControllers.LocationDenied.show()

@@ -13,11 +13,17 @@ class YiiButtons: NSObject {
 
   weak var delegate: YiiButtonsDelegate?
 
+  private var lastTapped = NSDate().dateByAddingTimeInterval(NSTimeInterval(-100))
+
   @IBAction func onStartTapped(sender: AnyObject) {
+    if !canTap { return }
+    tapped()
     start()
   }
 
   @IBAction func onRewindTapped(sender: AnyObject) {
+    if !canTap { return }
+    tapped()
     rewind()
   }
 
@@ -69,5 +75,14 @@ class YiiButtons: NSObject {
 
     iiAnimator.rotate3dIn(rewindButton)
     iiAnimator.fadeIn(rewindButton, duration: 0.1)
+  }
+
+  private var canTap: Bool {
+    let intervalSinceLastTap = NSDate().timeIntervalSinceDate(lastTapped)
+    return intervalSinceLastTap > 1
+  }
+
+  private func tapped() {
+    lastTapped = NSDate()
   }
 }

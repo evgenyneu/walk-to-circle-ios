@@ -89,7 +89,11 @@ extension CountdownDelegateImplementation {
   }
 
   func contdownDelegate_didFinish() {
-    WalkViewControllers.Walk.show()
+//    yiiButtons.rewindButton.hidden = true
+
+    iiQ.runAfterDelay(0.01) {
+//      WalkViewControllers.Walk.show()
+    }
   }
 }
 

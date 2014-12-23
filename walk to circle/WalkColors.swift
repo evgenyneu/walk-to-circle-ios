@@ -13,6 +13,10 @@ enum WalkColors: String {
 
   case CurrentPinOverlay = "#99999933"
   case CurrentPinStroke = "#dddddd"
+
+  static var ButtonTextColor: WalkColors {
+    return NewPinOverlay
+  }
   
   var uiColor: UIColor {
     return iiUIColor.fromHexString(rawValue)

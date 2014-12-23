@@ -13,7 +13,6 @@ class RewindButton: UIButton {
   private let countdownLabel = UILabel()
 
   private let iiFont = UIFont.systemFontOfSize(40)
-  private let iiColor = UIColor(red: 255 / 255, green: 217 / 255, blue: 14 / 255, alpha: 0.4)
 
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -24,7 +23,7 @@ class RewindButton: UIButton {
 
   func updateText(text: String) {
     let attributedText = NSAttributedString(string: text, attributes: [
-      NSForegroundColorAttributeName: iiColor,
+      NSForegroundColorAttributeName: WalkColors.ButtonTextColor.uiColor,
       NSFontAttributeName: iiFont,
       NSTextEffectAttributeName: NSTextEffectLetterpressStyle
       ])
@@ -48,7 +47,8 @@ class RewindButton: UIButton {
   }
 
   private class func rotateArrows(layer: CALayer) {
-    iiAnimator.addInfiniteAnimation(layer, keyPath: "transform.rotation.z",
+    let keyPath = "transform.rotation.z"
+    iiAnimator.addInfiniteAnimation(layer, keyPath: keyPath,
       fromVaue: 0, toValue: -M_PI, duration: 1, autoreverses: false)
   }
 

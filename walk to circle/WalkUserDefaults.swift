@@ -10,6 +10,8 @@ import Foundation
 
 enum WalkUserDefaults: String {
   case currentViewControllerId = "current view controller name"
+  case currentNonErrorViewControllerId = "current non error view controller name"
+
   case currentCircleCoordinateLatitude = "current circle coordinate latitude"
   case currentCircleCoordinateLongitude = "current circle coordinate longitude"
 
