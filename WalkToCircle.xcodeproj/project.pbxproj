@@ -41,6 +41,13 @@
 		2B7C38C81A4A89D800C3FDA7 /* stop_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38C51A4A89D800C3FDA7 /* stop_highlighted@2x.png */; };
 		2B7C38C91A4A89D800C3FDA7 /* stop_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38C61A4A89D800C3FDA7 /* stop_highlighted@3x.png */; };
 		2B7C38CF1A4AB68100C3FDA7 /* branch_background_1242_2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38CE1A4AB68100C3FDA7 /* branch_background_1242_2208.png */; };
+		2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */; };
+		2B7C38D81A4AB9F800C3FDA7 /* README_cute_possum_parser.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D71A4AB9F800C3FDA7 /* README_cute_possum_parser.md */; };
+		2B7C38DA1A4ABA1900C3FDA7 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D91A4ABA1900C3FDA7 /* CutePossumParser.swift */; };
+		2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */; };
+		2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */; };
+		2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */; };
+		2B7C38E51A4ABD0300C3FDA7 /* Quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */; };
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */; };
 		2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */; };
@@ -165,6 +172,13 @@
 		2B7C38C51A4A89D800C3FDA7 /* stop_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop_highlighted@2x.png"; sourceTree = "<group>"; };
 		2B7C38C61A4A89D800C3FDA7 /* stop_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop_highlighted@3x.png"; sourceTree = "<group>"; };
 		2B7C38CE1A4AB68100C3FDA7 /* branch_background_1242_2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = branch_background_1242_2208.png; sourceTree = "<group>"; };
+		2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuote.swift; sourceTree = "<group>"; };
+		2B7C38D71A4AB9F800C3FDA7 /* README_cute_possum_parser.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_cute_possum_parser.md; sourceTree = "<group>"; };
+		2B7C38D91A4ABA1900C3FDA7 /* CutePossumParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutePossumParser.swift; sourceTree = "<group>"; };
+		2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiJsonLoader.swift; sourceTree = "<group>"; };
+		2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoaderTests.swift; sourceTree = "<group>"; };
+		2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoader.swift; sourceTree = "<group>"; };
+		2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quotes.json; sourceTree = "<group>"; };
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtons.swift; sourceTree = "<group>"; };
 		2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtonsDelegate.swift; sourceTree = "<group>"; };
@@ -276,16 +290,17 @@
 				2B99483019BBE4B800CB08AA /* iiAnimator.swift */,
 				2B12763A1A45450500F6ED44 /* iiAutolayoutConstraints.swift */,
 				2B6D35D2197A581D008DDAE4 /* iiGeo.swift */,
-				2B1276341A450DA000F6ED44 /* iiOsVersion.swift */,
+				2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */,
 				2B8A6E601A21BD09006351BA /* iiLayer.swift */,
+				2B1276341A450DA000F6ED44 /* iiOsVersion.swift */,
 				2BCFEF3B19EA010800062A99 /* iiOutputView.swift */,
 				2B770A6219E8E09800C28177 /* iiQ.swift */,
 				2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */,
-				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
-				2B1276401A47EB2400F6ED44 /* iiUIColor.swift */,
-				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
-				2B1276381A45448100F6ED44 /* iiViewPosition.swift */,
 				2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */,
+				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
+				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
+				2B1276401A47EB2400F6ED44 /* iiUIColor.swift */,
+				2B1276381A45448100F6ED44 /* iiViewPosition.swift */,
 				2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */,
 			);
 			name = Utils;
@@ -299,6 +314,49 @@
 				2B4E67C91A34249C0072301A /* WalkRegions.swift */,
 			);
 			name = Location;
+			sourceTree = "<group>";
+		};
+		2B7C38D21A4AB90E00C3FDA7 /* Walk */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */,
+				2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */,
+				2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */,
+			);
+			name = Walk;
+			sourceTree = "<group>";
+		};
+		2B7C38D51A4AB9CD00C3FDA7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38D61A4AB9D800C3FDA7 /* CutePossumParser */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		2B7C38D61A4AB9D800C3FDA7 /* CutePossumParser */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38D91A4ABA1900C3FDA7 /* CutePossumParser.swift */,
+				2B7C38D71A4AB9F800C3FDA7 /* README_cute_possum_parser.md */,
+			);
+			name = CutePossumParser;
+			sourceTree = "<group>";
+		};
+		2B7C38DD1A4ABAC700C3FDA7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38DE1A4ABAD300C3FDA7 /* Walk */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
+		2B7C38DE1A4ABAD300C3FDA7 /* Walk */ = {
+			isa = PBXGroup;
+			children = (
+				2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */,
+			);
+			name = Walk;
 			sourceTree = "<group>";
 		};
 		2B87D7FE1A206BFD00CCE0B6 /* Delegates */ = {
@@ -335,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				2BAD4F361A33BDE400C3B5BD /* Map */,
+				2B7C38D21A4AB90E00C3FDA7 /* Walk */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -407,6 +466,7 @@
 		2BCCDB8E1968DC63005C4A47 /* walk to circle */ = {
 			isa = PBXGroup;
 			children = (
+				2B7C38D51A4AB9CD00C3FDA7 /* Components */,
 				2BAD4F3E1A33D29D00C3B5BD /* Core */,
 				2B0E49D91970B6FE00B276B2 /* Images */,
 				2BAD4F351A33BDCF00C3B5BD /* Screens */,
@@ -438,6 +498,7 @@
 				2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */,
 				2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */,
 				2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */,
+				2B7C38DD1A4ABAC700C3FDA7 /* Screens */,
 				2B1276441A47ECC000F6ED44 /* Utils */,
 				2BCCDBA21968DC63005C4A47 /* Supporting Files */,
 			);
@@ -560,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B7C38BC1A4A895500C3FDA7 /* stop@2x.png in Resources */,
+				2B7C38E51A4ABD0300C3FDA7 /* Quotes.json in Resources */,
 				2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */,
 				2B080B421A21B0C40073E1E3 /* play.png in Resources */,
 				2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */,
@@ -609,6 +671,7 @@
 				2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
 				2B1276351A450DA000F6ED44 /* iiOsVersion.swift in Sources */,
+				2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */,
 				2B1276391A45448100F6ED44 /* iiViewPosition.swift in Sources */,
@@ -624,19 +687,23 @@
 				2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */,
 				2B966A821A21A5AC00AAE8A4 /* YiiMap.swift in Sources */,
 				2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */,
+				2B7C38D81A4AB9F800C3FDA7 /* README_cute_possum_parser.md in Sources */,
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B7B70331A342E010026CDA9 /* CongratsViewController.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
+				2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */,
 				2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */,
 				2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
 				2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */,
+				2B7C38DA1A4ABA1900C3FDA7 /* CutePossumParser.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
 				2B4E67CA1A34249C0072301A /* WalkRegions.swift in Sources */,
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
 				2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */,
 				2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
+				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* InitialMapZoom.swift in Sources */,
 				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
@@ -654,6 +721,7 @@
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */,
+				2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */,
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,
 				2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct WalkConstants {
-  static let viewControllerTransitionDuration: NSTimeInterval = 1
+public struct WalkConstants {
+  public static let viewControllerTransitionDuration: NSTimeInterval = 1
+  public static let quotesJsonFileName = "Quotes.json"
 }
