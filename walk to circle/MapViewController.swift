@@ -20,6 +20,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
 
   let countdown = Countdown()
 
+  deinit {
+    println("deinit MapViewController")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 

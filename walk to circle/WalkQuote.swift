@@ -9,6 +9,11 @@
 import Foundation
 
 public struct WalkQuote {
+  public init(text: String, author: String) {
+    self.text = text
+    self.author = author
+  }
+
   public let text: String
   public let author: String
 }

@@ -26,6 +26,10 @@ class RewindButton: UIButton {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
   }
 
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillEnterForegroundNotification, object: nil)
+  }
+
   func applicationWillEnterForeground(notification: NSNotification) {
     // Animation was removed when application was in background
     // Recreate arrow animation

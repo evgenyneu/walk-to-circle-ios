@@ -42,13 +42,13 @@
 		2B7C38C91A4A89D800C3FDA7 /* stop_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38C61A4A89D800C3FDA7 /* stop_highlighted@3x.png */; };
 		2B7C38CF1A4AB68100C3FDA7 /* branch_background_1242_2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38CE1A4AB68100C3FDA7 /* branch_background_1242_2208.png */; };
 		2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */; };
-		2B7C38D81A4AB9F800C3FDA7 /* README_cute_possum_parser.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D71A4AB9F800C3FDA7 /* README_cute_possum_parser.md */; };
 		2B7C38DA1A4ABA1900C3FDA7 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D91A4ABA1900C3FDA7 /* CutePossumParser.swift */; };
 		2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */; };
 		2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */; };
 		2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */; };
 		2B7C38E51A4ABD0300C3FDA7 /* Quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */; };
 		2B7C38E71A4AC18800C3FDA7 /* YiiQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38E61A4AC18800C3FDA7 /* YiiQuotes.swift */; };
+		2B7C38EA1A4ACA2B00C3FDA7 /* YiiQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38E81A4AC9DE00C3FDA7 /* YiiQuotes.swift */; };
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */; };
 		2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */; };
@@ -181,6 +181,7 @@
 		2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoader.swift; sourceTree = "<group>"; };
 		2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quotes.json; sourceTree = "<group>"; };
 		2B7C38E61A4AC18800C3FDA7 /* YiiQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiQuotes.swift; sourceTree = "<group>"; };
+		2B7C38E81A4AC9DE00C3FDA7 /* YiiQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiQuotes.swift; sourceTree = "<group>"; };
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtons.swift; sourceTree = "<group>"; };
 		2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtonsDelegate.swift; sourceTree = "<group>"; };
@@ -358,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */,
+				2B7C38E81A4AC9DE00C3FDA7 /* YiiQuotes.swift */,
 			);
 			name = Walk;
 			sourceTree = "<group>";
@@ -691,7 +693,6 @@
 				2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */,
 				2B966A821A21A5AC00AAE8A4 /* YiiMap.swift in Sources */,
 				2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */,
-				2B7C38D81A4AB9F800C3FDA7 /* README_cute_possum_parser.md in Sources */,
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B7B70331A342E010026CDA9 /* CongratsViewController.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
@@ -721,6 +722,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7C38EA1A4ACA2B00C3FDA7 /* YiiQuotes.swift in Sources */,
 				2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,

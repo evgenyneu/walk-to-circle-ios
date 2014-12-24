@@ -8,15 +8,38 @@
 
 import UIKit
 
-class YiiQuotes: NSObject {
+public class YiiQuotes: NSObject {
 
-  @IBOutlet weak var quoteTextLabel: UILabel!
-  @IBOutlet weak var quoteAuthorLabel: UILabel!
+  @IBOutlet public weak var textLabel: UILabel!
+  @IBOutlet public weak var authorLabel: UILabel!
 
-  func showRandomQuote() {
+  private let quotesLoader = WalkQuotesLoader()
+
+  func setup() {
+    textLabel.text = ""
+    authorLabel.text = ""
   }
 
-  private var loadedQuotes: [WalkQuote]?
+  public func showRandomQuote(finished: (()->())? = nil) {
 
-  
+    quotesLoader.loadQuotes({ quotes in
+      if let quote = YiiQuotes.pickRandomQuote(quotes) {
+        YiiQuotes.showRandomQuote(quote, textLabel: self.textLabel, authorLabel: self.authorLabel)
+        finished?()
+      }
+    })
+  }
+
+  public class func pickRandomQuote(quotes: [WalkQuote]) -> WalkQuote? {
+    if quotes.isEmpty { return nil }
+    let randomIndex = Int(arc4random_uniform(UInt32(quotes.count)))
+    return quotes[randomIndex]
+  }
+
+  private class func showRandomQuote(quote: WalkQuote,
+    textLabel: UILabel, authorLabel:UILabel) {
+
+    textLabel.text = quote.text
+    authorLabel.text = quote.author
+  }
 }

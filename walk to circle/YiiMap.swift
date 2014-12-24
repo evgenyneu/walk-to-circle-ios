@@ -19,6 +19,9 @@ class YiiMap: NSObject, MKMapViewDelegate {
   private var zoomedToInitialLocation = false
   private var pindDropHeight: CGFloat = 0
 
+  deinit {
+    println("deinit YiiMap")
+  }
 
   func viewDidLoad() {
     annotations = Annotations(mapView)

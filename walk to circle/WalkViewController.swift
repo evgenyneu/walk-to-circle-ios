@@ -13,11 +13,16 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
   @IBOutlet var quotes: YiiQuotes!
 
+  deinit {
+    println("deinit WalkViewController")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     showBackground()
 
+    quotes.setup()
     quotes.showRandomQuote()
   }
 
@@ -31,7 +36,7 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
   private func showConfirmDialog() {
     let alert = UIAlertView(title: "",
-    message: "Stop current walk?",
+    message: "Abandon this walk?",
     delegate: self, cancelButtonTitle: nil, otherButtonTitles: "Yes", "No")
     alert.cancelButtonIndex = 1
     alert.show()
