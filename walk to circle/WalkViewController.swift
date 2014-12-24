@@ -10,13 +10,15 @@ import UIKit
 import CoreLocation
 
 class WalkViewController: UIViewController, UIAlertViewDelegate {
-  @IBOutlet weak var quoteLabel: UILabel!
-  @IBOutlet weak var authorLabel: UILabel!
-  
+
+  @IBOutlet var quotes: YiiQuotes!
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     showBackground()
+
+    quotes.showRandomQuote()
   }
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {

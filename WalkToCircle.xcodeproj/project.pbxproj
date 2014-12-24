@@ -48,6 +48,7 @@
 		2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */; };
 		2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */; };
 		2B7C38E51A4ABD0300C3FDA7 /* Quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */; };
+		2B7C38E71A4AC18800C3FDA7 /* YiiQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38E61A4AC18800C3FDA7 /* YiiQuotes.swift */; };
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */; };
 		2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */; };
@@ -179,6 +180,7 @@
 		2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoaderTests.swift; sourceTree = "<group>"; };
 		2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoader.swift; sourceTree = "<group>"; };
 		2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quotes.json; sourceTree = "<group>"; };
+		2B7C38E61A4AC18800C3FDA7 /* YiiQuotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiQuotes.swift; sourceTree = "<group>"; };
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtons.swift; sourceTree = "<group>"; };
 		2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtonsDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */,
 				2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */,
 				2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */,
+				2B7C38E61A4AC18800C3FDA7 /* YiiQuotes.swift */,
 			);
 			name = Walk;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */,
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
 				2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */,
+				2B7C38E71A4AC18800C3FDA7 /* YiiQuotes.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
 				2B1276351A450DA000F6ED44 /* iiOsVersion.swift in Sources */,
 				2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */,
