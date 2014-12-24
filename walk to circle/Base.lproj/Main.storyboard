@@ -181,17 +181,17 @@ Your location info never leaves your phone and stays private.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An early-morning walk is a blessing for the whole day." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MG-D7n">
-                                <rect key="frame" x="26" y="140" width="548" height="38"/>
+                                <rect key="frame" x="26" y="150" width="548" height="38"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.94901960784313721" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Henry David Thoreau" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-S6-Tfr">
-                                <rect key="frame" x="26" y="188" width="548" height="31.5"/>
+                                <rect key="frame" x="26" y="198" width="548" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.94901960784313721" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
@@ -210,7 +210,7 @@ Your location info never leaves your phone and stays private.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tzg-S6-Tfr" firstAttribute="top" secondItem="HFa-MG-D7n" secondAttribute="bottom" constant="10" id="6Ti-a9-Wac"/>
-                            <constraint firstItem="HFa-MG-D7n" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="120" id="7cC-4w-JwZ"/>
+                            <constraint firstItem="HFa-MG-D7n" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="130" id="7cC-4w-JwZ"/>
                             <constraint firstItem="HFa-MG-D7n" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" constant="10" id="7gy-5d-dqa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tzg-S6-Tfr" secondAttribute="trailing" constant="10" id="iI3-21-JJR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HFa-MG-D7n" secondAttribute="trailing" constant="10" id="icS-cz-wC0"/>
@@ -219,6 +219,10 @@ Your location info never leaves your phone and stays private.</string>
                             <constraint firstItem="NP5-O1-VLo" firstAttribute="top" secondItem="uls-x2-LLy" secondAttribute="bottom" constant="20" id="trx-5z-ZEh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="tzg-S6-Tfr" id="LNU-Y4-Azi"/>
+                        <outlet property="quoteLabel" destination="HFa-MG-D7n" id="wVc-qr-686"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHS-kU-p0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
