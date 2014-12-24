@@ -18,6 +18,10 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
     showBackground()
   }
+
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
+  }
   
   @IBAction func onCancelTapped(sender: AnyObject) {
     showConfirmDialog()
