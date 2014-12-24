@@ -13,8 +13,9 @@ class WalkViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let image = UIImage(named: "background.png")
+    let image = UIImage(named: "branch_background_1242_2208.png")
     let imageView = UIImageView(image: image)
+    imageView.contentMode = UIViewContentMode.ScaleAspectFill
     imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
     view.insertSubview(imageView, atIndex: 0)
 
