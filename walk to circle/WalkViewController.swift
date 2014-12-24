@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class WalkViewController: UIViewController {
+class WalkViewController: UIViewController, UIAlertViewDelegate {
   @IBOutlet weak var quoteLabel: UILabel!
   @IBOutlet weak var authorLabel: UILabel!
   
@@ -20,7 +20,15 @@ class WalkViewController: UIViewController {
   }
   
   @IBAction func onCancelTapped(sender: AnyObject) {
-    WalkViewControllers.Map.show()
+    showConfirmDialog()
+  }
+
+  private func showConfirmDialog() {
+    let alert = UIAlertView(title: "",
+    message: "Stop current walk?",
+    delegate: self, cancelButtonTitle: nil, otherButtonTitles: "Yes", "No")
+    alert.cancelButtonIndex = 1
+    alert.show()
   }
 
   private func showBackground() {
@@ -32,5 +40,20 @@ class WalkViewController: UIViewController {
 
     iiAutolayoutConstraints.fillParent(imageView, parentView: view, margin: 0, vertically: true)
     iiAutolayoutConstraints.fillParent(imageView, parentView: view, margin: 0, vertically: false)
+  }
+}
+
+// UIAlertViewDelegate
+// ------------------------
+
+typealias WalkViewController_alertViewDelegateImplementation = WalkViewController
+
+extension WalkViewController_alertViewDelegateImplementation {
+  // UIAlertViewDelegate
+  // ------------------------
+  func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    if buttonIndex == 0 {
+      WalkViewControllers.Map.show()
+    }
   }
 }
