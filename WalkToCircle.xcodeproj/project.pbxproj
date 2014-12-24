@@ -40,7 +40,7 @@
 		2B7C38C71A4A89D800C3FDA7 /* stop_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38C41A4A89D800C3FDA7 /* stop_highlighted.png */; };
 		2B7C38C81A4A89D800C3FDA7 /* stop_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38C51A4A89D800C3FDA7 /* stop_highlighted@2x.png */; };
 		2B7C38C91A4A89D800C3FDA7 /* stop_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38C61A4A89D800C3FDA7 /* stop_highlighted@3x.png */; };
-		2B7C38CD1A4A90A600C3FDA7 /* branch_background_1242_2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38CC1A4A90A600C3FDA7 /* branch_background_1242_2208.png */; };
+		2B7C38CF1A4AB68100C3FDA7 /* branch_background_1242_2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7C38CE1A4AB68100C3FDA7 /* branch_background_1242_2208.png */; };
 		2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */; };
 		2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */; };
 		2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */; };
@@ -164,7 +164,7 @@
 		2B7C38C41A4A89D800C3FDA7 /* stop_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_highlighted.png; sourceTree = "<group>"; };
 		2B7C38C51A4A89D800C3FDA7 /* stop_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop_highlighted@2x.png"; sourceTree = "<group>"; };
 		2B7C38C61A4A89D800C3FDA7 /* stop_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop_highlighted@3x.png"; sourceTree = "<group>"; };
-		2B7C38CC1A4A90A600C3FDA7 /* branch_background_1242_2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = branch_background_1242_2208.png; sourceTree = "<group>"; };
+		2B7C38CE1A4AB68100C3FDA7 /* branch_background_1242_2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = branch_background_1242_2208.png; sourceTree = "<group>"; };
 		2B87D7F81A20232700CCE0B6 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		2B87D7FC1A20672000CCE0B6 /* YiiButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtons.swift; sourceTree = "<group>"; };
 		2B87D7FF1A206C1000CCE0B6 /* YiiButtonsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiButtonsDelegate.swift; sourceTree = "<group>"; };
@@ -469,7 +469,7 @@
 		2BD47AAE1A4A70D70001D953 /* Background */ = {
 			isa = PBXGroup;
 			children = (
-				2B7C38CC1A4A90A600C3FDA7 /* branch_background_1242_2208.png */,
+				2B7C38CE1A4AB68100C3FDA7 /* branch_background_1242_2208.png */,
 			);
 			name = Background;
 			sourceTree = "<group>";
@@ -573,11 +573,11 @@
 				2B8A6E511A21BAFD006351BA /* rewind@2x.png in Resources */,
 				2B7C38C81A4A89D800C3FDA7 /* stop_highlighted@2x.png in Resources */,
 				2B99483C19BBF74D00CB08AA /* fall.wav in Resources */,
+				2B7C38CF1A4AB68100C3FDA7 /* branch_background_1242_2208.png in Resources */,
 				2B7C38BB1A4A895500C3FDA7 /* stop.png in Resources */,
 				2B080B431A21B0C40073E1E3 /* play@2x.png in Resources */,
 				2B8A6E5F1A21BCB9006351BA /* rewind_arrows@3x.png in Resources */,
 				2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */,
-				2B7C38CD1A4A90A600C3FDA7 /* branch_background_1242_2208.png in Resources */,
 				2B7C38C91A4A89D800C3FDA7 /* stop_highlighted@3x.png in Resources */,
 				2B8A6E501A21BAFD006351BA /* rewind.png in Resources */,
 				2B7C38C71A4A89D800C3FDA7 /* stop_highlighted.png in Resources */,
