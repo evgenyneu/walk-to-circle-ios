@@ -15,7 +15,7 @@ class LocationDeniedViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    if canOpenAppSettings {
+    if iiSettingsOpener.canOpenAppSettings {
       iiViewPosition.hide(settingsInstructionLabel)
     } else {
       openAppSettingsButton.removeFromSuperview()
@@ -23,14 +23,6 @@ class LocationDeniedViewController: UIViewController {
   }
 
   @IBAction func onOpenAppSettingsTapped(sender: AnyObject) {
-    if !canOpenAppSettings { return }
-
-    if let appSettingsUrl = NSURL(string: UIApplicationOpenSettingsURLString) {
-      UIApplication.sharedApplication().openURL(appSettingsUrl)
-    }
-  }
-
-  private var canOpenAppSettings: Bool {
-    return iiOsVersion.version >= 8
+    iiSettingsOpener.openSettings()
   }
 }

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     WalkLocation.shared.start()
     WalkViewControllers.current.show()
-    
+
     return true
   }
 

@@ -17,4 +17,6 @@ public struct WalkConstants {
 
   // No top margin when in landscape and screen height is small (phones in landscape)
   public static let quotesTopMarginCompact: CGFloat = 20
+
+  public static let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Sound
 }

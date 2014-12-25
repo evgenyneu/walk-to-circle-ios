@@ -166,7 +166,7 @@ Your location info never leaves your phone and stays private.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmq-fq-nXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="1078"/>
+            <point key="canvasLocation" x="324" y="1078"/>
         </scene>
         <!--Walk View Controller-->
         <scene sceneID="Zub-f6-YBr">

@@ -23,6 +23,7 @@
 		2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
+		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
 		2B4E67CA1A34249C0072301A /* WalkRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E67C91A34249C0072301A /* WalkRegions.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
 		2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */; };
@@ -156,6 +157,7 @@
 		2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColorTests.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
 		2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiScreenSize.swift; sourceTree = "<group>"; };
+		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
 		2B4E67C91A34249C0072301A /* WalkRegions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkRegions.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		2B5A5D6F19BC02E700E07F37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				2B770A6219E8E09800C28177 /* iiQ.swift */,
 				2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */,
 				2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */,
+				2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */,
 				2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */,
 				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
 				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
@@ -444,12 +447,12 @@
 			isa = PBXGroup;
 			children = (
 				2B7B70311A342B040026CDA9 /* Location */,
-				2B7B702F1A342B010026CDA9 /* WalkNotification.swift */,
+				2B1276421A47EB4B00F6ED44 /* WalkColors.swift */,
 				2B7B70361A3431780026CDA9 /* WalkConstants.swift */,
 				2B12763C1A47D93F00F6ED44 /* WalkCoordinate.swift */,
+				2B7B702F1A342B010026CDA9 /* WalkNotification.swift */,
 				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
 				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
-				2B1276421A47EB4B00F6ED44 /* WalkColors.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */,
 				2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
+				2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */,
 				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* InitialMapZoom.swift in Sources */,

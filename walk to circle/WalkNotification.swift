@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class WalkNotification {
   class func showNow(text: String) {
     let notification = UILocalNotification()
@@ -15,5 +16,21 @@ class WalkNotification {
     notification.alertBody = text
     notification.soundName = UILocalNotificationDefaultSoundName
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
+  }
+
+  class func registerNotifications() {
+    if !UIApplication.instancesRespondToSelector(Selector("registerUserNotificationSettings:"))
+    {
+      return // there is no need to register local notifications in iOS 7
+    }
+
+    sendNotificationRegisterRequest()
+  }
+
+  private class func sendNotificationRegisterRequest() {
+    let settings = UIUserNotificationSettings(forTypes: WalkConstants.notificationTypes,
+      categories: nil)
+    
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
   }
 }
