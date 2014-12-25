@@ -22,6 +22,7 @@
 		2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276421A47EB4B00F6ED44 /* WalkColors.swift */; };
 		2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
+		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B4E67CA1A34249C0072301A /* WalkRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E67C91A34249C0072301A /* WalkRegions.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
 		2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */; };
@@ -154,6 +155,7 @@
 		2B1276421A47EB4B00F6ED44 /* WalkColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkColors.swift; sourceTree = "<group>"; };
 		2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColorTests.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
+		2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiScreenSize.swift; sourceTree = "<group>"; };
 		2B4E67C91A34249C0072301A /* WalkRegions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkRegions.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		2B5A5D6F19BC02E700E07F37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				2BCFEF3B19EA010800062A99 /* iiOutputView.swift */,
 				2B770A6219E8E09800C28177 /* iiQ.swift */,
 				2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */,
+				2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */,
 				2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */,
 				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
 				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
@@ -710,6 +713,7 @@
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B7B70331A342E010026CDA9 /* CongratsViewController.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
+				2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */,
 				2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */,
 				2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */,
 				2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */,

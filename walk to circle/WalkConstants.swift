@@ -12,6 +12,9 @@ public struct WalkConstants {
   public static let viewControllerTransitionDuration: NSTimeInterval = 1
   public static let quotesJsonFileName = "Quotes.json"
 
+  // Top margin above the quotes
   public static let quotesTopMargin: CGFloat = 100
+
+  // No top margin when in landscape and screen height is small (phones in landscape)
   public static let quotesTopMarginCompact: CGFloat = 15
 }

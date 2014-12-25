@@ -46,32 +46,7 @@ public class YiiQuotes: NSObject {
     authorLabel.text = quote.author
   }
 
-  func adjustToNewSize(traitCollection: UITraitCollection) {
-    let verticalCompact = traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact
-    adjustToNewSize(verticalCompact)
-  }
-
-  // DEPRECATION WARNING: Remove this function when iOS7 support is dropped
-  func adjustToNewSize(orientation: UIInterfaceOrientation) {
-    let verticalCompact = !UIInterfaceOrientationIsPortrait(orientation)
-    adjustToNewSize(verticalCompact)
-  }
-  
-  func adjustToNewSize(verticalCompact: Bool) {
-    if verticalCompact {
-      scrollView.contentInset.top = WalkConstants.quotesTopMarginCompact
-    } else {
-      scrollView.contentInset.top = WalkConstants.quotesTopMargin
-    }
-
-    // Scroll text down to show the branch drawing
-    scrollView.contentOffset.y = -scrollView.contentInset.top
-
-    println("adjustToNewSize")
-  }
-
   func show() {
-    println("show")
     if !scrollView.hidden { return } // already shown
     scrollView.hidden = false
 
@@ -86,5 +61,28 @@ public class YiiQuotes: NSObject {
         self.scrollView.alpha = 1
       },
       completion: nil)
+  }
+
+  func adjustToNewSize(orientation: UIInterfaceOrientation) {
+    var verticalCompact = false
+
+    if UIInterfaceOrientationIsLandscape(orientation) && iiScreenSize.minSide < 600 {
+      // No top margin when in landscape and screen height is small (phones in landscape)
+      verticalCompact = true
+    }
+
+    adjustToNewSize(verticalCompact)
+  }
+  
+  private func adjustToNewSize(verticalCompact: Bool) {
+    if verticalCompact {
+      scrollView.contentInset.top = WalkConstants.quotesTopMarginCompact
+    } else {
+      let topMargin = WalkConstants.quotesTopMargin * (iiScreenSize.minSide / 320)
+      scrollView.contentInset.top = topMargin
+    }
+
+    // Scroll text down to show the branch on the drawing
+    scrollView.contentOffset.y = -scrollView.contentInset.top
   }
 }

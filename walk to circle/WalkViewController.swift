@@ -34,13 +34,8 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
   }
 
   private func initQuotesOrientation() {
-    if respondsToSelector(Selector("traitCollection")) {
-      quotes.adjustToNewSize(traitCollection)
-    } else {
-      // DEPRECATION WARNING: Remove this function when iOS7 support is dropped
-      let interfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
-      quotes.adjustToNewSize(interfaceOrientation)
-    }
+    let interfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+    quotes.adjustToNewSize(interfaceOrientation)
   }
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
