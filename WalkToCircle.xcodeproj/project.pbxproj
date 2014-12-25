@@ -90,6 +90,7 @@
 		2BD86EFB198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86EFD198C8B7E00CDA9F5 /* InfoPlist.strings */; };
 		2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F02198C8B7E00CDA9F5 /* Localizable.strings */; };
 		2BD86F05198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F07198C8B7E00CDA9F5 /* InfoPlist.strings */; };
+		2BFCA84D1A4B904A0080C988 /* TegScrolledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +227,8 @@
 		2BD86EFC198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BD86F01198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BD86F06198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegScrolledContent.swift; sourceTree = "<group>"; };
+		2BFCA84E1A4B90630080C988 /* README_scrolled_content.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_scrolled_content.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				2B7C38D61A4AB9D800C3FDA7 /* CutePossumParser */,
+				2BFCA84B1A4B903D0080C988 /* ScrolledContent */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -540,6 +544,15 @@
 			name = Background;
 			sourceTree = "<group>";
 		};
+		2BFCA84B1A4B903D0080C988 /* ScrolledContent */ = {
+			isa = PBXGroup;
+			children = (
+				2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */,
+				2BFCA84E1A4B90630080C988 /* README_scrolled_content.md */,
+			);
+			name = ScrolledContent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -674,6 +687,7 @@
 				2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */,
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
 				2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */,
+				2BFCA84D1A4B904A0080C988 /* TegScrolledContent.swift in Sources */,
 				2B7C38E71A4AC18800C3FDA7 /* YiiQuotes.swift in Sources */,
 				2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */,
 				2B1276351A450DA000F6ED44 /* iiOsVersion.swift in Sources */,
