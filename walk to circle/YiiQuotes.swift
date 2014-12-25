@@ -13,7 +13,7 @@ public class YiiQuotes: NSObject {
   @IBOutlet public weak var textLabel: UILabel!
   @IBOutlet public weak var authorLabel: UILabel!
   @IBOutlet weak var scrollView: UIScrollView!
-
+  
   private let quotesLoader = WalkQuotesLoader()
 
   func setup() {
@@ -21,10 +21,10 @@ public class YiiQuotes: NSObject {
     authorLabel.text = ""
 
     TegScrolledContent.createContentView(scrollView)
+    scrollView.contentInset.top = 100
   }
 
   public func showRandomQuote(finished: (()->())? = nil) {
-
     quotesLoader.loadQuotes({ quotes in
       if let quote = YiiQuotes.pickRandomQuote(quotes) {
         YiiQuotes.showRandomQuote(quote, textLabel: self.textLabel, authorLabel: self.authorLabel)
@@ -44,5 +44,18 @@ public class YiiQuotes: NSObject {
 
     textLabel.text = quote.text
     authorLabel.text = quote.author
+  }
+
+  func adjustToNewSize(traitCollection: UITraitCollection) {
+    let verticalCompact = traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact
+    adjustToNewSize(verticalCompact)
+  }
+  
+  func adjustToNewSize(verticalCompact: Bool) {
+    if verticalCompact {
+      scrollView.contentInset.top = 15
+    } else {
+      scrollView.contentInset.top = 100
+    }
   }
 }

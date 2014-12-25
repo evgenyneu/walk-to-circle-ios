@@ -24,10 +24,31 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
     quotes.setup()
     quotes.showRandomQuote()
+
+    if respondsToSelector(Selector("traitCollection")) {
+      quotes.adjustToNewSize(traitCollection)
+    }
   }
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
+  }
+
+  override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+
+    super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
+
+    quotes.adjustToNewSize(newCollection)
+  }
+
+  // DEPRECATED in iOS 8: Remove this function when iOS7 support is dropped
+  override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation,
+    duration: NSTimeInterval) {
+
+    super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
+
+    let verticalCompact = !UIInterfaceOrientationIsPortrait(toInterfaceOrientation)
+    quotes.adjustToNewSize(verticalCompact)
   }
   
   @IBAction func onCancelTapped(sender: AnyObject) {

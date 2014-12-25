@@ -194,7 +194,7 @@ Your location info never leaves your phone and stays private.</string>
                                 <rect key="frame" x="16" y="30" width="568" height="423"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-S6-Tfr">
-                                        <rect key="frame" x="10" y="144.5" width="118.5" height="30"/>
+                                        <rect key="frame" x="10" y="64.5" width="118.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -202,7 +202,7 @@ Your location info never leaves your phone and stays private.</string>
                                         <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MG-D7n">
-                                        <rect key="frame" x="10" y="80" width="118.5" height="44.5"/>
+                                        <rect key="frame" x="10" y="0.0" width="118.5" height="44.5"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -213,12 +213,13 @@ Your location info never leaves your phone and stays private.</string>
                                 <constraints>
                                     <constraint firstItem="tzg-S6-Tfr" firstAttribute="top" secondItem="HFa-MG-D7n" secondAttribute="bottom" constant="20" id="Ig3-ET-1c9"/>
                                     <constraint firstAttribute="bottom" secondItem="tzg-S6-Tfr" secondAttribute="bottom" constant="20" id="Nuu-do-UIj"/>
-                                    <constraint firstItem="HFa-MG-D7n" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="top" constant="80" id="PpR-Q7-UJU"/>
+                                    <constraint firstItem="HFa-MG-D7n" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="top" id="PpR-Q7-UJU"/>
                                     <constraint firstItem="HFa-MG-D7n" firstAttribute="leading" secondItem="zmT-gg-3Vr" secondAttribute="leading" constant="10" id="RGd-GF-r2P"/>
                                     <constraint firstItem="tzg-S6-Tfr" firstAttribute="leading" secondItem="zmT-gg-3Vr" secondAttribute="leading" constant="10" id="Xa7-qS-Eog"/>
                                     <constraint firstAttribute="trailing" secondItem="tzg-S6-Tfr" secondAttribute="trailing" constant="10" id="anI-1d-Cjv"/>
                                     <constraint firstAttribute="trailing" secondItem="HFa-MG-D7n" secondAttribute="trailing" constant="10" id="gZW-el-xFF"/>
                                 </constraints>
+                                <variation key="heightClass=compact"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
