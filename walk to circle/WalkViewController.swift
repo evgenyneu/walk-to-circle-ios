@@ -27,6 +27,10 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
     if respondsToSelector(Selector("traitCollection")) {
       quotes.adjustToNewSize(traitCollection)
+    } else {
+      // DEPRECATION WARNING: Remove this function when iOS7 support is dropped
+      let interfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
+      quotes.adjustToNewSize(interfaceOrientation)
     }
   }
 
@@ -41,14 +45,13 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
     quotes.adjustToNewSize(newCollection)
   }
 
-  // DEPRECATED in iOS 8: Remove this function when iOS7 support is dropped
+  // DEPRECATION WARNING: Remove this function when iOS7 support is dropped
   override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation,
     duration: NSTimeInterval) {
 
     super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
 
-    let verticalCompact = !UIInterfaceOrientationIsPortrait(toInterfaceOrientation)
-    quotes.adjustToNewSize(verticalCompact)
+    quotes.adjustToNewSize(toInterfaceOrientation)
   }
   
   @IBAction func onCancelTapped(sender: AnyObject) {

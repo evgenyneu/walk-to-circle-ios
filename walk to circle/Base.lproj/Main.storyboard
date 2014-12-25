@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-Gm-ry7">
-                                <rect key="frame" x="254" y="488" width="92" height="92"/>
+                                <rect key="frame" x="254" y="498" width="92" height="92"/>
                                 <color key="backgroundColor" red="1" green="0.89707423050000001" blue="0.1886660412" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Play" image="play.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2" customClass="RewindButton" customModule="WalkToCircle" customModuleProvider="target">
-                                <rect key="frame" x="253.5" y="488" width="92" height="92"/>
+                                <rect key="frame" x="253.5" y="498" width="92" height="92"/>
                                 <color key="backgroundColor" red="1" green="0.89707423050000001" blue="0.1886660412" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Rewind" image="rewind.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,11 +78,11 @@
                         <constraints>
                             <constraint firstItem="BVb-gS-cVf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0oK-Na-J73"/>
                             <constraint firstAttribute="centerX" secondItem="WD4-Gm-ry7" secondAttribute="centerX" id="6gQ-VF-eTE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jC3-dd-eb2" secondAttribute="bottom" constant="20" id="AsP-JS-Fbm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jC3-dd-eb2" secondAttribute="bottom" constant="10" id="AsP-JS-Fbm"/>
                             <constraint firstItem="BVb-gS-cVf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Cto-05-NU2"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ncc-cz-MaM" secondAttribute="bottom" id="QhD-qL-hb6"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="top" id="RMX-Gi-TyK"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WD4-Gm-ry7" secondAttribute="bottom" constant="20" id="gL0-5G-U0v"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WD4-Gm-ry7" secondAttribute="bottom" constant="10" id="gL0-5G-U0v"/>
                             <constraint firstAttribute="trailing" secondItem="ncc-cz-MaM" secondAttribute="trailing" id="sYv-c8-Qlv"/>
                             <constraint firstAttribute="centerX" secondItem="jC3-dd-eb2" secondAttribute="centerX" id="uaQ-ID-Lxp"/>
                             <constraint firstItem="ncc-cz-MaM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wnF-Z3-eZu"/>
@@ -181,7 +181,7 @@ Your location info never leaves your phone and stays private.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uls-x2-LLy">
-                                <rect key="frame" x="254" y="488" width="92" height="92"/>
+                                <rect key="frame" x="254" y="498" width="92" height="92"/>
                                 <state key="normal" image="stop.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -191,7 +191,7 @@ Your location info never leaves your phone and stays private.</string>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-gg-3Vr">
-                                <rect key="frame" x="16" y="20" width="568" height="433"/>
+                                <rect key="frame" x="16" y="20" width="568" height="468"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-S6-Tfr">
                                         <rect key="frame" x="10" y="64.5" width="118.5" height="30"/>
@@ -223,12 +223,12 @@ Your location info never leaves your phone and stays private.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uls-x2-LLy" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="bottom" constant="35" id="bqp-9V-j8r"/>
+                            <constraint firstItem="uls-x2-LLy" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="bottom" constant="10" id="bqp-9V-j8r"/>
                             <constraint firstItem="zmT-gg-3Vr" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" id="eQB-ik-wdH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zmT-gg-3Vr" secondAttribute="trailing" id="gpH-hF-3K5"/>
                             <constraint firstAttribute="centerX" secondItem="uls-x2-LLy" secondAttribute="centerX" id="qXe-zb-YE1"/>
                             <constraint firstItem="zmT-gg-3Vr" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="top" id="rwP-k2-jwF"/>
-                            <constraint firstItem="NP5-O1-VLo" firstAttribute="top" secondItem="uls-x2-LLy" secondAttribute="bottom" constant="20" id="trx-5z-ZEh"/>
+                            <constraint firstItem="NP5-O1-VLo" firstAttribute="top" secondItem="uls-x2-LLy" secondAttribute="bottom" constant="10" id="trx-5z-ZEh"/>
                         </constraints>
                     </view>
                     <connections>

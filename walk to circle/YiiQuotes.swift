@@ -50,6 +50,12 @@ public class YiiQuotes: NSObject {
     let verticalCompact = traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact
     adjustToNewSize(verticalCompact)
   }
+
+  // DEPRECATION WARNING: Remove this function when iOS7 support is dropped
+  func adjustToNewSize(orientation: UIInterfaceOrientation) {
+    let verticalCompact = !UIInterfaceOrientationIsPortrait(orientation)
+    adjustToNewSize(verticalCompact)
+  }
   
   func adjustToNewSize(verticalCompact: Bool) {
     if verticalCompact {
