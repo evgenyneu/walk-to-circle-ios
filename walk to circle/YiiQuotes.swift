@@ -21,7 +21,7 @@ public class YiiQuotes: NSObject {
     authorLabel.text = ""
 
     TegScrolledContent.createContentView(scrollView)
-    scrollView.contentInset.top = 100
+    adjustToNewSize(false)
   }
 
   public func showRandomQuote(finished: (()->())? = nil) {
@@ -53,9 +53,9 @@ public class YiiQuotes: NSObject {
   
   func adjustToNewSize(verticalCompact: Bool) {
     if verticalCompact {
-      scrollView.contentInset.top = 15
+      scrollView.contentInset.top = WalkConstants.quotesTopMarginCompact
     } else {
-      scrollView.contentInset.top = 100
+      scrollView.contentInset.top = WalkConstants.quotesTopMargin
     }
   }
 }
