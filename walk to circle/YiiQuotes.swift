@@ -19,9 +19,9 @@ public class YiiQuotes: NSObject {
   func setup() {
     textLabel.text = ""
     authorLabel.text = ""
+    scrollView.hidden = true
 
     TegScrolledContent.createContentView(scrollView)
-    adjustToNewSize(false)
   }
 
   public func showRandomQuote(finished: (()->())? = nil) {
@@ -63,5 +63,28 @@ public class YiiQuotes: NSObject {
     } else {
       scrollView.contentInset.top = WalkConstants.quotesTopMargin
     }
+
+    // Scroll text down to show the branch drawing
+    scrollView.contentOffset.y = -scrollView.contentInset.top
+
+    println("adjustToNewSize")
+  }
+
+  func show() {
+    println("show")
+    if !scrollView.hidden { return } // already shown
+    scrollView.hidden = false
+
+    scrollView.alpha = 0
+    UIView.animateWithDuration(
+      2,
+      delay: 0,
+      usingSpringWithDamping: 1,
+      initialSpringVelocity: 2,
+      options: nil,
+      animations: {
+        self.scrollView.alpha = 1
+      },
+      completion: nil)
   }
 }

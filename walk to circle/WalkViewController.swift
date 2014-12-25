@@ -24,7 +24,16 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
     quotes.setup()
     quotes.showRandomQuote()
+  }
 
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+
+    initQuotesOrientation()
+    quotes.show()
+  }
+
+  private func initQuotesOrientation() {
     if respondsToSelector(Selector("traitCollection")) {
       quotes.adjustToNewSize(traitCollection)
     } else {
@@ -36,13 +45,6 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
-  }
-
-  override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-
-    super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
-
-    quotes.adjustToNewSize(newCollection)
   }
 
   // DEPRECATION WARNING: Remove this function when iOS7 support is dropped

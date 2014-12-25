@@ -171,7 +171,7 @@ Your location info never leaves your phone and stays private.</string>
         <!--Walk View Controller-->
         <scene sceneID="Zub-f6-YBr">
             <objects>
-                <viewController storyboardIdentifier="walk view controller" id="weP-hj-53b" customClass="WalkViewController" customModule="WalkToCircle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk view controller" automaticallyAdjustsScrollViewInsets="NO" id="weP-hj-53b" customClass="WalkViewController" customModule="WalkToCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5GM-qE-7fe"/>
                         <viewControllerLayoutGuide type="bottom" id="NP5-O1-VLo"/>
