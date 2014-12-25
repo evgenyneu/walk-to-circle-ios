@@ -34,7 +34,7 @@ class WalkQuotesLoaderTests: XCTestCase {
 
     let lastQuote = quotes.last!
 
-    XCTAssertEqual("My life is like a stroll upon the beach,\nAs near the ocean's edge as I can go.",
+    XCTAssertEqual("My life is like a stroll upon the beach, As near the ocean's edge as I can go.",
       lastQuote.text)
 
     XCTAssertEqual("Henry David Thoreau", lastQuote.author)
