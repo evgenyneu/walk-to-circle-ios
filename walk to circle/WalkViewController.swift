@@ -64,7 +64,7 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
   }
 
   private func showBackground() {
-    let image = UIImage(named: "branch_background_1242_2208.png")
+    let image = UIImage(named: "branch_background.jpg")
     let imageView = UIImageView(image: image)
     imageView.contentMode = UIViewContentMode.ScaleAspectFill
     imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
