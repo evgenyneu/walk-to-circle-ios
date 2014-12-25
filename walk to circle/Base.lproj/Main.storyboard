@@ -191,7 +191,7 @@ Your location info never leaves your phone and stays private.</string>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-gg-3Vr">
-                                <rect key="frame" x="16" y="30" width="568" height="423"/>
+                                <rect key="frame" x="16" y="20" width="568" height="433"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-S6-Tfr">
                                         <rect key="frame" x="10" y="64.5" width="118.5" height="30"/>
@@ -219,7 +219,6 @@ Your location info never leaves your phone and stays private.</string>
                                     <constraint firstAttribute="trailing" secondItem="tzg-S6-Tfr" secondAttribute="trailing" constant="10" id="anI-1d-Cjv"/>
                                     <constraint firstAttribute="trailing" secondItem="HFa-MG-D7n" secondAttribute="trailing" constant="10" id="gZW-el-xFF"/>
                                 </constraints>
-                                <variation key="heightClass=compact"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,7 +227,7 @@ Your location info never leaves your phone and stays private.</string>
                             <constraint firstItem="zmT-gg-3Vr" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" id="eQB-ik-wdH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zmT-gg-3Vr" secondAttribute="trailing" id="gpH-hF-3K5"/>
                             <constraint firstAttribute="centerX" secondItem="uls-x2-LLy" secondAttribute="centerX" id="qXe-zb-YE1"/>
-                            <constraint firstItem="zmT-gg-3Vr" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="10" id="rwP-k2-jwF"/>
+                            <constraint firstItem="zmT-gg-3Vr" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="top" id="rwP-k2-jwF"/>
                             <constraint firstItem="NP5-O1-VLo" firstAttribute="top" secondItem="uls-x2-LLy" secondAttribute="bottom" constant="20" id="trx-5z-ZEh"/>
                         </constraints>
                     </view>
