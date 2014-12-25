@@ -13,8 +13,8 @@ public struct WalkConstants {
   public static let quotesJsonFileName = "Quotes.json"
 
   // Top margin above the quotes
-  public static let quotesTopMargin: CGFloat = 100
+  public static let quotesTopMargin: CGFloat = 110
 
   // No top margin when in landscape and screen height is small (phones in landscape)
-  public static let quotesTopMarginCompact: CGFloat = 15
+  public static let quotesTopMarginCompact: CGFloat = 20
 }
