@@ -180,22 +180,6 @@ Your location info never leaves your phone and stays private.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MG-D7n">
-                                <rect key="frame" x="26" y="150" width="548" height="44.5"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-S6-Tfr">
-                                <rect key="frame" x="26" y="224.5" width="548" height="30"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uls-x2-LLy">
                                 <rect key="frame" x="254" y="488" width="92" height="92"/>
                                 <state key="normal" image="stop.png">
@@ -206,16 +190,44 @@ Your location info never leaves your phone and stays private.</string>
                                     <action selector="onCancelTapped:" destination="weP-hj-53b" eventType="touchUpInside" id="MED-jw-UrU"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-gg-3Vr">
+                                <rect key="frame" x="16" y="30" width="568" height="423"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-S6-Tfr">
+                                        <rect key="frame" x="10" y="144.5" width="118.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MG-D7n">
+                                        <rect key="frame" x="10" y="80" width="118.5" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="27"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tzg-S6-Tfr" firstAttribute="top" secondItem="HFa-MG-D7n" secondAttribute="bottom" constant="20" id="Ig3-ET-1c9"/>
+                                    <constraint firstAttribute="bottom" secondItem="tzg-S6-Tfr" secondAttribute="bottom" constant="20" id="Nuu-do-UIj"/>
+                                    <constraint firstItem="HFa-MG-D7n" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="top" constant="80" id="PpR-Q7-UJU"/>
+                                    <constraint firstItem="HFa-MG-D7n" firstAttribute="leading" secondItem="zmT-gg-3Vr" secondAttribute="leading" constant="10" id="RGd-GF-r2P"/>
+                                    <constraint firstItem="tzg-S6-Tfr" firstAttribute="leading" secondItem="zmT-gg-3Vr" secondAttribute="leading" constant="10" id="Xa7-qS-Eog"/>
+                                    <constraint firstAttribute="trailing" secondItem="tzg-S6-Tfr" secondAttribute="trailing" constant="10" id="anI-1d-Cjv"/>
+                                    <constraint firstAttribute="trailing" secondItem="HFa-MG-D7n" secondAttribute="trailing" constant="10" id="gZW-el-xFF"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tzg-S6-Tfr" firstAttribute="top" secondItem="HFa-MG-D7n" secondAttribute="bottom" constant="30" id="6Ti-a9-Wac"/>
-                            <constraint firstItem="HFa-MG-D7n" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="130" id="7cC-4w-JwZ"/>
-                            <constraint firstItem="HFa-MG-D7n" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" constant="10" id="7gy-5d-dqa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tzg-S6-Tfr" secondAttribute="trailing" constant="10" id="iI3-21-JJR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HFa-MG-D7n" secondAttribute="trailing" constant="10" id="icS-cz-wC0"/>
+                            <constraint firstItem="uls-x2-LLy" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="bottom" constant="35" id="bqp-9V-j8r"/>
+                            <constraint firstItem="zmT-gg-3Vr" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" id="eQB-ik-wdH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zmT-gg-3Vr" secondAttribute="trailing" id="gpH-hF-3K5"/>
                             <constraint firstAttribute="centerX" secondItem="uls-x2-LLy" secondAttribute="centerX" id="qXe-zb-YE1"/>
-                            <constraint firstItem="tzg-S6-Tfr" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" constant="10" id="rwX-7N-JhC"/>
+                            <constraint firstItem="zmT-gg-3Vr" firstAttribute="top" secondItem="5GM-qE-7fe" secondAttribute="bottom" constant="10" id="rwP-k2-jwF"/>
                             <constraint firstItem="NP5-O1-VLo" firstAttribute="top" secondItem="uls-x2-LLy" secondAttribute="bottom" constant="20" id="trx-5z-ZEh"/>
                         </constraints>
                     </view>
@@ -227,11 +239,12 @@ Your location info never leaves your phone and stays private.</string>
                 <customObject id="sAj-x1-AfO" customClass="YiiQuotes" customModule="WalkToCircle" customModuleProvider="target">
                     <connections>
                         <outlet property="authorLabel" destination="tzg-S6-Tfr" id="rno-cx-T3n"/>
+                        <outlet property="scrollView" destination="zmT-gg-3Vr" id="AXt-jk-79N"/>
                         <outlet property="textLabel" destination="HFa-MG-D7n" id="cbR-hc-2Fh"/>
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="1022" y="350"/>
+            <point key="canvasLocation" x="1022" y="350.5"/>
         </scene>
         <!--Region Monitoring Unavailable-->
         <scene sceneID="tUa-sL-pbp">

@@ -12,12 +12,15 @@ public class YiiQuotes: NSObject {
 
   @IBOutlet public weak var textLabel: UILabel!
   @IBOutlet public weak var authorLabel: UILabel!
+  @IBOutlet weak var scrollView: UIScrollView!
 
   private let quotesLoader = WalkQuotesLoader()
 
   func setup() {
     textLabel.text = ""
     authorLabel.text = ""
+
+    TegScrolledContent.createContentView(scrollView)
   }
 
   public func showRandomQuote(finished: (()->())? = nil) {
