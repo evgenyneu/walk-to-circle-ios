@@ -26,6 +26,10 @@
 	<string>The app will notify you when you walk into a circle on the map.</string>
 	<key>NSLocationUsageDescription</key>
 	<string>The app will notify you when you walk into a circle on the map.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>

@@ -37,6 +37,12 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
     quotes.show()
   }
 
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+
+    WalkCircleMonitor.stop()
+  }
+
   private func initQuotesOrientation() {
     let interfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
     quotes.adjustToNewSize(interfaceOrientation)

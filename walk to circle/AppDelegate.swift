@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
 
-    WalkLocation.shared.start()
+    WalkLocation.shared.reactToCurrentAuthorizationStatus()
     WalkViewControllers.current.show()
 
     return true

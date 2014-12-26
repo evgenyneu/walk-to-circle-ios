@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 public struct WalkConstants {
   public static let viewControllerTransitionDuration: NSTimeInterval = 1
@@ -19,4 +20,6 @@ public struct WalkConstants {
   public static let quotesTopMarginCompact: CGFloat = 20
 
   public static let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Sound
+
+  public static let regionCircleRadiusMeters = CLLocationDistance(100)
 }

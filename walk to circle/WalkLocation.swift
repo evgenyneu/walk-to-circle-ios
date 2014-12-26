@@ -13,7 +13,7 @@ import CoreLocation
 let iiWalkLocation = WalkLocation()
 
 class WalkLocation: NSObject, CLLocationManagerDelegate {
-  let locationManager = CLLocationManager()
+  private let locationManager = CLLocationManager()
 
   class var shared: WalkLocation {
     return iiWalkLocation
@@ -24,12 +24,11 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
     locationManager.delegate = self
   }
 
-  func start() {
+  func reactToCurrentAuthorizationStatus() {
     checkAuthorizationStatus(CLLocationManager.authorizationStatus())
   }
 
   func checkAuthorizationStatus(status: CLAuthorizationStatus) {
-
     if !CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion) {
       // Region monitoring is not available on the hardware,
       // which means that our app is not functional on this device.
@@ -51,6 +50,16 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
     default:
       let none = 0
     }
+  }
+
+  func startUpdatingLocation() {
+    stopUpdatingLocation()
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+    locationManager.startUpdatingLocation()
+  }
+
+  func stopUpdatingLocation() {
+    locationManager.stopUpdatingLocation()
   }
 }
 

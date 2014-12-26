@@ -38,11 +38,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
     showCurrentPin()
   }
 
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-    WalkRegions.stopMonitoringForAllRegions()
-  }
-
   private func showCurrentPin() {
     if let currentCoordinate = WalkCoordinate.current {
       yiiMap.showCurrentPin(currentCoordinate)
@@ -61,9 +56,7 @@ extension YiiButtonsDelegateImplementation {
     
     yiiMap.dropNewPin()
 
-    if let currentCoordinate = WalkCoordinate.current {
-      WalkRegions.startMonitoringForCoordinate(currentCoordinate)
-    }
+    WalkCircleMonitor.start()
   }
 }
 

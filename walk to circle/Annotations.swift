@@ -22,7 +22,7 @@ class Annotations {
     if all[title] != nil { return all[title]! }
 
     let annotation = Annotation(centerCoordinate: coordinate,
-      radius: iiWalkRegionOverlayCircleRadiusMeters)
+      radius: WalkConstants.regionCircleRadiusMeters)
 
     annotation.newPin = newPin
     
