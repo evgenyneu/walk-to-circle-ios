@@ -15,6 +15,8 @@ let iiWalkLocation = WalkLocation()
 class WalkLocation: NSObject, CLLocationManagerDelegate {
   private let locationManager = CLLocationManager()
 
+  private(set) var updatingLocation = false
+
   class var shared: WalkLocation {
     return iiWalkLocation
   }
@@ -29,13 +31,6 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
   }
 
   func checkAuthorizationStatus(status: CLAuthorizationStatus) {
-    if !CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion) {
-      // Region monitoring is not available on the hardware,
-      // which means that our app is not functional on this device.
-      WalkViewControllers.RegionMonitoringUnavailable.show()
-      return
-    }
-
     switch status {
     case .Authorized:
       WalkViewControllers.currentNonError.show()
@@ -56,13 +51,14 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
     stopUpdatingLocation()
 
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-    locationManager.distanceFilter = 10
 
     locationManager.startUpdatingLocation()
+    updatingLocation = true
   }
 
   func stopUpdatingLocation() {
     locationManager.stopUpdatingLocation()
+    updatingLocation = false
   }
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-let walkCircleMonitor = WalkCircleMonitor()
+private let walkCircleMonitor = WalkCircleMonitor()
 
 class WalkCircleMonitor {
   private var region = CLCircularRegion()
@@ -27,6 +27,8 @@ class WalkCircleMonitor {
   }
 
   private func start(coordinate: CLLocationCoordinate2D) {
+    if alreadyUpdatingForCoordinate(coordinate) { return }
+
     region = WalkCircleMonitor.createRegion(coordinate)
     WalkLocation.shared.startUpdatingLocation()
   }
@@ -36,11 +38,17 @@ class WalkCircleMonitor {
   }
 
   func processLocationUpdate(location: CLLocation) {
-    
+    println("processLocationUpdate")
   }
 
   private class func createRegion(coordinate: CLLocationCoordinate2D) -> CLCircularRegion {
     return CLCircularRegion(center: coordinate, radius: WalkConstants.regionCircleRadiusMeters,
-      identifier: nil)
+      identifier: "walk circle")
+  }
+
+  private func alreadyUpdatingForCoordinate(location: CLLocationCoordinate2D) -> Bool {
+    return WalkLocation.shared.updatingLocation &&
+      region.center.latitude == location.latitude &&
+      region.center.longitude == location.longitude
   }
 }

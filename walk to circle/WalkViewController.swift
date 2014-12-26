@@ -20,6 +20,8 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    WalkCircleMonitor.start()
+
     showBackground()
 
     quotes.setup()
