@@ -38,7 +38,10 @@ class WalkCircleMonitor {
   }
 
   func processLocationUpdate(location: CLLocation) {
-    println("processLocationUpdate")
+    if region.containsCoordinate(location.coordinate) {
+      WalkCircleMonitor.stop()
+      
+    }
   }
 
   private class func createRegion(coordinate: CLLocationCoordinate2D) -> CLCircularRegion {
