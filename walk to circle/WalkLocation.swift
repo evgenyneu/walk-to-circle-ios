@@ -54,7 +54,10 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
 
   func startUpdatingLocation() {
     stopUpdatingLocation()
-    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+
+    locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+    locationManager.distanceFilter = 10
+
     locationManager.startUpdatingLocation()
   }
 
@@ -74,5 +77,24 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
     didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 
     checkAuthorizationStatus(status)
+  }
+
+  func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    for location in locations {
+      if let currentLocation = location as? CLLocation {
+        WalkCircleMonitor.shared.processLocationUpdate(currentLocation)
+      }
+    }
+  }
+
+  func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    let title = "Location Error"
+    let message = iiCLErrorToString.toString(error.code) + " " + error.description
+
+    let alert = UIAlertView(title: title, message: message, delegate: nil,
+      cancelButtonTitle: "Close")
+
+    WalkNotification.showNow("\(title): \(message)")
+    alert.show()
   }
 }

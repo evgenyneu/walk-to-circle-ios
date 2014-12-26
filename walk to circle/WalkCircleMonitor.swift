@@ -12,6 +12,8 @@ import CoreLocation
 let walkCircleMonitor = WalkCircleMonitor()
 
 class WalkCircleMonitor {
+  private var region = CLCircularRegion()
+
   class var shared: WalkCircleMonitor {
     return walkCircleMonitor
   }
@@ -25,11 +27,16 @@ class WalkCircleMonitor {
   }
 
   private func start(coordinate: CLLocationCoordinate2D) {
+    region = WalkCircleMonitor.createRegion(coordinate)
     WalkLocation.shared.startUpdatingLocation()
   }
 
   class func stop() {
     WalkLocation.shared.stopUpdatingLocation()
+  }
+
+  func processLocationUpdate(location: CLLocation) {
+    
   }
 
   private class func createRegion(coordinate: CLLocationCoordinate2D) -> CLCircularRegion {

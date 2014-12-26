@@ -22,6 +22,7 @@
 		2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276421A47EB4B00F6ED44 /* WalkColors.swift */; };
 		2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */; };
 		2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B143BF31A4E1CC800BDE4F4 /* WalkCircleMonitor.swift */; };
+		2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B143BF51A4E24AB00BDE4F4 /* iiCLErrorToString.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
@@ -155,6 +156,7 @@
 		2B1276421A47EB4B00F6ED44 /* WalkColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkColors.swift; sourceTree = "<group>"; };
 		2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColorTests.swift; sourceTree = "<group>"; };
 		2B143BF31A4E1CC800BDE4F4 /* WalkCircleMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCircleMonitor.swift; sourceTree = "<group>"; };
+		2B143BF51A4E24AB00BDE4F4 /* iiCLErrorToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiCLErrorToString.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
 		2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiScreenSize.swift; sourceTree = "<group>"; };
 		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			children = (
 				2B99483019BBE4B800CB08AA /* iiAnimator.swift */,
 				2B12763A1A45450500F6ED44 /* iiAutolayoutConstraints.swift */,
+				2B143BF51A4E24AB00BDE4F4 /* iiCLErrorToString.swift */,
 				2B6D35D2197A581D008DDAE4 /* iiGeo.swift */,
 				2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */,
 				2B8A6E601A21BD09006351BA /* iiLayer.swift */,
@@ -726,6 +729,7 @@
 				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* InitialMapZoom.swift in Sources */,
+				2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */,
 				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */,
