@@ -13,6 +13,8 @@ class CongratsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    WalkUserDefaults.anyCircleReached.save(true)
   }
 
   @IBAction func onDoneTapped(sender: AnyObject) {
