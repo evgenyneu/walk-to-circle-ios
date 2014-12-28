@@ -92,6 +92,8 @@
 		2BD86EFB198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86EFD198C8B7E00CDA9F5 /* InfoPlist.strings */; };
 		2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F02198C8B7E00CDA9F5 /* Localizable.strings */; };
 		2BD86F05198C8B7E00CDA9F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BD86F07198C8B7E00CDA9F5 /* InfoPlist.strings */; };
+		2BE7A5F41A5024FD00B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
+		2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BFCA84D1A4B904A0080C988 /* TegScrolledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */; };
 /* End PBXBuildFile section */
 
@@ -231,6 +233,7 @@
 		2BD86EFC198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BD86F01198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2BD86F06198C8B7E00CDA9F5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BE7A5F31A5024FD00B8846E /* iiRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiRandom.swift; sourceTree = "<group>"; };
 		2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegScrolledContent.swift; sourceTree = "<group>"; };
 		2BFCA84E1A4B90630080C988 /* README_scrolled_content.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_scrolled_content.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -307,6 +310,7 @@
 				2BCFEF3B19EA010800062A99 /* iiOutputView.swift */,
 				2B770A6219E8E09800C28177 /* iiQ.swift */,
 				2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */,
+				2BE7A5F31A5024FD00B8846E /* iiRandom.swift */,
 				2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */,
 				2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */,
 				2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */,
@@ -685,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCFEF3C19EA010800062A99 /* iiOutputView.swift in Sources */,
+				2BE7A5F41A5024FD00B8846E /* iiRandom.swift in Sources */,
 				2B1276371A453EE800F6ED44 /* RegionMonitoringUnavailable.swift in Sources */,
 				2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */,
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
@@ -745,6 +750,7 @@
 				2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
+				2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */,
 				2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */,
 				2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */,
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,

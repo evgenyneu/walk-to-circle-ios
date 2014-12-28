@@ -9,7 +9,6 @@
 import UIKit
 
 class Countdown: NSObject {
-  private let countdownStartFrom = 5
   private var delayTimer:NSTimer?
   private var timer: NSTimer?
 
@@ -23,7 +22,7 @@ class Countdown: NSObject {
 
   func start() {
     stopTimer()
-    countdown = countdownStartFrom
+    countdown = WalkConstants.mapCountdownIntervalSeconds
     reportTick()
     startDelayTimer()
   }

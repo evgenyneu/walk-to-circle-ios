@@ -59,7 +59,7 @@ class iiGeo {
 
   /* Returns random value between min and max */
   class func randomBetween(#min: Double, max: Double) -> Double {
-    return min + drand48() * (max - min)
+    return min + iiRandom.randomBetween0And1 * (max - min)
   }
 
   /* Returns random bearing between 0 and 360 degress */
@@ -67,7 +67,7 @@ class iiGeo {
     let min = 0.0
     let max = 360.0
 
-    return min + drand48() * (max - min)
+    return min + iiRandom.randomBetween0And1 * (max - min)
   }
 
   /*

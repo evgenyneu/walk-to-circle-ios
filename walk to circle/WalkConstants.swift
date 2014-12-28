@@ -12,6 +12,7 @@ import CoreLocation
 public struct WalkConstants {
   public static let viewControllerTransitionDuration: NSTimeInterval = 1
   public static let quotesJsonFileName = "Quotes.json"
+  public static let mapCountdownIntervalSeconds = 1
 
   // Top margin above the quotes
   public static let quotesTopMargin: CGFloat = 110
