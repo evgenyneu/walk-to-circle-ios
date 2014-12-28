@@ -24,13 +24,23 @@ public class YiiQuotes: NSObject {
     TegScrolledContent.createContentView(scrollView)
   }
 
-  public func showRandomQuote(finished: (()->())? = nil) {
+  public func showRandomQuote() {
+    if YiiQuotes.showTutorial {
+      let tutorial = WalkQuote(text: WalkConstants.tutorialText, author: WalkConstants.tutorialAuthor)
+      YiiQuotes.showQuote(tutorial, textLabel: textLabel, authorLabel: authorLabel)
+      return
+    }
+
     quotesLoader.loadQuotes({ quotes in
       if let quote = YiiQuotes.pickRandomQuote(quotes) {
-        YiiQuotes.showRandomQuote(quote, textLabel: self.textLabel, authorLabel: self.authorLabel)
-        finished?()
+        YiiQuotes.showQuote(quote, textLabel: self.textLabel, authorLabel: self.authorLabel)
       }
     })
+  }
+
+  private class var showTutorial: Bool {
+    // show tutorial screen if user has not reached any circles yet
+    return !WalkUserDefaults.anyCircleReached.boolValue()
   }
 
   public class func pickRandomQuote(quotes: [WalkQuote]) -> WalkQuote? {
@@ -39,7 +49,7 @@ public class YiiQuotes: NSObject {
     return quotes[randomIndex]
   }
 
-  private class func showRandomQuote(quote: WalkQuote,
+  private class func showQuote(quote: WalkQuote,
     textLabel: UILabel, authorLabel:UILabel) {
 
     textLabel.text = quote.text

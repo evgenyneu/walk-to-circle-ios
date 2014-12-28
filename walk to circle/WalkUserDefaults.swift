@@ -15,6 +15,8 @@ enum WalkUserDefaults: String {
   case currentCircleCoordinateLatitude = "current circle coordinate latitude"
   case currentCircleCoordinateLongitude = "current circle coordinate longitude"
 
+  case anyCircleReached = "circle reached"
+
   var value: AnyObject? {
     get {
       let userDefaults = NSUserDefaults.standardUserDefaults()
@@ -32,5 +34,13 @@ enum WalkUserDefaults: String {
     }
     
     userDefaults.synchronize()
+  }
+
+  func boolValue(defaultValue: Bool = false) -> Bool {
+    if let boolValue = value as? Bool {
+      return boolValue
+    }
+
+    return defaultValue
   }
 }
