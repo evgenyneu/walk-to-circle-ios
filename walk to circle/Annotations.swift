@@ -1,6 +1,5 @@
 //
 //  Annotations.swift
-//  Geo Regions Test
 //
 //  Created by Evgenii Neumerzhitckii on 22/06/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
@@ -10,41 +9,34 @@ import Foundation
 import CoreLocation
 import MapKit
 
+private weak var walkAnnotation: Annotation?
+
 class Annotations {
-  var mapView: MKMapView!
-  var all = Dictionary<String, Annotation>()
+  class func show(coordinate: CLLocationCoordinate2D, title: String,
+    newPin: Bool, mapView: MKMapView) -> Annotation {
 
-  init(_ mapView: MKMapView) {
-    self.mapView = mapView
-  }
-
-  func add(coordinate: CLLocationCoordinate2D, title: String, newPin: Bool) -> Annotation {
-    if all[title] != nil { return all[title]! }
+    remove(mapView)
 
     let annotation = Annotation(centerCoordinate: coordinate,
       radius: WalkConstants.regionCircleRadiusMeters)
 
+    walkAnnotation = annotation
+
     annotation.newPin = newPin
     
     annotation.title = title
-    all[title] = annotation
+
     mapView.addAnnotation(annotation)
     mapView.addOverlay(annotation)
 
-    return annotation;
+    return annotation
   }
 
-  func remove(id: String) {
-    if all[id] != nil {
-      mapView.removeAnnotation(all[id])
-      mapView.removeOverlay(all[id])
-      all[id] = nil
-    }
-  }
-
-  func removeAll() {
-    for (id, annotation) in all {
-      remove(id)
+  class func remove(mapView: MKMapView) {
+    if let currentAnnotation = walkAnnotation {
+      mapView.removeAnnotation(currentAnnotation)
+      mapView.removeOverlay(currentAnnotation)
+      walkAnnotation = nil
     }
   }
 }

@@ -13,7 +13,6 @@ class YiiMap: NSObject, MKMapViewDelegate {
 
   weak var delegate: YiiMapDelegate?
 
-  private var annotations: Annotations!
   private var callbackAfterRegionDidChange: (()->())?
 
   private var zoomedToInitialLocation = false
@@ -24,8 +23,6 @@ class YiiMap: NSObject, MKMapViewDelegate {
   }
 
   func viewDidLoad() {
-    annotations = Annotations(mapView)
-
     mapView.delegate = self
     mapView.showsUserLocation = true
   }
@@ -40,7 +37,7 @@ class YiiMap: NSObject, MKMapViewDelegate {
   }
 
   func dropNewPin() {
-    annotations.removeAll()
+    Annotations.remove(mapView)
 
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
       minDistanceMeters: iiPlaceCircleDistanceMeters,
@@ -61,8 +58,8 @@ class YiiMap: NSObject, MKMapViewDelegate {
     }
   }
 
-  func showCurrentPin(coordinate: CLLocationCoordinate2D) {
-    DropPin.showCurrentPin(mapView, coordinate: coordinate, annotations: annotations)
+  func showPreviousPin(coordinate: CLLocationCoordinate2D) {
+    DropPin.showPreviousPin(mapView, coordinate: coordinate)
   }
 
   private func placePin(coordinate: CLLocationCoordinate2D) {
@@ -74,8 +71,7 @@ class YiiMap: NSObject, MKMapViewDelegate {
       pindDropHeight =  coordinateInView.y - scrollNeeded.height
 
       ScrollToAnnotation.scrollMap(scrollNeeded, mapView: mapView) {
-        DropPin.dropNewPinAndAnimate(self.mapView, coordinate: coordinate,
-          annotations: self.annotations)
+        DropPin.dropNewPinAndAnimate(self.mapView, coordinate: coordinate)
       }
     }
   }

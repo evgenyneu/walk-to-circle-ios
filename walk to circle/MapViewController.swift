@@ -35,12 +35,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
 
     countdown.delegate = self
 
-    showCurrentPin()
+    showPreviousPin()
   }
 
-  private func showCurrentPin() {
-    if let currentCoordinate = WalkCoordinate.current {
-      yiiMap.showCurrentPin(currentCoordinate)
+  private func showPreviousPin() {
+    if let previousCoordinate = WalkCoordinate.previous {
+      yiiMap.showPreviousPin(previousCoordinate)
     }
   }
 }
