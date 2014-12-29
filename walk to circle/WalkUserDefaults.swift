@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 public enum WalkUserDefaults: String {
   case currentViewControllerId = "current view controller name"
@@ -15,9 +16,12 @@ public enum WalkUserDefaults: String {
   case currentCircleCoordinateLatitude = "current circle coordinate latitude"
   case currentCircleCoordinateLongitude = "current circle coordinate longitude"
 
+  case previousCircleCoordinateLatitude = "previous circle coordinate latitude"
+  case previousCircleCoordinateLongitude = "previous circle coordinate longitude"
+
   case anyCircleReached = "circle reached"
 
-  public  var value: AnyObject? {
+  public var value: AnyObject? {
     get {
       let userDefaults = NSUserDefaults.standardUserDefaults()
       return userDefaults.valueForKey(self.rawValue)
