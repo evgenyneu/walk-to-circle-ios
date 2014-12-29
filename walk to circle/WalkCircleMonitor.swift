@@ -27,6 +27,7 @@ class WalkCircleMonitor {
   }
 
   func applicationWillEnterForeground(notification: NSNotification) {
+    // We need to restart monitoring in case it was stopped
     WalkCircleMonitor.start()
   }
 
