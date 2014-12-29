@@ -10,8 +10,7 @@
 import UIKit
 import MapKit
 
-let iiPlaceCircleDistanceMeters:CLLocationDistance = 400
-private let iiMapSizeMeters:CLLocationDistance = iiPlaceCircleDistanceMeters * 2
+private let iiMapSizeMeters:CLLocationDistance = WalkConstants.circleDistanceFromCurrentLocationMeters * 2
 
 class InitialMapZoom {
   class func zoomToLocation(mapView: MKMapView, userLocation: MKUserLocation, animated: Bool) {

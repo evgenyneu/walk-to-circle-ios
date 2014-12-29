@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class YiiMap: NSObject, MKMapViewDelegate {
+public class YiiMap: NSObject, MKMapViewDelegate {
   @IBOutlet weak var mapView: MKMapView!
 
   weak var delegate: YiiMapDelegate?
@@ -39,9 +39,11 @@ class YiiMap: NSObject, MKMapViewDelegate {
   func dropNewPin() -> CLLocationCoordinate2D {
     Annotations.remove(mapView)
 
+    let (minDistance, maxDistance) = YiiMap.minMaxCircleDistance
+
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
-      minDistanceMeters: iiPlaceCircleDistanceMeters,
-      maxDistanceMeters: iiPlaceCircleDistanceMeters)
+      minDistanceMeters: minDistance,
+      maxDistanceMeters: maxDistance)
 
     if InitialMapZoom.needZoomingBeforePlay(mapView) {
       doAfterRegionDidChange {
@@ -55,6 +57,26 @@ class YiiMap: NSObject, MKMapViewDelegate {
       self.placePin(coordinate)
     }
     return coordinate
+  }
+
+  public class var minMaxCircleDistance: (CLLocationDistance, CLLocationDistance) {
+    var minDistanceMeters = WalkConstants.circleDistanceFromCurrentLocationMeters *
+      (1 - WalkConstants.circleDistanceRandomVariation)
+
+    let minAllowedCircleDistance = WalkConstants.regionCircleRadiusMeters * 2
+
+    if minDistanceMeters < minAllowedCircleDistance {
+      minDistanceMeters = minAllowedCircleDistance
+    }
+
+    var maxDistanceMeters = WalkConstants.circleDistanceFromCurrentLocationMeters *
+      (1 + WalkConstants.circleDistanceRandomVariation)
+
+    if maxDistanceMeters < minDistanceMeters {
+      maxDistanceMeters = minDistanceMeters
+    }
+
+    return (minDistanceMeters, maxDistanceMeters)
   }
 
   func showPreviousPin(coordinate: CLLocationCoordinate2D) {
@@ -86,16 +108,16 @@ class YiiMap: NSObject, MKMapViewDelegate {
 typealias MKMapViewDelegateImplementation = YiiMap
 
 extension MKMapViewDelegateImplementation {
-  func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+  public func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
     zoomToInitialLocation()
   }
 
-  func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
+  public func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
     callbackAfterRegionDidChange?()
     callbackAfterRegionDidChange = nil
   }
 
-  func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
+  public func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
     DropPin.playPinDropSound(pindDropHeight)
   }
 }

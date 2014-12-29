@@ -27,6 +27,12 @@ public struct WalkConstants {
 
   public static let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Sound
 
+  public static let circleDistanceFromCurrentLocationMeters: CLLocationDistance = 400
+
+  // Defines how much random variation is allowed for circle distance. Number from 0 to 1.
+  // 0 - no variation, 0.3 - varies +-30%.
+  public static let circleDistanceRandomVariation: Double = 0.3
+
   public static let regionCircleRadiusMeters = CLLocationDistance(100)
 
   public static let tutorialText = "Walk to the circle that was shown on the map. You will be notified when you reach it. You can lock your device during your walk. Just be careful on the street."

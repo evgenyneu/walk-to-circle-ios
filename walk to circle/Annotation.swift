@@ -51,7 +51,7 @@ class Annotation: MKCircle {
 typealias Ext_MapViewDelegate_Overlay = YiiMap
 
 extension Ext_MapViewDelegate_Overlay {
-  func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) ->
+  public func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) ->
     MKOverlayRenderer! {
 
     if let currentAnnotation = overlay as? Annotation {
@@ -66,7 +66,7 @@ extension Ext_MapViewDelegate_Overlay {
     return nil
   }
 
-  func mapView(mapView: MKMapView!,
+  public func mapView(mapView: MKMapView!,
     viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
 
     if annotation.isKindOfClass(MKUserLocation) { return nil }
