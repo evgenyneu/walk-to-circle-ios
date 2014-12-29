@@ -52,11 +52,14 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
     locationManager.pausesLocationUpdatesAutomatically = false
 
+    println("START startUpdatingLocation")
     locationManager.startUpdatingLocation()
     locationUpdateStarted = NSDate()
   }
 
   func stopUpdatingLocation() {
+    println("stopUpdatingLocation")
+
     locationManager.stopUpdatingLocation()
     locationUpdateStarted = nil
   }

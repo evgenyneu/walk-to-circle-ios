@@ -10,7 +10,7 @@
 import UIKit
 import MapKit
 
-private let iiMapSizeMeters:CLLocationDistance = WalkConstants.circleDistanceFromCurrentLocationMeters * 2
+private let iiMapSizeMeters:CLLocationDistance = WalkConstants.minCircleDistanceFromCurrentLocationMeters + WalkConstants.maxCircleDistanceFromCurrentLocationMeters
 
 class InitialMapZoom {
   class func zoomToLocation(mapView: MKMapView, userLocation: MKUserLocation, animated: Bool) {
@@ -27,7 +27,7 @@ class InitialMapZoom {
   // Zooms map to user location. It is called once after the app has started.
   class func zoomToInitialLocation(mapView: MKMapView, onZoomFinished: ()->()) {
     let accuracy = mapView.userLocation.location.horizontalAccuracy
-    if accuracy < 0 || accuracy > 100 { return } // Not accurate enough
+    if accuracy < 0 || accuracy > 1000 { return } // Not accurate enough
 
     InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: false)
 

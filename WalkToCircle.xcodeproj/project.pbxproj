@@ -83,7 +83,6 @@
 		2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */; };
 		2BCF7B6D1A5136C80007B062 /* WalkCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */; };
 		2BCF7B6F1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF7B6E1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift */; };
-		2BCF7B731A514F880007B062 /* YiiMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF7B711A514F810007B062 /* YiiMapTests.swift */; };
 		2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */; };
 		2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */; };
 		2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3919EA000600062A99 /* iiTickTock.swift */; };
@@ -226,7 +225,6 @@
 		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinateTests.swift; sourceTree = "<group>"; };
 		2BCF7B6E1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinateUserDefaultsSerializer.swift; sourceTree = "<group>"; };
-		2BCF7B711A514F810007B062 /* YiiMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiMapTests.swift; sourceTree = "<group>"; };
 		2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayer.swift; sourceTree = "<group>"; };
 		2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSounds.swift; sourceTree = "<group>"; };
 		2BCFEF3919EA000600062A99 /* iiTickTock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiTickTock.swift; sourceTree = "<group>"; };
@@ -361,7 +359,6 @@
 		2B7C38DD1A4ABAC700C3FDA7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				2BCF7B701A514F700007B062 /* Map */,
 				2B7C38DE1A4ABAD300C3FDA7 /* Walk */,
 			);
 			name = Screens;
@@ -540,14 +537,6 @@
 				2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */,
 			);
 			name = Core;
-			sourceTree = "<group>";
-		};
-		2BCF7B701A514F700007B062 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				2BCF7B711A514F810007B062 /* YiiMapTests.swift */,
-			);
-			name = Map;
 			sourceTree = "<group>";
 		};
 		2BD47A5D1A4A27590001D953 /* Stop */ = {
@@ -776,7 +765,6 @@
 				2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
-				2BCF7B731A514F880007B062 /* YiiMapTests.swift in Sources */,
 				2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */,
 				2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */,
 				2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */,

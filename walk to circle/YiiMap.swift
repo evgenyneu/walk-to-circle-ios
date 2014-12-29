@@ -39,11 +39,9 @@ public class YiiMap: NSObject, MKMapViewDelegate {
   func dropNewPin() -> CLLocationCoordinate2D {
     Annotations.remove(mapView)
 
-    let (minDistance, maxDistance) = YiiMap.minMaxCircleDistance
-
     let coordinate = iiGeo.randomCoordinate(mapView.userLocation.coordinate,
-      minDistanceMeters: minDistance,
-      maxDistanceMeters: maxDistance)
+      minDistanceMeters: WalkConstants.minCircleDistanceFromCurrentLocationMeters,
+      maxDistanceMeters: WalkConstants.maxCircleDistanceFromCurrentLocationMeters)
 
     if InitialMapZoom.needZoomingBeforePlay(mapView) {
       doAfterRegionDidChange {
@@ -57,26 +55,6 @@ public class YiiMap: NSObject, MKMapViewDelegate {
       self.placePin(coordinate)
     }
     return coordinate
-  }
-
-  public class var minMaxCircleDistance: (CLLocationDistance, CLLocationDistance) {
-    var minDistanceMeters = WalkConstants.circleDistanceFromCurrentLocationMeters *
-      (1 - WalkConstants.circleDistanceRandomVariation)
-
-    let minAllowedCircleDistance = WalkConstants.regionCircleRadiusMeters * 2
-
-    if minDistanceMeters < minAllowedCircleDistance {
-      minDistanceMeters = minAllowedCircleDistance
-    }
-
-    var maxDistanceMeters = WalkConstants.circleDistanceFromCurrentLocationMeters *
-      (1 + WalkConstants.circleDistanceRandomVariation)
-
-    if maxDistanceMeters < minDistanceMeters {
-      maxDistanceMeters = minDistanceMeters
-    }
-
-    return (minDistanceMeters, maxDistanceMeters)
   }
 
   func showPreviousPin(coordinate: CLLocationCoordinate2D) {
