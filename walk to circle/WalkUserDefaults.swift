@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum WalkUserDefaults: String {
+public enum WalkUserDefaults: String {
   case currentViewControllerId = "current view controller name"
   case currentNonErrorViewControllerId = "current non error view controller name"
 
@@ -17,14 +17,14 @@ enum WalkUserDefaults: String {
 
   case anyCircleReached = "circle reached"
 
-  var value: AnyObject? {
+  public  var value: AnyObject? {
     get {
       let userDefaults = NSUserDefaults.standardUserDefaults()
       return userDefaults.valueForKey(self.rawValue)
     }
   }
 
-  func save(value: AnyObject?) {
+  public func save(value: AnyObject?) {
     let userDefaults = NSUserDefaults.standardUserDefaults()
 
     if let currentValue: AnyObject = value {
@@ -36,7 +36,7 @@ enum WalkUserDefaults: String {
     userDefaults.synchronize()
   }
 
-  func boolValue(defaultValue: Bool = false) -> Bool {
+  public func boolValue(defaultValue: Bool = false) -> Bool {
     if let boolValue = value as? Bool {
       return boolValue
     }
