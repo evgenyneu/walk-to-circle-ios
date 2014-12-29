@@ -20,6 +20,11 @@ class Countdown: NSObject {
     super.init()
   }
 
+  deinit {
+    stopCurrentDelayTimer()
+    stopTimer()
+  }
+
   func start() {
     stopTimer()
     countdown = WalkConstants.mapCountdownIntervalSeconds
@@ -63,13 +68,16 @@ class Countdown: NSObject {
   }
 
   private func startDelayTimer() {
+    stopCurrentDelayTimer()
+    delayTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
+      selector: "delayTimerFired:", userInfo: nil, repeats: false)
+  }
+
+  private func stopCurrentDelayTimer() {
     if let currentDelayTimer = delayTimer {
       currentDelayTimer.invalidate()
       delayTimer = nil
     }
-
-    delayTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
-      selector: "delayTimerFired:", userInfo: nil, repeats: false)
   }
 
   func delayTimerFired(timer: NSTimer) {

@@ -76,9 +76,11 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
   }
 
   func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-    for location in locations {
+    for (index, location) in enumerate(locations) {
+      if index >= WalkConstants.maxNumberOfLocationsToProcessInSingleLocationUpdate { return }
+
       if let currentLocation = location as? CLLocation {
-        WalkCircleMonitor.shared.processLocationUpdate(currentLocation)
+        if WalkCircleMonitor.shared.processLocationUpdate(currentLocation) { return }
       }
     }
   }

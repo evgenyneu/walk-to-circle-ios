@@ -37,12 +37,15 @@ class WalkCircleMonitor {
     WalkLocation.shared.stopUpdatingLocation()
   }
 
-  func processLocationUpdate(location: CLLocation) {
+  func processLocationUpdate(location: CLLocation) -> Bool {
     if region.containsCoordinate(location.coordinate) {
       WalkCircleMonitor.stop()
 
       locationReached()
+      return true
     }
+
+    return false
   }
 
   private func locationReached() {
