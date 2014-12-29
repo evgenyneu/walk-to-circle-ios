@@ -53,8 +53,12 @@ typealias YiiButtonsDelegateImplementation = MapViewController
 extension YiiButtonsDelegateImplementation {
   func yiiButtonsDelegate_start() {
     countdown.start()
-    yiiMap.dropNewPin()
-    WalkCircleMonitor.start()
+    let newCoordinate = yiiMap.dropNewPin()
+
+    iiQ.main {
+      WalkCoordinate.current = newCoordinate
+      WalkCircleMonitor.start()
+    }
   }
 }
 

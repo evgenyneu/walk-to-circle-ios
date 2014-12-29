@@ -12,17 +12,17 @@ import CoreLocation
 public struct WalkConstants {
   public static let viewControllerTransitionDuration: NSTimeInterval = 1
   public static let quotesJsonFileName = "Quotes.json"
-  public static let mapCountdownIntervalSeconds = 1
+  public static let mapCountdownIntervalSeconds = 100
 
   // Top margin above the quotes
   public static let quotesTopMargin: CGFloat = 110
 
+  // No top margin when in landscape and screen height is small (phones in landscape)
+  public static let quotesTopMarginCompact: CGFloat = 20
+
   public static let maxNumberOfLocationsToProcessInSingleLocationUpdate = 100
 
   public static let maxLocationUpdatePeriodSeconds: NSTimeInterval = 60 * 60
-
-  // No top margin when in landscape and screen height is small (phones in landscape)
-  public static let quotesTopMarginCompact: CGFloat = 20
 
   public static let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Sound
 
