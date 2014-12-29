@@ -56,6 +56,7 @@ extension YiiButtonsDelegateImplementation {
     let newCoordinate = yiiMap.dropNewPin()
 
     iiQ.main {
+      // Defer saving new coordinate because it can slow down UI 
       WalkCoordinate.current = newCoordinate
       WalkCircleMonitor.start()
     }

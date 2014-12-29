@@ -77,9 +77,10 @@ class YiiButtons: NSObject {
     iiAnimator.fadeIn(rewindButton, duration: 0.1)
   }
 
+  // We can not allow to tap very fast, as it may not save current coordinate
   private var canTap: Bool {
     let intervalSinceLastTap = NSDate().timeIntervalSinceDate(lastTapped)
-    return intervalSinceLastTap > 1
+    return intervalSinceLastTap > 0.2
   }
 
   private func tapped() {
