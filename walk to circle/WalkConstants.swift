@@ -22,6 +22,7 @@ public struct WalkConstants {
 
   public static let maxNumberOfLocationsToProcessInSingleLocationUpdate = 100
 
+  // Stop location updates after this period to preserve battery
   public static let maxLocationUpdatePeriodSeconds: NSTimeInterval = 60 * 60
 
   public static let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Sound

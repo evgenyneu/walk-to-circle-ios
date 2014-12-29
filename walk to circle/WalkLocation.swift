@@ -50,7 +50,6 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
     stopUpdatingLocation()
 
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-    locationManager.distanceFilter = 10
     locationManager.pausesLocationUpdatesAutomatically = false
 
     locationManager.startUpdatingLocation()
@@ -78,6 +77,10 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
 
   func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
     if updatingLocationForTooLong {
+      // The location updates were running for too long
+      // User has probably abandoned the app.
+      // Dtop location updates to preserve the battery life.
+      // Location updates will be restarted when/if the app is opened again.
       stopUpdatingLocation()
     }
 

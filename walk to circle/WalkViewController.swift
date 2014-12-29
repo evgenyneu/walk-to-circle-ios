@@ -35,7 +35,6 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
 
-    println("WalkViewController viewDidAppear")
     initQuotesOrientation()
     quotes.show()
   }
