@@ -17,8 +17,11 @@ class DropPin {
       comment: "Annotation title shown above the pin on the map")
 
     let annotation = Annotations.show(coordinate, title: annotationTitle, newPin: true, mapView: mapView)
-    mapView.selectAnnotation(annotation, animated: true)
-    Annotation.hideCalloutAfterDelay(mapView, annotation: annotation, delay: 5)
+
+    if annotation.showCalloutAfterPinDrop {
+      mapView.selectAnnotation(annotation, animated: true)
+      Annotation.hideCalloutAfterDelay(mapView, annotation: annotation, delay: 5)
+    }
   }
 
   class func showPreviousPin(mapView: MKMapView, coordinate: CLLocationCoordinate2D) {
@@ -36,11 +39,11 @@ class DropPin {
       iiSounds.shared.play(iiSoundType.fall, atVolume: 0.01)
     }
 
-    var showPinAfterDelay = pow(Double(pindDropHeight) / 1200.0, 2.5)
+    var pinDropSoundDelay = pow(Double(pindDropHeight) / 1500.0, 2) + 0.15
 
-    if showPinAfterDelay < 0.2 { showPinAfterDelay = 0.2 }
+//    if pinDropSoundDelay < 0.2 { pinDropSoundDelay = 0.2 }
 
-    iiQ.runAfterDelay(showPinAfterDelay) {
+    iiQ.runAfterDelay(pinDropSoundDelay) {
       iiSounds.shared.play(iiSoundType.ballBounce, atVolume: 0.5)
     }
   }

@@ -16,7 +16,6 @@ public class YiiMap: NSObject, MKMapViewDelegate {
   private var callbackAfterRegionDidChange: (()->())?
 
   private var zoomedToInitialLocation = false
-  private var pindDropHeight: CGFloat = 0
 
   deinit {
     println("deinit YiiMap")
@@ -67,10 +66,11 @@ public class YiiMap: NSObject, MKMapViewDelegate {
         startButton: startButtonView, willDropAt: coordinate)
 
       let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
-      pindDropHeight =  coordinateInView.y - scrollNeeded.height
+      let pinDropHeight =  coordinateInView.y - scrollNeeded.height
 
       ScrollToAnnotation.scrollMap(scrollNeeded, mapView: mapView) {
         DropPin.dropNewPinAndAnimate(self.mapView, coordinate: coordinate)
+        DropPin.playPinDropSound(pinDropHeight)
       }
     }
   }
@@ -93,9 +93,5 @@ extension MKMapViewDelegateImplementation {
   public func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
     callbackAfterRegionDidChange?()
     callbackAfterRegionDidChange = nil
-  }
-
-  public func mapView(mapView: MKMapView!, didSelectAnnotationView view: MKAnnotationView!) {
-    DropPin.playPinDropSound(pindDropHeight)
   }
 }

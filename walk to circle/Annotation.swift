@@ -43,6 +43,12 @@ class Annotation: MKCircle {
   var overlayStrokeColor: UIColor {
     return newPin ? WalkColors.NewPinStroke.uiColor : WalkColors.CurrentPinStroke.uiColor
   }
+
+  var showCalloutAfterPinDrop: Bool {
+    // Show "Walk to Circle" callout if user has not reached any circles yet.
+    // Showing the callout each time can be inconvenient because it obstructs the map.
+    return newPin && WalkUserDefaults.anyCircleReached.boolValue()
+  }
 }
 
 // MapView Delegate
