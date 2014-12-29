@@ -17,35 +17,25 @@ class WalkQuotesLoaderTests: XCTestCase {
     let json = iiJsonLoader.read(WalkConstants.quotesJsonFileName)
     let quotes = WalkQuotesLoader.load(json!)
 
-    XCTAssertEqual(2, quotes.count)
+    XCTAssertEqual(32, quotes.count)
 
     // First quote
     // ---------
 
     let quote = quotes.first!
 
-    XCTAssertEqual("An early-morning walk is a blessing for the whole day.",
+    XCTAssertEqual("There are many dumb ways to die. One of them is to be hit by a car while using this app. Please be alert around cars.",
       quote.text)
     
-    XCTAssertEqual("Henry David Thoreau", quote.author)
-
-    // Last quote
-    // ---------
-
-    let lastQuote = quotes.last!
-
-    XCTAssertEqual("My life is like a stroll upon the beach, As near the ocean's edge as I can go.",
-      lastQuote.text)
-
-    XCTAssertEqual("Henry David Thoreau", lastQuote.author)
+    XCTAssertEqual("Evgenii Neumerzhitckii", quote.author)
   }
 
   func testLoadQuotes() {
     let expectation = expectationWithDescription("Loads quotes")
 
     obj.loadQuotes({ quotes in
-      XCTAssertEqual(2, quotes.count)
-      XCTAssertEqual("Henry David Thoreau", quotes[0].author)
+      XCTAssertEqual(32, quotes.count)
+      XCTAssertEqual("Evgenii Neumerzhitckii", quotes[0].author)
 
       expectation.fulfill()
     })
@@ -64,7 +54,7 @@ class WalkQuotesLoaderTests: XCTestCase {
 
     XCTAssertEqual(2, addedQuotes.count)
 
-    XCTAssertEqual(2, addedQuotes[0].count)
-    XCTAssertEqual("Henry David Thoreau", addedQuotes[0][0].author)
+    XCTAssertEqual(32, addedQuotes[0].count)
+    XCTAssertEqual("Evgenii Neumerzhitckii", addedQuotes[0][0].author)
   }
 }
