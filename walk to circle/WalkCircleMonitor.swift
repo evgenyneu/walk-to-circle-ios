@@ -6,19 +6,29 @@
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreLocation
 
 private let walkCircleMonitor = WalkCircleMonitor()
 
+@objc
 class WalkCircleMonitor {
   private var region = CLCircularRegion()
-
   class var shared: WalkCircleMonitor {
     return walkCircleMonitor
   }
 
-  private init() { }
+  private init() {
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+  }
+
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillEnterForegroundNotification, object: nil)
+  }
+
+  func applicationWillEnterForeground(notification: NSNotification) {
+    WalkCircleMonitor.start()
+  }
 
   class func start() {
     if let currentCoordinate = WalkCoordinate.current {
@@ -27,8 +37,6 @@ class WalkCircleMonitor {
   }
 
   private func start(coordinate: CLLocationCoordinate2D) {
-    if alreadyUpdatingForCoordinate(coordinate) { return }
-
     region = WalkCircleMonitor.createRegion(coordinate)
     WalkLocation.shared.startUpdatingLocation()
   }
@@ -49,6 +57,7 @@ class WalkCircleMonitor {
   }
 
   private func locationReached() {
+    WalkCoordinate.clearCurrent()
     WalkNotification.showNow("You reached your circle. Congrats!")
     WalkViewControllers.Congrats.show()
   }
@@ -56,11 +65,5 @@ class WalkCircleMonitor {
   private class func createRegion(coordinate: CLLocationCoordinate2D) -> CLCircularRegion {
     return CLCircularRegion(center: coordinate, radius: WalkConstants.regionCircleRadiusMeters,
       identifier: "walk circle")
-  }
-
-  private func alreadyUpdatingForCoordinate(location: CLLocationCoordinate2D) -> Bool {
-    return WalkLocation.shared.updatingLocation &&
-      region.center.latitude == location.latitude &&
-      region.center.longitude == location.longitude
   }
 }

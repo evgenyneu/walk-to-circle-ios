@@ -81,6 +81,7 @@
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
 		2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB981968DC63005C4A47 /* Images.xcassets */; };
 		2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */; };
+		2BCF7B6D1A5136C80007B062 /* WalkCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */; };
 		2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */; };
 		2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */; };
 		2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3919EA000600062A99 /* iiTickTock.swift */; };
@@ -221,6 +222,7 @@
 		2BCCDB9E1968DC63005C4A47 /* WalkToCircleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkToCircleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDBA31968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinateTests.swift; sourceTree = "<group>"; };
 		2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayer.swift; sourceTree = "<group>"; };
 		2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSounds.swift; sourceTree = "<group>"; };
 		2BCFEF3919EA000600062A99 /* iiTickTock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiTickTock.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 				2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */,
 				2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */,
 				2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */,
+				2BCF7B6A1A5136290007B062 /* Core */,
 				2B7C38DD1A4ABAC700C3FDA7 /* Screens */,
 				2B1276441A47ECC000F6ED44 /* Utils */,
 				2BCCDBA21968DC63005C4A47 /* Supporting Files */,
@@ -523,6 +526,14 @@
 				2BCCDBA31968DC63005C4A47 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BCF7B6A1A5136290007B062 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		2BD47A5D1A4A27590001D953 /* Stop */ = {
@@ -756,6 +767,7 @@
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,
 				2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */,
+				2BCF7B6D1A5136C80007B062 /* WalkCoordinateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

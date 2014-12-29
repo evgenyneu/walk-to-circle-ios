@@ -19,6 +19,8 @@ public struct WalkConstants {
 
   public static let maxNumberOfLocationsToProcessInSingleLocationUpdate = 100
 
+  public static let maxLocationUpdatePeriodSeconds: NSTimeInterval = 60 * 60
+
   // No top margin when in landscape and screen height is small (phones in landscape)
   public static let quotesTopMarginCompact: CGFloat = 20
 

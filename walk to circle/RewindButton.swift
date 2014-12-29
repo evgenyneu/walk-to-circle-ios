@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import QuartzCore
 
 class RewindButton: UIButton {
   private let countdownLabel = UILabel()

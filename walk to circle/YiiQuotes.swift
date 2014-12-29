@@ -24,7 +24,7 @@ public class YiiQuotes: NSObject {
     TegScrolledContent.createContentView(scrollView)
   }
 
-  public func showRandomQuote() {
+  public func showRandomQuote(onFinished: (()->())? = nil) {
     if YiiQuotes.showTutorial {
       let tutorial = WalkQuote(text: WalkConstants.tutorialText, author: WalkConstants.tutorialAuthor)
       YiiQuotes.showQuote(tutorial, textLabel: textLabel, authorLabel: authorLabel)
@@ -34,6 +34,7 @@ public class YiiQuotes: NSObject {
     quotesLoader.loadQuotes({ quotes in
       if let quote = YiiQuotes.pickRandomQuote(quotes) {
         YiiQuotes.showQuote(quote, textLabel: self.textLabel, authorLabel: self.authorLabel)
+        onFinished?() // used in test
       }
     })
   }

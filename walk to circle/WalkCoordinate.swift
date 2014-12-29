@@ -9,8 +9,12 @@
 import Foundation
 import CoreLocation
 
-class WalkCoordinate {
-  class var current: CLLocationCoordinate2D? {
+public class WalkCoordinate {
+  public class func clearCurrent() {
+    current = nil
+  }
+
+  public class var current: CLLocationCoordinate2D? {
     get {
       if let currentLatitude =
         WalkUserDefaults.currentCircleCoordinateLatitude.value as? CLLocationDegrees {
@@ -29,6 +33,10 @@ class WalkCoordinate {
       if let currentLocation = newValue {
         WalkUserDefaults.currentCircleCoordinateLatitude.save(currentLocation.latitude)
         WalkUserDefaults.currentCircleCoordinateLongitude.save(currentLocation.longitude)
+      } else {
+        // remove
+        WalkUserDefaults.currentCircleCoordinateLatitude.save(nil)
+        WalkUserDefaults.currentCircleCoordinateLongitude.save(nil)
       }
     }
   }

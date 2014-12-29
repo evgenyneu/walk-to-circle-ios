@@ -27,7 +27,7 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
     quotes.setup()
     quotes.showRandomQuote()
 
-    iiQ.runAfterDelay(3) {
+    iiQ.runAfterDelay(4) {
       WalkNotification.registerNotifications()
     }
   }
@@ -35,6 +35,7 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
 
+    println("WalkViewController viewDidAppear")
     initQuotesOrientation()
     quotes.show()
   }
@@ -97,6 +98,8 @@ extension WalkViewController_alertViewDelegateImplementation {
   // ------------------------
   func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
     if buttonIndex == 0 {
+      // abandon the walk
+      WalkCoordinate.clearCurrent()
       WalkViewControllers.Map.show()
     }
   }

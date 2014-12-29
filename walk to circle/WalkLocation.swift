@@ -14,8 +14,7 @@ let iiWalkLocation = WalkLocation()
 
 class WalkLocation: NSObject, CLLocationManagerDelegate {
   private let locationManager = CLLocationManager()
-
-  private(set) var updatingLocation = false
+  private var locationUpdateStarted: NSDate?
 
   class var shared: WalkLocation {
     return iiWalkLocation
@@ -51,14 +50,16 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
     stopUpdatingLocation()
 
     locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+    locationManager.distanceFilter = 10
+    locationManager.pausesLocationUpdatesAutomatically = false
 
     locationManager.startUpdatingLocation()
-    updatingLocation = true
+    locationUpdateStarted = NSDate()
   }
 
   func stopUpdatingLocation() {
     locationManager.stopUpdatingLocation()
-    updatingLocation = false
+    locationUpdateStarted = nil
   }
 }
 
@@ -76,6 +77,10 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
   }
 
   func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    if updatingLocationForTooLong {
+      stopUpdatingLocation()
+    }
+
     for (index, location) in enumerate(locations) {
       if index >= WalkConstants.maxNumberOfLocationsToProcessInSingleLocationUpdate { return }
 
@@ -94,5 +99,14 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
 
     WalkNotification.showNow("\(title): \(message)")
     alert.show()
+  }
+  
+  var updatingLocationForTooLong: Bool {
+    if let currentLocateUpdateStartDate = locationUpdateStarted {
+      let secondsUpdating = NSDate().timeIntervalSinceDate(currentLocateUpdateStartDate)
+      return secondsUpdating > WalkConstants.maxLocationUpdatePeriodSeconds
+    }
+
+    return false
   }
 }
