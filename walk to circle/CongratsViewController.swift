@@ -10,11 +10,18 @@ import UIKit
 import CoreLocation
 
 class CongratsViewController: UIViewController {
+  @IBOutlet weak var congratsLabel: UILabel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    WalkUserDefaults.anyCircleReached.save(true)
+    congratulate()
+  }
+
+  private func congratulate() {
+    let numberOfCirclesReachedToday = WalkCirlesReachedToday.number
+    let phrase = CongratsPhrase.oneRandomPhrase(numberOfCirclesReachedToday)
+    congratsLabel.text = phrase
   }
 
   @IBAction func onDoneTapped(sender: AnyObject) {

@@ -48,8 +48,6 @@ class WalkCircleMonitor {
 
   func processLocationUpdate(location: CLLocation) -> Bool {
     if region.containsCoordinate(location.coordinate) {
-      WalkCircleMonitor.stop()
-
       locationReached()
       return true
     }
@@ -59,6 +57,9 @@ class WalkCircleMonitor {
 
   private func locationReached() {
     WalkCoordinate.clearCurrent()
+    WalkCircleMonitor.stop()
+    WalkUserDefaults.anyCircleReached.save(true)
+    WalkCirlesReachedToday.increment()
     WalkNotification.showNow("You reached your circle. Congrats!")
     WalkViewControllers.Congrats.show()
   }

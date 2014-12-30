@@ -28,14 +28,14 @@ public class WalkCirlesReachedToday {
   }
 
   public class var number: Int {
-    return WalkUserDefaults.circlesReachedToday.intValue(0)
+    return number(NSDate())
   }
 
   public class func number(date: NSDate) -> Int {
     let dateStr = iiDate.toStringAsYearMonthDay(date)
 
     if WalkUserDefaults.lastCircleReachedDate_yearMonthDay.stringValue() == dateStr {
-      return number
+      return WalkUserDefaults.circlesReachedToday.intValue(0)
     }
 
     return 0
