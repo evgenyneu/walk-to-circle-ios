@@ -11,17 +11,30 @@ import CoreLocation
 
 class CongratsViewController: UIViewController {
   @IBOutlet weak var congratsLabel: UILabel!
+  @IBOutlet weak var ciclesReachedLabel: UILabel!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    WalkCirlesReachedToday.increment()
     congratulate()
+    showNumberOfCirclesReachedToday()
   }
 
   private func congratulate() {
     let numberOfCirclesReachedToday = WalkCirlesReachedToday.number
     let phrase = CongratsPhrase.oneRandomPhrase(numberOfCirclesReachedToday)
     congratsLabel.text = phrase
+  }
+
+  private func showNumberOfCirclesReachedToday() {
+    let numberOfCirclesReachedToday = WalkCirlesReachedToday.number
+
+    if numberOfCirclesReachedToday == 1 {
+      ciclesReachedLabel.text = "You reached your first circle today."
+    } else {
+      ciclesReachedLabel.text = "\(numberOfCirclesReachedToday) circles reached today."
+    }
   }
 
   @IBAction func onDoneTapped(sender: AnyObject) {

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -302,8 +303,16 @@ Your location info never leaves your phone and stays private.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP1-gW-zfc">
-                                <rect key="frame" x="20" y="265.5" width="560" height="49"/>
+                                <rect key="frame" x="20" y="241" width="560" height="49"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 circles reached today" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4s-aw-DLv">
+                                <rect key="frame" x="26" y="298" width="548" height="33"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
@@ -313,9 +322,12 @@ Your location info never leaves your phone and stays private.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JP1-gW-zfc" secondAttribute="trailing" constant="20" id="0H8-Vx-CZp"/>
-                            <constraint firstAttribute="centerY" secondItem="JP1-gW-zfc" secondAttribute="centerY" constant="10" id="54x-55-YOZ"/>
+                            <constraint firstItem="V4s-aw-DLv" firstAttribute="top" secondItem="JP1-gW-zfc" secondAttribute="bottom" constant="8" id="26e-VE-8TY"/>
+                            <constraint firstItem="V4s-aw-DLv" firstAttribute="leading" secondItem="YYO-j7-YFO" secondAttribute="leadingMargin" constant="10" id="4Bp-X0-2YR"/>
+                            <constraint firstAttribute="centerY" secondItem="JP1-gW-zfc" secondAttribute="bottom" constant="10" id="54x-55-YOZ"/>
                             <constraint firstItem="pHq-Qa-Q3O" firstAttribute="leading" secondItem="YYO-j7-YFO" secondAttribute="leading" id="6Vk-f9-4tI"/>
                             <constraint firstItem="0YG-WS-Jdx" firstAttribute="top" secondItem="pHq-Qa-Q3O" secondAttribute="bottom" constant="-71" id="HCP-Em-XmU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V4s-aw-DLv" secondAttribute="trailing" constant="10" id="SDE-ab-3OY"/>
                             <constraint firstAttribute="centerX" secondItem="0YG-WS-Jdx" secondAttribute="centerX" id="aQZ-LB-WBD"/>
                             <constraint firstAttribute="trailing" secondItem="pHq-Qa-Q3O" secondAttribute="trailing" id="hnn-V8-Izk"/>
                             <constraint firstItem="pHq-Qa-Q3O" firstAttribute="top" secondItem="2os-PS-uYQ" secondAttribute="top" id="smR-5p-Xqb"/>
@@ -324,6 +336,7 @@ Your location info never leaves your phone and stays private.</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ciclesReachedLabel" destination="V4s-aw-DLv" id="UWr-Gc-Ggx"/>
                         <outlet property="congratsLabel" destination="JP1-gW-zfc" id="kAN-HR-ZzJ"/>
                     </connections>
                 </viewController>
