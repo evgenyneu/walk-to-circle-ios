@@ -12,7 +12,8 @@ import XCTest
 
 class WalkCirlesReachedTodayTests: XCTestCase {
   func testIncrement() {
-    WalkUserDefaults.circlesReachedToday.save(nil)
+    WalkUserDefaults.circlesReachedToday.clear()
+    WalkUserDefaults.lastCircleReachedDate_yearMonthDay.clear()
 
     WalkCirlesReachedToday.increment()
 
@@ -25,10 +26,26 @@ class WalkCirlesReachedTodayTests: XCTestCase {
     XCTAssertEqual(4, WalkCirlesReachedToday.number)
   }
 
-  func testGetNumberOfCirclesReachedToday() {
-    let components = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit | NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.YearCalendarUnit, fromDate: NSDate())
+  func testGetNumberOfCirclesReachedForDate() {
+    WalkUserDefaults.circlesReachedToday.clear()
+    WalkUserDefaults.lastCircleReachedDate_yearMonthDay.clear()
 
-    println("!!!!!!!!!!!!!!!!!!!! \(components.year).\(components.month).\(components.day)")
+    let dateComponents = NSDateComponents()
+    dateComponents.day = 4
+    dateComponents.month = 5
+    dateComponents.year = 2031
+    let date: NSDate = NSCalendar.currentCalendar().dateFromComponents(dateComponents)!
+
+    var result = WalkCirlesReachedToday.number(date)
+    XCTAssertEqual(0, result)
+
+    WalkCirlesReachedToday.increment(date)
+    WalkCirlesReachedToday.increment(date)
+
+    result = WalkCirlesReachedToday.number(date)
+
+    XCTAssertEqual(2, result)
+
   }
 
   

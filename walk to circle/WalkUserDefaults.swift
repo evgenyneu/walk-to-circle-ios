@@ -20,7 +20,7 @@ public enum WalkUserDefaults: String {
   case previousCircleCoordinateLongitude = "previous circle coordinate longitude"
 
   case circlesReachedToday = "circles reached today"
-  case lastCircleReachDay = "lastCircleReachDay"
+  case lastCircleReachedDate_yearMonthDay = "last circle reached date - year, month, day"
 
   case anyCircleReached = "circle reached"
 
@@ -43,6 +43,10 @@ public enum WalkUserDefaults: String {
     userDefaults.synchronize()
   }
 
+  public func clear() {
+    save(nil)
+  }
+
   public func boolValue(defaultValue: Bool = false) -> Bool {
     if let boolValue = value as? Bool {
       return boolValue
@@ -54,6 +58,14 @@ public enum WalkUserDefaults: String {
   public func intValue(defaultValue: Int) -> Int {
     if let intValue = value as? Int {
       return intValue
+    }
+
+    return defaultValue
+  }
+
+  public func stringValue(defaultValue: String = "") -> String {
+    if let strValue = value as? String {
+      return strValue
     }
 
     return defaultValue
