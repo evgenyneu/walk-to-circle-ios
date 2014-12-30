@@ -30,11 +30,7 @@ class WalkCirlesReachedTodayTests: XCTestCase {
     WalkUserDefaults.circlesReachedToday.clear()
     WalkUserDefaults.lastCircleReachedDate_yearMonthDay.clear()
 
-    let dateComponents = NSDateComponents()
-    dateComponents.day = 4
-    dateComponents.month = 5
-    dateComponents.year = 2031
-    let date: NSDate = NSCalendar.currentCalendar().dateFromComponents(dateComponents)!
+    let date = iiDate.fromYearMonthDay(2031, month: 5, day: 4)!
 
     var result = WalkCirlesReachedToday.number(date)
     XCTAssertEqual(0, result)

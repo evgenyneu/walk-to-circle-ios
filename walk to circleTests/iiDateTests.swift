@@ -24,7 +24,7 @@ class iiDateTests: XCTestCase {
   }
 
   func testGetDateFromYearMonthDay() {
-    let date = iiDate.getDateFromYearMonthDay(2017, month: 12, day: 26)!
+    let date = iiDate.fromYearMonthDay(2017, month: 12, day: 26)!
     let result = iiDate.toStringAsYearMonthDay(date)
     XCTAssertEqual("2017.12.26", result)
   }

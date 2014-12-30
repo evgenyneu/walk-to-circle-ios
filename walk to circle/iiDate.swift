@@ -19,7 +19,7 @@ public class iiDate {
     return "\(components.year).\(components.month).\(components.day)"
   }
 
-  public class func getDateFromYearMonthDay(year: Int, month: Int, day: Int) -> NSDate? {
+  public class func fromYearMonthDay(year: Int, month: Int, day: Int) -> NSDate? {
     let dateComponents = NSDateComponents()
 
     dateComponents.year = year
