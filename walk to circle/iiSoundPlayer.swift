@@ -11,9 +11,11 @@ import UIKit
 import AVFoundation
 
 enum iiSoundType: String {
-  case ballBounce = "ball_bounce.wav"
-  case fall = "fall.wav"
+  case pin_drop = "pin_drop.mp3"
+  case fall = "snow_ball_throw_short.wav"
   case blop = "blop.wav"
+  case large_door = "large_door.mp3"
+  case click_sound = "click_sound.wav"
 }
 
 class iiSoundPlayer {

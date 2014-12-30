@@ -33,7 +33,7 @@ class Countdown: NSObject {
   }
 
   private func reportTick() {
-    delegate?.contdownDelegate_tick(countdown)
+    delegate?.contdownDelegate_tick(countdown, firstTick: countdown == WalkConstants.mapCountdownIntervalSeconds)
   }
 
   private func reportDidFinish() {

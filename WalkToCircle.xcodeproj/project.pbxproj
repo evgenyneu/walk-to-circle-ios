@@ -62,10 +62,12 @@
 		2B8A6E5E1A21BCB9006351BA /* rewind_arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E5B1A21BCB9006351BA /* rewind_arrows@2x.png */; };
 		2B8A6E5F1A21BCB9006351BA /* rewind_arrows@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A6E5C1A21BCB9006351BA /* rewind_arrows@3x.png */; };
 		2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A6E601A21BD09006351BA /* iiLayer.swift */; };
+		2B8B1DD01A52284B00DE018D /* large_door.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B1DCF1A52284B00DE018D /* large_door.mp3 */; };
+		2B8B1DD21A522CCF00DE018D /* click_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B1DD11A522CCF00DE018D /* click_sound.wav */; };
+		2B8B1DD41A52327600DE018D /* snow_ball_throw_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B1DD31A52327600DE018D /* snow_ball_throw_short.wav */; };
+		2B8B1DD61A5234E200DE018D /* pin_drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B1DD51A5234E200DE018D /* pin_drop.mp3 */; };
 		2B966A821A21A5AC00AAE8A4 /* YiiMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */; };
 		2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* iiAnimator.swift */; };
-		2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483919BBEA2100CB08AA /* ball_bounce.wav */; };
-		2B99483C19BBF74D00CB08AA /* fall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B99483B19BBF74D00CB08AA /* fall.wav */; };
 		2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
 		2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
 		2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */; };
@@ -202,10 +204,12 @@
 		2B8A6E5B1A21BCB9006351BA /* rewind_arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind_arrows@2x.png"; sourceTree = "<group>"; };
 		2B8A6E5C1A21BCB9006351BA /* rewind_arrows@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind_arrows@3x.png"; sourceTree = "<group>"; };
 		2B8A6E601A21BD09006351BA /* iiLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiLayer.swift; sourceTree = "<group>"; };
+		2B8B1DCF1A52284B00DE018D /* large_door.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = large_door.mp3; sourceTree = "<group>"; };
+		2B8B1DD11A522CCF00DE018D /* click_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click_sound.wav; sourceTree = "<group>"; };
+		2B8B1DD31A52327600DE018D /* snow_ball_throw_short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snow_ball_throw_short.wav; sourceTree = "<group>"; };
+		2B8B1DD51A5234E200DE018D /* pin_drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pin_drop.mp3; sourceTree = "<group>"; };
 		2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiMap.swift; sourceTree = "<group>"; };
 		2B99483019BBE4B800CB08AA /* iiAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiAnimator.swift; sourceTree = "<group>"; };
-		2B99483919BBEA2100CB08AA /* ball_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ball_bounce.wav; sourceTree = "<group>"; };
-		2B99483B19BBF74D00CB08AA /* fall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fall.wav; sourceTree = "<group>"; };
 		2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlap.swift; sourceTree = "<group>"; };
 		2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlapTests.swift; sourceTree = "<group>"; };
 		2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollToAnnotationTests.swift; sourceTree = "<group>"; };
@@ -397,8 +401,10 @@
 			isa = PBXGroup;
 			children = (
 				2B5A5D6D19BC01D100E07F37 /* blop.wav */,
-				2B99483B19BBF74D00CB08AA /* fall.wav */,
-				2B99483919BBEA2100CB08AA /* ball_bounce.wav */,
+				2B8B1DD11A522CCF00DE018D /* click_sound.wav */,
+				2B8B1DCF1A52284B00DE018D /* large_door.mp3 */,
+				2B8B1DD51A5234E200DE018D /* pin_drop.mp3 */,
+				2B8B1DD31A52327600DE018D /* snow_ball_throw_short.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -666,14 +672,16 @@
 				2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */,
 				2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */,
 				2B8A6E521A21BAFD006351BA /* rewind@3x.png in Resources */,
-				2B99483A19BBEA2100CB08AA /* ball_bounce.wav in Resources */,
+				2B8B1DD01A52284B00DE018D /* large_door.mp3 in Resources */,
+				2B8B1DD21A522CCF00DE018D /* click_sound.wav in Resources */,
 				2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */,
 				2B8A6E5E1A21BCB9006351BA /* rewind_arrows@2x.png in Resources */,
+				2B8B1DD41A52327600DE018D /* snow_ball_throw_short.wav in Resources */,
 				2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */,
+				2B8B1DD61A5234E200DE018D /* pin_drop.mp3 in Resources */,
 				2B8A6E5D1A21BCB9006351BA /* rewind_arrows.png in Resources */,
 				2B8A6E511A21BAFD006351BA /* rewind@2x.png in Resources */,
 				2B7C38C81A4A89D800C3FDA7 /* stop_highlighted@2x.png in Resources */,
-				2B99483C19BBF74D00CB08AA /* fall.wav in Resources */,
 				2B7C38BB1A4A895500C3FDA7 /* stop.png in Resources */,
 				2BB8BC0A1A4BD1C10003814B /* branch_background.jpg in Resources */,
 				2B080B431A21B0C40073E1E3 /* play@2x.png in Resources */,

@@ -84,11 +84,16 @@ extension YiiMapDelegateImplementation {
 typealias CountdownDelegateImplementation = MapViewController
 
 extension CountdownDelegateImplementation {
-  func contdownDelegate_tick(value: Int) {
+  func contdownDelegate_tick(value: Int, firstTick: Bool) {
     yiiButtons.rewindButton.updateText(String(value))
+
+    if !firstTick {
+      iiSounds.shared.play(iiSoundType.click_sound, atVolume: 0.02)
+    }
   }
 
   func contdownDelegate_didFinish() {
+    iiSounds.shared.play(iiSoundType.large_door, atVolume: 0.07)
     iiQ.runAfterDelay(0.01) { // Show zero before view transition
       WalkViewControllers.Walk.show()
     }

@@ -36,13 +36,13 @@ class DropPin {
     if pindDropHeight == 0 { return }
 
     if pindDropHeight > 200 {
-      iiSounds.shared.play(iiSoundType.fall, atVolume: 0.01)
+      iiSounds.shared.play(iiSoundType.fall, atVolume: 0.05)
     }
 
     let pinDropSoundDelay = pow(Double(pindDropHeight) / 1500.0, 2) + 0.2
 
     iiQ.runAfterDelay(pinDropSoundDelay) {
-      iiSounds.shared.play(iiSoundType.ballBounce, atVolume: 0.5)
+      iiSounds.shared.play(iiSoundType.pin_drop, atVolume: 0.2)
     }
   }
 }
