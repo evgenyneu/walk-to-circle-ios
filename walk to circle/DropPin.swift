@@ -39,9 +39,7 @@ class DropPin {
       iiSounds.shared.play(iiSoundType.fall, atVolume: 0.01)
     }
 
-    var pinDropSoundDelay = pow(Double(pindDropHeight) / 1500.0, 2) + 0.15
-
-//    if pinDropSoundDelay < 0.2 { pinDropSoundDelay = 0.2 }
+    let pinDropSoundDelay = pow(Double(pindDropHeight) / 1500.0, 2) + 0.2
 
     iiQ.runAfterDelay(pinDropSoundDelay) {
       iiSounds.shared.play(iiSoundType.ballBounce, atVolume: 0.5)
