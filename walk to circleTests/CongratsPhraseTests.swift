@@ -54,4 +54,9 @@ class CongratsPhraseTests: XCTestCase {
     XCTAssertEqual(["Test one"], result)
   }
 
+  func testUnseenPhrasesToday() {
+    let result = CongratsPhrase.unseenPhrasesToday(["a", "b", "c"], alreadySeenToday: ["a"])
+    XCTAssertEqual(["b", "c"], result)
+  }
+
 }

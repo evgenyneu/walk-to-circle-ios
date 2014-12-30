@@ -87,14 +87,15 @@ public var walkCongratsPhrases = [
   ]
 ]
 
-
 public class CongratsPhrase {
   public class func random(circlesReachedToday: Int) -> String {
+    let phases = getPhrases(circlesReachedToday)
+
+    
     return "asda"
   }
 
   public class func getPhrases(circlesReachedToday: Int) -> [String] {
-
     let numbers = walkCongratsPhrases.keys.array.sorted { $0 < $1 }
 
     var currentNumber = numbers.first ?? 1
@@ -109,5 +110,13 @@ public class CongratsPhrase {
     }
 
     return ["Oops. We ran out of 'good job' phrases finally."]
+  }
+
+  public class func unseenPhrasesToday(allPhrases: [String],
+    alreadySeenToday: [String]) -> [String] {
+      
+    return allPhrases.filter { phrase in
+      return !contains(alreadySeenToday, phrase)
+    }
   }
 }
