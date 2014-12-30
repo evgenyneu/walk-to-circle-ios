@@ -8,7 +8,7 @@
 
 import Foundation
 
-var walkCongratsPhrases = [
+public var walkCongratsPhrases = [
   1: [
     "Good start",
     "Good job",
@@ -75,7 +75,8 @@ var walkCongratsPhrases = [
     "Outstanding",
     "You've just about mastered that",
     "Beyond cool",
-    "Now you know the map better than a taxi driver"
+    "Now you know the map better than a taxi driver",
+    "Amazing. We almost ran out of 'good job' phrases"
   ],
   20: [
     "Holy Figs!",
@@ -87,8 +88,26 @@ var walkCongratsPhrases = [
 ]
 
 
-class CongratsPhrase {
-  class var randomTitle: String {
+public class CongratsPhrase {
+  public class func random(circlesReachedToday: Int) -> String {
     return "asda"
+  }
+
+  public class func getPhrases(circlesReachedToday: Int) -> [String] {
+
+    let numbers = walkCongratsPhrases.keys.array.sorted { $0 < $1 }
+
+    var currentNumber = numbers.first ?? 1
+
+    for number in numbers {
+      if number > circlesReachedToday { break }
+      currentNumber = number
+    }
+
+    if let currentPhrases = walkCongratsPhrases[currentNumber] {
+      return currentPhrases
+    }
+
+    return ["Oops. We ran out of 'good job' phrases finally."]
   }
 }
