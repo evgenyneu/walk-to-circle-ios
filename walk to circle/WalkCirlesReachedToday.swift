@@ -10,19 +10,21 @@ import Foundation
 
 public class WalkCirlesReachedToday {
   public class func increment() {
-    let current = WalkUserDefaults.circlesReachedToday.intValue(0)
-    WalkUserDefaults.circlesReachedToday.save(current + 1)
+    increment(NSDate())
   }
 
   public class func increment(date: NSDate) {
     let dateStr = iiDate.toStringAsYearMonthDay(date)
 
-    if WalkUserDefaults.lastCircleReachedDate_yearMonthDay.stringValue() == dateStr {
-      increment()
-    } else {
+    var value = number(date)
+
+    if WalkUserDefaults.lastCircleReachedDate_yearMonthDay.stringValue() != dateStr {
+      // We have not reached circles today, update the date
       WalkUserDefaults.lastCircleReachedDate_yearMonthDay.save(dateStr)
-      WalkUserDefaults.circlesReachedToday.save(1)
     }
+
+    value++
+    WalkUserDefaults.circlesReachedToday.save(value)
   }
 
   public class var number: Int {
