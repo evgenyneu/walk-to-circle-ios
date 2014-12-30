@@ -19,6 +19,9 @@ public enum WalkUserDefaults: String {
   case previousCircleCoordinateLatitude = "previous circle coordinate latitude"
   case previousCircleCoordinateLongitude = "previous circle coordinate longitude"
 
+  case circlesReachedToday = "circles reached today"
+  case lastCircleReachDay = "lastCircleReachDay"
+
   case anyCircleReached = "circle reached"
 
   public var value: AnyObject? {

@@ -10,7 +10,6 @@ import CoreLocation
 import WalkToCircle
 import XCTest
 
-
 class WalkCoordinateTests: XCTestCase {
   func testSetAndGetCurrent() {
     WalkCoordinate.current = CLLocationCoordinate2D(latitude: 30, longitude: 10)
