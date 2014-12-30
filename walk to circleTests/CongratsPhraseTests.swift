@@ -59,4 +59,19 @@ class CongratsPhraseTests: XCTestCase {
     XCTAssertEqual(["b", "c"], result)
   }
 
+  func testUnseenPhrasesToday_withGlobalPhrases() {
+    walkCongratsPhrasesSeenToday = ["b"]
+    let result = CongratsPhrase.unseenPhrasesToday(["a", "b", "c"])
+    XCTAssertEqual(["a", "c"], result)
+  }
+
+  func testUnseenPhrasesToday_withGlobalPhrases_whenAllSeen() {
+    walkCongratsPhrasesSeenToday = ["b", "c", "a"]
+
+    let result = CongratsPhrase.unseenPhrasesToday(["a", "b", "c"])
+
+    XCTAssertEqual(["a", "b", "c"], result)
+    XCTAssertEqual([], walkCongratsPhrasesSeenToday)
+  }
+
 }

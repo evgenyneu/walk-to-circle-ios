@@ -87,6 +87,8 @@ public var walkCongratsPhrases = [
   ]
 ]
 
+public var walkCongratsPhrasesSeenToday = [String]()
+
 public class CongratsPhrase {
   public class func random(circlesReachedToday: Int) -> String {
     let phases = getPhrases(circlesReachedToday)
@@ -110,6 +112,18 @@ public class CongratsPhrase {
     }
 
     return ["Oops. We ran out of 'good job' phrases finally."]
+  }
+
+  public class func unseenPhrasesToday(allPhrases: [String]) -> [String] {
+    var unseen = unseenPhrasesToday(allPhrases, alreadySeenToday: walkCongratsPhrasesSeenToday)
+
+    if unseen.isEmpty {
+      // Seen all phrases today - reset
+      unseen = allPhrases
+      walkCongratsPhrasesSeenToday = []
+    }
+
+    return unseen
   }
 
   public class func unseenPhrasesToday(allPhrases: [String],
