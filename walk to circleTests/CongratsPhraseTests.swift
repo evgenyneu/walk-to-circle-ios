@@ -12,10 +12,27 @@ import XCTest
 
 class CongratsPhraseTests: XCTestCase {
 
+  // oneRandomPhrase
+  // -----------------
+
   func testGetRandom() {
     walkCongratsPhrases[1] = ["Test one"]
-    XCTAssertEqual("asdajkj", CongratsPhrase.random(1))
+    walkCongratsPhrases[2] = ["Test two"]
+    walkCongratsPhrases[5] = ["Test five"]
+    walkCongratsPhrases[20] = ["Test Oh My Glob!"]
+
+    XCTAssertEqual("Test one", CongratsPhrase.oneRandomPhrase(1))
+    XCTAssertEqual("Test two", CongratsPhrase.oneRandomPhrase(2))
+    XCTAssertEqual("Test two", CongratsPhrase.oneRandomPhrase(3))
+    XCTAssertEqual("Test five", CongratsPhrase.oneRandomPhrase(5))
+
+    // Edge cases
+    XCTAssertEqual("Test Oh My Glob!", CongratsPhrase.oneRandomPhrase(1000))
+    XCTAssertEqual("Test one", CongratsPhrase.oneRandomPhrase(0))
   }
+
+  // Get random phrases
+  // -----------------
 
   func testGetPhrases() {
     walkCongratsPhrases[1] = ["Test one"]
@@ -54,6 +71,9 @@ class CongratsPhraseTests: XCTestCase {
     XCTAssertEqual(["Test one"], result)
   }
 
+  // Unseen phrases
+  // -----------------
+
   func testUnseenPhrasesToday() {
     let result = CongratsPhrase.unseenPhrasesToday(["a", "b", "c"], alreadySeenToday: ["a"])
     XCTAssertEqual(["b", "c"], result)
@@ -73,5 +93,17 @@ class CongratsPhraseTests: XCTestCase {
     XCTAssertEqual(["a", "b", "c"], result)
     XCTAssertEqual([], walkCongratsPhrasesSeenToday)
   }
+
+  // Random
+  // -----------------
+
+  func testPickRandomPhraseFomrArray() {
+    var result = CongratsPhrase.random(["a"])
+    XCTAssertEqual("a", result)
+
+    result = CongratsPhrase.random([])
+    XCTAssertEqual(walkCongratsNoPhraseFound, result)
+  }
+
 
 }

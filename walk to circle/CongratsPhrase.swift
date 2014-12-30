@@ -89,12 +89,20 @@ public var walkCongratsPhrases = [
 
 public var walkCongratsPhrasesSeenToday = [String]()
 
-public class CongratsPhrase {
-  public class func random(circlesReachedToday: Int) -> String {
-    let phases = getPhrases(circlesReachedToday)
+public let walkCongratsNoPhraseFound = "Oops. We ran out of 'good job' phrases. Finally!"
 
+public class CongratsPhrase {
+  public class func oneRandomPhrase(circlesReachedToday: Int) -> String {
+    var phrases = getPhrases(circlesReachedToday)
+    phrases = unseenPhrasesToday(phrases)
+
+    let randomPhrase = random(phrases)
     
-    return "asda"
+    return randomPhrase
+  }
+
+  public class func random(phrases: [String]) -> String {
+    return iiRandom.random(phrases) ?? walkCongratsNoPhraseFound
   }
 
   public class func getPhrases(circlesReachedToday: Int) -> [String] {
@@ -111,7 +119,7 @@ public class CongratsPhrase {
       return currentPhrases
     }
 
-    return ["Oops. We ran out of 'good job' phrases finally."]
+    return [walkCongratsNoPhraseFound]
   }
 
   public class func unseenPhrasesToday(allPhrases: [String]) -> [String] {

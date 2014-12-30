@@ -45,9 +45,7 @@ public class YiiQuotes: NSObject {
   }
 
   public class func pickRandomQuote(quotes: [WalkQuote]) -> WalkQuote? {
-    if quotes.isEmpty { return nil }
-    let randomIndex = Int(arc4random_uniform(UInt32(quotes.count)))
-    return quotes[randomIndex]
+    return iiRandom.random(quotes)
   }
 
   private class func showQuote(quote: WalkQuote,
