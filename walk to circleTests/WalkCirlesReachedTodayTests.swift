@@ -24,4 +24,12 @@ class WalkCirlesReachedTodayTests: XCTestCase {
 
     XCTAssertEqual(4, WalkCirlesReachedToday.number)
   }
+
+  func testGetNumberOfCirclesReachedToday() {
+    let components = NSCalendar.currentCalendar().components(NSCalendarUnit.DayCalendarUnit | NSCalendarUnit.MonthCalendarUnit | NSCalendarUnit.YearCalendarUnit, fromDate: NSDate())
+
+    println("!!!!!!!!!!!!!!!!!!!! \(components.year).\(components.month).\(components.day)")
+  }
+
+  
 }
