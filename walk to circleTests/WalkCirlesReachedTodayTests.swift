@@ -45,8 +45,5 @@ class WalkCirlesReachedTodayTests: XCTestCase {
     result = WalkCirlesReachedToday.number(date)
 
     XCTAssertEqual(2, result)
-
   }
-
-  
 }

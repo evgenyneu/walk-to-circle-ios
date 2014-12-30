@@ -15,7 +15,7 @@ public class WalkCirlesReachedToday {
   }
 
   public class func increment(date: NSDate) {
-    let dateStr = iiDateFormatter.dateMonthDayYearAsString(date)
+    let dateStr = iiDate.toStringAsYearMonthDay(date)
 
     if WalkUserDefaults.lastCircleReachedDate_yearMonthDay.stringValue() == dateStr {
       increment()
@@ -30,7 +30,7 @@ public class WalkCirlesReachedToday {
   }
 
   public class func number(date: NSDate) -> Int {
-    let dateStr = iiDateFormatter.dateMonthDayYearAsString(date)
+    let dateStr = iiDate.toStringAsYearMonthDay(date)
 
     if WalkUserDefaults.lastCircleReachedDate_yearMonthDay.stringValue() == dateStr {
       return number

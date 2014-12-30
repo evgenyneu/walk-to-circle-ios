@@ -10,7 +10,7 @@ import UIKit
 import WalkToCircle
 import XCTest
 
-class iiDateFormatterTests: XCTestCase {
+class iiDateTests: XCTestCase {
   func testGetDateAsString() {
     let dateComponents = NSDateComponents()
     dateComponents.day = 12
@@ -19,7 +19,13 @@ class iiDateFormatterTests: XCTestCase {
 
     let date: NSDate = NSCalendar.currentCalendar().dateFromComponents(dateComponents)!
 
-    let result = iiDateFormatter.dateMonthDayYearAsString(date)
+    let result = iiDate.toStringAsYearMonthDay(date)
     XCTAssertEqual("2078.3.12", result)
+  }
+
+  func testGetDateFromYearMonthDay() {
+    let date = iiDate.getDateFromYearMonthDay(2017, month: 12, day: 26)!
+    let result = iiDate.toStringAsYearMonthDay(date)
+    XCTAssertEqual("2017.12.26", result)
   }
 }
