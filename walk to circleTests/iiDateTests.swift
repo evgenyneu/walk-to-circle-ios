@@ -12,15 +12,9 @@ import XCTest
 
 class iiDateTests: XCTestCase {
   func testGetDateAsString() {
-    let dateComponents = NSDateComponents()
-    dateComponents.day = 12
-    dateComponents.month = 3
-    dateComponents.year = 2078
-
-    let date: NSDate = NSCalendar.currentCalendar().dateFromComponents(dateComponents)!
-
+    let date = iiDate.fromYearMonthDay(2072, month: 4, day: 7)!
     let result = iiDate.toStringAsYearMonthDay(date)
-    XCTAssertEqual("2078.3.12", result)
+    XCTAssertEqual("2072.4.7", result)
   }
 
   func testGetDateFromYearMonthDay() {
