@@ -31,6 +31,43 @@ class CongratsPhraseTests: XCTestCase {
     XCTAssertEqual("Test one", CongratsPhrase.oneRandomPhrase(0))
   }
 
+  func testGetRandom_returnsUnseenOne() {
+    walkCongratsPhrases[1] = ["a", "b", "c", "d"]
+    walkCongratsPhrasesSeenToday = ["a", "b", "d"]
+    XCTAssertEqual("c", CongratsPhrase.oneRandomPhrase(1))
+  }
+
+  func testGetRandom_remembersPhraseInTodaysList() {
+    walkCongratsPhrases[1] = ["Something to remember"]
+    walkCongratsPhrasesSeenToday = []
+
+    CongratsPhrase.oneRandomPhrase(1)
+
+    XCTAssertEqual(["Something to remember"], walkCongratsPhrasesSeenToday)
+  }
+
+  func testGetRandom_remembersPhraseOnlyOnce() {
+    walkCongratsPhrases[1] = ["Something to remember"]
+    walkCongratsPhrasesSeenToday = []
+
+    CongratsPhrase.oneRandomPhrase(1)
+    CongratsPhrase.oneRandomPhrase(1)
+    CongratsPhrase.oneRandomPhrase(1)
+
+    XCTAssertEqual(["Something to remember"], walkCongratsPhrasesSeenToday)
+  }
+
+  // oneRandomPhrase from array
+  // -----------------
+
+  func testPickRandomPhraseFomrArray() {
+    var result = CongratsPhrase.oneRandomPhrase(["a"])
+    XCTAssertEqual("a", result)
+
+    result = CongratsPhrase.oneRandomPhrase([])
+    XCTAssertEqual(walkCongratsNoPhraseFound, result)
+  }
+
   // Get random phrases
   // -----------------
 
@@ -93,17 +130,4 @@ class CongratsPhraseTests: XCTestCase {
     XCTAssertEqual(["a", "b", "c"], result)
     XCTAssertEqual([], walkCongratsPhrasesSeenToday)
   }
-
-  // Random
-  // -----------------
-
-  func testPickRandomPhraseFomrArray() {
-    var result = CongratsPhrase.random(["a"])
-    XCTAssertEqual("a", result)
-
-    result = CongratsPhrase.random([])
-    XCTAssertEqual(walkCongratsNoPhraseFound, result)
-  }
-
-
 }

@@ -96,12 +96,18 @@ public class CongratsPhrase {
     var phrases = getPhrases(circlesReachedToday)
     phrases = unseenPhrasesToday(phrases)
 
-    let randomPhrase = random(phrases)
+    let randomPhrase = oneRandomPhrase(phrases)
+    rememberSeenPhrase(randomPhrase)
     
     return randomPhrase
   }
 
-  public class func random(phrases: [String]) -> String {
+  private class func rememberSeenPhrase(phrase: String) {
+    if contains(walkCongratsPhrasesSeenToday, phrase) { return }
+    walkCongratsPhrasesSeenToday.append(phrase)
+  }
+
+  public class func oneRandomPhrase(phrases: [String]) -> String {
     return iiRandom.random(phrases) ?? walkCongratsNoPhraseFound
   }
 
