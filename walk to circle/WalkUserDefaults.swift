@@ -50,4 +50,12 @@ public enum WalkUserDefaults: String {
 
     return defaultValue
   }
+
+  public func intValue(defaultValue: Int) -> Int {
+    if let intValue = value as? Int {
+      return intValue
+    }
+
+    return defaultValue
+  }
 }
