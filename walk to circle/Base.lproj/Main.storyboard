@@ -317,6 +317,7 @@ Your location info never leaves your phone and stays private.</string>
                                 <state key="highlighted" image="continue_highlighted.png"/>
                                 <connections>
                                     <action selector="onCancelTapped:" destination="weP-hj-53b" eventType="touchUpInside" id="uGf-ov-Yjb"/>
+                                    <action selector="onDoneTapped:" destination="yeR-ET-AoZ" eventType="touchUpInside" id="fpc-YL-rM1"/>
                                 </connections>
                             </button>
                         </subviews>

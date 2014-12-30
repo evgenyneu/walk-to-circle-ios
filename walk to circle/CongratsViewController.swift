@@ -16,7 +16,6 @@ class CongratsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    WalkCirlesReachedToday.increment()
     congratulate()
     showNumberOfCirclesReachedToday()
   }
@@ -31,7 +30,7 @@ class CongratsViewController: UIViewController {
     let numberOfCirclesReachedToday = WalkCirlesReachedToday.number
 
     if numberOfCirclesReachedToday == 1 {
-      ciclesReachedLabel.text = "You reached your first circle today."
+      ciclesReachedLabel.text = "You've reached your first circle today."
     } else {
       ciclesReachedLabel.text = "\(numberOfCirclesReachedToday) circles reached today."
     }
