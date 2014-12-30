@@ -23,7 +23,10 @@
 		2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */; };
 		2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B143BF31A4E1CC800BDE4F4 /* WalkCircleMonitor.swift */; };
 		2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B143BF51A4E24AB00BDE4F4 /* iiCLErrorToString.swift */; };
+		2B23E82B1A525DA60062A01F /* CongratsPhrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E82A1A525DA60062A01F /* CongratsPhrase.swift */; };
+		2B23E82F1A52646D0062A01F /* CongratsPhraseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E82D1A5264670062A01F /* CongratsPhraseTests.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
+		2B35290B1A525B7D00058FDB /* blank_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B35290A1A525B7D00058FDB /* blank_background.jpg */; };
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
@@ -163,7 +166,10 @@
 		2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColorTests.swift; sourceTree = "<group>"; };
 		2B143BF31A4E1CC800BDE4F4 /* WalkCircleMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCircleMonitor.swift; sourceTree = "<group>"; };
 		2B143BF51A4E24AB00BDE4F4 /* iiCLErrorToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiCLErrorToString.swift; sourceTree = "<group>"; };
+		2B23E82A1A525DA60062A01F /* CongratsPhrase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsPhrase.swift; sourceTree = "<group>"; };
+		2B23E82D1A5264670062A01F /* CongratsPhraseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsPhraseTests.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
+		2B35290A1A525B7D00058FDB /* blank_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blank_background.jpg; sourceTree = "<group>"; };
 		2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiScreenSize.swift; sourceTree = "<group>"; };
 		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
@@ -305,6 +311,22 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		2B23E8291A525D910062A01F /* Congrats */ = {
+			isa = PBXGroup;
+			children = (
+				2B23E82A1A525DA60062A01F /* CongratsPhrase.swift */,
+			);
+			name = Congrats;
+			sourceTree = "<group>";
+		};
+		2B23E82C1A5264410062A01F /* Congrats */ = {
+			isa = PBXGroup;
+			children = (
+				2B23E82D1A5264670062A01F /* CongratsPhraseTests.swift */,
+			);
+			name = Congrats;
+			sourceTree = "<group>";
+		};
 		2B770A6119E8E07300C28177 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +385,7 @@
 		2B7C38DD1A4ABAC700C3FDA7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2B23E82C1A5264410062A01F /* Congrats */,
 				2B7C38DE1A4ABAD300C3FDA7 /* Walk */,
 			);
 			name = Screens;
@@ -412,6 +435,7 @@
 		2BAD4F351A33BDCF00C3B5BD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2B23E8291A525D910062A01F /* Congrats */,
 				2BAD4F361A33BDE400C3B5BD /* Map */,
 				2B7C38D21A4AB90E00C3FDA7 /* Walk */,
 			);
@@ -561,6 +585,7 @@
 		2BD47AAE1A4A70D70001D953 /* Background */ = {
 			isa = PBXGroup;
 			children = (
+				2B35290A1A525B7D00058FDB /* blank_background.jpg */,
 				2BB8BC091A4BD1C10003814B /* branch_background.jpg */,
 			);
 			name = Background;
@@ -675,6 +700,7 @@
 				2B8B1DD01A52284B00DE018D /* large_door.mp3 in Resources */,
 				2B8B1DD21A522CCF00DE018D /* click_sound.wav in Resources */,
 				2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */,
+				2B35290B1A525B7D00058FDB /* blank_background.jpg in Resources */,
 				2B8A6E5E1A21BCB9006351BA /* rewind_arrows@2x.png in Resources */,
 				2B8B1DD41A52327600DE018D /* snow_ball_throw_short.wav in Resources */,
 				2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */,
@@ -761,6 +787,7 @@
 				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */,
+				2B23E82B1A525DA60062A01F /* CongratsPhrase.swift in Sources */,
 				2B12763F1A47D9F900F6ED44 /* WalkUserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,6 +803,7 @@
 				2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */,
 				2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */,
 				2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */,
+				2B23E82F1A52646D0062A01F /* CongratsPhraseTests.swift in Sources */,
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,
 				2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */,
