@@ -18,11 +18,15 @@ Sounds:
 
 * **Applause 1** http://www.soundjay.com/applause-sounds-1.html
 
-* **Applause 5** http://www.soundjay.com/applause-sounds-1.html
+* **Applause 2** http://www.soundjay.com/applause-sounds-1.html
+
+* **Applause 5** Recorded by Mike Koenig http://soundbible.com/1700-5-Sec-Crowd-Cheer.html
 
 * **Applause 10** Recorded by Yannick Lemieux http://soundbible.com/1964-Small-Crowd-Applause.html
 
-* **Fireworks** Recorded by Stephan http://soundbible.com/693-Fireworks-Finale.html
+* **Applause 13** Recorded by GoGo http://soundbible.com/1881-Sports-Crowd.html
+
+* **Applause 20** Recorded by Stephan http://soundbible.com/693-Fireworks-Finale.html
 
 
 
