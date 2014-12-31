@@ -44,6 +44,22 @@ class iiAnimator {
     }
   }
 
+  class func fadeInSpring(view: UIView, duration: Double, delay: Double = 0) {
+    view.alpha = 0
+
+    UIView.animateWithDuration(
+      duration,
+      delay: delay,
+      usingSpringWithDamping: 1,
+      initialSpringVelocity: 2,
+      options: nil,
+      animations: {
+        view.alpha = 1
+      },
+      completion: nil
+    )
+  }
+
   class func rotate3dOut(view: UIView, onFinished: (()->())? = nil) {
     springRotateX3d(view, fromAngle: 0, toAngle: M_PI, duration: 2, onFinished)
   }

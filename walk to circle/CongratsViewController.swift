@@ -18,6 +18,7 @@ class CongratsViewController: UIViewController {
 
     congratulate()
     showNumberOfCirclesReachedToday()
+    fadeInLabels()
     playSound()
   }
 
@@ -35,6 +36,11 @@ class CongratsViewController: UIViewController {
     } else {
       ciclesReachedLabel.text = "\(numberOfCirclesReachedToday) circles reached today."
     }
+  }
+
+  private func fadeInLabels() {
+    iiAnimator.fadeInSpring(congratsLabel, duration: WalkConstants.textFadeInDuration, delay: 0.2)
+    iiAnimator.fadeInSpring(ciclesReachedLabel, duration: WalkConstants.textFadeInDuration, delay: 0.2)
   }
 
   @IBAction func onPlayTapped(sender: AnyObject) {

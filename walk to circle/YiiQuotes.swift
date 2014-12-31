@@ -58,18 +58,7 @@ public class YiiQuotes: NSObject {
   func show() {
     if !scrollView.hidden { return } // already shown
     scrollView.hidden = false
-
-    scrollView.alpha = 0
-    UIView.animateWithDuration(
-      2,
-      delay: 0,
-      usingSpringWithDamping: 1,
-      initialSpringVelocity: 2,
-      options: nil,
-      animations: {
-        self.scrollView.alpha = 1
-      },
-      completion: nil)
+    iiAnimator.fadeInSpring(scrollView, duration: WalkConstants.textFadeInDuration)
   }
 
   func adjustToNewSize(orientation: UIInterfaceOrientation) {

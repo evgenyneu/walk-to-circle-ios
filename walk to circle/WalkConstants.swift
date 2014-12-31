@@ -34,5 +34,7 @@ public struct WalkConstants {
 
   public static let tutorialText = "Walk to the circle that was shown on the map. You will be notified when you reach it. You can lock your device during your walk. Just be careful on the street."
 
-  public static let tutorialAuthor = "Evgenii Neumerzhitckii"  
+  public static let tutorialAuthor = "Evgenii Neumerzhitckii"
+
+  public static let textFadeInDuration = 3.0
 }
