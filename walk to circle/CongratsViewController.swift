@@ -13,19 +13,45 @@ class CongratsViewController: UIViewController {
   @IBOutlet weak var congratsLabel: UILabel!
   @IBOutlet weak var ciclesReachedLabel: UILabel!
 
+  private var shownMessagesAndPlayedSounds = false
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     congratulate()
     showNumberOfCirclesReachedToday()
-    fadeInLabels()
-    playSound()
+    congratsLabel.alpha = 0
+    ciclesReachedLabel.alpha = 0
+
+    if UIApplication.sharedApplication().applicationState != UIApplicationState.Background {
+      showMessagesAndPlaySound()
+    }
+
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+  }
+
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+
+    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillEnterForegroundNotification, object: nil)
+  }
+
+  func applicationWillEnterForeground(notification: NSNotification) {
+    showMessagesAndPlaySound()
   }
 
   private func congratulate() {
     let numberOfCirclesReachedToday = WalkCirlesReachedToday.number
     let phrase = CongratsPhrase.oneRandomPhrase(numberOfCirclesReachedToday)
     congratsLabel.text = phrase
+  }
+
+  private func showMessagesAndPlaySound() {
+    if shownMessagesAndPlayedSounds { return }
+    shownMessagesAndPlayedSounds = true
+
+    fadeInLabels()
+    playSound()
   }
 
   private func showNumberOfCirclesReachedToday() {
