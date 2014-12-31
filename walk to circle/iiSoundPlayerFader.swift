@@ -69,15 +69,14 @@ public class iiSoundPlayerFader {
     player.volume = newVolume
   }
 
-  public class func timeValue(currentStep: Int, fadeIntervalSeconds: Double,
-    stepsPerSecond: Double, velocity: Double) -> Double {
+  public class func timeFrom0To1(currentStep: Int, fadeIntervalSeconds: Double,
+    stepsPerSecond: Double) -> Double {
 
     let totalSteps = fadeIntervalSeconds * stepsPerSecond
-    let timeValue = Double(currentStep) / totalSteps
-      return iiSoundPlayerFader.timeValue(timeValue, velocity: velocity)
+    return Double(currentStep) / totalSteps
   }
 
-  public class func timeValue(timeFromZeroToOne: Double, velocity: Double) -> Double {
+  public class func volumeMultiplier(timeFromZeroToOne: Double, velocity: Double) -> Double {
     var time = timeFromZeroToOne
     if time < 0 { time = 0 }
     if time > 1 { time = 1 }
