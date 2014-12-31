@@ -11,6 +11,8 @@
 		2B080B421A21B0C40073E1E3 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B3F1A21B0C40073E1E3 /* play.png */; };
 		2B080B431A21B0C40073E1E3 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B401A21B0C40073E1E3 /* play@2x.png */; };
 		2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B080B411A21B0C40073E1E3 /* play@3x.png */; };
+		2B0BCD451A5378140082D3C5 /* iiSoundPlayerFader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD441A5378140082D3C5 /* iiSoundPlayerFader.swift */; };
+		2B0BCD481A53922A0082D3C5 /* iiSoundPlayerFaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BCD461A53920F0082D3C5 /* iiSoundPlayerFaderTests.swift */; };
 		2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276321A45019000F6ED44 /* LocationDeniedViewController.swift */; };
 		2B1276351A450DA000F6ED44 /* iiOsVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276341A450DA000F6ED44 /* iiOsVersion.swift */; };
 		2B1276371A453EE800F6ED44 /* RegionMonitoringUnavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276361A453EE800F6ED44 /* RegionMonitoringUnavailable.swift */; };
@@ -111,6 +113,7 @@
 		2BF00CE31A536947009174B9 /* continue_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF00CE01A536947009174B9 /* continue_highlighted.png */; };
 		2BF00CE41A536947009174B9 /* continue_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF00CE11A536947009174B9 /* continue_highlighted@2x.png */; };
 		2BF00CE51A536947009174B9 /* continue_highlighted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF00CE21A536947009174B9 /* continue_highlighted@3x.png */; };
+		2BF00CE71A536CEE009174B9 /* applause-01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BF00CE61A536CEE009174B9 /* applause-01.mp3 */; };
 		2BFCA84D1A4B904A0080C988 /* TegScrolledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +167,8 @@
 		2B080B3F1A21B0C40073E1E3 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		2B080B401A21B0C40073E1E3 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		2B080B411A21B0C40073E1E3 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
+		2B0BCD441A5378140082D3C5 /* iiSoundPlayerFader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayerFader.swift; sourceTree = "<group>"; };
+		2B0BCD461A53920F0082D3C5 /* iiSoundPlayerFaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayerFaderTests.swift; sourceTree = "<group>"; };
 		2B1276321A45019000F6ED44 /* LocationDeniedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDeniedViewController.swift; sourceTree = "<group>"; };
 		2B1276341A450DA000F6ED44 /* iiOsVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiOsVersion.swift; sourceTree = "<group>"; };
 		2B1276361A453EE800F6ED44 /* RegionMonitoringUnavailable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMonitoringUnavailable.swift; sourceTree = "<group>"; };
@@ -268,6 +273,7 @@
 		2BF00CE01A536947009174B9 /* continue_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue_highlighted.png; sourceTree = "<group>"; };
 		2BF00CE11A536947009174B9 /* continue_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue_highlighted@2x.png"; sourceTree = "<group>"; };
 		2BF00CE21A536947009174B9 /* continue_highlighted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue_highlighted@3x.png"; sourceTree = "<group>"; };
+		2BF00CE61A536CEE009174B9 /* applause-01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "applause-01.mp3"; sourceTree = "<group>"; };
 		2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegScrolledContent.swift; sourceTree = "<group>"; };
 		2BFCA84E1A4B90630080C988 /* README_scrolled_content.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_scrolled_content.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				2B5338A71A52897E0082DC93 /* iiDateTests.swift */,
+				2B0BCD461A53920F0082D3C5 /* iiSoundPlayerFaderTests.swift */,
 				2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */,
 			);
 			name = Utils;
@@ -367,6 +374,7 @@
 				2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */,
 				2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */,
 				2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */,
+				2B0BCD441A5378140082D3C5 /* iiSoundPlayerFader.swift */,
 				2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */,
 				2BCFEF3919EA000600062A99 /* iiTickTock.swift */,
 				2B1276401A47EB2400F6ED44 /* iiUIColor.swift */,
@@ -446,6 +454,7 @@
 		2B99483419BBE56E00CB08AA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				2BF00CE61A536CEE009174B9 /* applause-01.mp3 */,
 				2B5A5D6D19BC01D100E07F37 /* blop.wav */,
 				2B8B1DD11A522CCF00DE018D /* click_sound.wav */,
 				2B8B1DCF1A52284B00DE018D /* large_door.mp3 */,
@@ -738,6 +747,7 @@
 				2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */,
 				2B8A6E521A21BAFD006351BA /* rewind@3x.png in Resources */,
 				2B8B1DD01A52284B00DE018D /* large_door.mp3 in Resources */,
+				2BF00CE71A536CEE009174B9 /* applause-01.mp3 in Resources */,
 				2B8B1DD21A522CCF00DE018D /* click_sound.wav in Resources */,
 				2B080B441A21B0C40073E1E3 /* play@3x.png in Resources */,
 				2B35290B1A525B7D00058FDB /* blank_background.jpg in Resources */,
@@ -785,6 +795,7 @@
 				2B1276371A453EE800F6ED44 /* RegionMonitoringUnavailable.swift in Sources */,
 				2B87D8001A206C1000CCE0B6 /* YiiButtonsDelegate.swift in Sources */,
 				2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */,
+				2B0BCD451A5378140082D3C5 /* iiSoundPlayerFader.swift in Sources */,
 				2B1276331A45019000F6ED44 /* LocationDeniedViewController.swift in Sources */,
 				2BFCA84D1A4B904A0080C988 /* TegScrolledContent.swift in Sources */,
 				2B7C38E71A4AC18800C3FDA7 /* YiiQuotes.swift in Sources */,
@@ -849,6 +860,7 @@
 				2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */,
 				2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */,
 				2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */,
+				2B0BCD481A53922A0082D3C5 /* iiSoundPlayerFaderTests.swift in Sources */,
 				2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */,
 				2B23E82F1A52646D0062A01F /* CongratsPhraseTests.swift in Sources */,
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,

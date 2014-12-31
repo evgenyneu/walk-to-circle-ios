@@ -18,6 +18,7 @@ class CongratsViewController: UIViewController {
 
     congratulate()
     showNumberOfCirclesReachedToday()
+    playSound()
   }
 
   private func congratulate() {
@@ -36,7 +37,16 @@ class CongratsViewController: UIViewController {
     }
   }
 
+  @IBAction func onPlayTapped(sender: AnyObject) {
+    playSound()
+  }
+
+  private func playSound() {
+    iiSounds.shared.play(iiSoundType.applause1, atVolume: 0.1)
+  }
+
   @IBAction func onDoneTapped(sender: AnyObject) {
-    WalkViewControllers.Map.show()
+    iiSounds.shared.fadeOut(iiSoundType.applause1)
+//    WalkViewControllers.Map.show()
   }
 }

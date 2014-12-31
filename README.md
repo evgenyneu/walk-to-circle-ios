@@ -15,3 +15,14 @@ Sounds:
 * **Pin drop** Recorded by Mike Koenig http://soundbible.com/1073-Pin-Drop.html
 
 * **Snow Ball Throw And Splat** Recorded by Mike Koenig http://soundbible.com/632-Snow-Ball-Throw-And-Splat.html
+
+* **Applause 1** http://www.soundjay.com/applause-sounds-1.html
+
+* **Applause 5** http://www.soundjay.com/applause-sounds-1.html
+
+* **Applause 10** Recorded by Yannick Lemieux http://soundbible.com/1964-Small-Crowd-Applause.html
+
+* **Fireworks** Recorded by Stephan http://soundbible.com/693-Fireworks-Finale.html
+
+
+

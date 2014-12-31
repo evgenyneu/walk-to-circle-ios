@@ -16,10 +16,13 @@ enum iiSoundType: String {
   case blop = "blop.wav"
   case large_door = "large_door.mp3"
   case click_sound = "click_sound.wav"
+  case applause1 = "applause-01.mp3"
 }
 
 class iiSoundPlayer {
   var player: AVAudioPlayer?
+
+  var fader: iiSoundPlayerFader?
 
   init(fileName: String) {
     setAudioSessionToAmbient()
@@ -56,6 +59,13 @@ class iiSoundPlayer {
   func playAsync(atVolume volume: Float = 1.0) {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
       self.play(atVolume: volume)
+    }
+  }
+
+  func fadeOut() {
+    if let currentPlayer = player {
+      fader = iiSoundPlayerFader(player: currentPlayer)
+      fader?.fadeOut()
     }
   }
 }

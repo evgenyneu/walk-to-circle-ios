@@ -16,7 +16,7 @@ class iiSounds {
     return _shared_iiSounds
   }
   
-  private var soundPlayers = [iiSoundType: iiSoundPlayer]()
+  private(set) var soundPlayers = [iiSoundType: iiSoundPlayer]()
   
   private init() { }
   
@@ -27,6 +27,12 @@ class iiSounds {
     
     if let currentPlayer = soundPlayers[type] {
       currentPlayer.playAsync(atVolume: volume)
+    }
+  }
+
+  func fadeOut(type: iiSoundType, atVolume volume: Float = 1.0) {
+    if let currentPlayer = soundPlayers[type] {
+      currentPlayer.fadeOut()
     }
   }
 }
