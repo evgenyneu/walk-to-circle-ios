@@ -80,6 +80,6 @@ class SpringAnimation {
   private class func animationValuesNormalized(x: Double, usingSpringWithDamping: Double,
     initialSpringVelocity: Double) -> Double {
       
-      return pow(M_E, -usingSpringWithDamping * x) * cos(initialSpringVelocity * x)
+    return pow(M_E, -usingSpringWithDamping * x) * cos(initialSpringVelocity * x)
   }
 }

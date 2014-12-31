@@ -21,8 +21,7 @@ enum iiSoundType: String {
 
 class iiSoundPlayer {
   var player: AVAudioPlayer?
-
-  var fader: iiSoundPlayerFader?
+  var fader: iiFaderForAvAudioPlayer?
 
   init(fileName: String) {
     setAudioSessionToAmbient()
@@ -64,8 +63,13 @@ class iiSoundPlayer {
 
   func fadeOut() {
     if let currentPlayer = player {
-      fader = iiSoundPlayerFader(player: currentPlayer)
-      fader?.fadeOut()
+      if let currentFader = fader {
+        currentFader.stop()
+      }
+
+      let newFader = iiFaderForAvAudioPlayer(player: currentPlayer)
+      fader = newFader
+      newFader.fadeOut()
     }
   }
 }

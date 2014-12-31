@@ -42,11 +42,11 @@ class CongratsViewController: UIViewController {
   }
 
   private func playSound() {
-    iiSounds.shared.play(iiSoundType.applause1, atVolume: 0.1)
+    iiSounds.shared.play(iiSoundType.applause1, atVolume: 0.3)
   }
 
   @IBAction func onDoneTapped(sender: AnyObject) {
     iiSounds.shared.fadeOut(iiSoundType.applause1)
-//    WalkViewControllers.Map.show()
+    WalkViewControllers.Map.show()
   }
 }

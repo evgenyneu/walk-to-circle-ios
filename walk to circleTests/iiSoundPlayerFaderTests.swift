@@ -57,6 +57,21 @@ class iiSoundPlayerFaderTests: XCTestCase {
     // 100%
     result = iiSoundPlayerFader.timeFrom0To1(10, fadeIntervalSeconds: 1, stepsPerSecond: 10)
     XCTAssertEqual(1.0, rounded(result))
+
+    // Edge cases
+    // -----------------
+
+    result = iiSoundPlayerFader.timeFrom0To1(-10, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    XCTAssertEqual(0.0, rounded(result))
+
+    result = iiSoundPlayerFader.timeFrom0To1(100, fadeIntervalSeconds: 1, stepsPerSecond: 10)
+    XCTAssertEqual(1.0, rounded(result))
+
+    result = iiSoundPlayerFader.timeFrom0To1(1, fadeIntervalSeconds: 0, stepsPerSecond: 10)
+    XCTAssertEqual(1.0, rounded(result))
+
+    result = iiSoundPlayerFader.timeFrom0To1(1, fadeIntervalSeconds: 1, stepsPerSecond: 0)
+    XCTAssertEqual(1.0, rounded(result))
   }
 
   private func rounded(value: Double) -> Double {
