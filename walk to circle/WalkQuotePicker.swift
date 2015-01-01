@@ -12,7 +12,15 @@ public var walkQuotesSeenToday = [String]()
 
 public class WalkQuotePicker {
   public class func unseenQuotesToday(allQuotes: [WalkQuote]) -> [WalkQuote] {
-    return unseenQuotesToday(allQuotes, alreadySeenToday: walkQuotesSeenToday)
+    var unseenQuotes = unseenQuotesToday(allQuotes, alreadySeenToday: walkQuotesSeenToday)
+
+    if unseenQuotes.isEmpty {
+      // Seen all quotes today. Reset the seen array.
+      walkQuotesSeenToday = []
+      unseenQuotes = allQuotes
+    }
+
+    return unseenQuotes
   }
 
   public class func unseenQuotesToday(allQuotes: [WalkQuote],
@@ -25,6 +33,11 @@ public class WalkQuotePicker {
 
   public class func random(quotes: [WalkQuote]) -> WalkQuote? {
     if let currentQuote = iiRandom.random(quotes) {
+
+      if !contains(walkQuotesSeenToday, currentQuote.text) {
+        walkQuotesSeenToday.append(currentQuote.text)
+      }
+
       return currentQuote
     }
     

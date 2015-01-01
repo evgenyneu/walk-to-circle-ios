@@ -11,6 +11,10 @@ import WalkToCircle
 import XCTest
 
 class WalkQuotePickerTests: XCTestCase {
+
+  // unseenQuotesToday
+  // -----------------
+
   func testGetUnseenQuotesToday() {
     let allQuotes = [
       WalkQuote(text: "one", author: "one"),
@@ -43,7 +47,24 @@ class WalkQuotePickerTests: XCTestCase {
     XCTAssertEqual("two", quotes[0].text)
   }
 
-  // Random
+  func testGetUnseenQuotesToday_fromGlobalUbseenArray_whenAllQuotesAreSeen_EmptyUnseenArray() {
+    let allQuotes = [
+      WalkQuote(text: "one", author: "one"),
+      WalkQuote(text: "two", author: "two"),
+      WalkQuote(text: "three", author: "three")
+    ]
+
+    walkQuotesSeenToday = ["three", "one", "two"]
+
+    let quotes = WalkQuotePicker.unseenQuotesToday(allQuotes)
+
+    XCTAssertEqual(true, walkQuotesSeenToday.isEmpty)
+
+    XCTAssertEqual(3, quotes.count)
+    XCTAssertEqual("one", quotes[0].text)
+  }
+
+  // random
   // -----------------
 
   func testPickRandomQuote() {
@@ -52,5 +73,29 @@ class WalkQuotePickerTests: XCTestCase {
     let quote = WalkQuotePicker.random(allQuotes)!
 
     XCTAssertEqual("Hi, I am Mastodon", quote.text)
+  }
+
+  func testPickRandomQuote_addQuoteToListOfSeenQuotesToday() {
+    let allQuotes = [WalkQuote(text: "Hi, I am great auk", author: "Mastodon")]
+
+    walkQuotesSeenToday = []
+
+    WalkQuotePicker.random(allQuotes)
+
+    XCTAssertEqual(1, walkQuotesSeenToday.count)
+    XCTAssertEqual("Hi, I am great auk", walkQuotesSeenToday[0])
+  }
+
+  func testPickRandomQuote_adsToUnseeQuotesListOnlyOnce() {
+    let allQuotes = [WalkQuote(text: "Hi, I am great auk", author: "Mastodon")]
+
+    walkQuotesSeenToday = []
+
+    WalkQuotePicker.random(allQuotes)
+    WalkQuotePicker.random(allQuotes)
+    WalkQuotePicker.random(allQuotes)
+
+    XCTAssertEqual(1, walkQuotesSeenToday.count)
+    XCTAssertEqual("Hi, I am great auk", walkQuotesSeenToday[0])
   }
 }
