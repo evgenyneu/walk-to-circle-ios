@@ -20,8 +20,13 @@ class RewindButton: UIButton {
 
     initLabel()
     initArrows()
-    animateArrows()
 
+    // Arrows do not rotate without this first time after app is launched
+    iiQ.runAfterDelay(0.1) {
+      self.animateArrows()
+    }
+
+    println("RewindButton init")
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
   }
 
@@ -58,6 +63,7 @@ class RewindButton: UIButton {
   }
 
   private func animateArrows() {
+    println("animate arrows")
     RewindButton.rotateArrows(arrowsLayer)
   }
 

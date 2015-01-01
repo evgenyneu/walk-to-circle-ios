@@ -40,6 +40,8 @@ enum WalkViewControllers: String {
   }
 
   private func presentViewController(animate: Bool = true) {
+
+    println("Presenting controller \(self.rawValue)")
     WalkViewControllers.currentlyPresented = self
 
     let options = self == WalkViewControllers.Map ?
