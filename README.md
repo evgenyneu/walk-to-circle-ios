@@ -16,15 +16,26 @@ Sounds:
 
 * **Snow Ball Throw And Splat** Recorded by Mike Koenig http://soundbible.com/632-Snow-Ball-Throw-And-Splat.html
 
-* **Applause 1** http://www.soundjay.com/applause-sounds-1.html
+
+### Applause and Cheer sounds
+
+* **Applause 1** https://www.freesound.org/people/xtrgamr/sounds/243799/
 
 * **Applause 2** http://www.soundjay.com/applause-sounds-1.html
 
-* **Applause 5** Recorded by Mike Koenig http://soundbible.com/1700-5-Sec-Crowd-Cheer.html
+* **Applause 3** https://www.freesound.org/people/xtrgamr/sounds/252808/
 
-* **Applause 10** Recorded by Yannick Lemieux http://soundbible.com/1964-Small-Crowd-Applause.html
+* **Applause 4** http://www.soundjay.com/applause-sounds-1.html
 
-* **Applause 13** Recorded by GoGo http://soundbible.com/1881-Sports-Crowd.html
+* **Applause 6** https://www.freesound.org/people/johansyd/sounds/35964/
+
+* **Applause 7** Recorded by Mike Koenig http://soundbible.com/1700-5-Sec-Crowd-Cheer.html
+
+* **Applause 9** http://www.soundjay.com/applause-sounds-1.html
+
+* **Applause 12** https://www.freesound.org/people/mlteenie/sounds/169233/
+
+* **Applause 15** https://www.freesound.org/people/AlaskaRobotics/sounds/221567/
 
 * **Applause 20** Recorded by Stephan http://soundbible.com/693-Fireworks-Finale.html
 

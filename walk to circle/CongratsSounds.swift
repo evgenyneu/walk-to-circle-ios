@@ -8,7 +8,7 @@
 
 import Foundation
 
-public var walkCongratsSounds = [1, 2, 5, 8, 13, 20]
+public var walkCongratsSounds = [1, 2, 3, 4, 6, 7, 9, 12, 15, 20]
 
 public class CongratsSounds {
   public class func getFileName(circlesReachedToday: Int) -> String {
