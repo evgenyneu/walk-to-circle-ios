@@ -88,12 +88,12 @@ extension CountdownDelegateImplementation {
     yiiButtons.rewindButton.updateText(String(value))
 
     if !firstTick {
-      iiSounds.shared.play(iiSoundType.click_sound, atVolume: 0.02)
+      iiSounds.shared.play(iiSoundType.click_sound, atVolume: 0.05)
     }
   }
 
   func contdownDelegate_didFinish() {
-    iiSounds.shared.play(iiSoundType.large_door, atVolume: 0.07)
+    iiSounds.shared.play(iiSoundType.large_door, atVolume: 0.2)
     iiQ.runAfterDelay(0.01) { // Show zero before view transition
       WalkViewControllers.Walk.show()
     }
