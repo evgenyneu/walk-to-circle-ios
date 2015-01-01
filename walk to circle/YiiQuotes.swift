@@ -32,7 +32,7 @@ public class YiiQuotes: NSObject {
     }
 
     quotesLoader.loadQuotes({ quotes in
-      if let quote = YiiQuotes.pickRandomQuote(quotes) {
+      if let quote = WalkQuotePicker.random(quotes) {
         YiiQuotes.showQuote(quote, textLabel: self.textLabel, authorLabel: self.authorLabel)
         onFinished?() // used in test
       }
@@ -42,10 +42,6 @@ public class YiiQuotes: NSObject {
   private class var showTutorial: Bool {
     // show tutorial screen if user has not reached any circles yet
     return !WalkUserDefaults.anyCircleReached.boolValue()
-  }
-
-  public class func pickRandomQuote(quotes: [WalkQuote]) -> WalkQuote? {
-    return iiRandom.random(quotes)
   }
 
   private class func showQuote(quote: WalkQuote,

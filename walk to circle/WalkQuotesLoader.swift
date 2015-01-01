@@ -1,6 +1,5 @@
 //
-//  WalkQuotesLoader.swift
-//  WalkToCircle
+//  Loads quotes from a text file.
 //
 //  Created by Evgenii Neumerzhitckii on 24/12/2014.
 //  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.

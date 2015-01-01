@@ -51,19 +51,4 @@ class YiiQuotesTests: XCTestCase {
     XCTAssertEqual(WalkConstants.tutorialText, textLabel.text!)
     XCTAssertEqual(WalkConstants.tutorialAuthor, authorLabel.text!)
   }
-
-  func testPickRandomQuote() {
-    let quotes = [
-      WalkQuote(text: "text 1", author: "author 1")
-    ]
-
-    let quote = YiiQuotes.pickRandomQuote(quotes)!
-
-    XCTAssertEqual("text 1", quote.text)
-    XCTAssertEqual("author 1", quote.author)
-  }
-
-  func testPickRandomQuote_edgeCases() {
-    XCTAssertTrue(YiiQuotes.pickRandomQuote([]) == nil)
-  }
 }
