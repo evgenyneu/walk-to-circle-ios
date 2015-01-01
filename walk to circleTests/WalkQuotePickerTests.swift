@@ -42,4 +42,15 @@ class WalkQuotePickerTests: XCTestCase {
     XCTAssertEqual(1, quotes.count)
     XCTAssertEqual("two", quotes[0].text)
   }
+
+  // Random
+  // -----------------
+
+  func testPickRandomQuote() {
+    let allQuotes = [WalkQuote(text: "Hi, I am Mastodon", author: "Mastodon")]
+
+    let quote = WalkQuotePicker.random(allQuotes)!
+
+    XCTAssertEqual("Hi, I am Mastodon", quote.text)
+  }
 }

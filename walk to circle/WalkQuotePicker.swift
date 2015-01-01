@@ -22,4 +22,12 @@ public class WalkQuotePicker {
       return !contains(alreadySeenToday, quote.text)
     }
   }
+
+  public class func random(quotes: [WalkQuote]) -> WalkQuote? {
+    if let currentQuote = iiRandom.random(quotes) {
+      return currentQuote
+    }
+    
+    return nil
+  }
 }
