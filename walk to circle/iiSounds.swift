@@ -19,7 +19,17 @@ class iiSounds {
   private(set) var soundPlayers = [iiSoundType: iiSoundPlayer]()
   
   private init() { }
-  
+
+  func prepareToPlay(type: iiSoundType) {
+    if soundPlayers[type] == nil {
+      soundPlayers[type] = iiSoundPlayer(soundType: type)
+    }
+
+    if let currentPlayer = soundPlayers[type] {
+      currentPlayer.prepareToPlay()
+    }
+  }
+
   func play(type: iiSoundType, atVolume volume: Float = 1.0) {
     if soundPlayers[type] == nil {
       soundPlayers[type] = iiSoundPlayer(soundType: type)

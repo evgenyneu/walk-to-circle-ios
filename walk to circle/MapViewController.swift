@@ -36,6 +36,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
     countdown.delegate = self
 
     showPreviousPin()
+
+    // Preload pin drop sound to make it play without delay and in sync with animation
+    iiSounds.shared.prepareToPlay(iiSoundType.pin_drop)
   }
 
   private func showPreviousPin() {

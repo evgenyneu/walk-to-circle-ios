@@ -20,7 +20,6 @@ class DropPin {
 
     if annotation.showCalloutAfterPinDrop {
       mapView.selectAnnotation(annotation, animated: true)
-      Annotation.hideCalloutAfterDelay(mapView, annotation: annotation, delay: 5)
     }
   }
 
@@ -36,7 +35,7 @@ class DropPin {
     if pindDropHeight == 0 { return }
 
     if pindDropHeight > 200 {
-      iiSounds.shared.play(iiSoundType.fall, atVolume: 0.1)
+      iiSounds.shared.play(iiSoundType.fall, atVolume: 0.07)
     }
 
     let pinDropSoundDelay = pow(Double(pindDropHeight) / 1500.0, 2) + 0.2

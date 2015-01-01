@@ -41,7 +41,7 @@ class YiiButtons: NSObject {
   func showStartButton() {
     if !startButton.hidden { return }
     startButton.hidden = false
-    iiSounds.shared.play(iiSoundType.blop, atVolume: 0.2)
+    iiSounds.shared.play(iiSoundType.blop, atVolume: 0.05)
     iiAnimator.bounce(startButton)
   }
 

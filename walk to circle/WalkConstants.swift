@@ -32,7 +32,7 @@ public struct WalkConstants {
 
   public static let regionCircleRadiusMeters = CLLocationDistance(80)
 
-  public static let tutorialText = "Walk to the circle that was shown on the map. You will be notified when you reach it. You can lock your device during your walk. Just be careful on the street."
+  public static let tutorialText = "Walk to the circle from the map if you remember it. You can keep your device locked. You will be notified when you reach it. Just be careful on the street, my dear traveller."
 
   public static let tutorialAuthor = "Evgenii Neumerzhitckii"
 
