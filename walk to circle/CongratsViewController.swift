@@ -30,23 +30,11 @@ class CongratsViewController: UIViewController {
     congratsLabel.alpha = 0
     ciclesReachedLabel.alpha = 0
 
-    if UIApplication.sharedApplication().applicationState != UIApplicationState.Background {
-      showMessagesAndPlaySound()
-    }
-
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
-  }
-
-  deinit {
-    NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillEnterForegroundNotification, object: nil)
+    showMessagesAndPlaySound()
   }
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
-  }
-
-  func applicationWillEnterForeground(notification: NSNotification) {
-    showMessagesAndPlaySound()
   }
 
   private func congratulate() {
