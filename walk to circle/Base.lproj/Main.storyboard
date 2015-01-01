@@ -320,17 +320,6 @@ Your location info never leaves your phone and stays private.</string>
                                     <action selector="onDoneTapped:" destination="yeR-ET-AoZ" eventType="touchUpInside" id="fpc-YL-rM1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-Kf-vP5">
-                                <rect key="frame" x="282" y="436" width="36" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Play">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onPlayTapped:" destination="yeR-ET-AoZ" eventType="touchUpInside" id="Db9-2E-Odz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -339,7 +328,6 @@ Your location info never leaves your phone and stays private.</string>
                             <constraint firstItem="V4s-aw-DLv" firstAttribute="leading" secondItem="YYO-j7-YFO" secondAttribute="leadingMargin" constant="10" id="4Bp-X0-2YR"/>
                             <constraint firstAttribute="centerY" secondItem="JP1-gW-zfc" secondAttribute="bottom" constant="15" id="54x-55-YOZ"/>
                             <constraint firstItem="pHq-Qa-Q3O" firstAttribute="leading" secondItem="YYO-j7-YFO" secondAttribute="leading" id="6Vk-f9-4tI"/>
-                            <constraint firstItem="XgJ-VH-MF5" firstAttribute="top" secondItem="6l0-Kf-vP5" secondAttribute="bottom" constant="27" id="8jd-UN-zNJ"/>
                             <constraint firstAttribute="centerX" secondItem="XgJ-VH-MF5" secondAttribute="centerX" id="COm-lz-8cw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="V4s-aw-DLv" secondAttribute="trailing" constant="10" id="SDE-ab-3OY"/>
                             <constraint firstAttribute="trailing" secondItem="pHq-Qa-Q3O" secondAttribute="trailing" id="hnn-V8-Izk"/>
@@ -347,7 +335,6 @@ Your location info never leaves your phone and stays private.</string>
                             <constraint firstItem="pHq-Qa-Q3O" firstAttribute="top" secondItem="2os-PS-uYQ" secondAttribute="top" id="smR-5p-Xqb"/>
                             <constraint firstItem="hhZ-1D-leP" firstAttribute="top" secondItem="pHq-Qa-Q3O" secondAttribute="bottom" id="syz-vC-jvf"/>
                             <constraint firstItem="JP1-gW-zfc" firstAttribute="leading" secondItem="YYO-j7-YFO" secondAttribute="leading" constant="20" id="w8N-dh-96O"/>
-                            <constraint firstAttribute="centerX" secondItem="6l0-Kf-vP5" secondAttribute="centerX" id="w8P-S1-Xe6"/>
                         </constraints>
                     </view>
                     <connections>
