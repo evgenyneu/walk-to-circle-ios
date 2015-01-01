@@ -20,7 +20,7 @@ public class CongratsSounds {
 
     if let sound = CongratsSounds.soundType(ciclesReached) {
       soundPlayed = sound
-      iiSounds.shared.play(sound, atVolume: 0.5)
+      iiSounds.shared.play(sound, atVolume: 0.8)
     }
   }
 

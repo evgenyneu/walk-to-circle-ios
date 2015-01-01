@@ -39,4 +39,15 @@ class Annotations {
       walkAnnotation = nil
     }
   }
+
+  // Function is called before app is going into background.
+  // Out task is to remove the new pin and overlay from the map.
+  // So it does not appear in task switcher.
+  class func clearForBackground(mapView: MKMapView) {
+    if let currentAnnotation = walkAnnotation {
+      if !currentAnnotation.newPin { return } // We can leave the previous pin on the map
+
+      remove(mapView)
+    }
+  }
 }

@@ -41,6 +41,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
     iiSounds.shared.prepareToPlay(iiSoundType.pin_drop)
   }
 
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return UIStatusBarStyle.LightContent
+  }
+
   private func showPreviousPin() {
     if let previousCoordinate = WalkCoordinate.previous {
       yiiMap.showPreviousPin(previousCoordinate)
@@ -91,12 +95,12 @@ extension CountdownDelegateImplementation {
     yiiButtons.rewindButton.updateText(String(value))
 
     if !firstTick {
-      iiSounds.shared.play(iiSoundType.click_sound, atVolume: 0.05)
+      iiSounds.shared.play(iiSoundType.click_sound, atVolume: 0.2)
     }
   }
 
   func contdownDelegate_didFinish() {
-    iiSounds.shared.play(iiSoundType.large_door, atVolume: 0.1)
+    iiSounds.shared.play(iiSoundType.large_door, atVolume: 0.15)
     iiQ.runAfterDelay(0.01) { // Show zero before view transition
       WalkViewControllers.Walk.show()
     }

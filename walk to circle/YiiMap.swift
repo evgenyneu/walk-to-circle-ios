@@ -19,11 +19,20 @@ public class YiiMap: NSObject, MKMapViewDelegate {
 
   deinit {
     println("deinit YiiMap")
+    NSNotificationCenter.defaultCenter().removeObserver(self,
+      name: UIApplicationWillResignActiveNotification, object: nil)
   }
 
   func viewDidLoad() {
     mapView.delegate = self
     mapView.showsUserLocation = true
+
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillResignActive:",
+      name: UIApplicationWillResignActiveNotification, object: nil)
+  }
+
+  func applicationWillResignActive(notification: NSNotification) {
+    Annotations.clearForBackground(mapView)
   }
 
   private func zoomToInitialLocation() {

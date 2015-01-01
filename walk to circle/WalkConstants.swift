@@ -30,9 +30,9 @@ public struct WalkConstants {
   public static let minCircleDistanceFromCurrentLocationMeters: CLLocationDistance = 300
   public static let maxCircleDistanceFromCurrentLocationMeters: CLLocationDistance = 500
 
-  public static let regionCircleRadiusMeters = CLLocationDistance(80)
+  public static let regionCircleRadiusMeters = CLLocationDistance(100)
 
-  public static let tutorialText = "Walk to the circle from the map. You will be notified when you reach it. Have a wonderful and safe walk."
+  public static let tutorialText = "Walk to the circle that was shown on the map. You will be notified when you reach it. Have a wonderful and safe walk."
 
   public static let tutorialAuthor = "Evgenii Neumerzhitckii"
 
