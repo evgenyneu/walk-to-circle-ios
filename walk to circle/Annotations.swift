@@ -18,7 +18,7 @@ class Annotations {
     remove(mapView)
 
     let annotation = Annotation(centerCoordinate: coordinate,
-      radius: WalkConstants.regionCircleRadiusMeters)
+      radius: WalkConstants.regionCircleRadiusMeters - 5)
 
     walkAnnotation = annotation
 

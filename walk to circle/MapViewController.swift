@@ -96,7 +96,7 @@ extension CountdownDelegateImplementation {
   }
 
   func contdownDelegate_didFinish() {
-    iiSounds.shared.play(iiSoundType.large_door, atVolume: 0.2)
+    iiSounds.shared.play(iiSoundType.large_door, atVolume: 0.1)
     iiQ.runAfterDelay(0.01) { // Show zero before view transition
       WalkViewControllers.Walk.show()
     }
