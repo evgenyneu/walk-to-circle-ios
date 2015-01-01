@@ -71,10 +71,6 @@ class CongratsViewController: UIViewController {
     iiAnimator.fadeInSpring(ciclesReachedLabel, duration: WalkConstants.textFadeInDuration, delay: 0.2)
   }
 
-  @IBAction func onPlayTapped(sender: AnyObject) {
-    congratsSounds.play()
-  }
-
 
   @IBAction func onDoneTapped(sender: AnyObject) {
     congratsSounds.stop()
