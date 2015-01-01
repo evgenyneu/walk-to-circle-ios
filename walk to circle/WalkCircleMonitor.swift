@@ -60,7 +60,7 @@ class WalkCircleMonitor {
     WalkCircleMonitor.stop()
     WalkUserDefaults.anyCircleReached.save(true)
     WalkCirlesReachedToday.increment()
-    WalkNotification.showNow("You reached your circle. Congrats!")
+    WalkNotification.showNow("You reached your circle. Well done!")
     WalkViewControllers.Congrats.show()
   }
 
