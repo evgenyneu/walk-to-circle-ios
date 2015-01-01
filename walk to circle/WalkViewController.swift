@@ -27,7 +27,7 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
     quotes.setup()
     quotes.showRandomQuote()
 
-    iiQ.runAfterDelay(4) {
+    iiQ.runAfterDelay(3) {
       WalkNotification.registerNotifications()
     }
   }
