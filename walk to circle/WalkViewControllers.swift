@@ -18,7 +18,7 @@ enum WalkViewControllers: String {
   case LocationDenied = "location denied controller"
   case RegionMonitoringUnavailable = "region monitoring unavailable controller"
 
-  func show() {
+  func show(animate: Bool = true) {
     if WalkViewControllers.controllerPresented && WalkViewControllers.current == self {
       // This view controller is already being shown
       return
@@ -27,7 +27,7 @@ enum WalkViewControllers: String {
     let options = self == WalkViewControllers.Map ?
       UIViewAnimationOptions.TransitionFlipFromBottom : UIViewAnimationOptions.TransitionFlipFromTop
 
-    if WalkViewControllers.controllerPresented {
+    if WalkViewControllers.controllerPresented && animate {
       iiPresentViewController.replaceRootViewController(rawValue,
         options: options,
         duration: WalkConstants.viewControllerTransitionDuration)
