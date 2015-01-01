@@ -116,6 +116,7 @@
 		2BE4D73C1A54C578006B600D /* applause_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7321A54C578006B600D /* applause_12.mp3 */; };
 		2BE4D73D1A54C578006B600D /* applause_15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7331A54C578006B600D /* applause_15.mp3 */; };
 		2BE4D73E1A54C578006B600D /* applause_20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7341A54C578006B600D /* applause_20.mp3 */; };
+		2BE4D7401A54C782006B600D /* WalkSoundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4D73F1A54C782006B600D /* WalkSoundType.swift */; };
 		2BE7A5F41A5024FD00B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BF00CDD1A5368C5009174B9 /* continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF00CDA1A5368C5009174B9 /* continue.png */; };
@@ -288,6 +289,7 @@
 		2BE4D7321A54C578006B600D /* applause_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_12.mp3; sourceTree = "<group>"; };
 		2BE4D7331A54C578006B600D /* applause_15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_15.mp3; sourceTree = "<group>"; };
 		2BE4D7341A54C578006B600D /* applause_20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_20.mp3; sourceTree = "<group>"; };
+		2BE4D73F1A54C782006B600D /* WalkSoundType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkSoundType.swift; sourceTree = "<group>"; };
 		2BE7A5F31A5024FD00B8846E /* iiRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiRandom.swift; sourceTree = "<group>"; };
 		2BF00CDA1A5368C5009174B9 /* continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue.png; sourceTree = "<group>"; };
 		2BF00CDB1A5368C5009174B9 /* continue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue@2x.png"; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 				2BCF7B6E1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift */,
 				2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */,
 				2B7B702F1A342B010026CDA9 /* WalkNotification.swift */,
+				2BE4D73F1A54C782006B600D /* WalkSoundType.swift */,
 				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
 				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
 			);
@@ -875,6 +878,7 @@
 				2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */,
 				2B966A821A21A5AC00AAE8A4 /* YiiMap.swift in Sources */,
 				2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */,
+				2BE4D7401A54C782006B600D /* WalkSoundType.swift in Sources */,
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B7B70331A342E010026CDA9 /* CongratsViewController.swift in Sources */,
 				2B5338A51A5289600082DC93 /* iiDate.swift in Sources */,

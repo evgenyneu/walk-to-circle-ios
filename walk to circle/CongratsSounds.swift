@@ -11,7 +11,7 @@ import Foundation
 public var walkCongratsSounds = [1, 2, 3, 4, 6, 7, 9, 12, 15, 20]
 
 public class CongratsSounds {
-  public class func getFileName(circlesReachedToday: Int) -> String {
+  public class func fileName(circlesReachedToday: Int) -> String {
     var currentNumber = walkCongratsSounds.first ?? 1
 
     for number in walkCongratsSounds {
@@ -20,5 +20,10 @@ public class CongratsSounds {
     }
 
     return "applause_\(currentNumber).mp3"
+  }
+
+  public class func soundType(circlesReachedToday: Int) -> WalkSoundType? {
+    let name = fileName(circlesReachedToday)
+    return WalkSoundType(rawValue: name)
   }
 }
