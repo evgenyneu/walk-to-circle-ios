@@ -79,7 +79,7 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
     if updatingLocationForTooLong {
       // The location updates were running for too long
       // User has probably abandoned the app.
-      // Dtop location updates to preserve the battery life.
+      // Stop location updates to preserve the battery life.
       // Location updates will be restarted when/if the app is opened again.
       stopUpdatingLocation()
     }

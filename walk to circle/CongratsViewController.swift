@@ -32,9 +32,7 @@ class CongratsViewController: UIViewController {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
   }
 
-  override func viewWillDisappear(animated: Bool) {
-    super.viewWillDisappear(animated)
-
+  deinit {
     NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillEnterForegroundNotification, object: nil)
   }
 
