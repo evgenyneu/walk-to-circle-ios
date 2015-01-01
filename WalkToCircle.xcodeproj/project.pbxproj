@@ -117,6 +117,8 @@
 		2BE4D7401A54C782006B600D /* WalkSoundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4D73F1A54C782006B600D /* WalkSoundType.swift */; };
 		2BE4D7421A54D392006B600D /* applause_15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7411A54D392006B600D /* applause_15.mp3 */; };
 		2BE4D7441A54D3D8006B600D /* applause_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7431A54D3D8006B600D /* applause_12.mp3 */; };
+		2BE4D7471A54DA04006B600D /* WalkQuotePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4D7451A54D9EC006B600D /* WalkQuotePickerTests.swift */; };
+		2BE4D7491A54DA86006B600D /* WalkQuotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4D7481A54DA86006B600D /* WalkQuotePicker.swift */; };
 		2BE7A5F41A5024FD00B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BF00CDD1A5368C5009174B9 /* continue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF00CDA1A5368C5009174B9 /* continue.png */; };
@@ -290,6 +292,8 @@
 		2BE4D73F1A54C782006B600D /* WalkSoundType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkSoundType.swift; sourceTree = "<group>"; };
 		2BE4D7411A54D392006B600D /* applause_15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_15.mp3; sourceTree = "<group>"; };
 		2BE4D7431A54D3D8006B600D /* applause_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_12.mp3; sourceTree = "<group>"; };
+		2BE4D7451A54D9EC006B600D /* WalkQuotePickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotePickerTests.swift; sourceTree = "<group>"; };
+		2BE4D7481A54DA86006B600D /* WalkQuotePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotePicker.swift; sourceTree = "<group>"; };
 		2BE7A5F31A5024FD00B8846E /* iiRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiRandom.swift; sourceTree = "<group>"; };
 		2BF00CDA1A5368C5009174B9 /* continue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continue.png; sourceTree = "<group>"; };
 		2BF00CDB1A5368C5009174B9 /* continue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "continue@2x.png"; sourceTree = "<group>"; };
@@ -421,6 +425,7 @@
 			children = (
 				2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */,
 				2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */,
+				2BE4D7481A54DA86006B600D /* WalkQuotePicker.swift */,
 				2B7C38E41A4ABD0300C3FDA7 /* Quotes.json */,
 				2B7C38E61A4AC18800C3FDA7 /* YiiQuotes.swift */,
 			);
@@ -459,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */,
+				2BE4D7451A54D9EC006B600D /* WalkQuotePickerTests.swift */,
 				2B7C38E81A4AC9DE00C3FDA7 /* YiiQuotes.swift */,
 			);
 			name = Walk;
@@ -898,6 +904,7 @@
 				2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
 				2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */,
+				2BE4D7491A54DA86006B600D /* WalkQuotePicker.swift in Sources */,
 				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* InitialMapZoom.swift in Sources */,
@@ -918,6 +925,7 @@
 				2B7C38EA1A4ACA2B00C3FDA7 /* YiiQuotes.swift in Sources */,
 				2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
+				2BE4D7471A54DA04006B600D /* WalkQuotePickerTests.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */,
 				2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */,
