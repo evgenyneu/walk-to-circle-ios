@@ -32,7 +32,7 @@ class WalkLocation: NSObject, CLLocationManagerDelegate {
   func checkAuthorizationStatus(status: CLAuthorizationStatus) {
     switch status {
     case .Authorized:
-      WalkViewControllers.currentNonError.show()
+      WalkViewControllers.nonErrorToBePresented.show()
       
     case .Denied, .Restricted:
       WalkViewControllers.LocationDenied.show()

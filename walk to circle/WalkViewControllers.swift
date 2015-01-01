@@ -18,16 +18,34 @@ enum WalkViewControllers: String {
   case LocationDenied = "location denied controller"
   case RegionMonitoringUnavailable = "region monitoring unavailable controller"
 
+  private static private(set) var currentlyPresented: WalkViewControllers?
+
+  private static var anyControllerPresentedYet: Bool {
+    return currentlyPresented != nil
+  }
+
   func show(animate: Bool = true) {
-    if WalkViewControllers.controllerPresented && WalkViewControllers.current == self {
+    if WalkViewControllers.anyControllerPresentedYet && WalkViewControllers.currentlyPresented == self {
       // This view controller is already being shown
       return
     }
 
+    // Present view controller unless we are in background, in which case it will be presented later
+    // when application becomes active again.
+    if UIApplication.sharedApplication().applicationState != UIApplicationState.Background {
+      presentViewController(animate: animate)
+    }
+
+    WalkViewControllers.toBePresented = self
+  }
+
+  private func presentViewController(animate: Bool = true) {
+    WalkViewControllers.currentlyPresented = self
+
     let options = self == WalkViewControllers.Map ?
       UIViewAnimationOptions.TransitionFlipFromBottom : UIViewAnimationOptions.TransitionFlipFromTop
 
-    if WalkViewControllers.controllerPresented && animate {
+    if WalkViewControllers.anyControllerPresentedYet && animate {
       iiPresentViewController.replaceRootViewController(rawValue,
         options: options,
         duration: WalkConstants.viewControllerTransitionDuration)
@@ -36,15 +54,10 @@ enum WalkViewControllers: String {
       // Replace it with new controller without animation.
       iiPresentViewController.setRootViewController(rawValue)
     }
-
-    WalkViewControllers.controllerPresented = true
-    WalkViewControllers.current = self
   }
 
-  // If root view controller was presented yet
-  static private(set) var controllerPresented = false
-
-  static var current: WalkViewControllers {
+  // View controller that will be presented when app becomes active
+  static var toBePresented: WalkViewControllers {
     get {
       let defaultViewController = WalkViewControllers.Map
 
@@ -58,13 +71,14 @@ enum WalkViewControllers: String {
     set {
       WalkUserDefaults.currentViewControllerId.save(newValue.rawValue)
 
-      if !newValue.errorViewController {
+      if !newValue.isErrorViewController {
         WalkUserDefaults.currentNonErrorViewControllerId.save(newValue.rawValue)
       }
     }
   }
 
-  static var currentNonError: WalkViewControllers {
+  // Non error view controller that will be presented when app becomes active
+  static var nonErrorToBePresented: WalkViewControllers {
     get {
       let defaultViewController = WalkViewControllers.Map
 
@@ -76,7 +90,7 @@ enum WalkViewControllers: String {
     }
   }
 
-  var errorViewController: Bool {
+  private var isErrorViewController: Bool {
     let errorViewControllers = [
       WalkViewControllers.LocationDenied,
       WalkViewControllers.RegionMonitoringUnavailable]
