@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-41-5xG">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_background_1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-41-5xG">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_scren_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-8q-s7d">
@@ -38,7 +38,7 @@
         </view>
     </objects>
     <resources>
-        <image name="blank_background.jpg" width="1500" height="2000"/>
+        <image name="launch_screen_background_1024x1024.png" width="1024" height="768"/>
         <image name="launch_scren_logo" width="1024" height="1024"/>
     </resources>
 </document>

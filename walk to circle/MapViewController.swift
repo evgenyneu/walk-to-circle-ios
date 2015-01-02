@@ -42,7 +42,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
   }
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return UIStatusBarStyle.LightContent
+    return UIStatusBarStyle.Default
   }
 
   private func showPreviousPin() {
