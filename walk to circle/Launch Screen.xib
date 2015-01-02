@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,10 +15,19 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-41-5xG">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_scren_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-8q-s7d">
+                    <rect key="frame" x="140" y="140" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="EeT-ik-pKh"/>
+                        <constraint firstAttribute="width" secondItem="gVP-8q-s7d" secondAttribute="height" multiplier="1:1" id="cJ2-gh-71Z"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerY" secondItem="gVP-8q-s7d" secondAttribute="centerY" id="Bbh-xc-JS3"/>
                 <constraint firstItem="oTd-41-5xG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IFc-sO-9qH"/>
+                <constraint firstAttribute="centerX" secondItem="gVP-8q-s7d" secondAttribute="centerX" id="Zq4-1A-Ntz"/>
                 <constraint firstItem="oTd-41-5xG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="akY-VY-Whz"/>
                 <constraint firstAttribute="trailing" secondItem="oTd-41-5xG" secondAttribute="trailing" id="oxv-rp-OEZ"/>
                 <constraint firstAttribute="bottom" secondItem="oTd-41-5xG" secondAttribute="bottom" id="q3H-cC-ULn"/>
@@ -29,5 +39,6 @@
     </objects>
     <resources>
         <image name="blank_background.jpg" width="1500" height="2000"/>
+        <image name="launch_scren_logo" width="1024" height="1024"/>
     </resources>
 </document>

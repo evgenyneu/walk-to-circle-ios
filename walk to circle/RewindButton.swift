@@ -63,7 +63,6 @@ class RewindButton: UIButton {
   }
 
   private func animateArrows() {
-    println("animate arrows")
     RewindButton.rotateArrows(arrowsLayer)
   }
 
