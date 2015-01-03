@@ -31,7 +31,11 @@ class InitialMapZoom {
     if WalkTutorial.showTutorial {
       showYouAreHereAnnotation(mapView, onZoomFinished: onZoomFinished)
     } else {
-      onZoomFinished()
+      // Send "Zoom finished" after a delay. It allows to show start button animation is visible
+      // after view controller transition animation.
+      iiQ.runAfterDelay(WalkConstants.showMapAnnotationAfterDelay) {
+        onZoomFinished()
+      }
     }
   }
 
@@ -39,9 +43,11 @@ class InitialMapZoom {
     mapView.userLocation.title = NSLocalizedString("You are here",
       comment: "Short message shown above user location on the map")
 
-    Annotation.showCalloutAfterDelay(mapView, annotation: mapView.userLocation, delay: 1) {
+    Annotation.showCalloutAfterDelay(mapView, annotation: mapView.userLocation,
+      delay: WalkConstants.showMapAnnotationAfterDelay) {
+
       Annotation.hideCalloutAfterDelay(mapView,
-        annotation: mapView.userLocation, delay: 3)
+        annotation: mapView.userLocation, delay: WalkConstants.hideMapAnnotationAfterDelay)
 
       onZoomFinished()
     }
