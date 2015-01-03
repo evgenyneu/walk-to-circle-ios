@@ -8,11 +8,11 @@
 import UIKit
 
 enum WalkColors: String {
-  case NewPinOverlay = "#FFD90E66"
-  case NewPinStroke = "#FFFFFF"
+  case NewPinOverlay = "#A4AFFF33"
+  case NewPinStroke = "#A4AFFF"
 
   case CurrentPinOverlay = "#99999933"
-  case CurrentPinStroke = "#dddddd"
+  case CurrentPinStroke = "#dddddd99"
 
   static var ButtonTextColor: WalkColors {
     return NewPinOverlay

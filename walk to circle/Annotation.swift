@@ -64,7 +64,7 @@ extension Ext_MapViewDelegate_Overlay {
       let aRenderer =  MKCircleRenderer(circle: currentAnnotation)
       aRenderer.fillColor = currentAnnotation.overlayFillColor
       aRenderer.strokeColor = currentAnnotation.overlayStrokeColor
-      aRenderer.lineWidth = 2;
+      aRenderer.lineWidth = 1;
 
       return aRenderer;
     }
