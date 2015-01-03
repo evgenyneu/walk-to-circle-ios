@@ -11,7 +11,7 @@ import UIKit
 class RewindButton: UIButton {
   private let countdownLabel = UILabel()
 
-  private let iiFont = UIFont.systemFontOfSize(40)
+  private let iiLabelFont = UIFont.systemFontOfSize(40)
   private let arrowsLayer = CALayer()
 
   required init(coder aDecoder: NSCoder) {
@@ -43,9 +43,9 @@ class RewindButton: UIButton {
   func updateText(text: String) {
     let attributedText = NSAttributedString(string: text, attributes: [
       NSForegroundColorAttributeName: WalkColors.ButtonTextColor.uiColor,
-      NSFontAttributeName: iiFont,
+      NSFontAttributeName: iiLabelFont,
       NSTextEffectAttributeName: NSTextEffectLetterpressStyle
-      ])
+    ])
 
     countdownLabel.attributedText = attributedText
   }

@@ -12,10 +12,10 @@ enum WalkColors: String {
   case NewPinStroke = "#A4AFFF"
 
   case CurrentPinOverlay = "#99999933"
-  case CurrentPinStroke = "#dddddd99"
+  case CurrentPinStroke = "#D5D5D5"
 
   static var ButtonTextColor: WalkColors {
-    return NewPinOverlay
+    return NewPinStroke
   }
   
   var uiColor: UIColor {
