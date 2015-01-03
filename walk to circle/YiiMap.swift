@@ -18,7 +18,6 @@ public class YiiMap: NSObject, MKMapViewDelegate {
   private var zoomedToInitialLocation = false
 
   deinit {
-    println("deinit YiiMap")
     NSNotificationCenter.defaultCenter().removeObserver(self,
       name: UIApplicationWillResignActiveNotification, object: nil)
   }

@@ -13,10 +13,6 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
 
   @IBOutlet var quotes: YiiQuotes!
 
-  deinit {
-    println("deinit WalkViewController")
-  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
 

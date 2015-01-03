@@ -26,7 +26,6 @@ class RewindButton: UIButton {
       self.animateArrows()
     }
 
-    println("RewindButton init")
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
   }
 
