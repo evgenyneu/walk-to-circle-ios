@@ -18,7 +18,7 @@
                     <view key="view" contentMode="scaleToFill" id="2eI-8U-YjA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.98854736160000001" blue="0.45219169729999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omQ-Fn-hmy" userLabel="First Responder" sceneMemberID="firstResponder"/>

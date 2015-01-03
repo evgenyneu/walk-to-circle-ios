@@ -40,20 +40,23 @@ enum WalkViewControllers: String {
   }
 
   private func presentViewController(animate: Bool = true) {
-    WalkViewControllers.currentlyPresented = self
-
-    let options = self == WalkViewControllers.Map ?
-      UIViewAnimationOptions.TransitionFlipFromBottom : UIViewAnimationOptions.TransitionFlipFromTop
 
     if WalkViewControllers.anyControllerPresentedYet && animate {
+
+      let options = self == WalkViewControllers.Map ?
+        UIViewAnimationOptions.TransitionFlipFromBottom : UIViewAnimationOptions.TransitionFlipFromTop
+
       iiPresentViewController.replaceRootViewController(rawValue,
         options: options,
         duration: WalkConstants.viewControllerTransitionDuration)
+
     } else {
       // No controller was presented yet. Currentl root view controller is a blank dummy
       // Replace it with new controller without animation.
       iiPresentViewController.setRootViewController(rawValue)
     }
+
+    WalkViewControllers.currentlyPresented = self
   }
 
   // View controller that will be presented when app becomes active
