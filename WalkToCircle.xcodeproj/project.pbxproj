@@ -26,6 +26,7 @@
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
 		2B4132BE1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4132BD1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift */; };
+		2B5016DD1A57E60A00FD1297 /* WalkTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */; };
 		2B5338A11A5284AE0082DC93 /* WalkCirlesReachedTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */; };
 		2B5338A31A52855A0082DC93 /* WalkCirlesReachedToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */; };
 		2B5338A51A5289600082DC93 /* iiDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A41A5289600082DC93 /* iiDate.swift */; };
@@ -196,6 +197,7 @@
 		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
 		2B4132BB1A54AA92005405D8 /* README_sound_fader_ios.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_sound_fader_ios.md; sourceTree = "<group>"; };
 		2B4132BD1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
+		2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTutorial.swift; sourceTree = "<group>"; };
 		2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedTodayTests.swift; sourceTree = "<group>"; };
 		2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedToday.swift; sourceTree = "<group>"; };
 		2B5338A41A5289600082DC93 /* iiDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDate.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 				2BCF7B6E1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift */,
 				2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */,
 				2B7B702F1A342B010026CDA9 /* WalkNotification.swift */,
+				2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */,
 				2BE4D73F1A54C782006B600D /* WalkSoundType.swift */,
 				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
 				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
@@ -904,6 +907,7 @@
 				2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
 				2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */,
+				2B5016DD1A57E60A00FD1297 /* WalkTutorial.swift in Sources */,
 				2BE4D7491A54DA86006B600D /* WalkQuotePicker.swift in Sources */,
 				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,

@@ -25,7 +25,7 @@ public class YiiQuotes: NSObject {
   }
 
   public func showRandomQuote(onFinished: (()->())? = nil) {
-    if YiiQuotes.showTutorial {
+    if WalkTutorial.showTutorial {
       let tutorial = WalkQuote(text: WalkConstants.tutorialText, author: WalkConstants.tutorialAuthor)
       YiiQuotes.showQuote(tutorial, textLabel: textLabel, authorLabel: authorLabel)
       return
@@ -37,11 +37,6 @@ public class YiiQuotes: NSObject {
         onFinished?() // used in test
       }
     })
-  }
-
-  private class var showTutorial: Bool {
-    // show tutorial screen if user has not reached any circles yet
-    return !WalkUserDefaults.anyCircleReached.boolValue()
   }
 
   private class func showQuote(quote: WalkQuote,
