@@ -92,17 +92,6 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
       }
     }
   }
-
-  func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-    let title = "Location Error"
-    let message = iiCLErrorToString.toString(error.code) + " " + error.description
-
-    let alert = UIAlertView(title: title, message: message, delegate: nil,
-      cancelButtonTitle: "Close")
-
-    WalkNotification.showNow("\(title): \(message)")
-    alert.show()
-  }
   
   var updatingLocationForTooLong: Bool {
     if let currentLocateUpdateStartDate = locationUpdateStarted {
