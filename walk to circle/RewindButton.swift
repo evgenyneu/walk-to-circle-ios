@@ -68,7 +68,7 @@ class RewindButton: UIButton {
 
   private class func rotateArrows(layer: CALayer) {
     iiAnimator.addInfiniteAnimation(layer, keyPath: "transform.rotation.z",
-      fromVaue: 0, toValue: -M_PI, duration: 1, autoreverses: false)
+      fromVaue: 0, toValue: -2*M_PI-0.001, duration: 2, autoreverses: false)
   }
 
   private class func positionContdownLabel(superview: UIView, label: UILabel) {
