@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.36862745098039218" green="0.3843137254901961" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BVb-gS-cVf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0oK-Na-J73"/>
                             <constraint firstAttribute="centerX" secondItem="WD4-Gm-ry7" secondAttribute="centerX" id="6gQ-VF-eTE"/>
@@ -214,7 +214,7 @@ Your location info never leaves your phone and stays private.</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.36862745098039218" green="0.3843137254901961" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uls-x2-LLy" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="bottom" constant="10" id="bqp-9V-j8r"/>
                             <constraint firstItem="zmT-gg-3Vr" firstAttribute="leading" secondItem="gp9-hz-YNi" secondAttribute="leadingMargin" id="eQB-ik-wdH"/>
