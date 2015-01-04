@@ -17,25 +17,25 @@ class WalkQuotesLoaderTests: XCTestCase {
     let json = iiJsonLoader.read(WalkConstants.quotesJsonFileName)
     let quotes = WalkQuotesLoader.load(json!)
 
-    XCTAssertEqual(32, quotes.count)
+    XCTAssertEqual(31, quotes.count)
 
     // First quote
     // ---------
 
     let quote = quotes.first!
 
-    XCTAssertEqual("There are many dumb ways to die. One of them is to be hit by a car while using this app. Please be alert around cars.",
+    XCTAssertEqual("Scientific studies have shown that walking, besides its physical benefits, is also beneficial for the mind, improving memory skills, learning ability, concentration and abstract reasoning, as well as reducing stress and lifting spirits.",
       quote.text)
     
-    XCTAssertEqual("Evgenii Neumerzhitckii", quote.author)
+    XCTAssertEqual("Wikipedia", quote.author)
   }
 
   func testLoadQuotes() {
     let expectation = expectationWithDescription("Loads quotes")
 
     obj.loadQuotes({ quotes in
-      XCTAssertEqual(32, quotes.count)
-      XCTAssertEqual("Evgenii Neumerzhitckii", quotes[0].author)
+      XCTAssertEqual(31, quotes.count)
+      XCTAssertEqual("Wikipedia", quotes[0].author)
 
       expectation.fulfill()
     })
@@ -54,7 +54,7 @@ class WalkQuotesLoaderTests: XCTestCase {
 
     XCTAssertEqual(2, addedQuotes.count)
 
-    XCTAssertEqual(32, addedQuotes[0].count)
-    XCTAssertEqual("Evgenii Neumerzhitckii", addedQuotes[0][0].author)
+    XCTAssertEqual(31, addedQuotes[0].count)
+    XCTAssertEqual("Wikipedia", addedQuotes[0][0].author)
   }
 }
