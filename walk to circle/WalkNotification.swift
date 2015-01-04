@@ -14,7 +14,7 @@ class WalkNotification {
     let notification = UILocalNotification()
     notification.fireDate = nil
     notification.alertBody = text
-    notification.soundName = "notification_morning.mp3"
+    notification.soundName = "notification_fresh_morning.mp3"
     UIApplication.sharedApplication().scheduleLocalNotification(notification)
   }
 
