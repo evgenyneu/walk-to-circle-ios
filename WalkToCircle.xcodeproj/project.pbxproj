@@ -63,7 +63,7 @@
 		2B8B1DD41A52327600DE018D /* snow_ball_throw_short.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B1DD31A52327600DE018D /* snow_ball_throw_short.wav */; };
 		2B8B1DD61A5234E200DE018D /* pin_drop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B1DD51A5234E200DE018D /* pin_drop.mp3 */; };
 		2B966A821A21A5AC00AAE8A4 /* YiiMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */; };
-		2B9720C61A593851005FE3BD /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B9720C51A593851005FE3BD /* notification.mp3 */; };
+		2B9720C81A5945C5005FE3BD /* notification_morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B9720C71A5945C5005FE3BD /* notification_morning.mp3 */; };
 		2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B99483019BBE4B800CB08AA /* iiAnimator.swift */; };
 		2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
 		2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */; };
@@ -237,7 +237,7 @@
 		2B8B1DD31A52327600DE018D /* snow_ball_throw_short.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snow_ball_throw_short.wav; sourceTree = "<group>"; };
 		2B8B1DD51A5234E200DE018D /* pin_drop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pin_drop.mp3; sourceTree = "<group>"; };
 		2B966A811A21A5AC00AAE8A4 /* YiiMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiMap.swift; sourceTree = "<group>"; };
-		2B9720C51A593851005FE3BD /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification.mp3; sourceTree = "<group>"; };
+		2B9720C71A5945C5005FE3BD /* notification_morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification_morning.mp3; sourceTree = "<group>"; };
 		2B99483019BBE4B800CB08AA /* iiAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiAnimator.swift; sourceTree = "<group>"; };
 		2B9BA3B319970980009C0DE0 /* ButtonOverlap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlap.swift; sourceTree = "<group>"; };
 		2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlapTests.swift; sourceTree = "<group>"; };
@@ -501,7 +501,7 @@
 				2B5A5D6D19BC01D100E07F37 /* blop.wav */,
 				2B8B1DD11A522CCF00DE018D /* click_sound.wav */,
 				2B8B1DCF1A52284B00DE018D /* large_door.mp3 */,
-				2B9720C51A593851005FE3BD /* notification.mp3 */,
+				2B9720C71A5945C5005FE3BD /* notification_morning.mp3 */,
 				2B8B1DD51A5234E200DE018D /* pin_drop.mp3 */,
 				2B8B1DD31A52327600DE018D /* snow_ball_throw_short.wav */,
 			);
@@ -820,9 +820,9 @@
 				2BD86F00198C8B7E00CDA9F5 /* Localizable.strings in Resources */,
 				2B8B1DD61A5234E200DE018D /* pin_drop.mp3 in Resources */,
 				2BD944301A576668001B542E /* play@3x.png in Resources */,
-				2B9720C61A593851005FE3BD /* notification.mp3 in Resources */,
 				2BD944641A577486001B542E /* stop.png in Resources */,
 				2BD9447D1A57780C001B542E /* continue_highlighted@2x.png in Resources */,
+				2B9720C81A5945C5005FE3BD /* notification_morning.mp3 in Resources */,
 				2BD944821A57786C001B542E /* stop_highlighted.png in Resources */,
 				2BE4D7381A54C578006B600D /* applause_4.mp3 in Resources */,
 				2B8A6E511A21BAFD006351BA /* rewind@2x.png in Resources */,
