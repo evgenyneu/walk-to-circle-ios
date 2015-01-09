@@ -12,7 +12,9 @@ public var walkQuotesSeenToday = [String]()
 
 public class WalkQuotePicker {
   public class func random(quotes: [WalkQuote]) -> WalkQuote? {
-    if let currentQuote = iiRandom.random(quotes) {
+    let unseenQuotes = unseenQuotesToday(quotes)
+    
+    if let currentQuote = iiRandom.random(unseenQuotes) {
 
       if !contains(walkQuotesSeenToday, currentQuote.text) {
         walkQuotesSeenToday.append(currentQuote.text)

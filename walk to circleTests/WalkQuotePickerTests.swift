@@ -75,6 +75,19 @@ class WalkQuotePickerTests: XCTestCase {
     XCTAssertEqual("Hi, I am Mastodon", quote.text)
   }
 
+  func testPickRandomQuote_showOnlyUnseenQuote() {
+    let allQuotes = [
+      WalkQuote(text: "Quote seen", author: "Mastodon"),
+      WalkQuote(text: "New quote", author: "Mastodon")
+    ]
+
+    walkQuotesSeenToday = ["Quote seen"]
+
+    let quote = WalkQuotePicker.random(allQuotes)!
+
+    XCTAssertEqual("New quote", quote.text)
+  }
+
   func testPickRandomQuote_addQuoteToListOfSeenQuotesToday() {
     let allQuotes = [WalkQuote(text: "Hi, I am great auk", author: "Mastodon")]
 
