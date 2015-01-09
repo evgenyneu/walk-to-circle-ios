@@ -52,7 +52,7 @@ class iiAnimator {
       delay: delay,
       usingSpringWithDamping: 1,
       initialSpringVelocity: 2,
-      options: nil,
+      options: UIViewAnimationOptions.AllowUserInteraction,
       animations: {
         view.alpha = 1
       },
