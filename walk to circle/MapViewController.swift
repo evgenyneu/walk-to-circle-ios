@@ -66,7 +66,7 @@ extension YiiButtonsDelegateImplementation {
   }
 }
 
-// ButtonsDelgate
+// MapDelgate
 // ------------------------------
 
 typealias YiiMapDelegateImplementation = MapViewController

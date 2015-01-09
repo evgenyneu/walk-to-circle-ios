@@ -62,4 +62,11 @@ class InitialMapZoom {
     return minSize < CGFloat(iiMapSizeMeters * 2)
       && minSize > CGFloat(iiMapSizeMeters / 2)
   }
+
+  // Scroll/zooms map to user location if it is not visible
+  class func makeUserLocationVisible(mapView: MKMapView) {
+    if mapView.userLocationVisible { return }
+
+    InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: true)
+  }
 }

@@ -19,6 +19,9 @@ public class YiiMap: NSObject, MKMapViewDelegate {
 
   deinit {
     NSNotificationCenter.defaultCenter().removeObserver(self,
+      name: UIApplicationWillEnterForegroundNotification, object: nil)
+
+    NSNotificationCenter.defaultCenter().removeObserver(self,
       name: UIApplicationWillResignActiveNotification, object: nil)
   }
 
@@ -26,14 +29,24 @@ public class YiiMap: NSObject, MKMapViewDelegate {
     mapView.delegate = self
     mapView.showsUserLocation = true
 
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:",
+      name: UIApplicationWillEnterForegroundNotification, object: nil)
+
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillResignActive:",
       name: UIApplicationWillResignActiveNotification, object: nil)
+  }
+
+  func applicationWillEnterForeground(notification: NSNotification) {
+    // Make sure user location is visible on map when application enters foreground
+    makeUserLocationVisible()
   }
 
   func applicationWillResignActive(notification: NSNotification) {
     Annotations.clearForBackground(mapView)
   }
 
+  // Runs once when app if first started
+  // Scrolls/zooms map to show user location
   private func zoomToInitialLocation() {
     if zoomedToInitialLocation { return }
 
@@ -41,6 +54,14 @@ public class YiiMap: NSObject, MKMapViewDelegate {
       self.zoomedToInitialLocation = true
       self.delegate?.yiiMapDelegate_mapIsReady()
     }
+  }
+
+  // Runs every time the app ener foreground
+  // Scrolls/zooms map on user location if it is not visible on map
+  private func makeUserLocationVisible() {
+    if !zoomedToInitialLocation { return }
+
+    InitialMapZoom.makeUserLocationVisible(mapView)
   }
 
   func dropNewPin() -> CLLocationCoordinate2D {
