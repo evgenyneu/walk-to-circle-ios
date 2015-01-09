@@ -78,7 +78,25 @@ class iiGeo {
     minDistanceMeters: Double,
     maxDistanceMeters: Double) -> CLLocationCoordinate2D {
 
-    let distanceMeters = iiGeo.randomBetween(min: minDistanceMeters, max: maxDistanceMeters)
+    var minDistanceMetersCorrected = minDistanceMeters
+    var maxDistanceMetersCorrected = maxDistanceMeters
+
+    // Correct the distance by 0.25%.
+    // That is amount of inaccuracy in distance calculation.
+    // We want to make sure the returned coordinate is always inside min/max range.
+    if minDistanceMetersCorrected != maxDistanceMetersCorrected {
+      minDistanceMetersCorrected += minDistanceMetersCorrected * 0.0025
+      maxDistanceMetersCorrected -= maxDistanceMetersCorrected * 0.0025
+    }
+
+    if minDistanceMetersCorrected > maxDistanceMetersCorrected {
+      minDistanceMetersCorrected = maxDistanceMetersCorrected
+    }
+
+    let distanceMeters = iiGeo.randomBetween(
+      min: minDistanceMetersCorrected,
+      max: maxDistanceMetersCorrected)
+
     let bearingDegrees = iiGeo.randomBearinDegrees()
 
     return iiGeo.destination(start, distanceMeters: distanceMeters,

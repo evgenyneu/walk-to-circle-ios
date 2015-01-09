@@ -40,11 +40,11 @@ class iiGeoTests: XCTestCase {
   }
 
   func testRandomBetween() {
-    for _ in 1...100 {
-      let result = iiGeo.randomBetween(min: 1, max: 5)
+    for _ in 1...1000 {
+      let result = iiGeo.randomBetween(min: 1000, max: 5000)
 
-      XCTAssertGreaterThanOrEqual(result, 1)
-      XCTAssertLessThanOrEqual(result, 5)
+      XCTAssertGreaterThanOrEqual(result, 1000)
+      XCTAssertLessThanOrEqual(result, 5000)
     }
   }
 
@@ -60,7 +60,7 @@ class iiGeoTests: XCTestCase {
   func testRandomCoord() {
     let start = CLLocationCoordinate2DMake(-37.817728, 144.968108)
 
-    for _ in 1...100 {
+    for _ in 1...1000 {
       let newCoordinate = iiGeo.randomCoordinate(start,
         minDistanceMeters: 1000, maxDistanceMeters: 5000)
 
