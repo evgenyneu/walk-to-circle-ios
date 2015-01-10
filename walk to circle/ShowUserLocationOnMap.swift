@@ -12,8 +12,8 @@ import MapKit
 
 private let iiMapSizeMeters:CLLocationDistance = WalkConstants.minCircleDistanceFromCurrentLocationMeters + WalkConstants.maxCircleDistanceFromCurrentLocationMeters
 
-class InitialMapZoom {
-  class func zoomToLocation(mapView: MKMapView, userLocation: MKUserLocation, animated: Bool) {
+class ShowUserLocationOnMap {
+  class func showUserLocation(mapView: MKMapView, userLocation: MKUserLocation, animated: Bool) {
     let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
       iiMapSizeMeters, iiMapSizeMeters)
 
@@ -24,9 +24,12 @@ class InitialMapZoom {
     return !(isZoomLevelOk(mapView.visibleMapRect) && mapView.userLocationVisible)
   }
 
-  // Zooms map to user location. It is called once after the app has started.
-  class func zoomToInitialLocation(mapView: MKMapView, onZoomFinished: ()->()) {
-    InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: false)
+  // Zooms/scrolls map to show user location.
+  // It is called once after the app has started and each time it's brought to foreground.
+  class func showUserLocation(mapView: MKMapView, onZoomFinished: ()->()) {
+    if needZoomingBeforePlay(mapView) {
+      showUserLocation(mapView, userLocation: mapView.userLocation, animated: false)
+    }
 
     if WalkTutorial.showTutorial {
       showYouAreHereAnnotation(mapView, onZoomFinished: onZoomFinished)
@@ -61,12 +64,5 @@ class InitialMapZoom {
     // than initial zoom size.
     return minSize < CGFloat(iiMapSizeMeters * 2)
       && minSize > CGFloat(iiMapSizeMeters / 2)
-  }
-
-  // Scroll/zooms map to user location if it is not visible
-  class func makeUserLocationVisible(mapView: MKMapView) {
-    if mapView.userLocationVisible { return }
-
-    InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: true)
   }
 }

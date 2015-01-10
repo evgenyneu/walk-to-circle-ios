@@ -15,7 +15,10 @@ public class YiiMap: NSObject, MKMapViewDelegate {
 
   private var callbackAfterRegionDidChange: (()->())?
 
-  private var zoomedToInitialLocation = false
+  // true after user locatino is visible with correct zoom
+  private var mapIsReadyToStartTheGame = false
+  
+  private var didShowUserLocation = false
 
   deinit {
     NSNotificationCenter.defaultCenter().removeObserver(self,
@@ -38,30 +41,27 @@ public class YiiMap: NSObject, MKMapViewDelegate {
 
   func applicationWillEnterForeground(notification: NSNotification) {
     // Make sure user location is visible on map when application enters foreground
-    makeUserLocationVisible()
+    didShowUserLocation = false
   }
 
   func applicationWillResignActive(notification: NSNotification) {
     Annotations.clearForBackground(mapView)
   }
 
-  // Runs once when app if first started
-  // Scrolls/zooms map to show user location
-  private func zoomToInitialLocation() {
-    if zoomedToInitialLocation { return }
+  // Runs once when app if first started.
+  // Scrolls/zooms map to show user location.
+  private func showUserLocation() {
+    if didShowUserLocation { return }
 
-    InitialMapZoom.zoomToInitialLocation(mapView) {
-      self.zoomedToInitialLocation = true
-      self.delegate?.yiiMapDelegate_mapIsReady()
+    ShowUserLocationOnMap.showUserLocation(mapView) {
+
+      if !self.mapIsReadyToStartTheGame {
+        self.delegate?.yiiMapDelegate_mapIsReady()
+      }
+
+      self.didShowUserLocation = true
+      self.mapIsReadyToStartTheGame = true
     }
-  }
-
-  // Runs every time the app ener foreground
-  // Scrolls/zooms map on user location if it is not visible on map
-  private func makeUserLocationVisible() {
-    if !zoomedToInitialLocation { return }
-
-    InitialMapZoom.makeUserLocationVisible(mapView)
   }
 
   func dropNewPin() -> CLLocationCoordinate2D {
@@ -71,14 +71,14 @@ public class YiiMap: NSObject, MKMapViewDelegate {
       minDistanceMeters: WalkConstants.minCircleDistanceFromCurrentLocationMeters,
       maxDistanceMeters: WalkConstants.maxCircleDistanceFromCurrentLocationMeters)
 
-    if InitialMapZoom.needZoomingBeforePlay(mapView) {
+    if ShowUserLocationOnMap.needZoomingBeforePlay(mapView) {
       doAfterRegionDidChange {
         iiQ.runAfterDelay(0.3) {
           self.placePin(coordinate)
         }
       }
 
-      InitialMapZoom.zoomToLocation(mapView, userLocation: mapView.userLocation, animated: true)
+      ShowUserLocationOnMap.showUserLocation(mapView, userLocation: mapView.userLocation, animated: true)
     } else {
       self.placePin(coordinate)
     }
@@ -116,7 +116,7 @@ typealias MKMapViewDelegateImplementation = YiiMap
 
 extension MKMapViewDelegateImplementation {
   public func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
-    zoomToInitialLocation()
+    showUserLocation()
   }
 
   public func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
