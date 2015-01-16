@@ -26,7 +26,7 @@ class DropPin {
   class func showPreviousPin(mapView: MKMapView, coordinate: CLLocationCoordinate2D) {
 
     let annotationTitle = NSLocalizedString("Previous circle",
-      comment: "Annotation title for current pin")
+      comment: "Annotation title for previous pin")
 
     Annotations.show(coordinate, title: annotationTitle, newPin: false, mapView: mapView)
   }
