@@ -24,7 +24,7 @@ public class WalkCirlesReachedToday {
     }
 
     value++
-    WalkUserDefaults.circlesReachedToday.save(value)
+    WalkUserDefaults.circlesReached.save(value)
   }
 
   public class var number: Int {
@@ -35,7 +35,7 @@ public class WalkCirlesReachedToday {
     let dateStr = iiDate.toStringAsYearMonthDay(date)
 
     if WalkUserDefaults.lastCircleReachedDate_yearMonthDay.stringValue() == dateStr {
-      return WalkUserDefaults.circlesReachedToday.intValue(0)
+      return WalkUserDefaults.circlesReached.intValue(0)
     }
 
     return 0

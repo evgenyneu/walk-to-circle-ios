@@ -20,7 +20,7 @@ class CongratsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    if WalkUserDefaults.circlesReachedToday.intValue(0) == 0 {
+    if WalkCirlesReachedToday.number == 0 {
       WalkViewControllers.Map.show(animate: false)
       return
     }

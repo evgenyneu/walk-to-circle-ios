@@ -12,7 +12,7 @@ import XCTest
 
 class WalkCirlesReachedTodayTests: XCTestCase {
   func testIncrement() {
-    WalkUserDefaults.circlesReachedToday.clear()
+    WalkUserDefaults.circlesReached.clear()
     WalkUserDefaults.lastCircleReachedDate_yearMonthDay.clear()
 
     WalkCirlesReachedToday.increment()
@@ -27,7 +27,7 @@ class WalkCirlesReachedTodayTests: XCTestCase {
   }
 
   func testGetNumberOfCirclesReachedForDate() {
-    WalkUserDefaults.circlesReachedToday.clear()
+    WalkUserDefaults.circlesReached.clear()
     WalkUserDefaults.lastCircleReachedDate_yearMonthDay.clear()
 
     let date = iiDate.fromYearMonthDay(2031, month: 5, day: 4)!
@@ -44,7 +44,7 @@ class WalkCirlesReachedTodayTests: XCTestCase {
   }
 
   func testGetNumberOfCirclesReachedForDate_whenAnotherDayIsGiven() {
-    WalkUserDefaults.circlesReachedToday.clear()
+    WalkUserDefaults.circlesReached.clear()
     WalkUserDefaults.lastCircleReachedDate_yearMonthDay.clear()
 
     // Increment the previous dat

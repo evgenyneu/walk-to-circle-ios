@@ -16,7 +16,7 @@ public class CongratsSounds {
   init() { }
 
   public func play() {
-    let ciclesReached = WalkUserDefaults.circlesReachedToday.intValue(0)
+    let ciclesReached = WalkCirlesReachedToday.number
 
     if let sound = CongratsSounds.soundType(ciclesReached) {
       soundPlayed = sound
