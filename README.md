@@ -21,7 +21,7 @@ The porpose of the game is to encourage walking and discover new places around y
 * **Snow Ball Throw And Splat** Recorded by Mike Koenig http://soundbible.com/632-Snow-Ball-Throw-And-Splat.html
 
 
-### Applause and Cheer sounds
+### Applause and cheer sounds
 
 * **Applause 1** https://www.freesound.org/people/xtrgamr/sounds/243799/
 
