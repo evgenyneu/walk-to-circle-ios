@@ -1,6 +1,6 @@
 # Walk to Circle map exploration iOS game
 
-The goal of the game is to reach a circle on a map. The porpose of the game is to encourage walking. Please feel free to use the source for any purpose. Drop me a message if you have any questions.
+The porpose of the game is to encourage walking and discover new places around you. Please feel free to use the source for any purpose. Drop me a message if you have any questions.
 
 <a href='https://itunes.apple.com/us/app/walk-to-circle/id955310614' title='Download on App Store'><img src='https://raw.githubusercontent.com/evgenyneu/walk-to-circle-ios/master/graphics/readme/appstore_badge.png' height="60" alt='Download Walk to Circle on App Store' class='AppStoreBadge'></a>
 
