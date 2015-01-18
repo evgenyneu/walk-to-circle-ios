@@ -2,6 +2,8 @@
 
 iOS geolocation game. Goal of the game is to reach a circle on a map. Position of the circle is chosen randomly when the game is started.
 
+<a href='https://itunes.apple.com/us/app/walk-to-circle/id955310614' title='Download on App Store'><img src='https://raw.githubusercontent.com/evgenyneu/walk-to-circle-ios/master/graphics/readme/appstore_badge.png' height="60" alt='Download Walk to Circle on App Store' class='AppStoreBadge'></a>
+
 ## Credit
 
 Sounds:
