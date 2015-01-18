@@ -8,7 +8,7 @@ The porpose of the game is to encourage walking and discover new places around y
 
 ## Credit
 
-### Sounds:
+### Sounds
 
 * **Blop** Recorded by Mark DiAngelo. http://soundbible.com/2067-Blop.html
 
