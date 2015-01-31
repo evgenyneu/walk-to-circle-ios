@@ -1,0 +1,22 @@
+Script for Walk to Circle iOS app
+—————————————————
+
+
+<the map is shown in the video>
+
+This app is made for walking. 
+It gives you a nearby area that you’ll walk to
+
+<the pin is dropped in the video>
+
+You’ll have five seconds to remember its location.
+
+And then…bye bye map!
+
+<the map screen is closed in the video>
+
+Do you think you can remember where the circle was?.
+
+When you reach your goal, the app will tell you!.
+
+<show a notification arriving in the video>
