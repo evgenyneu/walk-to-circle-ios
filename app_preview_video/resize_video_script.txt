@@ -1,0 +1,2 @@
+
+ffmpeg -i 1080×1920_walk_to_circle_app_preview.mp4 -filter:v scale=750:1334 -c:a copy 750x1334_walk_to_circle.mp4
