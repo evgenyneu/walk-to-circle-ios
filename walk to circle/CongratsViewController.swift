@@ -27,8 +27,6 @@ class CongratsViewController: UIViewController {
 
     congratulate()
     showNumberOfCirclesReachedToday()
-    congratsLabel.alpha = 0
-    ciclesReachedLabel.alpha = 0
 
     showMessagesAndPlaySound()
   }
@@ -47,7 +45,6 @@ class CongratsViewController: UIViewController {
     if shownMessagesAndPlayedSounds { return }
     shownMessagesAndPlayedSounds = true
 
-    fadeInLabels()
     congratsSounds.play()
   }
 
@@ -60,12 +57,6 @@ class CongratsViewController: UIViewController {
       ciclesReachedLabel.text = "\(numberOfCirclesReachedToday) circles reached today."
     }
   }
-
-  private func fadeInLabels() {
-    iiAnimator.fadeInSpring(congratsLabel, duration: WalkConstants.textFadeInDuration, delay: 0.2)
-    iiAnimator.fadeInSpring(ciclesReachedLabel, duration: WalkConstants.textFadeInDuration, delay: 0.2)
-  }
-
 
   @IBAction func onDoneTapped(sender: AnyObject) {
     congratsSounds.stop()
