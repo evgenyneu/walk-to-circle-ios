@@ -8,51 +8,66 @@ import WalkToCircle
 import XCTest
 
 class WalkWatchDataTests: XCTestCase {
-  func testDictionary() {
-    // 228 degress
+  func testWalkDirection() {
+    // 228 degress bearing
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.879057, 144.924075)
 
-    let result = WalkWatchData.dictionary!
+    let result = WalkWatchData.walkDirection!
+
+    let resultLocation = result["userLocation"]! as [String: Double]
+    let direction = result["circleDirection"]! as Int
+
+    XCTAssertEqual(-37.847480, resultLocation["latitude"]!)
+    XCTAssertEqual(144.969737, resultLocation["longitude"]!)
+    XCTAssertEqual(10, direction)
   }
 
+  func testDataToDictionary() {
+    let userLocation = WalkWatch_userLocationModel(latitude: 10, longitude: 2)
+    let data = WalkWatch_directionModel(userLocation: userLocation, circleDirection: 3)
+
+    let result = WalkWatchData.toDictionary(data)
+
+    let resultLocation = result["userLocation"]! as [String: Double]
+    let direction = result["circleDirection"]! as Int
+
+    XCTAssertEqual(10, resultLocation["latitude"]!)
+    XCTAssertEqual(2, resultLocation["longitude"]!)
+    XCTAssertEqual(3, direction)
+  }
+
+  // Get direction data object
+  // ----------------------
+
   func testData() {
-    // 228 degress
+    // 228 degress bearing
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.879057, 144.924075)
 
-    let result = WalkWatchData.get!
+    let result = WalkWatchData.data!
 
     let userLocation = result.userLocation
 
     XCTAssertEqual(-37.847480, userLocation.latitude)
     XCTAssertEqual(144.969737, userLocation.longitude)
     XCTAssertEqual(10, result.circleDirection)
-
-//
-//    let userLocation = result["userLocation"]! as [String: Double]
-//    let direction = result["circleDirection"]! as Int
-//
-//    XCTAssertEqual(-37.847480, userLocation["latitude"]!)
-//    XCTAssertEqual(144.969737, userLocation["longitude"]!)
-//
-//    XCTAssertEqual(10, direction)
   }
 
   func testData_noCircleDirection() {
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.current = nil // no current circle
 
-    let result = WalkWatchData.get 
+    let result = WalkWatchData.data
 
     XCTAssert(result == nil)
   }
 
   func testData_noUserLocation() {
-    WalkLocation.shared.lastLocation = nil // no User location
+    WalkLocation.shared.lastLocation = nil // no user location
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.879057, 144.924075)
 
-    let result = WalkWatchData.get
+    let result = WalkWatchData.data
 
     XCTAssert(result == nil)
   }

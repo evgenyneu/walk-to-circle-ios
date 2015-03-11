@@ -6,6 +6,11 @@
 import Foundation
 
 public struct WalkWatch_directionModel {
+  public init(userLocation: WalkWatch_userLocationModel, circleDirection: Int) {
+    self.userLocation = userLocation
+    self.circleDirection = circleDirection
+  }
+
   public let userLocation: WalkWatch_userLocationModel
   public let circleDirection: Int
 }

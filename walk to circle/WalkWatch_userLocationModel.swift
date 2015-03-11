@@ -6,6 +6,11 @@
 import Foundation
 
 public struct WalkWatch_userLocationModel {
+  public init(latitude: Double, longitude: Double) {
+    self.latitude = latitude
+    self.longitude = longitude
+  }
+
   public let latitude: Double
   public let longitude: Double
 }
