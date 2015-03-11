@@ -37,6 +37,23 @@ class WalkWatchDataTests: XCTestCase {
     XCTAssertEqual(3, direction)
   }
 
+  func testDataFromDictionary() {
+    let dict = [
+      "userLocation": [
+        "latitude": 1.123,
+        "longitude": 5.567
+      ],
+
+      "circleDirection": 14
+    ] as [String: AnyObject]
+
+    let result = WalkWatchData.fromDictionary(dict)!
+
+    XCTAssertEqual(1.123, result.userLocation.latitude)
+    XCTAssertEqual(5.567, result.userLocation.longitude)
+    XCTAssertEqual(14, result.circleDirection)
+  }
+
   // Get direction data object
   // ----------------------
 

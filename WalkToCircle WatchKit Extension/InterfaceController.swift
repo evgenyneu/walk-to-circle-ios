@@ -43,18 +43,9 @@ class InterfaceController: WKInterfaceController {
       println("Reply from parent \(reply)")
       if reply == nil { return }
 
-      let p = CutePossumParser(data: reply)
 
-      let data = watchData(
-        userLocation: watchData_userLocation(
-          latitude: p["userLocation"].parse("latitude", miss: 0),
-          longitude: p["userLocation"].parse("longitude", miss: 0)),
-        circleDirection: p.parse("circleDirection", miss: 0)
-      )
 
-      if !p.success { return }
-
-      self.onReceivedDataFromParentApp(data)
+//      self.onReceivedDataFromParentApp(data)
 
       println("Reply from parent app \(reply)")
     }
