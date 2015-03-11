@@ -28,20 +28,18 @@ class InterfaceController: WKInterfaceController {
   }
 
   private func getDataFromParentApp() {
-    WKInterfaceController.openParentApplication(["asd":"asdas"]) { reply, error in
-
-      println("Reply from parent \(reply)")
+    WKInterfaceController.openParentApplication([:]) { reply, error in
 
       if let currentReply = reply as? [String: AnyObject] {
         if let currentDirection = WalkWatchDataConsumer.fromDictionary(currentReply) {
-          self.onReceivedDataFromParentApp(currentDirection)
+          self.didReceiveDirection(currentDirection)
         }
       }
 
     }
   }
 
-  private func onReceivedDataFromParentApp(direction: WalkWatch_directionModel) {
+  private func didReceiveDirection(direction: WalkWatch_directionModel) {
     println("Direction: \(direction.circleDirection) coordinate: \(direction.userLocation.latitude),\(direction.userLocation.longitude)")
   }
 }
