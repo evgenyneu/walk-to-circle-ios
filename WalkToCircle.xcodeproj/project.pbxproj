@@ -38,6 +38,10 @@
 		2B5338A31A52855A0082DC93 /* WalkCirlesReachedToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */; };
 		2B5338A51A5289600082DC93 /* iiDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A41A5289600082DC93 /* iiDate.swift */; };
 		2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A71A52897E0082DC93 /* iiDateTests.swift */; };
+		2B5503F51AB012D300CD151C /* WalkWatchDataConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5503F41AB012D300CD151C /* WalkWatchDataConsumer.swift */; };
+		2B5503F91AB012EF00CD151C /* WalkWatchDataConsumerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5503F61AB012EB00CD151C /* WalkWatchDataConsumerTests.swift */; };
+		2B5503FA1AB0137400CD151C /* WalkWatchDataConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5503F41AB012D300CD151C /* WalkWatchDataConsumer.swift */; };
+		2B5503FB1AB0137900CD151C /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
 		2B5C2C841AAFE0490077532D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2C831AAFE0490077532D /* InterfaceController.swift */; };
 		2B5C2C861AAFE0490077532D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C851AAFE0490077532D /* Images.xcassets */; };
@@ -249,6 +253,8 @@
 		2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedToday.swift; sourceTree = "<group>"; };
 		2B5338A41A5289600082DC93 /* iiDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDate.swift; sourceTree = "<group>"; };
 		2B5338A71A52897E0082DC93 /* iiDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDateTests.swift; sourceTree = "<group>"; };
+		2B5503F41AB012D300CD151C /* WalkWatchDataConsumer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDataConsumer.swift; sourceTree = "<group>"; };
+		2B5503F61AB012EB00CD151C /* WalkWatchDataConsumerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDataConsumerTests.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		2B5A5D6F19BC02E700E07F37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WalkToCircle WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -509,6 +515,7 @@
 				2B4980DC1AAFE9A200821F13 /* Model */,
 				2B5C2CA01AAFE0DB0077532D /* WalkWatchDirection.swift */,
 				2B5C2CA11AAFE0DB0077532D /* WalkWatchData.swift */,
+				2B5503F41AB012D300CD151C /* WalkWatchDataConsumer.swift */,
 				2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocation.swift */,
 			);
 			name = Watch;
@@ -519,6 +526,7 @@
 			children = (
 				2B5C2CA71AAFE1030077532D /* WalkWatchDirectionTests.swift */,
 				2B5C2CA81AAFE1030077532D /* WalkWatchDataTests.swift */,
+				2B5503F61AB012EB00CD151C /* WalkWatchDataConsumerTests.swift */,
 				2B5C2CA91AAFE1030077532D /* WalkWatchUserLocationTests.swift */,
 			);
 			name = Watch;
@@ -1054,6 +1062,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4980E11AAFEA1100821F13 /* WalkWatch_directionModel.swift in Sources */,
+				2B5503FA1AB0137400CD151C /* WalkWatchDataConsumer.swift in Sources */,
+				2B5503FB1AB0137900CD151C /* CutePossumParser.swift in Sources */,
 				2B4980D71AAFE51700821F13 /* WalkConstants.swift in Sources */,
 				2B5C2C841AAFE0490077532D /* InterfaceController.swift in Sources */,
 				2B4980E21AAFEA1300821F13 /* WalkWatch_userLocationModel.swift in Sources */,
@@ -1084,6 +1094,7 @@
 				2B4980DE1AAFE9C500821F13 /* WalkWatch_directionModel.swift in Sources */,
 				2B8A353F1A292E820086634F /* CountdownDelegate.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
+				2B5503F51AB012D300CD151C /* WalkWatchDataConsumer.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
@@ -1140,6 +1151,7 @@
 				2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
 				2BE4D7471A54DA04006B600D /* WalkQuotePickerTests.swift in Sources */,
+				2B5503F91AB012EF00CD151C /* WalkWatchDataConsumerTests.swift in Sources */,
 				2B5C2CAC1AAFE1030077532D /* WalkWatchUserLocationTests.swift in Sources */,
 				2B5C2CAB1AAFE1030077532D /* WalkWatchDataTests.swift in Sources */,
 				2B5C2CAA1AAFE1030077532D /* WalkWatchDirectionTests.swift in Sources */,

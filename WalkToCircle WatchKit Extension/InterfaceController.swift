@@ -27,31 +27,21 @@ class InterfaceController: WKInterfaceController {
     super.didDeactivate()
   }
 
-  struct watchData {
-    let userLocation: watchData_userLocation
-    let circleDirection: Int
-  }
-
-  struct watchData_userLocation {
-    let latitude: Double
-    let longitude: Double
-  }
-
   private func getDataFromParentApp() {
     WKInterfaceController.openParentApplication(["asd":"asdas"]) { reply, error in
 
       println("Reply from parent \(reply)")
-      if reply == nil { return }
 
+      if let currentReply = reply as? [String: AnyObject] {
+        if let currentDirection = WalkWatchDataConsumer.fromDictionary(currentReply) {
+          self.onReceivedDataFromParentApp(currentDirection)
+        }
+      }
 
-
-//      self.onReceivedDataFromParentApp(data)
-
-      println("Reply from parent app \(reply)")
     }
   }
 
-  private func onReceivedDataFromParentApp(data: watchData) {
-    println("Direction: \(data.circleDirection) coordinate: \(data.userLocation.latitude),\(data.userLocation.longitude)")
+  private func onReceivedDataFromParentApp(direction: WalkWatch_directionModel) {
+    println("Direction: \(direction.circleDirection) coordinate: \(direction.userLocation.latitude),\(direction.userLocation.longitude)")
   }
 }
