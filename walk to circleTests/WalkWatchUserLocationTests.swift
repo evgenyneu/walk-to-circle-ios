@@ -24,8 +24,8 @@ class WalkWatchUserLocationTests: XCTestCase {
 
     let result = WalkWatchUserLocation.userLocation!
 
-    XCTAssertEqual(-37.863471, result["latitude"]!)
-    XCTAssertEqual(144.983910, result["longitude"]!)
+    XCTAssertEqual(-37.863471, result.latitude)
+    XCTAssertEqual(144.983910, result.longitude)
   }
 
   func testCurrentUserLocation_locationUpdateIsMissing() {

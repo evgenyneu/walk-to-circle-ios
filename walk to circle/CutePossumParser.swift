@@ -100,8 +100,8 @@ public class CutePossumParser {
     return miss
   }
   
-  // Parses a top-level object: String, Int, [String] etc.
-  public func parse<T: CollectionType>(miss: T, canBeMissing: Bool = false) -> T {
+  // Parses a top-level value: String, Int, [String] etc.
+  public func parseTopLevelValue<T: CollectionType>(miss: T, canBeMissing: Bool = false) -> T {
     if !success { return miss }
     
     return parse(cutePossumTopLevelObjectKey, miss: miss, canBeMissing: canBeMissing)
@@ -115,6 +115,18 @@ public class CutePossumParser {
       return parsed
     }
     
+    return miss
+  }
+
+  // Parses an optional with custom parser.
+  public func parseOptional<T>(name: String, miss: T? = nil, parser: (CutePossumParser) -> T) -> T? {
+    if !success { return miss }
+
+    if let currentData = data[name] as? NSDictionary {
+      let itemParser = CutePossumParser(data: currentData, parent: self)
+      return parser(itemParser)
+    }
+
     return miss
   }
   

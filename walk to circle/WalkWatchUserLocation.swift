@@ -6,15 +6,14 @@
 import Foundation
 
 public struct WalkWatchUserLocation {
-  public static var userLocation: [String: Double]? {
+  public static var userLocation: WalkWatch_userLocationModel? {
     if let currentLastLocation = WalkLocation.shared.lastLocation {
 
       if !isLocationFresh(currentLastLocation.timestamp) { return nil }
 
-      return [
-        WalkConstants.watch.latitudeName: currentLastLocation.coordinate.latitude,
-        WalkConstants.watch.longitudeName: currentLastLocation.coordinate.longitude,
-      ]
+      return WalkWatch_userLocationModel(
+        latitude: currentLastLocation.coordinate.latitude,
+        longitude: currentLastLocation.coordinate.longitude)
     }
 
     return nil

@@ -6,13 +6,14 @@
 import Foundation
 
 public struct WalkWatchData {
-  public static var get: [String: AnyObject]? {
+
+  public static var get: WalkWatch_directionModel? {
     if let currentUserLocation = WalkWatchUserLocation.userLocation {
       if let currentDirection = WalkWatchDirection.get {
-        return [
-          WalkConstants.watch.userLocation.name: currentUserLocation,
-          WalkConstants.watch.circleDirectionName: currentDirection
-        ]
+        return WalkWatch_directionModel(
+          userLocation: currentUserLocation,
+          circleDirection: currentDirection
+        )
       }
     }
 

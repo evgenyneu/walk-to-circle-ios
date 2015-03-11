@@ -27,6 +27,13 @@
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
 		2B4132BE1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4132BD1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift */; };
+		2B4980D71AAFE51700821F13 /* WalkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70361A3431780026CDA9 /* WalkConstants.swift */; };
+		2B4980DA1AAFE6F900821F13 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */; };
+		2B4980DB1AAFE6FD00821F13 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */; };
+		2B4980DE1AAFE9C500821F13 /* WalkWatch_directionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */; };
+		2B4980E01AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */; };
+		2B4980E11AAFEA1100821F13 /* WalkWatch_directionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */; };
+		2B4980E21AAFEA1300821F13 /* WalkWatch_userLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */; };
 		2B5016DD1A57E60A00FD1297 /* WalkTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */; };
 		2B5338A11A5284AE0082DC93 /* WalkCirlesReachedTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */; };
 		2B5338A31A52855A0082DC93 /* WalkCirlesReachedToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */; };
@@ -55,7 +62,6 @@
 		2B7B70371A3431780026CDA9 /* WalkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70361A3431780026CDA9 /* WalkConstants.swift */; };
 		2B7B70391A3432450026CDA9 /* WalkViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */; };
 		2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */; };
-		2B7C38DA1A4ABA1900C3FDA7 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D91A4ABA1900C3FDA7 /* CutePossumParser.swift */; };
 		2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */; };
 		2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */; };
 		2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */; };
@@ -236,6 +242,9 @@
 		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
 		2B4132BB1A54AA92005405D8 /* README_sound_fader_ios.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_sound_fader_ios.md; sourceTree = "<group>"; };
 		2B4132BD1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
+		2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutePossumParser.swift; sourceTree = "<group>"; };
+		2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatch_directionModel.swift; sourceTree = "<group>"; };
+		2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatch_userLocationModel.swift; sourceTree = "<group>"; };
 		2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTutorial.swift; sourceTree = "<group>"; };
 		2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedTodayTests.swift; sourceTree = "<group>"; };
 		2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedToday.swift; sourceTree = "<group>"; };
@@ -268,7 +277,6 @@
 		2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewControllers.swift; sourceTree = "<group>"; };
 		2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuote.swift; sourceTree = "<group>"; };
 		2B7C38D71A4AB9F800C3FDA7 /* README_cute_possum_parser.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_cute_possum_parser.md; sourceTree = "<group>"; };
-		2B7C38D91A4ABA1900C3FDA7 /* CutePossumParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutePossumParser.swift; sourceTree = "<group>"; };
 		2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiJsonLoader.swift; sourceTree = "<group>"; };
 		2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoaderTests.swift; sourceTree = "<group>"; };
 		2B7C38E21A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoader.swift; sourceTree = "<group>"; };
@@ -451,6 +459,15 @@
 			name = SoundFaderIOS;
 			sourceTree = "<group>";
 		};
+		2B4980DC1AAFE9A200821F13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */,
+				2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2B5C2C801AAFE0490077532D /* WalkToCircle WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +507,7 @@
 		2B5C2C9F1AAFE0CD0077532D /* Watch */ = {
 			isa = PBXGroup;
 			children = (
+				2B4980DC1AAFE9A200821F13 /* Model */,
 				2B5C2CA01AAFE0DB0077532D /* WalkWatchDirection.swift */,
 				2B5C2CA11AAFE0DB0077532D /* WalkWatchData.swift */,
 				2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocation.swift */,
@@ -559,7 +577,7 @@
 		2B7C38D61A4AB9D800C3FDA7 /* CutePossumParser */ = {
 			isa = PBXGroup;
 			children = (
-				2B7C38D91A4ABA1900C3FDA7 /* CutePossumParser.swift */,
+				2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */,
 				2B7C38D71A4AB9F800C3FDA7 /* README_cute_possum_parser.md */,
 			);
 			name = CutePossumParser;
@@ -1036,7 +1054,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B4980E11AAFEA1100821F13 /* WalkWatch_directionModel.swift in Sources */,
+				2B4980D71AAFE51700821F13 /* WalkConstants.swift in Sources */,
 				2B5C2C841AAFE0490077532D /* InterfaceController.swift in Sources */,
+				2B4980E21AAFEA1300821F13 /* WalkWatch_userLocationModel.swift in Sources */,
+				2B4980DB1AAFE6FD00821F13 /* CutePossumParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,9 +1079,11 @@
 				2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */,
+				2B4980E01AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift in Sources */,
 				2B1276391A45448100F6ED44 /* iiViewPosition.swift in Sources */,
 				2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */,
 				2B12763D1A47D93F00F6ED44 /* WalkCoordinate.swift in Sources */,
+				2B4980DE1AAFE9C500821F13 /* WalkWatch_directionModel.swift in Sources */,
 				2B8A353F1A292E820086634F /* CountdownDelegate.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
@@ -1084,7 +1108,6 @@
 				2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
 				2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */,
-				2B7C38DA1A4ABA1900C3FDA7 /* CutePossumParser.swift in Sources */,
 				2BCF7B6F1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */,
 				2B5C2CA41AAFE0DB0077532D /* WalkWatchData.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
@@ -1104,6 +1127,7 @@
 				2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */,
 				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
+				2B4980DA1AAFE6F900821F13 /* CutePossumParser.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */,
 				2B23E82B1A525DA60062A01F /* CongratsPhrase.swift in Sources */,
 				2B12763F1A47D9F900F6ED44 /* WalkUserDefaults.swift in Sources */,
@@ -1418,6 +1442,7 @@
 				2B5C2C9B1AAFE0490077532D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B5C2C9D1AAFE0490077532D /* Build configuration list for PBXNativeTarget "WalkToCircle WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -1426,6 +1451,7 @@
 				2B5C2C991AAFE0490077532D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "WalkToCircle" */ = {
 			isa = XCConfigurationList;
