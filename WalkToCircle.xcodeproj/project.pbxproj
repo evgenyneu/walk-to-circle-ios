@@ -33,6 +33,18 @@
 		2B5338A51A5289600082DC93 /* iiDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A41A5289600082DC93 /* iiDate.swift */; };
 		2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A71A52897E0082DC93 /* iiDateTests.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
+		2B5C2C841AAFE0490077532D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2C831AAFE0490077532D /* InterfaceController.swift */; };
+		2B5C2C861AAFE0490077532D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C851AAFE0490077532D /* Images.xcassets */; };
+		2B5C2C8A1AAFE0490077532D /* WalkToCircle WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C891AAFE0490077532D /* WalkToCircle WatchKit App.app */; };
+		2B5C2C921AAFE0490077532D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C901AAFE0490077532D /* Interface.storyboard */; };
+		2B5C2C941AAFE0490077532D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C931AAFE0490077532D /* Images.xcassets */; };
+		2B5C2C971AAFE0490077532D /* WalkToCircle WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B5C2CA31AAFE0DB0077532D /* WalkWatchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA01AAFE0DB0077532D /* WalkWatchDirection.swift */; };
+		2B5C2CA41AAFE0DB0077532D /* WalkWatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA11AAFE0DB0077532D /* WalkWatchData.swift */; };
+		2B5C2CA51AAFE0DB0077532D /* WalkWatchUserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocation.swift */; };
+		2B5C2CAA1AAFE1030077532D /* WalkWatchDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA71AAFE1030077532D /* WalkWatchDirectionTests.swift */; };
+		2B5C2CAB1AAFE1030077532D /* WalkWatchDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA81AAFE1030077532D /* WalkWatchDataTests.swift */; };
+		2B5C2CAC1AAFE1030077532D /* WalkWatchUserLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA91AAFE1030077532D /* WalkWatchUserLocationTests.swift */; };
 		2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */; };
 		2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* iiGeo.swift */; };
 		2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* iiGeo.swift */; };
@@ -130,6 +142,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2B5C2C8B1AAFE0490077532D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B5C2C881AAFE0490077532D;
+			remoteInfo = "WalkToCircle WatchKit App";
+		};
+		2B5C2C951AAFE0490077532D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B5C2C7E1AAFE0490077532D;
+			remoteInfo = "WalkToCircle WatchKit Extension";
+		};
 		2B6D35CC197A56C3008DDAE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
@@ -174,6 +200,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B5C2C9E1AAFE0490077532D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2B5C2C971AAFE0490077532D /* WalkToCircle WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B080B3B1A21A9960073E1E3 /* YiiMapDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YiiMapDelegate.swift; sourceTree = "<group>"; };
 		2B0A53D61A594ABC0009D84C /* notification_morning_fresh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification_morning_fresh.mp3; sourceTree = "<group>"; };
@@ -203,6 +243,20 @@
 		2B5338A71A52897E0082DC93 /* iiDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDateTests.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		2B5A5D6F19BC02E700E07F37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WalkToCircle WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5C2C821AAFE0490077532D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5C2C831AAFE0490077532D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		2B5C2C851AAFE0490077532D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2B5C2C891AAFE0490077532D /* WalkToCircle WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WalkToCircle WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5C2C8F1AAFE0490077532D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5C2C911AAFE0490077532D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2B5C2C931AAFE0490077532D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2B5C2CA01AAFE0DB0077532D /* WalkWatchDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDirection.swift; sourceTree = "<group>"; };
+		2B5C2CA11AAFE0DB0077532D /* WalkWatchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchData.swift; sourceTree = "<group>"; };
+		2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchUserLocation.swift; sourceTree = "<group>"; };
+		2B5C2CA71AAFE1030077532D /* WalkWatchDirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDirectionTests.swift; sourceTree = "<group>"; };
+		2B5C2CA81AAFE1030077532D /* WalkWatchDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDataTests.swift; sourceTree = "<group>"; };
+		2B5C2CA91AAFE1030077532D /* WalkWatchUserLocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchUserLocationTests.swift; sourceTree = "<group>"; };
 		2B5E726B199F3F4C00779AC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiGeoTests.swift; sourceTree = "<group>"; };
 		2B6D35D2197A581D008DDAE4 /* iiGeo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiGeo.swift; sourceTree = "<group>"; };
@@ -303,6 +357,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B5C2C7C1AAFE0490077532D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BCCDB891968DC63005C4A47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +449,62 @@
 				2B4132BB1A54AA92005405D8 /* README_sound_fader_ios.md */,
 			);
 			name = SoundFaderIOS;
+			sourceTree = "<group>";
+		};
+		2B5C2C801AAFE0490077532D /* WalkToCircle WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C2C831AAFE0490077532D /* InterfaceController.swift */,
+				2B5C2C851AAFE0490077532D /* Images.xcassets */,
+				2B5C2C811AAFE0490077532D /* Supporting Files */,
+			);
+			path = "WalkToCircle WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		2B5C2C811AAFE0490077532D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C2C821AAFE0490077532D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B5C2C8D1AAFE0490077532D /* WalkToCircle WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C2C901AAFE0490077532D /* Interface.storyboard */,
+				2B5C2C931AAFE0490077532D /* Images.xcassets */,
+				2B5C2C8E1AAFE0490077532D /* Supporting Files */,
+			);
+			path = "WalkToCircle WatchKit App";
+			sourceTree = "<group>";
+		};
+		2B5C2C8E1AAFE0490077532D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C2C8F1AAFE0490077532D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B5C2C9F1AAFE0CD0077532D /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C2CA01AAFE0DB0077532D /* WalkWatchDirection.swift */,
+				2B5C2CA11AAFE0DB0077532D /* WalkWatchData.swift */,
+				2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocation.swift */,
+			);
+			name = Watch;
+			sourceTree = "<group>";
+		};
+		2B5C2CA61AAFE0ED0077532D /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				2B5C2CA71AAFE1030077532D /* WalkWatchDirectionTests.swift */,
+				2B5C2CA81AAFE1030077532D /* WalkWatchDataTests.swift */,
+				2B5C2CA91AAFE1030077532D /* WalkWatchUserLocationTests.swift */,
+			);
+			name = Watch;
 			sourceTree = "<group>";
 		};
 		2B770A6119E8E07300C28177 /* Utils */ = {
@@ -556,6 +673,7 @@
 				2BE4D73F1A54C782006B600D /* WalkSoundType.swift */,
 				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
 				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
+				2B5C2C9F1AAFE0CD0077532D /* Watch */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -568,6 +686,8 @@
 				2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */,
 				2BCCDB8E1968DC63005C4A47 /* walk to circle */,
 				2BCCDBA11968DC63005C4A47 /* walk to circleTests */,
+				2B5C2C801AAFE0490077532D /* WalkToCircle WatchKit Extension */,
+				2B5C2C8D1AAFE0490077532D /* WalkToCircle WatchKit App */,
 				2BCCDB8D1968DC63005C4A47 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -577,6 +697,8 @@
 			children = (
 				2BCCDB8C1968DC63005C4A47 /* WalkToCircle.app */,
 				2BCCDB9E1968DC63005C4A47 /* WalkToCircleTests.xctest */,
+				2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */,
+				2B5C2C891AAFE0490077532D /* WalkToCircle WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -635,6 +757,7 @@
 			children = (
 				2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */,
 				2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */,
+				2B5C2CA61AAFE0ED0077532D /* Watch */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -703,6 +826,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B5C2C7E1AAFE0490077532D /* WalkToCircle WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B5C2C9D1AAFE0490077532D /* Build configuration list for PBXNativeTarget "WalkToCircle WatchKit Extension" */;
+			buildPhases = (
+				2B5C2C7B1AAFE0490077532D /* Sources */,
+				2B5C2C7C1AAFE0490077532D /* Frameworks */,
+				2B5C2C7D1AAFE0490077532D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B5C2C8C1AAFE0490077532D /* PBXTargetDependency */,
+			);
+			name = "WalkToCircle WatchKit Extension";
+			productName = "WalkToCircle WatchKit Extension";
+			productReference = 2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		2B5C2C881AAFE0490077532D /* WalkToCircle WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B5C2C9C1AAFE0490077532D /* Build configuration list for PBXNativeTarget "WalkToCircle WatchKit App" */;
+			buildPhases = (
+				2B5C2C871AAFE0490077532D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WalkToCircle WatchKit App";
+			productName = "WalkToCircle WatchKit App";
+			productReference = 2B5C2C891AAFE0490077532D /* WalkToCircle WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		2BCCDB8B1968DC63005C4A47 /* WalkToCircle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BCCDBA81968DC63005C4A47 /* Build configuration list for PBXNativeTarget "WalkToCircle" */;
@@ -710,10 +866,12 @@
 				2BCCDB881968DC63005C4A47 /* Sources */,
 				2BCCDB891968DC63005C4A47 /* Frameworks */,
 				2BCCDB8A1968DC63005C4A47 /* Resources */,
+				2B5C2C9E1AAFE0490077532D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2B5C2C961AAFE0490077532D /* PBXTargetDependency */,
 			);
 			name = WalkToCircle;
 			productName = "walk to circle";
@@ -752,6 +910,13 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Evgenii Neumerzhitckii";
 				TargetAttributes = {
+					2B5C2C7E1AAFE0490077532D = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = BS677JRE62;
+					};
+					2B5C2C881AAFE0490077532D = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					2BCCDB8B1968DC63005C4A47 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = BS677JRE62;
@@ -782,11 +947,31 @@
 			targets = (
 				2BCCDB8B1968DC63005C4A47 /* WalkToCircle */,
 				2BCCDB9D1968DC63005C4A47 /* WalkToCircleTests */,
+				2B5C2C7E1AAFE0490077532D /* WalkToCircle WatchKit Extension */,
+				2B5C2C881AAFE0490077532D /* WalkToCircle WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B5C2C7D1AAFE0490077532D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5C2C8A1AAFE0490077532D /* WalkToCircle WatchKit App.app in Resources */,
+				2B5C2C861AAFE0490077532D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B5C2C871AAFE0490077532D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5C2C921AAFE0490077532D /* Interface.storyboard in Resources */,
+				2B5C2C941AAFE0490077532D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BCCDB8A1968DC63005C4A47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -847,6 +1032,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B5C2C7B1AAFE0490077532D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5C2C841AAFE0490077532D /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BCCDB881968DC63005C4A47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -893,6 +1086,7 @@
 				2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */,
 				2B7C38DA1A4ABA1900C3FDA7 /* CutePossumParser.swift in Sources */,
 				2BCF7B6F1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */,
+				2B5C2CA41AAFE0DB0077532D /* WalkWatchData.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
 				2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */,
@@ -904,7 +1098,9 @@
 				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* ShowUserLocationOnMap.swift in Sources */,
+				2B5C2CA31AAFE0DB0077532D /* WalkWatchDirection.swift in Sources */,
 				2B4132BE1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift in Sources */,
+				2B5C2CA51AAFE0DB0077532D /* WalkWatchUserLocation.swift in Sources */,
 				2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */,
 				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
@@ -922,6 +1118,9 @@
 				2B6D35D1197A5782008DDAE4 /* iiGeoTests.swift in Sources */,
 				2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */,
 				2BE4D7471A54DA04006B600D /* WalkQuotePickerTests.swift in Sources */,
+				2B5C2CAC1AAFE1030077532D /* WalkWatchUserLocationTests.swift in Sources */,
+				2B5C2CAB1AAFE1030077532D /* WalkWatchDataTests.swift in Sources */,
+				2B5C2CAA1AAFE1030077532D /* WalkWatchDirectionTests.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
 				2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */,
 				2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */,
@@ -940,6 +1139,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2B5C2C8C1AAFE0490077532D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B5C2C881AAFE0490077532D /* WalkToCircle WatchKit App */;
+			targetProxy = 2B5C2C8B1AAFE0490077532D /* PBXContainerItemProxy */;
+		};
+		2B5C2C961AAFE0490077532D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B5C2C7E1AAFE0490077532D /* WalkToCircle WatchKit Extension */;
+			targetProxy = 2B5C2C951AAFE0490077532D /* PBXContainerItemProxy */;
+		};
 		2B6D35CD197A56C3008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
@@ -973,6 +1182,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2B5C2C901AAFE0490077532D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B5C2C911AAFE0490077532D /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		2BCCDB951968DC63005C4A47 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -984,6 +1201,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2B5C2C981AAFE0490077532D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WalkToCircle WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2B5C2C991AAFE0490077532D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "WalkToCircle WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2B5C2C9A1AAFE0490077532D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = WalkToCircle_WatchKit_Extension;
+				INFOPLIST_FILE = "WalkToCircle WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		2B5C2C9B1AAFE0490077532D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = WalkToCircle_WatchKit_Extension;
+				INFOPLIST_FILE = "WalkToCircle WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		2BCCDBA61968DC63005C4A47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1069,6 +1352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = WalkToCircle;
@@ -1081,6 +1365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = WalkToCircle;
@@ -1126,6 +1411,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B5C2C9C1AAFE0490077532D /* Build configuration list for PBXNativeTarget "WalkToCircle WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B5C2C9A1AAFE0490077532D /* Debug */,
+				2B5C2C9B1AAFE0490077532D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B5C2C9D1AAFE0490077532D /* Build configuration list for PBXNativeTarget "WalkToCircle WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B5C2C981AAFE0490077532D /* Debug */,
+				2B5C2C991AAFE0490077532D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2BCCDB871968DC63005C4A47 /* Build configuration list for PBXProject "WalkToCircle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

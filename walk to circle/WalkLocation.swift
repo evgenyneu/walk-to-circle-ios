@@ -12,11 +12,12 @@ import CoreLocation
 
 let iiWalkLocation = WalkLocation()
 
-class WalkLocation: NSObject, CLLocationManagerDelegate {
+public class WalkLocation: NSObject, CLLocationManagerDelegate {
   private let locationManager = CLLocationManager()
   private var locationUpdateStarted: NSDate?
+  public var lastLocation: CLLocation?
 
-  class var shared: WalkLocation {
+  public class var shared: WalkLocation {
     return iiWalkLocation
   }
 
@@ -69,13 +70,13 @@ typealias WalkLocation_LocationManagerDelegate_Implementation = WalkLocation
 
 extension WalkLocation_LocationManagerDelegate_Implementation {
 
-  func locationManager(manager: CLLocationManager!,
+  public func locationManager(manager: CLLocationManager!,
     didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 
     checkAuthorizationStatus(status)
   }
 
-  func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+  public func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
     if updatingLocationForTooLong {
       // The location updates were running for too long
       // User has probably abandoned the app.
@@ -88,6 +89,7 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
       if index >= WalkConstants.maxNumberOfLocationsToProcessInSingleLocationUpdate { return }
 
       if let currentLocation = location as? CLLocation {
+        lastLocation = currentLocation
         if WalkCircleMonitor.shared.processLocationUpdate(currentLocation) { return }
       }
     }

@@ -40,4 +40,32 @@ public struct WalkConstants {
   public static let tutorialAuthor = "Evgenii Neumerzhitckii"
 
   public static let textFadeInDuration = 3.0
+
+  public static let watch = WalkConstrants_watch()
+}
+
+public struct WalkConstrants_watch {
+  public let userLocation = WalkConstrants_watch_userLocation()
+  public let circleDirectionName = "circleDirection"
+
+  public let latitudeName = "latitude"
+  public let longitudeName = "longitude"
+
+  // Number of directions.
+  // Directions go from 0 to (numberOfDirections-1).
+  // The values represent direction angle from North moving clockwise.
+  //
+  // For example, if there are 4 directions, the values will be:
+  //  0 - North
+  //  1 - West
+  //  2 - South
+  //  3 - East
+  public let numberOfDirections = 16
+}
+
+public struct WalkConstrants_watch_userLocation {
+  public let name = "userLocation"
+
+  // Maximum age of current user location that is considered fresh, in seconds.
+  public let maxLocationAgeInSeconds: NSTimeInterval = 30
 }
