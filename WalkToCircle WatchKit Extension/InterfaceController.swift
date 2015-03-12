@@ -7,17 +7,13 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController {
-  @IBOutlet weak var map: WKInterfaceMap!
 
-  @IBOutlet weak var image: WKInterfaceImage!
+  @IBOutlet weak var rotatingArrowImage: WKInterfaceImage!
+  @IBOutlet weak var infoLabel: WKInterfaceLabel!
+  @IBOutlet weak var buttonGroup: WKInterfaceGroup!
 
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
-
-    image.startAnimatingWithImagesInRange(
-      NSRange(location:0, length: 16),
-      duration: 1,
-      repeatCount: 0)
   }
 
   override func willActivate() {
@@ -53,6 +49,6 @@ class InterfaceController: WKInterfaceController {
 
     let region = MKCoordinateRegion(center: coordinate, span: span)
 
-    map.setRegion(region)
+//    map.setRegion(region)
   }
 }

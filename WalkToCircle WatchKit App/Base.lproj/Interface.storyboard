@@ -5,24 +5,45 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--watch_background-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WalkToCircle_WatchKit_App" customModuleProvider="target">
+                <controller backgroundImage="watch_background" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WalkToCircle_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" backgroundImage="map_arrow_circle" contentMode="center" id="feu-AQ-R4k">
+                        <group alignment="left" verticalAlignment="center" layout="vertical" id="4Va-I4-MZz">
                             <items>
-                                <imageView width="130" height="130" alignment="center" image="map_arrow_" contentMode="center" id="zeJ-1R-zVe"/>
+                                <group width="1" alignment="left" backgroundImage="map_arrow_circle" contentMode="center" id="feu-AQ-R4k">
+                                    <items>
+                                        <button alignment="left" id="s58-aC-kqa">
+                                            <group key="contentGroup" width="1" height="1" alignment="left" id="5RD-xI-67f">
+                                                <items>
+                                                    <imageView width="1" alignment="center" verticalAlignment="center" image="map_arrow_" contentMode="center" id="AIP-CE-c2D"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <segue destination="g5g-xZ-OlR" kind="push" id="9nf-wD-Q13"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <map height="1" alignment="left" id="dAW-6s-ZOC"/>
                     </items>
-                    <connections>
-                        <outlet property="image" destination="zeJ-1R-zVe" id="a5E-Rm-SQi"/>
-                        <outlet property="map" destination="dAW-6s-ZOC" id="mZ4-EO-fVj"/>
-                    </connections>
+                    <color key="backgroundColor" red="0.01176470588" green="0.2274509804" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </controller>
             </objects>
+        </scene>
+        <!--watch_background-->
+        <scene sceneID="BX8-sa-pjw">
+            <objects>
+                <controller backgroundImage="watch_background" id="g5g-xZ-OlR">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Drop a circle in the main app and see walking direction here." textAlignment="center" numberOfLines="0" id="aco-lq-zI6"/>
+                    </items>
+                    <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="444" y="286"/>
         </scene>
     </scenes>
 </document>
