@@ -16,10 +16,8 @@ class InterfaceController: WKInterfaceController {
 
     image.startAnimatingWithImagesInRange(
       NSRange(location:0, length: 16),
-      duration: 0.5,
+      duration: 1,
       repeatCount: 0)
-
-    image.stopAnimating()
   }
 
   override func willActivate() {

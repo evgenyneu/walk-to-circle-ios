@@ -10,7 +10,11 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WalkToCircle_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <imageView width="130" height="130" alignment="center" image="map_arrow_" contentMode="center" id="zeJ-1R-zVe"/>
+                        <group width="1" alignment="left" backgroundImage="map_arrow_circle" contentMode="center" id="feu-AQ-R4k">
+                            <items>
+                                <imageView width="130" height="130" alignment="center" image="map_arrow_" contentMode="center" id="zeJ-1R-zVe"/>
+                            </items>
+                        </group>
                         <map height="1" alignment="left" id="dAW-6s-ZOC"/>
                     </items>
                     <connections>
