@@ -40,6 +40,14 @@ class InterfaceController: WKInterfaceController {
   }
 
   private func didReceiveDirection(direction: WalkWatch_directionModel) {
-    println("Direction: \(direction.circleDirection) coordinate: \(direction.userLocation.latitude),\(direction.userLocation.longitude)")
+    let coordinate = CLLocationCoordinate2D(
+      latitude: direction.userLocation.latitude,
+      longitude: direction.userLocation.longitude)
+
+    let span = MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004)
+
+    let region = MKCoordinateRegion(center: coordinate, span: span)
+
+    map.setRegion(region)
   }
 }
