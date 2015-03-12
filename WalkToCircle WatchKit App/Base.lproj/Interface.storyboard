@@ -10,9 +10,11 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WalkToCircle_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <imageView width="130" height="130" alignment="center" image="map_arrow_" contentMode="center" id="zeJ-1R-zVe"/>
                         <map height="1" alignment="left" id="dAW-6s-ZOC"/>
                     </items>
                     <connections>
+                        <outlet property="image" destination="zeJ-1R-zVe" id="a5E-Rm-SQi"/>
                         <outlet property="map" destination="dAW-6s-ZOC" id="mZ4-EO-fVj"/>
                     </connections>
                 </controller>

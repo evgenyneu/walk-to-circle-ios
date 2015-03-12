@@ -9,10 +9,17 @@ import Foundation
 class InterfaceController: WKInterfaceController {
   @IBOutlet weak var map: WKInterfaceMap!
 
+  @IBOutlet weak var image: WKInterfaceImage!
+
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
 
-    // Configure interface objects here.
+    image.startAnimatingWithImagesInRange(
+      NSRange(location:0, length: 16),
+      duration: 0.5,
+      repeatCount: 0)
+
+    image.stopAnimating()
   }
 
   override func willActivate() {

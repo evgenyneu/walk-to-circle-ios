@@ -476,6 +476,7 @@
 		2B5C2C801AAFE0490077532D /* WalkToCircle WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2BFA0D971AB11A5700D0B9BB /* Images */,
 				2B5C2C831AAFE0490077532D /* InterfaceController.swift */,
 				2B5C2C851AAFE0490077532D /* Images.xcassets */,
 				2B5C2C811AAFE0490077532D /* Supporting Files */,
@@ -837,6 +838,13 @@
 				2BD9447B1A57780C001B542E /* continue_highlighted@3x.png */,
 			);
 			name = Continue;
+			sourceTree = "<group>";
+		};
+		2BFA0D971AB11A5700D0B9BB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		2BFCA84B1A4B903D0080C988 /* ScrolledContent */ = {
