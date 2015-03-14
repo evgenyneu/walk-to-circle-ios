@@ -25,6 +25,7 @@ class InterfaceController: WKInterfaceController {
   override func willActivate() {
     super.willActivate()
 
+    getDataFromParentApp()
     startTimer()
   }
 
@@ -137,14 +138,6 @@ class InterfaceController: WKInterfaceController {
   }
 
   func timerFired(timer: NSTimer) {
-    let dateFormatter = NSDateFormatter()
-
-    dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
-
-    let currentTime = dateFormatter.stringFromDate(NSDate())
-
-    println("Timer fired \(currentTime)")
-
     getDataFromParentApp()
   }
 }

@@ -15,7 +15,7 @@
                                 <map width="1" height="1" alignment="left" id="Ijv-HZ-4TZ"/>
                             </items>
                         </group>
-                        <group alignment="left" verticalAlignment="center" backgroundImage="watch_background" layout="vertical" id="4Va-I4-MZz">
+                        <group alignment="left" verticalAlignment="center" backgroundImage="branch_background.jpg" layout="vertical" id="4Va-I4-MZz">
                             <items>
                                 <group width="1" alignment="left" backgroundImage="map_arrow_circle" contentMode="center" id="feu-AQ-R4k">
                                     <items>
@@ -45,7 +45,7 @@
         <!--watch_background-->
         <scene sceneID="BX8-sa-pjw">
             <objects>
-                <controller backgroundImage="watch_background" id="g5g-xZ-OlR">
+                <controller backgroundImage="watch_background" id="g5g-xZ-OlR" customClass="InfoInterfaceController" customModule="WalkToCircle_WatchKit_Extension">
                     <items>
                         <label alignment="center" verticalAlignment="center" text="Use the main app to drop a circle and see walking direction here." textAlignment="center" numberOfLines="0" id="aco-lq-zI6"/>
                     </items>
