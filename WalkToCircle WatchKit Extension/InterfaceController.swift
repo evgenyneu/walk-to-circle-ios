@@ -7,13 +7,14 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController {
-
-  @IBOutlet weak var rotatingArrowImage: WKInterfaceImage!
-  @IBOutlet weak var infoLabel: WKInterfaceLabel!
-  @IBOutlet weak var buttonGroup: WKInterfaceGroup!
+  @IBOutlet weak var mapGroup: WKInterfaceGroup!
+  @IBOutlet weak var arrowGroup: WKInterfaceGroup!
+  @IBOutlet weak var map: WKInterfaceMap!
 
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
+
+    toggleMap(false)
   }
 
   override func willActivate() {
@@ -34,13 +35,16 @@ class InterfaceController: WKInterfaceController {
       if let currentReply = reply as? [String: AnyObject] {
         if let currentDirection = WalkWatchDataConsumer.fromDictionary(currentReply) {
           self.didReceiveDirection(currentDirection)
+          return
         }
       }
 
+      self.toggleMap(false)
     }
   }
 
   private func didReceiveDirection(direction: WalkWatch_directionModel) {
+
     let coordinate = CLLocationCoordinate2D(
       latitude: direction.userLocation.latitude,
       longitude: direction.userLocation.longitude)
@@ -49,6 +53,15 @@ class InterfaceController: WKInterfaceController {
 
     let region = MKCoordinateRegion(center: coordinate, span: span)
 
-//    map.setRegion(region)
+    map.setRegion(region)
+    map.addAnnotation(coordinate,
+      withImageNamed: "map_arrow_\(direction.circleDirection)", centerOffset: CGPointZero)
+
+    toggleMap(true)
+  }
+
+  private func toggleMap(mapVisible: Bool) {
+    mapGroup.setHidden(!mapVisible)
+    arrowGroup.setHidden(mapVisible)
   }
 }

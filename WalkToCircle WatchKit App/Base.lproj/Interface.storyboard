@@ -5,12 +5,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--watch_background-->
+        <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller backgroundImage="watch_background" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WalkToCircle_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WalkToCircle_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" verticalAlignment="center" layout="vertical" id="4Va-I4-MZz">
+                        <group width="1" alignment="left" id="siJ-uK-2Qa">
+                            <items>
+                                <map width="1" height="1" alignment="left" id="Ijv-HZ-4TZ"/>
+                            </items>
+                        </group>
+                        <group alignment="left" verticalAlignment="center" backgroundImage="watch_background" layout="vertical" id="4Va-I4-MZz">
                             <items>
                                 <group width="1" alignment="left" backgroundImage="map_arrow_circle" contentMode="center" id="feu-AQ-R4k">
                                     <items>
@@ -29,7 +34,11 @@
                             </items>
                         </group>
                     </items>
-                    <color key="backgroundColor" red="0.01176470588" green="0.2274509804" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="arrowGroup" destination="4Va-I4-MZz" id="E6A-2h-81d"/>
+                        <outlet property="map" destination="Ijv-HZ-4TZ" id="J77-vC-JHL"/>
+                        <outlet property="mapGroup" destination="siJ-uK-2Qa" id="Lb1-bq-AwI"/>
+                    </connections>
                 </controller>
             </objects>
         </scene>
@@ -43,7 +52,7 @@
                     <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="600" y="517"/>
+            <point key="canvasLocation" x="139" y="660"/>
         </scene>
     </scenes>
 </document>
