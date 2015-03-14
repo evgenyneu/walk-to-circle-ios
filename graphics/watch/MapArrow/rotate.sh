@@ -21,7 +21,10 @@ while [ $c -le $steps_minus_one ]
 do
   angle=$(bc <<< "scale = 2; $c * $step_angle")
   input_name="$original_file_name@2x.png"
-  output_name="${original_file_name}_$c@2x.png"
+
+  number_padded=$(printf "%02d" $c)
+  output_name="${original_file_name}_$number_padded@2x.png"
+
   echo "Rotating $input_name to $output_name"
   convert $input_name -distort SRT $angle rotated/$output_name
   (( c++ ))

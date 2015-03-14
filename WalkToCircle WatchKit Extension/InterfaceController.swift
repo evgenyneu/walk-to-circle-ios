@@ -91,7 +91,7 @@ class InterfaceController: WKInterfaceController {
 
     map.removeAllAnnotations()
 
-    let imageName = arrowImageName(direction.circleDirection)
+    var imageName = arrowImageName(direction.circleDirection)
     map.addAnnotation(coordinate, withImageNamed: imageName, centerOffset: CGPointZero)
   }
 
@@ -101,7 +101,8 @@ class InterfaceController: WKInterfaceController {
   }
 
   private func arrowImageName(direction: Int) -> String {
-    return "map_arrow_\(direction)"
+    let paddedNumber = String(format: "%02d", direction)
+    return "map_arrow_\(paddedNumber)"
   }
 
   private func coordinateChanged(coordinate: CLLocationCoordinate2D) -> Bool {
