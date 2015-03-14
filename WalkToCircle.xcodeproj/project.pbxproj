@@ -99,6 +99,8 @@
 		2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */; };
 		2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */; };
 		2BB8BC0A1A4BD1C10003814B /* branch_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8BC091A4BD1C10003814B /* branch_background.jpg */; };
+		2BB9CB801AB3F48D00D39096 /* iiGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* iiGeo.swift */; };
+		2BB9CB811AB3F49C00D39096 /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB911968DC63005C4A47 /* AppDelegate.swift */; };
 		2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* MapViewController.swift */; };
 		2BCCDB971968DC63005C4A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB951968DC63005C4A47 /* Main.storyboard */; };
@@ -1073,7 +1075,9 @@
 				2B5503FA1AB0137400CD151C /* WalkWatchDataConsumer.swift in Sources */,
 				2B5503FB1AB0137900CD151C /* CutePossumParser.swift in Sources */,
 				2B4980D71AAFE51700821F13 /* WalkConstants.swift in Sources */,
+				2BB9CB811AB3F49C00D39096 /* iiRandom.swift in Sources */,
 				2B5C2C841AAFE0490077532D /* InterfaceController.swift in Sources */,
+				2BB9CB801AB3F48D00D39096 /* iiGeo.swift in Sources */,
 				2B4980E21AAFEA1300821F13 /* WalkWatch_userLocationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

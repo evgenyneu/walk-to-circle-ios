@@ -65,6 +65,9 @@ public struct WalkConstrants_watch {
   public let updateDirectionInterval_inSeconds:NSTimeInterval = 2
 
   public let mapSpan_inDegrees: CLLocationDegrees = 0.004
+
+  // Number of meters we need to travel in order to update the map on the watch
+  public let minMapUpdateDistance_inMeters: CLLocationDistance = 30
 }
 
 public struct WalkConstrants_watch_userLocation {
