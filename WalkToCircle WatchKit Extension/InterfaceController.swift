@@ -11,6 +11,10 @@ class InterfaceController: WKInterfaceController {
   @IBOutlet weak var arrowGroup: WKInterfaceGroup!
   @IBOutlet weak var map: WKInterfaceMap!
 
+  private var timer: NSTimer?
+
+  private var previousMapCenter: CLLocationCoordinate2D?
+
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
 
@@ -18,15 +22,15 @@ class InterfaceController: WKInterfaceController {
   }
 
   override func willActivate() {
-    // This method is called when watch view controller is about to be visible to user
     super.willActivate()
 
-    getDataFromParentApp()
+    startTimer()
   }
 
   override func didDeactivate() {
-    // This method is called when watch view controller is no longer visible
     super.didDeactivate()
+
+    stopTimer()
   }
 
   private func getDataFromParentApp() {
@@ -49,11 +53,19 @@ class InterfaceController: WKInterfaceController {
       latitude: direction.userLocation.latitude,
       longitude: direction.userLocation.longitude)
 
-    let span = MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004)
+    let span = MKCoordinateSpan(
+      latitudeDelta: WalkConstants.watch.mapSpan_inDegrees,
+      longitudeDelta: WalkConstants.watch.mapSpan_inDegrees)
+
+    if let currentPreviousMapCenter = previousMapCenter {
+    }
 
     let region = MKCoordinateRegion(center: coordinate, span: span)
 
     map.setRegion(region)
+
+
+    map.removeAllAnnotations()
     map.addAnnotation(coordinate,
       withImageNamed: "map_arrow_\(direction.circleDirection)", centerOffset: CGPointZero)
 
@@ -63,5 +75,33 @@ class InterfaceController: WKInterfaceController {
   private func toggleMap(mapVisible: Bool) {
     mapGroup.setHidden(!mapVisible)
     arrowGroup.setHidden(mapVisible)
+  }
+
+  // Timer
+  // --------------
+
+  private func startTimer() {
+    stopTimer()
+    timer = NSTimer.scheduledTimerWithTimeInterval(
+      WalkConstants.watch.updateDirectionInterval_inSeconds,
+      target: self, selector: "timerFired:", userInfo: nil, repeats: true)
+  }
+
+  private func stopTimer() {
+    timer?.invalidate()
+    timer = nil
+  }
+
+  func timerFired(timer: NSTimer) {
+    let dateFormatter = NSDateFormatter()
+
+    dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
+
+    let currentTime = dateFormatter.stringFromDate(NSDate())
+
+    println("Timer fired \(currentTime)")
+
+
+    getDataFromParentApp()
   }
 }

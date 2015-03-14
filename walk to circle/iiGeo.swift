@@ -155,4 +155,13 @@ class iiGeo {
 
     return (radiansToDegrees(θ) + 360) % 360
   }
+
+  class func distanceInMeters(#start: CLLocationCoordinate2D,
+    end: CLLocationCoordinate2D) -> CLLocationDistance {
+
+    let locationStart = CLLocation(latitude: start.latitude, longitude: start.longitude)
+    let locationEnd = CLLocation(latitude: end.latitude, longitude: end.longitude)
+
+    return locationStart.distanceFromLocation(locationEnd)
+  }
 }

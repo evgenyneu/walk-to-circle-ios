@@ -74,6 +74,9 @@ class iiGeoTests: XCTestCase {
     }
   }
 
+  // initialBearing
+  // ---------------------
+
   func testInitialBearing_one() {
     let start = CLLocationCoordinate2DMake(-37.847480, 144.969737)
     let end = CLLocationCoordinate2DMake(-37.861644, 144.986903)
@@ -90,5 +93,17 @@ class iiGeoTests: XCTestCase {
     let result = iiGeo.initialBearing(start: start, end: end)
 
     XCTAssertEqual(228, Int(result))
+  }
+
+  // distance
+  // -------------------
+
+  func testDistance() {
+    let start = CLLocationCoordinate2DMake(-37.847480, 144.969737)
+    let end = CLLocationCoordinate2DMake(-37.861644, 144.986903)
+
+    let result = iiGeo.distanceInMeters(start: start, end: end)
+
+    XCTAssertEqual(2_180, round(result))
   }
 }

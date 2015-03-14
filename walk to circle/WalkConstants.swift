@@ -61,6 +61,10 @@ public struct WalkConstrants_watch {
   //  2 - South
   //  3 - East
   public let numberOfDirections = 16
+
+  public let updateDirectionInterval_inSeconds:NSTimeInterval = 2
+
+  public let mapSpan_inDegrees: CLLocationDegrees = 0.004
 }
 
 public struct WalkConstrants_watch_userLocation {
