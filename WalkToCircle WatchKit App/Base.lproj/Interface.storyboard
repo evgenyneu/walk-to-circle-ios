@@ -38,12 +38,12 @@
             <objects>
                 <controller backgroundImage="watch_background" id="g5g-xZ-OlR">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="Drop a circle in the main app and see walking direction here." textAlignment="center" numberOfLines="0" id="aco-lq-zI6"/>
+                        <label alignment="center" verticalAlignment="center" text="Use the main app to drop a circle and see walking direction here." textAlignment="center" numberOfLines="0" id="aco-lq-zI6"/>
                     </items>
                     <edgeInsets key="margins" left="8" right="8" top="0.0" bottom="0.0"/>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="444" y="286"/>
+            <point key="canvasLocation" x="600" y="517"/>
         </scene>
     </scenes>
 </document>
