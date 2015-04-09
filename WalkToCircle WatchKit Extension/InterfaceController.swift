@@ -102,7 +102,7 @@ class InterfaceController: WKInterfaceController {
 
   private func arrowImageName(direction: Int) -> String {
     let paddedNumber = String(format: "%02d", direction)
-    return "map_arrow_\(paddedNumber)"
+    return "map_arrow_padded_\(paddedNumber)"
   }
 
   private func coordinateChanged(coordinate: CLLocationCoordinate2D) -> Bool {
