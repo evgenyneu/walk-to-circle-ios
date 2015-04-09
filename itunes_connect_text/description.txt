@@ -1,13 +1,13 @@
-Dear traveler, this game is made for walking. It will help you explore your neighbourhood, improve memory skills and lift spirits.
+Dear traveller, Walk to Circle is a fun and easy game that anyone can play for walking and discovery. It is designed to get you exploring new places in your neighbourhood, helps improve your memory skills and have fun – all at the same time!
 
-The game places a circle on the map at random location. You have 5 seconds to memorise it before the map is closed. Then you walk to the circle and receive a notification upon reaching it.
+The game starts by placing a circle at random on a map within about 400 metres (1,300 feet) of your starting location. Pay attention, because you have just 5 seconds in which to memorise the circle’s location before it disappears!
 
-The circle is placed at about 400 meters (1,300 feet) from your current location. Each walk takes about 5-10 minutes to complete.
+Your task is to then walk to the circle, guided only by your memory of its whereabouts. A notification on your device will let you know once you have successfully reached the circle. Each walk to circle takes about 5-10 minutes to complete. How many new places will you discover today?
 
-If you have an Apple Watch it will show your the walking direction.
+I love walking and exploring my city and Walk to Circle has led me to many places just a stone’s throw from my house that I had never been to before. For those that like to walk, or who maybe want a reason to get out and walk more, this app is great for taking you away from the same old familiar routes and helping you to discover new places in your town or city.
 
-I love walking and exploring my city. While using the app I found many hidden places just near my house where I’ve never been. The game picks walking destination randomly which can break habit of choosing the same paths and helps discover new ways.
+If you have an Apple Watch the app will show your walking direction as you travel, bringing an added dimension to the game.
 
-Drop me a message at evgenii.com. I wish you happy and safe walking.
+Note: Continued use of GPS running in the background can dramatically decrease the battery life of your device. Walk to Circle will help preserve your battery life by automatically stopping GPS monitoring after one hour.
 
-Note: Continued use of GPS running in the background can dramatically decrease battery life. The app will save your battery life by stoping GPS monitoring automatically in the app after one hour.
+I wish you happy and safe walking. I’d love to hear how you get on and welcome all feedback on the app. Drop me a message at evgenii.com.
