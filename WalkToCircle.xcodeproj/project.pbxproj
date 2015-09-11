@@ -45,10 +45,8 @@
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
 		2B5C2C841AAFE0490077532D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2C831AAFE0490077532D /* InterfaceController.swift */; };
 		2B5C2C861AAFE0490077532D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C851AAFE0490077532D /* Images.xcassets */; };
-		2B5C2C8A1AAFE0490077532D /* WalkToCircle WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C891AAFE0490077532D /* WalkToCircle WatchKit App.app */; };
 		2B5C2C921AAFE0490077532D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C901AAFE0490077532D /* Interface.storyboard */; };
 		2B5C2C941AAFE0490077532D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C2C931AAFE0490077532D /* Images.xcassets */; };
-		2B5C2C971AAFE0490077532D /* WalkToCircle WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B5C2CA31AAFE0DB0077532D /* WalkWatchDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA01AAFE0DB0077532D /* WalkWatchDirection.swift */; };
 		2B5C2CA41AAFE0DB0077532D /* WalkWatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA11AAFE0DB0077532D /* WalkWatchData.swift */; };
 		2B5C2CA51AAFE0DB0077532D /* WalkWatchUserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocation.swift */; };
@@ -151,23 +149,11 @@
 		2BE7A5F41A5024FD00B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BFCA84D1A4B904A0080C988 /* TegScrolledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */; };
+		7EECBB4D1BA38CD3003231E6 /* WalkToCircle WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7EECBB501BA38CD3003231E6 /* WalkToCircle WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B5C2C891AAFE0490077532D /* WalkToCircle WatchKit App.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2B5C2C8B1AAFE0490077532D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B5C2C881AAFE0490077532D;
-			remoteInfo = "WalkToCircle WatchKit App";
-		};
-		2B5C2C951AAFE0490077532D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B5C2C7E1AAFE0490077532D;
-			remoteInfo = "WalkToCircle WatchKit Extension";
-		};
 		2B6D35CC197A56C3008DDAE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
@@ -210,18 +196,43 @@
 			remoteGlobalIDString = 2BCCDB8B1968DC63005C4A47;
 			remoteInfo = "walk to circle";
 		};
+		7EECBB4B1BA38CD3003231E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B5C2C7E1AAFE0490077532D;
+			remoteInfo = "WalkToCircle WatchKit Extension";
+		};
+		7EECBB4E1BA38CD3003231E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BCCDB841968DC63005C4A47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B5C2C881AAFE0490077532D;
+			remoteInfo = "WalkToCircle WatchKit App";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2B5C2C9E1AAFE0490077532D /* Embed App Extensions */ = {
+		7EECBB511BA38CD3003231E6 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2B5C2C971AAFE0490077532D /* WalkToCircle WatchKit Extension.appex in Embed App Extensions */,
+				7EECBB4D1BA38CD3003231E6 /* WalkToCircle WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EECBB521BA38CD3003231E6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				7EECBB501BA38CD3003231E6 /* WalkToCircle WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -875,27 +886,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				2B5C2C8C1AAFE0490077532D /* PBXTargetDependency */,
 			);
 			name = "WalkToCircle WatchKit Extension";
 			productName = "WalkToCircle WatchKit Extension";
 			productReference = 2B5C2C7F1AAFE0490077532D /* WalkToCircle WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit-extension";
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		2B5C2C881AAFE0490077532D /* WalkToCircle WatchKit App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B5C2C9C1AAFE0490077532D /* Build configuration list for PBXNativeTarget "WalkToCircle WatchKit App" */;
 			buildPhases = (
 				2B5C2C871AAFE0490077532D /* Resources */,
+				7EECBB511BA38CD3003231E6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7EECBB4C1BA38CD3003231E6 /* PBXTargetDependency */,
 			);
 			name = "WalkToCircle WatchKit App";
 			productName = "WalkToCircle WatchKit App";
 			productReference = 2B5C2C891AAFE0490077532D /* WalkToCircle WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp";
+			productType = "com.apple.product-type.application.watchapp2";
 		};
 		2BCCDB8B1968DC63005C4A47 /* WalkToCircle */ = {
 			isa = PBXNativeTarget;
@@ -904,12 +916,12 @@
 				2BCCDB881968DC63005C4A47 /* Sources */,
 				2BCCDB891968DC63005C4A47 /* Frameworks */,
 				2BCCDB8A1968DC63005C4A47 /* Resources */,
-				2B5C2C9E1AAFE0490077532D /* Embed App Extensions */,
+				7EECBB521BA38CD3003231E6 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2B5C2C961AAFE0490077532D /* PBXTargetDependency */,
+				7EECBB4F1BA38CD3003231E6 /* PBXTargetDependency */,
 			);
 			name = WalkToCircle;
 			productName = "walk to circle";
@@ -945,7 +957,9 @@
 		2BCCDB841968DC63005C4A47 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Evgenii Neumerzhitckii";
 				TargetAttributes = {
 					2B5C2C7E1AAFE0490077532D = {
@@ -997,7 +1011,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B5C2C8A1AAFE0490077532D /* WalkToCircle WatchKit App.app in Resources */,
 				2B5C2C861AAFE0490077532D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1190,16 +1203,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2B5C2C8C1AAFE0490077532D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2B5C2C881AAFE0490077532D /* WalkToCircle WatchKit App */;
-			targetProxy = 2B5C2C8B1AAFE0490077532D /* PBXContainerItemProxy */;
-		};
-		2B5C2C961AAFE0490077532D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2B5C2C7E1AAFE0490077532D /* WalkToCircle WatchKit Extension */;
-			targetProxy = 2B5C2C951AAFE0490077532D /* PBXContainerItemProxy */;
-		};
 		2B6D35CD197A56C3008DDAE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
@@ -1229,6 +1232,16 @@
 			isa = PBXTargetDependency;
 			target = 2BCCDB8B1968DC63005C4A47 /* WalkToCircle */;
 			targetProxy = 2BCCDB9F1968DC63005C4A47 /* PBXContainerItemProxy */;
+		};
+		7EECBB4C1BA38CD3003231E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B5C2C7E1AAFE0490077532D /* WalkToCircle WatchKit Extension */;
+			targetProxy = 7EECBB4B1BA38CD3003231E6 /* PBXContainerItemProxy */;
+		};
+		7EECBB4F1BA38CD3003231E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B5C2C881AAFE0490077532D /* WalkToCircle WatchKit App */;
+			targetProxy = 7EECBB4E1BA38CD3003231E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1265,9 +1278,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evgenii.WalkToCircle.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -1281,9 +1298,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evgenii.WalkToCircle.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1293,19 +1314,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				IBSC_MODULE = WalkToCircle_WatchKit_Extension;
 				INFOPLIST_FILE = "WalkToCircle WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evgenii.WalkToCircle.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -1316,15 +1339,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = WalkToCircle_WatchKit_Extension;
 				INFOPLIST_FILE = "WalkToCircle WatchKit App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evgenii.WalkToCircle.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1348,6 +1373,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1416,6 +1442,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WalkToCircle;
 			};
 			name = Debug;
@@ -1429,6 +1456,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "walk to circle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = WalkToCircle;
 			};
 			name = Release;
@@ -1448,6 +1476,7 @@
 				INFOPLIST_FILE = "walk to circleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = WalkToCircleTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkToCircle.app/WalkToCircle";
 			};
@@ -1464,6 +1493,7 @@
 				INFOPLIST_FILE = "walk to circleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evgenii.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = WalkToCircleTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkToCircle.app/WalkToCircle";
 			};

@@ -21,7 +21,7 @@ class CongratsViewController: UIViewController {
     super.viewDidLoad()
 
     if WalkCirlesReachedToday.number == 0 {
-      WalkViewControllers.Map.show(animate: false)
+      WalkViewControllers.Map.show(false)
       return
     }
 

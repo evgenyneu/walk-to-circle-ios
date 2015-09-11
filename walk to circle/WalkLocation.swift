@@ -40,10 +40,10 @@ public class WalkLocation: NSObject, CLLocationManagerDelegate {
       
     case .NotDetermined:
       if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
-        locationManager.requestAlwaysAuthorization()
+        if #available(iOS 8.0, *) {
+            locationManager.requestAlwaysAuthorization()
+        }
       }
-    default:
-      let none = 0
     }
   }
 
@@ -70,13 +70,13 @@ typealias WalkLocation_LocationManagerDelegate_Implementation = WalkLocation
 
 extension WalkLocation_LocationManagerDelegate_Implementation {
 
-  public func locationManager(manager: CLLocationManager!,
+  public func locationManager(manager: CLLocationManager,
     didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 
     checkAuthorizationStatus(status)
   }
 
-  public func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+  public func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if updatingLocationForTooLong {
       // The location updates were running for too long
       // User has probably abandoned the app.
@@ -85,13 +85,11 @@ extension WalkLocation_LocationManagerDelegate_Implementation {
       stopUpdatingLocation()
     }
 
-    for (index, location) in enumerate(locations) {
+    for (index, location) in locations.enumerate() {
       if index >= WalkConstants.maxNumberOfLocationsToProcessInSingleLocationUpdate { return }
 
-      if let currentLocation = location as? CLLocation {
-        lastLocation = currentLocation
-        if WalkCircleMonitor.shared.processLocationUpdate(currentLocation) { return }
-      }
+      lastLocation = location
+      if WalkCircleMonitor.shared.processLocationUpdate(location) { return }
     }
   }
   

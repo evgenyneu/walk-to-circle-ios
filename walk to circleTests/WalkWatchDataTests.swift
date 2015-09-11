@@ -15,8 +15,8 @@ class WalkWatchDataTests: XCTestCase {
 
     let result = WalkWatchData.walkDirection!
 
-    let resultLocation = result["userLocation"]! as [String: Double]
-    let direction = result["circleDirection"]! as Int
+    let resultLocation = result["userLocation"] as! [String: Double]
+    let direction = result["circleDirection"] as! Int
 
     XCTAssertEqual(-37.847480, resultLocation["latitude"]!)
     XCTAssertEqual(144.969737, resultLocation["longitude"]!)
@@ -29,8 +29,8 @@ class WalkWatchDataTests: XCTestCase {
 
     let result = WalkWatchData.toDictionary(data)
 
-    let resultLocation = result["userLocation"]! as [String: Double]
-    let direction = result["circleDirection"]! as Int
+    let resultLocation = result["userLocation"] as! [String: Double]
+    let direction = result["circleDirection"] as! Int
 
     XCTAssertEqual(10, resultLocation["latitude"]!)
     XCTAssertEqual(2, resultLocation["longitude"]!)

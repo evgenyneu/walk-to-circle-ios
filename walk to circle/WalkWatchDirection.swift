@@ -25,7 +25,7 @@ public struct WalkWatchDirection {
       normalizedBearing += 360
     }
 
-    var direction = Int(round(normalizedBearing / degreesPerDirection))
+    let direction = Int(round(normalizedBearing / degreesPerDirection))
 
     return direction % WalkConstants.watch.numberOfDirections // Make it less than numberOfDirections
   }

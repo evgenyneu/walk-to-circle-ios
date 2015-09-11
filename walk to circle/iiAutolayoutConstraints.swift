@@ -22,7 +22,7 @@ class iiAutolayoutConstraints {
     }
 
     let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format,
-      options: nil, metrics: nil,
+      options: [], metrics: nil,
       views: ["view": view])
 
     parentView.addConstraints(constraints)
@@ -45,7 +45,7 @@ class iiAutolayoutConstraints {
 
   class func equalWidth(viewOne: UIView, viewTwo: UIView, constraintContainer: UIView) -> [NSLayoutConstraint] {
     let constraints = NSLayoutConstraint.constraintsWithVisualFormat("[viewOne(==viewTwo)]",
-      options: nil, metrics: nil,
+      options: NSLayoutFormatOptions(rawValue: 0), metrics: nil,
       views: ["viewOne": viewOne, "viewTwo": viewTwo]) as [NSLayoutConstraint]
 
     constraintContainer.addConstraints(constraints)

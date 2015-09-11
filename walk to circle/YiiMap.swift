@@ -115,11 +115,11 @@ public class YiiMap: NSObject, MKMapViewDelegate {
 typealias MKMapViewDelegateImplementation = YiiMap
 
 extension MKMapViewDelegateImplementation {
-  public func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+  public func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
     showUserLocation()
   }
 
-  public func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
+  public func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
     callbackAfterRegionDidChange?()
     callbackAfterRegionDidChange = nil
   }

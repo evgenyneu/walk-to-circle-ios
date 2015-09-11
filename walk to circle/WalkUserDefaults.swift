@@ -52,7 +52,7 @@ public enum WalkUserDefaults: String {
   public func save(value: AnyObject?) {
     let userDefaults = NSUserDefaults.standardUserDefaults()
 
-    if let currentValue: AnyObject = value {
+    if value != nil {
       userDefaults.setValue(value, forKey: self.rawValue)
     } else {
       userDefaults.removeObjectForKey(self.rawValue)

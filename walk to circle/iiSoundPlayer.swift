@@ -19,7 +19,12 @@ class iiSoundPlayer {
 
     let error: NSErrorPointer = nil
     let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), fileName as NSString, nil, nil)
-    player = AVAudioPlayer(contentsOfURL: soundURL, error: error)
+    do {
+      player = try AVAudioPlayer(contentsOfURL: soundURL)
+    } catch let error1 as NSError {
+      error.memory = error1
+      player = nil
+    }
   }
 
   convenience init(soundType: iiSoundType) {
@@ -34,8 +39,14 @@ class iiSoundPlayer {
 
   // Allows the sounds to be played with sounds from other apps
   func setAudioSessionToAmbient() {
-    AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, error: nil)
-    AVAudioSession.sharedInstance().setActive(true, error: nil)
+    do {
+      try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+    } catch _ {
+    }
+    do {
+      try AVAudioSession.sharedInstance().setActive(true)
+    } catch _ {
+    }
   }
 
   func play(atVolume volume: Float = 1.0) {

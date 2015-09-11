@@ -36,17 +36,17 @@ class InterfaceController: WKInterfaceController {
   }
 
   private func getDataFromParentApp() {
-    WKInterfaceController.openParentApplication([:]) { reply, error in
-
-      if let currentReply = reply as? [String: AnyObject] {
-        if let currentDirection = WalkWatchDataConsumer.fromDictionary(currentReply) {
-          self.didReceiveDirection(currentDirection)
-          return
-        }
-      }
-
-      self.toggleMap(false)
-    }
+//    WKInterfaceController.openParentApplication([:]) { reply, error in
+//
+//      if let currentReply = reply as? [String: AnyObject] {
+//        if let currentDirection = WalkWatchDataConsumer.fromDictionary(currentReply) {
+//          self.didReceiveDirection(currentDirection)
+//          return
+//        }
+//      }
+//
+//      self.toggleMap(false)
+//    }
   }
 
   // Map
@@ -91,7 +91,7 @@ class InterfaceController: WKInterfaceController {
 
     map.removeAllAnnotations()
 
-    var imageName = arrowImageName(direction.circleDirection)
+    let imageName = arrowImageName(direction.circleDirection)
     map.addAnnotation(coordinate, withImageNamed: imageName, centerOffset: CGPointZero)
   }
 

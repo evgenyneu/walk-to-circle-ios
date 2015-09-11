@@ -58,7 +58,7 @@ class iiGeo {
   }
 
   /* Returns random value between min and max */
-  class func randomBetween(#min: Double, max: Double) -> Double {
+  class func randomBetween(min min: Double, max: Double) -> Double {
     return min + iiRandom.randomBetween0And1 * (max - min)
   }
 
@@ -139,14 +139,14 @@ class iiGeo {
 
     Source: http://www.movable-type.co.uk/scripts/latlong.html
   */
-  class func initialBearing(#start: CLLocationCoordinate2D,
+  class func initialBearing(start start: CLLocationCoordinate2D,
     end: CLLocationCoordinate2D) -> Double {
 
-    var φ1 = degreesToRadians(start.latitude)
-    var φ2 = degreesToRadians(end.latitude)
+    let φ1 = degreesToRadians(start.latitude)
+    let φ2 = degreesToRadians(end.latitude)
 
-    var λ1 = degreesToRadians(start.longitude)
-    var λ2 = degreesToRadians(end.longitude)
+    let λ1 = degreesToRadians(start.longitude)
+    let λ2 = degreesToRadians(end.longitude)
 
     let Δλ = λ2 - λ1
 
@@ -156,7 +156,7 @@ class iiGeo {
     return (radiansToDegrees(θ) + 360) % 360
   }
 
-  class func distanceInMeters(#start: CLLocationCoordinate2D,
+  class func distanceInMeters(start start: CLLocationCoordinate2D,
     end: CLLocationCoordinate2D) -> CLLocationDistance {
 
     let locationStart = CLLocation(latitude: start.latitude, longitude: start.longitude)

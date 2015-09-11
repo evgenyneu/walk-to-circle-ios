@@ -37,8 +37,7 @@ class ScrollToAnnotation {
   class func convertDistance(distance: CGSize,
     toCoordinateSpanForMapView mapView: MKMapView) -> MKCoordinateSpan {
 
-    var distanceAbs = CGSize(width: fabs(distance.width), height: fabs(distance.height))
-    var rect = CGRect(origin: CGPoint(x: 0, y: 0), size: distance)
+    let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: distance)
     let region = mapView.convertRect(rect, toRegionFromView: mapView)
 
     var latitudeDelta = region.span.latitudeDelta
@@ -58,7 +57,7 @@ class ScrollToAnnotation {
 
     let coordinateInView = mapView.convertCoordinate(coordinate, toPointToView: mapView)
 
-    var scrollDelta = ScrollToAnnotation.getScroll(mapView.frame.size,
+    let scrollDelta = ScrollToAnnotation.getScroll(mapView.frame.size,
       annotationCoordinate: coordinateInView)
 
     let userLocationInView =  mapView.convertCoordinate(mapView.userLocation.coordinate,
@@ -81,10 +80,10 @@ class ScrollToAnnotation {
     }
 
     // convert scroll amount from pixels to map coordinates
-    var coordinateSpan = ScrollToAnnotation.convertDistance(scollBy,
+    let coordinateSpan = ScrollToAnnotation.convertDistance(scollBy,
       toCoordinateSpanForMapView: mapView)
 
-    var newCenter = CLLocationCoordinate2D(
+    let newCenter = CLLocationCoordinate2D(
       latitude: mapView.region.center.latitude + coordinateSpan.latitudeDelta,
       longitude: mapView.region.center.longitude + coordinateSpan.longitudeDelta)
 

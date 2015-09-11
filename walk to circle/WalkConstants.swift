@@ -28,8 +28,6 @@ public struct WalkConstants {
   // Stop location updates after this period of time to preserve battery
   public static let maxLocationUpdatePeriodSeconds: NSTimeInterval = 60 * 60
 
-  public static let notificationTypes = UIUserNotificationType.Alert | UIUserNotificationType.Sound
-
   public static let minCircleDistanceFromCurrentLocationMeters: CLLocationDistance = 300
   public static let maxCircleDistanceFromCurrentLocationMeters: CLLocationDistance = 500
 

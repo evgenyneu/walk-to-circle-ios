@@ -103,7 +103,7 @@ public class CongratsPhrase {
   }
 
   private class func rememberSeenPhrase(phrase: String) {
-    if contains(walkCongratsPhrasesSeenToday, phrase) { return }
+    if walkCongratsPhrasesSeenToday.contains(phrase) { return }
     walkCongratsPhrasesSeenToday.append(phrase)
   }
 
@@ -112,8 +112,8 @@ public class CongratsPhrase {
   }
 
   public class func getPhrases(circlesReachedToday: Int) -> [String] {
-    let numbers = walkCongratsPhrases.keys.array.sorted { $0 < $1 }
-
+    let numbers = Array(walkCongratsPhrases.keys).sort { $0 < $1 }
+    
     var currentNumber = numbers.first ?? 1
 
     for number in numbers {
@@ -144,7 +144,7 @@ public class CongratsPhrase {
     alreadySeenToday: [String]) -> [String] {
       
     return allPhrases.filter { phrase in
-      return !contains(alreadySeenToday, phrase)
+      return !alreadySeenToday.contains(phrase)
     }
   }
 }

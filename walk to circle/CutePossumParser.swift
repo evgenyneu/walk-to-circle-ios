@@ -25,8 +25,14 @@ public class CutePossumParser {
     if let currentEncoded = encoded {
       var error: NSError?
 
-      let parsedObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(currentEncoded,
-        options: .MutableContainers | .AllowFragments, error: &error)
+      let parsedObject: AnyObject?
+      do {
+        parsedObject = try NSJSONSerialization.JSONObjectWithData(currentEncoded,
+                options: [.MutableContainers, .AllowFragments])
+      } catch let error1 as NSError {
+        error = error1
+        parsedObject = nil
+      }
       
       if error != nil {
         data = NSDictionary()

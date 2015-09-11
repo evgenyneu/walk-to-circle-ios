@@ -32,11 +32,9 @@ class iiViewPosition {
   // Shows the view previously hidden with `hide` method
   class func unhide(view: UIView) {
     view.hidden = false
-    for constraint in view.constraints() {
-      if let currentConstraint = constraint as? NSLayoutConstraint {
-        if currentConstraint.identifier == iiHidingConstraintIdentifier {
-          view.removeConstraint(currentConstraint)
-        }
+    for constraint in view.constraints {
+      if constraint.identifier == iiHidingConstraintIdentifier {
+        view.removeConstraint(constraint)
       }
     }
   }

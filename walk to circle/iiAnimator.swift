@@ -61,15 +61,15 @@ class iiAnimator {
   }
 
   class func rotate3dOut(view: UIView, onFinished: (()->())? = nil) {
-    springRotateX3d(view, fromAngle: 0, toAngle: M_PI, duration: 2, onFinished)
+    springRotateX3d(view, fromAngle: 0, toAngle: M_PI, duration: 2, onFinished: onFinished)
   }
 
   class func rotate3dIn(view: UIView, onFinished: (()->())? = nil) {
-    springRotateX3d(view, fromAngle: -M_PI, toAngle: 0, duration: 2, onFinished)
+    springRotateX3d(view, fromAngle: -M_PI, toAngle: 0, duration: 2, onFinished: onFinished)
   }
 
   class func rotate3d360(view: UIView, onFinished: (()->())? = nil) {
-    springRotateX3d(view, fromAngle: 0, toAngle: 2 * M_PI, duration: 2, onFinished)
+    springRotateX3d(view, fromAngle: 0, toAngle: 2 * M_PI, duration: 2, onFinished: onFinished)
   }
 
   class func springRotateX3d(view: UIView,

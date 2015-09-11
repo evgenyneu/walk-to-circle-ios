@@ -58,8 +58,8 @@ class Annotation: MKCircle {
 typealias Ext_MapViewDelegate_Overlay = YiiMap
 
 extension Ext_MapViewDelegate_Overlay {
-  public func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) ->
-    MKOverlayRenderer! {
+  public func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) ->
+    MKOverlayRenderer {
 
     if let currentAnnotation = overlay as? Annotation {
       let aRenderer =  MKCircleRenderer(circle: currentAnnotation)
@@ -69,28 +69,28 @@ extension Ext_MapViewDelegate_Overlay {
 
       return aRenderer;
     }
-    
-    return nil
+      
+    return MKOverlayRenderer()
   }
 
-  public func mapView(mapView: MKMapView!,
-    viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+  public func mapView(mapView: MKMapView,
+    viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
     if annotation.isKindOfClass(MKUserLocation) { return nil }
 
     var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("MapVC")
-
-    if annotationView == nil {
-      annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "MapVC")
-      annotationView.canShowCallout = true
-    } else {
+    if let annotationView = annotationView {
       // Sometimes the reused pin annotation view already has a callout subview
       // which results in displaying two or more callouts above the pin.
       // To prevent it - remove all existing subviews from annotation.
       for view in annotationView.subviews {
         view.removeFromSuperview()
       }
+    } else {
+      annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "MapVC")
+      annotationView?.canShowCallout = true
     }
+      
 
     if let pinAnnoration = annotationView as? MKPinAnnotationView {
       if let currentAnnotation = annotation as? Annotation {
@@ -99,8 +99,8 @@ extension Ext_MapViewDelegate_Overlay {
       }
     }
 
-    annotationView.annotation = annotation
-    annotationView.setSelected(false, animated: false)
+    annotationView?.annotation = annotation
+    annotationView?.setSelected(false, animated: false)
     return annotationView
   }
 }

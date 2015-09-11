@@ -33,7 +33,7 @@ enum WalkViewControllers: String {
     // Present view controller unless we are in background, in which case it will be presented later
     // when application becomes active again.
     if UIApplication.sharedApplication().applicationState != UIApplicationState.Background {
-      presentViewController(animate: animate)
+      presentViewController(animate)
     }
 
     WalkViewControllers.toBePresented = self
@@ -98,6 +98,6 @@ enum WalkViewControllers: String {
       WalkViewControllers.LocationDenied,
       WalkViewControllers.RegionMonitoringUnavailable]
 
-    return contains(errorViewControllers, self)
+    return errorViewControllers.contains(self)
   }
 }

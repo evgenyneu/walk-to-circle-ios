@@ -38,7 +38,7 @@ class iiTickTock {
   }
 
   func output() {
-    println(formattedWithMs())
+    print(formattedWithMs())
   }
 
   func outputView() {

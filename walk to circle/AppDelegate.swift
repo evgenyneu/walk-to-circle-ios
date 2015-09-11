@@ -18,11 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return UIApplication.sharedApplication().delegate as? AppDelegate
   }
 
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-
+  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
     WalkLocation.shared.reactToCurrentAuthorizationStatus()
     WalkViewControllers.toBePresented.show()
-
+    
     return true
   }
 
@@ -52,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication,
     handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
-    reply: (([NSObject : AnyObject]!) -> Void)!) {
+    reply: (([NSObject : AnyObject]?) -> Void)) {
 
     let replyData = WalkWatchData.walkDirection
     reply(replyData)

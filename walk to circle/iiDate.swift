@@ -11,9 +11,7 @@ import Foundation
 public class iiDate {
   public class func toStringAsYearMonthDay(date: NSDate) -> String {
     let components = NSCalendar.currentCalendar().components(
-      NSCalendarUnit.DayCalendarUnit |
-      NSCalendarUnit.MonthCalendarUnit |
-      NSCalendarUnit.YearCalendarUnit,
+      [NSCalendarUnit.NSDayCalendarUnit, NSCalendarUnit.NSMonthCalendarUnit, NSCalendarUnit.NSYearCalendarUnit],
       fromDate: date)
 
     return "\(components.year).\(components.month).\(components.day)"

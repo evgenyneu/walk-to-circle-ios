@@ -33,7 +33,7 @@ class YiiQuotesTests: XCTestCase {
       expectation.fulfill()
     }
 
-    waitForExpectationsWithTimeout(0.05, handler: nil)
+    waitForExpectationsWithTimeout(0.1, handler: nil)
   }
 
   func testShowTutorialMessageWhenRandomQuoteIsNotReached() {

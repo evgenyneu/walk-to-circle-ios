@@ -14,7 +14,7 @@ class RewindButton: UIButton {
   private let iiLabelFont = UIFont.systemFontOfSize(40)
   private let arrowsLayer = CALayer()
 
-  required init(coder aDecoder: NSCoder) {
+  required init?(coder aDecoder: NSCoder) {
 
     super.init(coder: aDecoder)
 
@@ -50,7 +50,7 @@ class RewindButton: UIButton {
   }
 
   private func initLabel() {
-    countdownLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+    countdownLabel.translatesAutoresizingMaskIntoConstraints = false
 
     RewindButton.positionContdownLabel(self, label: countdownLabel)
   }

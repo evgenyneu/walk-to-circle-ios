@@ -16,7 +16,7 @@ public class WalkQuotePicker {
     
     if let currentQuote = iiRandom.random(unseenQuotes) {
 
-      if !contains(walkQuotesSeenToday, currentQuote.text) {
+      if !walkQuotesSeenToday.contains(currentQuote.text) {
         walkQuotesSeenToday.append(currentQuote.text)
       }
 
@@ -42,7 +42,7 @@ public class WalkQuotePicker {
     alreadySeenToday: [String]) -> [WalkQuote] {
 
     return allQuotes.filter { quote in
-      return !contains(alreadySeenToday, quote.text)
+      return !alreadySeenToday.contains(quote.text)
     }
   }
 }

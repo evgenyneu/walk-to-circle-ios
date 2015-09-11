@@ -27,15 +27,15 @@ class InfoInterfaceController: WKInterfaceController {
   }
 
   private func getDataFromParentApp() {
-    WKInterfaceController.openParentApplication([:]) { reply, error in
-
-      if let currentReply = reply as? [String: AnyObject] {
-        if let currentDirection = WalkWatchDataConsumer.fromDictionary(currentReply) {
-          self.popToRootController()
-          return
-        }
-      }
-    }
+//    WKInterfaceController.openParentApplication([:]) { reply, error in
+//
+//      if let currentReply = reply as? [String: AnyObject] {
+//        if let currentDirection = WalkWatchDataConsumer.fromDictionary(currentReply) {
+//          self.popToRootController()
+//          return
+//        }
+//      }
+//    }
   }
 
   // Timer

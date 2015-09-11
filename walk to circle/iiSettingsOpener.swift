@@ -12,8 +12,10 @@ class iiSettingsOpener {
   class func openSettings() {
     if !canOpenAppSettings { return }
 
-    if let appSettingsUrl = NSURL(string: UIApplicationOpenSettingsURLString) {
-      UIApplication.sharedApplication().openURL(appSettingsUrl)
+    if #available(iOS 8.0, *) {
+      if let appSettingsUrl = NSURL(string: UIApplicationOpenSettingsURLString) {
+        UIApplication.sharedApplication().openURL(appSettingsUrl)
+      }
     }
   }
 

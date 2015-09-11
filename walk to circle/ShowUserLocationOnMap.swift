@@ -14,10 +14,12 @@ private let iiMapSizeMeters:CLLocationDistance = WalkConstants.minCircleDistance
 
 class ShowUserLocationOnMap {
   class func showUserLocation(mapView: MKMapView, userLocation: MKUserLocation, animated: Bool) {
-    let region = MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate,
-      iiMapSizeMeters, iiMapSizeMeters)
+    if let location = userLocation.location {
+      let region = MKCoordinateRegionMakeWithDistance(location.coordinate,
+        iiMapSizeMeters, iiMapSizeMeters)
 
-    mapView.setRegion(region, animated:animated)
+      mapView.setRegion(region, animated:animated)
+    }
   }
 
   class func needZoomingBeforePlay(mapView: MKMapView) -> Bool {

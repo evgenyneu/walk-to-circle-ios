@@ -36,9 +36,9 @@ class iiPresentViewController {
       
     let bundle = NSBundle.mainBundle()
     if let storyboardName = bundle.objectForInfoDictionaryKey("UIMainStoryboardFile" ) as? NSString {
-      let storyboard = UIStoryboard(name: storyboardName, bundle: bundle)
+      let storyboard = UIStoryboard(name: storyboardName as String, bundle: bundle)
       
-      return storyboard.instantiateViewControllerWithIdentifier(viewControllerId) as? UIViewController
+      return storyboard.instantiateViewControllerWithIdentifier(viewControllerId)
     }
       
     return nil

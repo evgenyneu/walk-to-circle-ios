@@ -11,7 +11,7 @@ import CoreLocation
 
 private let walkCircleMonitor = WalkCircleMonitor()
 
-@objc
+
 class WalkCircleMonitor {
   private var region = CLCircularRegion()
   class var shared: WalkCircleMonitor {

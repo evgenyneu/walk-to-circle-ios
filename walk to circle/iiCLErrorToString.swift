@@ -56,8 +56,6 @@ struct iiCLErrorToString {
       return "Ranging cannot be performed"
     case .RangingFailure:
       return "General ranging failure"
-    default:
-      return "Unknown error code: \(error.rawValue)"
     }
   }
 }

@@ -75,7 +75,7 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
     let image = UIImage(named: "branch_background.jpg")
     let imageView = UIImageView(image: image)
     imageView.contentMode = UIViewContentMode.ScaleAspectFill
-    imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+    imageView.translatesAutoresizingMaskIntoConstraints = false
     view.insertSubview(imageView, atIndex: 0)
 
     iiAutolayoutConstraints.fillParent(imageView, parentView: view, margin: 0, vertically: true)
