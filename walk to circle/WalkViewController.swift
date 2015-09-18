@@ -41,13 +41,22 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
     WalkCircleMonitor.stop()
   }
 
-  private func initQuotesOrientation() {
-    let interfaceOrientation = UIApplication.sharedApplication().statusBarOrientation
-    quotes.adjustToNewSize(interfaceOrientation)
-  }
-
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
+  }
+  
+  private func initQuotesOrientation() {
+    let isLandscape = view.bounds.width > view.bounds.height
+    quotes.adjustToNewSize(isLandscape)
+  }
+  
+  override func viewWillTransitionToSize(size: CGSize,
+    withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+      
+    super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    
+    let isLandscape = size.width > size.height
+    quotes.adjustToNewSize(isLandscape)
   }
   
   @IBAction func onCancelTapped(sender: AnyObject) {

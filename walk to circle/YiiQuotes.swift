@@ -52,18 +52,18 @@ public class YiiQuotes: NSObject {
     iiAnimator.fadeInSpring(scrollView, duration: WalkConstants.textFadeInDuration)
   }
 
-  func adjustToNewSize(orientation: UIInterfaceOrientation) {
+  func adjustToNewSize(isLandscape: Bool) {
     var verticalCompact = false
 
-    if UIInterfaceOrientationIsLandscape(orientation) && iiScreenSize.minSide < 600 {
+    if isLandscape && iiScreenSize.minSide < 600 {
       // No top margin when in landscape and screen height is small (phones in landscape)
       verticalCompact = true
     }
 
-    adjustToNewSize(verticalCompact)
+    adjustToNewSize(verticalCompact: verticalCompact)
   }
   
-  private func adjustToNewSize(verticalCompact: Bool) {
+  private func adjustToNewSize(verticalCompact verticalCompact: Bool) {
     if verticalCompact {
       scrollView.contentInset.top = WalkConstants.quotesTopMarginCompact
     } else {
