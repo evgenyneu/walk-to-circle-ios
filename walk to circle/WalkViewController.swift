@@ -49,15 +49,6 @@ class WalkViewController: UIViewController, UIAlertViewDelegate {
   override func preferredStatusBarStyle() -> UIStatusBarStyle {
     return UIStatusBarStyle.LightContent
   }
-
-  // DEPRECATION WARNING: Remove this function when iOS7 support is dropped
-  override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation,
-    duration: NSTimeInterval) {
-
-    super.willRotateToInterfaceOrientation(toInterfaceOrientation, duration: duration)
-
-    quotes.adjustToNewSize(toInterfaceOrientation)
-  }
   
   @IBAction func onCancelTapped(sender: AnyObject) {
     showConfirmDialog()

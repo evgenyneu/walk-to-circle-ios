@@ -40,9 +40,7 @@ public class WalkLocation: NSObject, CLLocationManagerDelegate {
       
     case .NotDetermined:
       if locationManager.respondsToSelector(Selector("requestAlwaysAuthorization")) {
-        if #available(iOS 8.0, *) {
-            locationManager.requestAlwaysAuthorization()
-        }
+        locationManager.requestAlwaysAuthorization()
       }
     }
   }

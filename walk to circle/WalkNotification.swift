@@ -28,9 +28,7 @@ class WalkNotification {
   }
 
   private class func sendNotificationRegisterRequest() {
-    if #available(iOS 8.0, *) {
-      let settings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
-      UIApplication.sharedApplication().registerUserNotificationSettings(settings)
-    }
+    let settings = UIUserNotificationSettings(forTypes: [.Alert, .Sound], categories: nil)
+    UIApplication.sharedApplication().registerUserNotificationSettings(settings)
   }
 }
