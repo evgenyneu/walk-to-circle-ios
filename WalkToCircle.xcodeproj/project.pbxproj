@@ -26,7 +26,6 @@
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
-		2B4132BE1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4132BD1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift */; };
 		2B4980DA1AAFE6F900821F13 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */; };
 		2B4980DE1AAFE9C500821F13 /* WalkWatch_directionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */; };
 		2B4980E01AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */; };
@@ -145,6 +144,7 @@
 		7E7510A81BACC2900070CCAF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7510A71BACC2900070CCAF /* ExtensionDelegate.swift */; };
 		7E7510AA1BACC2900070CCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510A91BACC2900070CCAF /* Assets.xcassets */; };
 		7E7510AE1BACC2900070CCAF /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E7510941BACC2900070CCAF /* Watch.app */; };
+		7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,7 +252,6 @@
 		2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiScreenSize.swift; sourceTree = "<group>"; };
 		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
 		2B4132BB1A54AA92005405D8 /* README_sound_fader_ios.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_sound_fader_ios.md; sourceTree = "<group>"; };
-		2B4132BD1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
 		2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutePossumParser.swift; sourceTree = "<group>"; };
 		2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatch_directionModel.swift; sourceTree = "<group>"; };
 		2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatch_userLocationModel.swift; sourceTree = "<group>"; };
@@ -384,6 +383,7 @@
 		7E7510A71BACC2900070CCAF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7E7510A91BACC2900070CCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E7510AB1BACC2900070CCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,7 +475,7 @@
 		2B4132BA1A54AA6D005405D8 /* SoundFaderIOS */ = {
 			isa = PBXGroup;
 			children = (
-				2B4132BD1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift */,
+				7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */,
 				2B4132BB1A54AA92005405D8 /* README_sound_fader_ios.md */,
 			);
 			name = SoundFaderIOS;
@@ -1132,6 +1132,7 @@
 				2B12763D1A47D93F00F6ED44 /* WalkCoordinate.swift in Sources */,
 				2B4980DE1AAFE9C500821F13 /* WalkWatch_directionModel.swift in Sources */,
 				2B8A353F1A292E820086634F /* CountdownDelegate.swift in Sources */,
+				7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
 				2B5503F51AB012D300CD151C /* WalkWatchDataConsumer.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
@@ -1171,7 +1172,6 @@
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* ShowUserLocationOnMap.swift in Sources */,
 				2B5C2CA31AAFE0DB0077532D /* WalkWatchDirection.swift in Sources */,
-				2B4132BE1A54AAC3005405D8 /* iiFaderForAvAudioPlayer.swift in Sources */,
 				2B5C2CA51AAFE0DB0077532D /* WalkWatchUserLocation.swift in Sources */,
 				2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */,
 				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,

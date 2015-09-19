@@ -11,14 +11,18 @@ import CoreLocation
 
 private let walkCircleMonitor = WalkCircleMonitor()
 
-
-class WalkCircleMonitor {
+class WalkCircleMonitor: NSObject {
   private var region = CLCircularRegion()
+  
+  static var tempStart: NSDate?
+  
   class var shared: WalkCircleMonitor {
     return walkCircleMonitor
   }
 
-  private init() {
+  override private init() {
+    super.init()
+    
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
   }
 
@@ -44,13 +48,24 @@ class WalkCircleMonitor {
 
   class func stop() {
     WalkLocation.shared.stopUpdatingLocation()
+    tempStart = nil
   }
 
   func processLocationUpdate(location: CLLocation) -> Bool {
-    if region.containsCoordinate(location.coordinate) {
-      locationReached()
-      return true
+    if let tempStart = WalkCircleMonitor.tempStart {
+      let intervalSeconds = NSDate().timeIntervalSinceDate(tempStart)
+      if intervalSeconds > 8 {
+        locationReached()
+        return true
+      }
+    } else {
+      WalkCircleMonitor.tempStart = NSDate()
     }
+
+//    if region.containsCoordinate(location.coordinate) {
+//      locationReached()
+//      return true
+//    }
 
     return false
   }

@@ -1,19 +1,10 @@
-//
-//  iiSoundPlayerFadeOut.swift
-//  iiFaderForAvAudioPlayer
-//
-//  Created by Evgenii Neumerzhitckii on 31/12/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import Foundation
 import AVFoundation
 
 let iiFaderForAvAudioPlayer_defaultFadeDurationSeconds = 3.0
 let iiFaderForAvAudioPlayer_defaultVelocity = 2.0
 
-
-public class iiFaderForAvAudioPlayer {
+public class iiFaderForAvAudioPlayer: NSObject {
   let player: AVAudioPlayer
   private var timer: NSTimer?
 
