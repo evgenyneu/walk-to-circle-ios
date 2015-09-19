@@ -36,7 +36,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, iiOutputViewContro
     // Preload pin drop sounds to make it play without delay and in sync with animation
     iiSounds.shared.prepareToPlay(iiSoundType.fall)
     iiSounds.shared.prepareToPlay(iiSoundType.pin_drop)
-
   }
 
   override func preferredStatusBarStyle() -> UIStatusBarStyle {

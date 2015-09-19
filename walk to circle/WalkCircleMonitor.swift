@@ -14,8 +14,6 @@ private let walkCircleMonitor = WalkCircleMonitor()
 class WalkCircleMonitor: NSObject {
   private var region = CLCircularRegion()
   
-  static var tempStart: NSDate?
-  
   class var shared: WalkCircleMonitor {
     return walkCircleMonitor
   }
@@ -48,24 +46,13 @@ class WalkCircleMonitor: NSObject {
 
   class func stop() {
     WalkLocation.shared.stopUpdatingLocation()
-    tempStart = nil
   }
 
   func processLocationUpdate(location: CLLocation) -> Bool {
-    if let tempStart = WalkCircleMonitor.tempStart {
-      let intervalSeconds = NSDate().timeIntervalSinceDate(tempStart)
-      if intervalSeconds > 8 {
-        locationReached()
-        return true
-      }
-    } else {
-      WalkCircleMonitor.tempStart = NSDate()
+    if region.containsCoordinate(location.coordinate) {
+      locationReached()
+      return true
     }
-
-//    if region.containsCoordinate(location.coordinate) {
-//      locationReached()
-//      return true
-//    }
 
     return false
   }
