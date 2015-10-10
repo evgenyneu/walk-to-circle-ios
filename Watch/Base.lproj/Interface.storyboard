@@ -11,7 +11,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="I1s-88-5xH">
-                            <group key="contentGroup" width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="dPD-AI-Bdk">
+                            <group key="contentGroup" width="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="dPD-AI-Bdk">
                                 <items>
                                     <group width="1" alignment="center" backgroundImage="Walk_noShadow3" contentMode="scaleAspectFit" layout="vertical" id="dso-4D-sRX">
                                         <items>
@@ -21,6 +21,9 @@
                                     <label alignment="center" text="Tap to walk" id="PMh-9H-uBE"/>
                                 </items>
                             </group>
+                            <connections>
+                                <action selector="didTapWalkButton" destination="AgC-eL-Hgc" id="ZXU-Hw-PaX"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>

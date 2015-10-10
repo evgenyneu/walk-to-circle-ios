@@ -28,6 +28,10 @@ class InterfaceController: WKInterfaceController {
     print("deinit")
   }
   
+  @IBAction func didTapWalkButton() {
+    print("Tap tap tap")
+  }
+  
   override func didDeactivate() {
     super.didDeactivate()
     
