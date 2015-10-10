@@ -16,8 +16,9 @@
                                     <group key="contentGroup" width="1" height="1" alignment="left" backgroundImage="Walk" contentMode="scaleAspectFit" id="fbi-Bh-9kb"/>
                                 </button>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
-                        <label alignment="center" text="Tap &amp; walk" id="azY-Ve-tem">
+                        <label alignment="center" text="Tap to walk" id="azY-Ve-tem">
                             <color key="textColor" red="0.73162402530680948" green="0.73580961434972647" blue="0.81863547120418845" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                     </items>

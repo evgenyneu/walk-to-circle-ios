@@ -24,6 +24,10 @@ class InterfaceController: WKInterfaceController {
     startTimer()
   }
   
+  deinit {
+    print("deinit")
+  }
+  
   override func didDeactivate() {
     super.didDeactivate()
     
