@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -14,15 +14,18 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_background_1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-41-5xG">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <animations/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_scren_logo" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-8q-s7d">
                     <rect key="frame" x="140" y="140" width="200" height="200"/>
+                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="EeT-ik-pKh"/>
                         <constraint firstAttribute="width" secondItem="gVP-8q-s7d" secondAttribute="height" multiplier="1:1" id="cJ2-gh-71Z"/>
                     </constraints>
                 </imageView>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="gVP-8q-s7d" secondAttribute="centerY" id="Bbh-xc-JS3"/>

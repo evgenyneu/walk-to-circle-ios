@@ -1,31 +1,67 @@
-//
-//  InterfaceController.swift
-//  Watch Extension
-//
-//  Created by Evgenii on 19/09/2015.
-//  Copyright © 2015 Evgenii Neumerzhitckii. All rights reserved.
-//
+
 
 import WatchKit
 import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+  
+  private var timer: NSTimer?
+  
+  private var toggleImage = true
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+  @IBOutlet var imageGroup: WKInterfaceGroup!
+  
+  override func awakeWithContext(context: AnyObject?) {
+    super.awakeWithContext(context)
+  }
+  
+  override func willActivate() {
+    super.willActivate()
+    
+    print("willActivate")
+    
+    startTimer()
+  }
+  
+  override func didDeactivate() {
+    super.didDeactivate()
+    
+    print("didDeactivate")
+
+    
+    stopTimer()
+  }
+  
+  override func didAppear() {
+    super.didAppear()
+    
+    print("didAppear")
+  }
+  
+  private func startTimer() {
+    stopTimer()
+    timer = NSTimer.scheduledTimerWithTimeInterval(2,
+      target: self, selector: "timerFired:", userInfo: nil, repeats: true)
+  }
+  
+  private func stopTimer() {
+    timer?.invalidate()
+    timer = nil
+  }
+  
+  func timerFired(timer: NSTimer) {
+    animate()
+  }
+  
+  private func animate() {
+    toggleImage = !toggleImage
+    imageGroup.setAlpha(toggleImage ? 0: 1)
+    
+    animateWithDuration(2) { [weak self] in
+      if let thisSelf = self {
+        thisSelf.imageGroup.setAlpha(thisSelf.toggleImage ? 1: 0)
+      }
     }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
+  }
 }
