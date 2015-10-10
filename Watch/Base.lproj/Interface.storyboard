@@ -11,14 +11,20 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="I1s-88-5xH">
-                            <group key="contentGroup" width="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="dPD-AI-Bdk">
+                            <group key="contentGroup" width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="dPD-AI-Bdk">
                                 <items>
-                                    <group width="1" alignment="center" backgroundImage="Walk_noShadow3" contentMode="scaleAspectFit" layout="vertical" id="dso-4D-sRX">
+                                    <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="aLv-BO-5zx">
                                         <items>
-                                            <imageView width="1" alignment="center" image="Walk" contentMode="scaleAspectFit" id="cJ2-Fn-1pr"/>
+                                            <group width="1" alignment="center" backgroundImage="Walk3" contentMode="scaleAspectFit" layout="vertical" id="dso-4D-sRX">
+                                                <items>
+                                                    <imageView width="1" alignment="center" image="Walk_noShadow2" contentMode="scaleAspectFit" id="cJ2-Fn-1pr"/>
+                                                </items>
+                                            </group>
+                                            <label alignment="center" text="Tap to walk" id="PMh-9H-uBE">
+                                                <color key="textColor" red="0.72429638651187112" green="0.76762803261920309" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </label>
                                         </items>
                                     </group>
-                                    <label alignment="center" text="Tap to walk" id="PMh-9H-uBE"/>
                                 </items>
                             </group>
                             <connections>
