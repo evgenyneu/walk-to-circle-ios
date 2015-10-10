@@ -1,7 +1,6 @@
-
-
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class StartInterfaceController: WKInterfaceController {
@@ -29,6 +28,25 @@ class StartInterfaceController: WKInterfaceController {
     super.didDeactivate()
     
     stopTimer()
+  }
+  
+  @IBAction func didTapStartButton() {
+    startSession()
+  }
+  
+  func startSession() {
+    if !WCSession.isSupported() { return }
+    
+    let session = WCSession.defaultSession()
+    
+    print("Send message from child")
+    
+    session.sendMessage(["hoy":"drop circle"], replyHandler: { reply in
+      print("Reply from parent \(reply)")
+      
+      if let reply = reply as? [String: String] {
+      }
+    }, errorHandler: nil)
   }
   
   private func startTimer() {

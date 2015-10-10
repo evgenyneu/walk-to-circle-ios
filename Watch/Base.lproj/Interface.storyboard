@@ -35,8 +35,7 @@
                                 </items>
                             </group>
                             <connections>
-                                <action selector="didTapWalkButton" destination="AgC-eL-Hgc" id="ZXU-Hw-PaX"/>
-                                <segue destination="WBC-Ov-C6Q" kind="push" id="KSx-cM-urI"/>
+                                <action selector="didTapStartButton" destination="AgC-eL-Hgc" id="8iP-yZ-5lM"/>
                             </connections>
                         </button>
                     </items>

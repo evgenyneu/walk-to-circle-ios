@@ -146,6 +146,7 @@
 		7E7510AE1BACC2900070CCAF /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E7510941BACC2900070CCAF /* Watch.app */; };
 		7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */; settings = {ASSET_TAGS = (); }; };
 		7E9407001BC8EC0E00BC8DB4 /* WalkInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9406FF1BC8EC0E00BC8DB4 /* WalkInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		7E9407041BC8EF7800BC8DB4 /* WatchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,6 +387,7 @@
 		7E7510AB1BACC2900070CCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
 		7E9406FF1BC8EC0E00BC8DB4 /* WalkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkInterfaceController.swift; sourceTree = "<group>"; };
+		7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -530,7 +532,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2B5C2C9F1AAFE0CD0077532D /* Watch */ = {
+		2B5C2C9F1AAFE0CD0077532D /* WatchOld */ = {
 			isa = PBXGroup;
 			children = (
 				2B4980DC1AAFE9A200821F13 /* Model */,
@@ -539,7 +541,7 @@
 				2B5503F41AB012D300CD151C /* WalkWatchDataConsumer.swift */,
 				2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocation.swift */,
 			);
-			name = Watch;
+			name = WatchOld;
 			sourceTree = "<group>";
 		};
 		2B5C2CA61AAFE0ED0077532D /* Watch */ = {
@@ -720,7 +722,8 @@
 				2BE4D73F1A54C782006B600D /* WalkSoundType.swift */,
 				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
 				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
-				2B5C2C9F1AAFE0CD0077532D /* Watch */,
+				7E9407011BC8EE9500BC8DB4 /* Watch */,
+				2B5C2C9F1AAFE0CD0077532D /* WatchOld */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -899,6 +902,14 @@
 				7E9406FF1BC8EC0E00BC8DB4 /* WalkInterfaceController.swift */,
 			);
 			path = "Watch Extension";
+			sourceTree = "<group>";
+		};
+		7E9407011BC8EE9500BC8DB4 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */,
+			);
+			path = Watch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1138,6 +1149,7 @@
 				7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
 				2B5503F51AB012D300CD151C /* WalkWatchDataConsumer.swift in Sources */,
+				7E9407041BC8EF7800BC8DB4 /* WatchCommunicator.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
