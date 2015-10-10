@@ -10,7 +10,7 @@ class InterfaceController: WKInterfaceController {
   
   private var toggleImage = true
 
-  @IBOutlet var imageGroup: WKInterfaceGroup!
+  @IBOutlet var image: WKInterfaceImage!
   
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
@@ -60,11 +60,11 @@ class InterfaceController: WKInterfaceController {
   
   private func animate() {
     toggleImage = !toggleImage
-    imageGroup.setAlpha(toggleImage ? 0: 1)
+    image.setAlpha(toggleImage ? 0: 1)
     
     animateWithDuration(2) { [weak self] in
       if let thisSelf = self {
-        thisSelf.imageGroup.setAlpha(thisSelf.toggleImage ? 1: 0)
+        thisSelf.image.setAlpha(thisSelf.toggleImage ? 1: 0)
       }
     }
   }

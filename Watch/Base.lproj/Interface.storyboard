@@ -10,20 +10,21 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
-                        <group width="0.69999999999999996" height="0.69999999999999996" alignment="center" backgroundImage="Walk_noShadow3" contentMode="scaleAspectFit" layout="vertical" id="q1o-HW-VoM">
-                            <items>
-                                <button alignment="center" verticalAlignment="center" accessibilityLabel="Walk" id="tTL-QX-9jw">
-                                    <group key="contentGroup" width="1" height="1" alignment="left" backgroundImage="Walk" contentMode="scaleAspectFit" id="fbi-Bh-9kb"/>
-                                </button>
-                            </items>
-                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
-                        </group>
-                        <label alignment="center" text="Tap to walk" id="azY-Ve-tem">
-                            <color key="textColor" red="0.73162402530680948" green="0.73580961434972647" blue="0.81863547120418845" alpha="1" colorSpace="calibratedRGB"/>
-                        </label>
+                        <button alignment="center" verticalAlignment="center" id="I1s-88-5xH">
+                            <group key="contentGroup" width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="dPD-AI-Bdk">
+                                <items>
+                                    <group width="1" alignment="center" backgroundImage="Walk_noShadow3" contentMode="scaleAspectFit" layout="vertical" id="dso-4D-sRX">
+                                        <items>
+                                            <imageView width="1" alignment="center" image="Walk" contentMode="scaleAspectFit" id="cJ2-Fn-1pr"/>
+                                        </items>
+                                    </group>
+                                    <label alignment="center" text="Tap to walk" id="PMh-9H-uBE"/>
+                                </items>
+                            </group>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="imageGroup" destination="fbi-Bh-9kb" id="EcT-id-OgY"/>
+                        <outlet property="image" destination="cJ2-Fn-1pr" id="Ka3-Hd-9GC"/>
                     </connections>
                 </controller>
             </objects>
