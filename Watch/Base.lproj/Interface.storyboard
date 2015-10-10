@@ -5,10 +5,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Walk Interface Controller-->
+        <scene sceneID="5ED-qi-gTZ">
+            <objects>
+                <controller hidesWhenLoading="NO" id="WBC-Ov-C6Q" customClass="WalkInterfaceController" customModule="Watch_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="255"/>
+        </scene>
+        <!--Start Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="Watch_Extension">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="I1s-88-5xH">
                             <group key="contentGroup" width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="dPD-AI-Bdk">
@@ -29,6 +36,7 @@
                             </group>
                             <connections>
                                 <action selector="didTapWalkButton" destination="AgC-eL-Hgc" id="ZXU-Hw-PaX"/>
+                                <segue destination="WBC-Ov-C6Q" kind="push" id="KSx-cM-urI"/>
                             </connections>
                         </button>
                     </items>

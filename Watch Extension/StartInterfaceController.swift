@@ -4,7 +4,7 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class StartInterfaceController: WKInterfaceController {
   
   private var timer: NSTimer?
   
@@ -18,33 +18,17 @@ class InterfaceController: WKInterfaceController {
   
   override func willActivate() {
     super.willActivate()
-    
-    print("willActivate")
-    
+
     startTimer()
   }
   
-  deinit {
-    print("deinit")
-  }
-  
   @IBAction func didTapWalkButton() {
-    print("Tap tap tap")
   }
   
   override func didDeactivate() {
     super.didDeactivate()
     
-    print("didDeactivate")
-
-    
     stopTimer()
-  }
-  
-  override func didAppear() {
-    super.didAppear()
-    
-    print("didAppear")
   }
   
   private func startTimer() {
@@ -64,7 +48,7 @@ class InterfaceController: WKInterfaceController {
   
   private func animate() {
     toggleImage = !toggleImage
-    image.setAlpha(toggleImage ? 0: 1)
+    //image.setAlpha(toggleImage ? 0: 1)
     
     animateWithDuration(2) { [weak self] in
       if let thisSelf = self {

@@ -140,11 +140,12 @@
 		7E7510981BACC2900070CCAF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510961BACC2900070CCAF /* Interface.storyboard */; };
 		7E75109A1BACC2900070CCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510991BACC2900070CCAF /* Assets.xcassets */; };
 		7E7510A11BACC2900070CCAF /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E7510A01BACC2900070CCAF /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7E7510A61BACC2900070CCAF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7510A51BACC2900070CCAF /* InterfaceController.swift */; };
+		7E7510A61BACC2900070CCAF /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7510A51BACC2900070CCAF /* StartInterfaceController.swift */; };
 		7E7510A81BACC2900070CCAF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7510A71BACC2900070CCAF /* ExtensionDelegate.swift */; };
 		7E7510AA1BACC2900070CCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510A91BACC2900070CCAF /* Assets.xcassets */; };
 		7E7510AE1BACC2900070CCAF /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E7510941BACC2900070CCAF /* Watch.app */; };
 		7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */; settings = {ASSET_TAGS = (); }; };
+		7E9407001BC8EC0E00BC8DB4 /* WalkInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9406FF1BC8EC0E00BC8DB4 /* WalkInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -379,11 +380,12 @@
 		7E7510991BACC2900070CCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E75109B1BACC2900070CCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7510A01BACC2900070CCAF /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E7510A51BACC2900070CCAF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7E7510A51BACC2900070CCAF /* StartInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInterfaceController.swift; sourceTree = "<group>"; };
 		7E7510A71BACC2900070CCAF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7E7510A91BACC2900070CCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E7510AB1BACC2900070CCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
+		7E9406FF1BC8EC0E00BC8DB4 /* WalkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -890,10 +892,11 @@
 		7E7510A41BACC2900070CCAF /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				7E7510A51BACC2900070CCAF /* InterfaceController.swift */,
+				7E7510A51BACC2900070CCAF /* StartInterfaceController.swift */,
 				7E7510A71BACC2900070CCAF /* ExtensionDelegate.swift */,
 				7E7510A91BACC2900070CCAF /* Assets.xcassets */,
 				7E7510AB1BACC2900070CCAF /* Info.plist */,
+				7E9406FF1BC8EC0E00BC8DB4 /* WalkInterfaceController.swift */,
 			);
 			path = "Watch Extension";
 			sourceTree = "<group>";
@@ -1215,7 +1218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E7510A81BACC2900070CCAF /* ExtensionDelegate.swift in Sources */,
-				7E7510A61BACC2900070CCAF /* InterfaceController.swift in Sources */,
+				7E9407001BC8EC0E00BC8DB4 /* WalkInterfaceController.swift in Sources */,
+				7E7510A61BACC2900070CCAF /* StartInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
