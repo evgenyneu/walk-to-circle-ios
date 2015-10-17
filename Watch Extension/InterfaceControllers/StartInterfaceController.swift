@@ -9,19 +9,20 @@ class StartInterfaceController: WKInterfaceController {
   
   private var toggleImage = true
 
-  @IBOutlet var image: WKInterfaceImage!
+  @IBOutlet var walkImage: WKInterfaceImage!
+  @IBOutlet var stopImage: WKInterfaceImage!
   
+  @IBOutlet var tapToWalkLabel: WKInterfaceLabel!
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
+    
+    stopImage.setHeight(0)
   }
   
   override func willActivate() {
     super.willActivate()
 
     startTimer()
-  }
-  
-  @IBAction func didTapWalkButton() {
   }
   
   override func didDeactivate() {
@@ -31,7 +32,25 @@ class StartInterfaceController: WKInterfaceController {
   }
   
   @IBAction func didTapStartButton() {
-    startSession()
+    animateWithDuration(0.5) { [weak self] in
+      if let thisSelf = self {
+        thisSelf.walkImage.setHeight(0)
+        thisSelf.tapToWalkLabel.setHeight(0)
+        thisSelf.stopImage.setHeight(100)
+      }
+    }
+    //WalkInterfaceControllers.Walk.push(self)
+    // startSession()
+  }
+  
+  @IBAction func didTapStopButton() {
+    animateWithDuration(0.5) { [weak self] in
+      if let thisSelf = self {
+        thisSelf.walkImage.setHeight(100)
+        thisSelf.tapToWalkLabel.setHeight(15)
+        thisSelf.stopImage.setHeight(0)
+      }
+    }
   }
   
   func startSession() {
@@ -70,7 +89,7 @@ class StartInterfaceController: WKInterfaceController {
     
     animateWithDuration(2) { [weak self] in
       if let thisSelf = self {
-        thisSelf.image.setAlpha(thisSelf.toggleImage ? 1: 0)
+        thisSelf.walkImage.setAlpha(thisSelf.toggleImage ? 1: 0)
       }
     }
   }

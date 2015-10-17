@@ -6,7 +6,7 @@ class WalkInterfaceController: WKInterfaceController {
   override func willActivate() {
     super.willActivate()
     
-    startSession()
+    // startSession()
   }
   
   func startSession() {

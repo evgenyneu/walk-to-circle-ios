@@ -5,29 +5,29 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
-        <!--Walk Interface Controller-->
+        <!--Walk-->
         <scene sceneID="5ED-qi-gTZ">
             <objects>
-                <controller hidesWhenLoading="NO" id="WBC-Ov-C6Q" customClass="WalkInterfaceController" customModule="Watch_Extension"/>
+                <controller identifier="Walk" hidesWhenLoading="NO" id="WBC-Ov-C6Q" customClass="WalkInterfaceController" customModule="Watch_Extension"/>
             </objects>
-            <point key="canvasLocation" x="464" y="255"/>
+            <point key="canvasLocation" x="541" y="260"/>
         </scene>
         <!--Start Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="Watch_Extension">
+                <controller spacing="0.0" id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="Watch_Extension">
                     <items>
                         <button alignment="center" verticalAlignment="center" id="I1s-88-5xH">
-                            <group key="contentGroup" width="1" height="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="dPD-AI-Bdk">
+                            <group key="contentGroup" width="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" spacing="0.0" id="dPD-AI-Bdk">
                                 <items>
-                                    <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="aLv-BO-5zx">
+                                    <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="aLv-BO-5zx">
                                         <items>
-                                            <group width="1" alignment="center" backgroundImage="Walk3" contentMode="scaleAspectFit" layout="vertical" id="dso-4D-sRX">
+                                            <group width="1" alignment="center" backgroundImage="Walk3" contentMode="scaleAspectFit" layout="vertical" spacing="0.0" id="dso-4D-sRX">
                                                 <items>
-                                                    <imageView width="1" alignment="center" image="Walk_noShadow2" contentMode="scaleAspectFit" id="cJ2-Fn-1pr"/>
+                                                    <imageView width="1" height="100" alignment="center" image="Walk_noShadow2" contentMode="scaleAspectFit" id="cJ2-Fn-1pr"/>
                                                 </items>
                                             </group>
-                                            <label alignment="center" text="Tap to walk" id="PMh-9H-uBE">
+                                            <label height="15" alignment="center" hidden="YES" text="Tap to walk" id="PMh-9H-uBE">
                                                 <color key="textColor" red="0.72429638651187112" green="0.76762803261920309" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </label>
                                         </items>
@@ -38,12 +38,34 @@
                                 <action selector="didTapStartButton" destination="AgC-eL-Hgc" id="8iP-yZ-5lM"/>
                             </connections>
                         </button>
+                        <button alignment="center" verticalAlignment="center" id="DS6-vd-ts9">
+                            <group key="contentGroup" width="1" alignment="left" contentMode="scaleAspectFit" layout="vertical" spacing="0.0" id="eMT-pi-ZpN">
+                                <items>
+                                    <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="EDQ-II-L0b">
+                                        <items>
+                                            <group width="1" alignment="center" layout="vertical" spacing="0.0" id="v4y-id-Rmx">
+                                                <items>
+                                                    <imageView width="1" height="100" alignment="center" image="Walk3" contentMode="scaleAspectFit" id="l9g-O4-UQp"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="didTapStopButton" destination="AgC-eL-Hgc" id="kMQ-MK-vxe"/>
+                            </connections>
+                        </button>
                     </items>
+                    <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
                     <connections>
-                        <outlet property="image" destination="cJ2-Fn-1pr" id="Ka3-Hd-9GC"/>
+                        <outlet property="stopImage" destination="l9g-O4-UQp" id="fSx-0I-MmJ"/>
+                        <outlet property="tapToWalkLabel" destination="PMh-9H-uBE" id="Xvl-54-OKm"/>
+                        <outlet property="walkImage" destination="cJ2-Fn-1pr" id="r1m-ZQ-zyD"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="261" y="128.5"/>
         </scene>
     </scenes>
 </document>
