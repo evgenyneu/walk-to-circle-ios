@@ -17,10 +17,22 @@
             <objects>
                 <controller spacing="0.0" id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="Watch_Extension">
                     <items>
-                        <imageView width="100" height="100" alignment="center" verticalAlignment="center" image="Watch_compass" contentMode="scaleAspectFit" id="qvm-Oh-djh"/>
-                        <imageView width="100" height="100" alignment="center" image="Walk_noShadow2" contentMode="scaleAspectFit" id="XtP-VI-owM"/>
+                        <button alignment="center" verticalAlignment="center" id="GMb-Zw-qn3">
+                            <group key="contentGroup" width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="Rxo-hL-cn4">
+                                <items>
+                                    <imageView width="1" height="1" alignment="center" verticalAlignment="center" image="Watch_walk" contentMode="scaleAspectFit" id="FPA-ie-ZsC"/>
+                                </items>
+                            </group>
+                            <connections>
+                                <action selector="didTapButton" destination="AgC-eL-Hgc" id="gYc-vd-bKm"/>
+                            </connections>
+                        </button>
                     </items>
                     <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
+                    <connections>
+                        <outlet property="group" destination="Rxo-hL-cn4" id="zdj-KM-l4d"/>
+                        <outlet property="image" destination="FPA-ie-ZsC" id="1Z0-OH-aZe"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="261" y="128.5"/>
