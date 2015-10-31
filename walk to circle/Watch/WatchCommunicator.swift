@@ -22,6 +22,7 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
   func session(session: WCSession, didReceiveMessage message: [String : AnyObject],
     replyHandler: ([String : AnyObject]) -> Void) {
       
+    print("Reply to watch \(WatchParentReplyInfo.data)")
     replyHandler(WatchParentReplyInfo.data)
   }
 }

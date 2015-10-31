@@ -47,12 +47,18 @@ public struct WalkConstants {
 public struct WalkConstants_watch {
   public let commandKeyName = "command"
   public let commands = WalkConstants_watchCommands()
+  public let replyKeys = WalkConstants_watchReplyKeys()
+  public let walkDirectionUnkown: Int = -9973
 }
 
 public struct WalkConstants_watchCommands {
   let start = "start"
   let stop = "stop"
   let getInfo = "get info"
+}
+
+public struct WalkConstants_watchReplyKeys {
+  let walkDirection = "walk direction"
 }
 
 public struct WalkConstants_watchOld {

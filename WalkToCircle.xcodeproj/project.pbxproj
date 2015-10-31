@@ -140,6 +140,7 @@
 		7E6210671BE498C2006C30B9 /* WatchParentReplyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */; };
 		7E6210691BE49B24006C30B9 /* WatchWalkDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */; };
 		7E62106C1BE49B63006C30B9 /* WatchWalkDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */; };
+		7E6210701BE49C50006C30B9 /* TestLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62106E1BE49C16006C30B9 /* TestLocationHelper.swift */; };
 		7E6FED6F1BE490F800ACEF52 /* WatchToParentPinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED6E1BE490F800ACEF52 /* WatchToParentPinger.swift */; };
 		7E6FED711BE4918500ACEF52 /* WatchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED701BE4918500ACEF52 /* WatchCommunicator.swift */; };
 		7E6FED731BE4925B00ACEF52 /* AutocancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */; };
@@ -389,6 +390,7 @@
 		7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentReplyInfo.swift; sourceTree = "<group>"; };
 		7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchWalkDirection.swift; sourceTree = "<group>"; };
 		7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchWalkDirectionTests.swift; sourceTree = "<group>"; };
+		7E62106E1BE49C16006C30B9 /* TestLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLocationHelper.swift; sourceTree = "<group>"; };
 		7E6FED6E1BE490F800ACEF52 /* WatchToParentPinger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchToParentPinger.swift; sourceTree = "<group>"; };
 		7E6FED701BE4918500ACEF52 /* WatchCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunicator.swift; sourceTree = "<group>"; };
 		7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocancellingTimer.swift; sourceTree = "<group>"; };
@@ -804,13 +806,14 @@
 		2BCCDBA11968DC63005C4A47 /* walk to circleTests */ = {
 			isa = PBXGroup;
 			children = (
-				2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */,
-				2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */,
-				2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */,
+				7E62106D1BE49C01006C30B9 /* Helpers */,
 				2BCF7B6A1A5136290007B062 /* Core */,
 				2B7C38DD1A4ABAC700C3FDA7 /* Screens */,
 				2B1276441A47ECC000F6ED44 /* Utils */,
 				2BCCDBA21968DC63005C4A47 /* Supporting Files */,
+				2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */,
+				2B6D35D0197A5782008DDAE4 /* iiGeoTests.swift */,
+				2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */,
 			);
 			path = "walk to circleTests";
 			sourceTree = "<group>";
@@ -900,6 +903,14 @@
 				2BFCA84E1A4B90630080C988 /* README_scrolled_content.md */,
 			);
 			name = ScrolledContent;
+			sourceTree = "<group>";
+		};
+		7E62106D1BE49C01006C30B9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E62106E1BE49C16006C30B9 /* TestLocationHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7E6FED761BE4983500ACEF52 /* Watch */ = {
@@ -1280,6 +1291,7 @@
 				2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */,
 				2B23E82F1A52646D0062A01F /* CongratsPhraseTests.swift in Sources */,
 				2BE4D71B1A54B304006B600D /* CongratsSoundsTests.swift in Sources */,
+				7E6210701BE49C50006C30B9 /* TestLocationHelper.swift in Sources */,
 				2B9BA3B919970EA3009C0DE0 /* ButtonOverlapTests.swift in Sources */,
 				2B9BA3E919974665009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2B9BA3E619974555009C0DE0 /* scrollToAnnotationTests.swift in Sources */,

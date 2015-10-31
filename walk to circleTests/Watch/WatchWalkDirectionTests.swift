@@ -9,7 +9,9 @@ class WalkDirectionTests: XCTestCase {
   
   func testGetDirection() {
     // 136 degress
-    setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
+    TestLocationHelper.setTestUserLocation(CLLocationCoordinate2DMake(
+      -37.847480, 144.969737))
+    
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.861644, 144.986903)
     
     let result = WatchWalkDirection.get!
@@ -18,7 +20,9 @@ class WalkDirectionTests: XCTestCase {
   }
   
   func testGetDirection_noCurrentCircle() {
-    setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
+    TestLocationHelper.setTestUserLocation(
+      CLLocationCoordinate2DMake(-37.847480, 144.969737))
+    
     WalkCoordinate.clearCurrent() // No current circle
     
     let result = WatchWalkDirection.get
@@ -53,18 +57,5 @@ class WalkDirectionTests: XCTestCase {
     XCTAssertEqual(2, WatchWalkDirection.directionForBearing(405)) // 360 + 45 degrees
     XCTAssertEqual(12, WatchWalkDirection.directionForBearing(-90)) // 270 degrees
     XCTAssertEqual(12, WatchWalkDirection.directionForBearing(-450)) // 270 degrees
-  }
-  
-  private func setTestUserLocation(coordinate: CLLocationCoordinate2D) {
-    let location = CLLocation(
-      coordinate: coordinate,
-      altitude: 0,
-      horizontalAccuracy: 0,
-      verticalAccuracy: 0,
-      course: 0,
-      speed: 0,
-      timestamp: NSDate())
-    
-    WalkLocation.shared.lastLocation = location
   }
 }

@@ -22,7 +22,7 @@ class WatchToParentPinger {
     session.sendMessage(data, replyHandler: { reply in
       print("Reply from parent \(reply)")
 
-      if let reply = reply as? [String: String] {
+      if let reply = reply as? [String: AnyObject] {
       }
     }, errorHandler: nil)
   }

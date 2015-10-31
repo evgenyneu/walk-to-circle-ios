@@ -2,14 +2,12 @@ import CoreLocation
 
 public struct WatchWalkDirection{
   public static var get: Int? {
-    if let currentStart = start {
-      if let currentEnd = end {
-        let bearing = iiGeo.initialBearing(start: currentStart, end: currentEnd)
-        return directionForBearing(bearing)
-      }
+    if let currentStart = start, currentEnd = end {
+      let bearing = iiGeo.initialBearing(start: currentStart, end: currentEnd)
+      return directionForBearing(bearing)
     }
     
-    return nil
+    return WalkConstants.watch.walkDirectionUnkown
   }
   
   public static func directionForBearing(bearing: Double) -> Int {
