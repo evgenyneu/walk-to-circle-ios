@@ -8,34 +8,28 @@
         <!--Walk-->
         <scene sceneID="5ED-qi-gTZ">
             <objects>
-                <controller identifier="Walk" hidesWhenLoading="NO" id="WBC-Ov-C6Q" customClass="WalkInterfaceController" customModule="Watch_Extension"/>
+                <controller identifier="Walk" hidesWhenLoading="NO" id="WBC-Ov-C6Q" customClass="WalkInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <label alignment="left" text="Walk" id="KR0-rp-mk0"/>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="541" y="260"/>
+            <point key="canvasLocation" x="236" y="95"/>
         </scene>
         <!--Start Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
                 <controller spacing="0.0" id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="Watch_Extension">
                     <items>
-                        <button alignment="center" verticalAlignment="center" id="GMb-Zw-qn3">
-                            <group key="contentGroup" width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="Rxo-hL-cn4">
-                                <items>
-                                    <imageView width="1" height="1" alignment="center" verticalAlignment="center" image="Watch_walk" contentMode="scaleAspectFit" id="FPA-ie-ZsC"/>
-                                </items>
-                            </group>
-                            <connections>
-                                <action selector="didTapButton" destination="AgC-eL-Hgc" id="gYc-vd-bKm"/>
-                            </connections>
-                        </button>
+                        <imageView width="1" height="1" alignment="center" image="Watch_start" contentMode="scaleAspectFit" id="9sd-I7-l1y"/>
                     </items>
                     <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
                     <connections>
-                        <outlet property="group" destination="Rxo-hL-cn4" id="zdj-KM-l4d"/>
-                        <outlet property="image" destination="FPA-ie-ZsC" id="1Z0-OH-aZe"/>
+                        <segue destination="WBC-Ov-C6Q" kind="relationship" relationship="nextPage" id="Dqi-eb-kBj"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="261" y="128.5"/>
+            <point key="canvasLocation" x="29" y="95"/>
         </scene>
     </scenes>
 </document>
