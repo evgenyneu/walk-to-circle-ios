@@ -1,7 +1,7 @@
 import CoreLocation
 
 public struct WatchWalkDirection{
-  public static var get: Int? {
+  public static var get: Int {
     if let currentStart = start, currentEnd = end {
       let bearing = iiGeo.initialBearing(start: currentStart, end: currentEnd)
       return directionForBearing(bearing)

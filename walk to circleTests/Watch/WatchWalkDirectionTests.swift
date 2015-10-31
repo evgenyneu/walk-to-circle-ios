@@ -14,7 +14,7 @@ class WalkDirectionTests: XCTestCase {
     
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.861644, 144.986903)
     
-    let result = WatchWalkDirection.get!
+    let result = WatchWalkDirection.get
     
     XCTAssertEqual(6, result)
   }
@@ -27,7 +27,7 @@ class WalkDirectionTests: XCTestCase {
     
     let result = WatchWalkDirection.get
     
-    XCTAssert(result == nil)
+    XCTAssertEqual(result, -9973)
   }
   
   func testGetDirection_noUserLocation() {
@@ -36,7 +36,7 @@ class WalkDirectionTests: XCTestCase {
     
     let result = WatchWalkDirection.get
     
-    XCTAssert(result == nil)
+    XCTAssertEqual(result, -9973)
   }
   
   // directionForBearing

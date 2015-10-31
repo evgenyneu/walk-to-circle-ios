@@ -12,6 +12,9 @@
                     <items>
                         <label alignment="left" text="Walk" id="KR0-rp-mk0"/>
                     </items>
+                    <connections>
+                        <outlet property="walkLabel" destination="KR0-rp-mk0" id="5tH-cO-LeQ"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="236" y="95"/>

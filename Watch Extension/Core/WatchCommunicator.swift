@@ -3,10 +3,10 @@ import WatchConnectivity
 
 class WatchCommunicator: NSObject, WCSessionDelegate {
   func activateWatchConnectivity() {
-    if WCSession.isSupported() {
-      let session = WCSession.defaultSession()
-      session.delegate = self
-      session.activateSession()
-    }
+    if !WCSession.isSupported() { return }
+    
+    let session = WCSession.defaultSession()
+    session.delegate = self
+    session.activateSession()
   }
 }

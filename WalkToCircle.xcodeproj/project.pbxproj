@@ -154,6 +154,7 @@
 		7E7510AA1BACC2900070CCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510A91BACC2900070CCAF /* Assets.xcassets */; };
 		7E7510AE1BACC2900070CCAF /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E7510941BACC2900070CCAF /* Watch.app */; };
 		7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */; };
+		7E8BFD961BE4AAE20081C166 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
 		7E9407041BC8EF7800BC8DB4 /* WatchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */; };
 		7EB0A83E1BD2197B0009A39F /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */; };
 		7EB0A83F1BD2197B0009A39F /* WalkInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83D1BD2197B0009A39F /* WalkInterfaceController.swift */; };
@@ -1312,6 +1313,7 @@
 				7EB0A83F1BD2197B0009A39F /* WalkInterfaceController.swift in Sources */,
 				7E7510A81BACC2900070CCAF /* ExtensionDelegate.swift in Sources */,
 				7E6FED731BE4925B00ACEF52 /* AutocancellingTimer.swift in Sources */,
+				7E8BFD961BE4AAE20081C166 /* iiQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
