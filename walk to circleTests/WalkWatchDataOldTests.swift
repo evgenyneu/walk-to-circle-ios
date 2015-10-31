@@ -13,7 +13,7 @@ class WalkWatchDataTests: XCTestCase {
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.879057, 144.924075)
 
-    let result = WalkWatchData.walkDirection!
+    let result = WalkWatchDataOld.walkDirection!
 
     let resultLocation = result["userLocation"] as! [String: Double]
     let direction = result["circleDirection"] as! Int
@@ -24,10 +24,10 @@ class WalkWatchDataTests: XCTestCase {
   }
 
   func testDataToDictionary() {
-    let userLocation = WalkWatch_userLocationModel(latitude: 10, longitude: 2)
-    let data = WalkWatch_directionModel(userLocation: userLocation, circleDirection: 3)
+    let userLocation = WalkWatch_userLocationModelOld(latitude: 10, longitude: 2)
+    let data = WalkWatch_directionModelOld(userLocation: userLocation, circleDirection: 3)
 
-    let result = WalkWatchData.toDictionary(data)
+    let result = WalkWatchDataOld.toDictionary(data)
 
     let resultLocation = result["userLocation"] as! [String: Double]
     let direction = result["circleDirection"] as! Int
@@ -45,7 +45,7 @@ class WalkWatchDataTests: XCTestCase {
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.879057, 144.924075)
 
-    let result = WalkWatchData.data!
+    let result = WalkWatchDataOld.data!
 
     let userLocation = result.userLocation
 
@@ -58,7 +58,7 @@ class WalkWatchDataTests: XCTestCase {
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.current = nil // no current circle
 
-    let result = WalkWatchData.data
+    let result = WalkWatchDataOld.data
 
     XCTAssert(result == nil)
   }
@@ -67,7 +67,7 @@ class WalkWatchDataTests: XCTestCase {
     WalkLocation.shared.lastLocation = nil // no user location
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.879057, 144.924075)
 
-    let result = WalkWatchData.data
+    let result = WalkWatchDataOld.data
 
     XCTAssert(result == nil)
   }

@@ -5,7 +5,7 @@
 
 import CoreLocation
 
-public struct WalkWatchDirection {
+public struct WalkWatchDirectionOld{
   public static var get: Int? {
     if let currentStart = start {
       if let currentEnd = end {

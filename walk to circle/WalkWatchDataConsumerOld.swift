@@ -5,12 +5,12 @@
 
 import Foundation
 
-public struct WalkWatchDataConsumer {
-  public static func fromDictionary(data: [String: AnyObject]) -> WalkWatch_directionModel? {
+public struct WalkWatchDataConsumerOld {
+  public static func fromDictionary(data: [String: AnyObject]) -> WalkWatch_directionModelOld? {
     let p = CutePossumParser(data: data)
 
-    let data = WalkWatch_directionModel(
-      userLocation: WalkWatch_userLocationModel(
+    let data = WalkWatch_directionModelOld(
+      userLocation: WalkWatch_userLocationModelOld(
         latitude: p["userLocation"].parse("latitude", miss: 0),
         longitude: p["userLocation"].parse("longitude", miss: 0)),
       circleDirection: p.parse("circleDirection", miss: 0)

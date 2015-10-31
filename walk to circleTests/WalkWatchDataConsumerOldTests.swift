@@ -19,7 +19,7 @@ class WalkWatchDataConsumeTests: XCTestCase {
       "circleDirection": 14
       ] as [String: AnyObject]
 
-    let result = WalkWatchDataConsumer.fromDictionary(dict)!
+    let result = WalkWatchDataConsumerOld.fromDictionary(dict)!
 
     XCTAssertEqual(1.123, result.userLocation.latitude)
     XCTAssertEqual(5.567, result.userLocation.longitude)

@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
     reply: (([NSObject : AnyObject]?) -> Void)) {
 
-    let replyData = WalkWatchData.walkDirection
+    let replyData = WalkWatchDataOld.walkDirection
     reply(replyData)
   }
 }

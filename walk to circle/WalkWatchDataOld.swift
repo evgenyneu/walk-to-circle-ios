@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct WalkWatchData {
+public struct WalkWatchDataOld {
   public static var walkDirection: [String: AnyObject]? {
     if let currentData = data {
       return toDictionary(currentData)
@@ -14,7 +14,7 @@ public struct WalkWatchData {
     return nil
   }
 
-  public static func toDictionary(data: WalkWatch_directionModel) -> [String: AnyObject] {
+  public static func toDictionary(data: WalkWatch_directionModelOld) -> [String: AnyObject] {
     return [
       WalkConstants.watchOld.userLocation.name: [
         WalkConstants.watchOld.latitudeName: data.userLocation.latitude,
@@ -25,10 +25,10 @@ public struct WalkWatchData {
     ]
   }
 
-  public static var data: WalkWatch_directionModel? {
-    if let currentUserLocation = WalkWatchUserLocation.userLocation {
-      if let currentDirection = WalkWatchDirection.get {
-        return WalkWatch_directionModel(
+  public static var data: WalkWatch_directionModelOld? {
+    if let currentUserLocation = WalkWatchUserLocationOld.userLocation {
+      if let currentDirection = WalkWatchDirectionOld.get {
+        return WalkWatch_directionModelOld(
           userLocation: currentUserLocation,
           circleDirection: currentDirection
         )

@@ -22,7 +22,7 @@ class WalkWatchUserLocationTests: XCTestCase {
 
     WalkLocation.shared.lastLocation = location
 
-    let result = WalkWatchUserLocation.userLocation!
+    let result = WalkWatchUserLocationOld.userLocation!
 
     XCTAssertEqual(-37.863471, result.latitude)
     XCTAssertEqual(144.983910, result.longitude)
@@ -31,7 +31,7 @@ class WalkWatchUserLocationTests: XCTestCase {
   func testCurrentUserLocation_locationUpdateIsMissing() {
     WalkLocation.shared.lastLocation = nil
 
-    let result = WalkWatchUserLocation.userLocation
+    let result = WalkWatchUserLocationOld.userLocation
 
     XCTAssert(result == nil)
   }
@@ -50,7 +50,7 @@ class WalkWatchUserLocationTests: XCTestCase {
 
     WalkLocation.shared.lastLocation = location
 
-    let result = WalkWatchUserLocation.userLocation
+    let result = WalkWatchUserLocationOld.userLocation
 
     XCTAssert(result == nil)
   }
@@ -58,13 +58,13 @@ class WalkWatchUserLocationTests: XCTestCase {
   // Is location fresh
   // -----------------
   func testIsLocationFresh_Yes() {
-    let result = WalkWatchUserLocation.isLocationFresh(NSDate())
+    let result = WalkWatchUserLocationOld.isLocationFresh(NSDate())
 
     XCTAssert(result)
   }
 
   func testIsLocationFresh_No() {
-    let result = WalkWatchUserLocation.isLocationFresh(NSDate().dateByAddingTimeInterval(-40))
+    let result = WalkWatchUserLocationOld.isLocationFresh(NSDate().dateByAddingTimeInterval(-40))
 
     XCTAssertFalse(result)
   }

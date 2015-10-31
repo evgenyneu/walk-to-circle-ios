@@ -27,8 +27,6 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
   func session(session: WCSession, didReceiveMessage message: [String : AnyObject],
     replyHandler: ([String : AnyObject]) -> Void) {
       
-    iiQ.main { WalkViewControllers.Congrats.show() }
     WatchCommunicator.reply(replyHandler)
-    print("message from watch")
   }
 }

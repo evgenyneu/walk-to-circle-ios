@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct WalkWatch_userLocationModel {
+public struct WalkWatch_userLocationModelOld {
   public init(latitude: Double, longitude: Double) {
     self.latitude = latitude
     self.longitude = longitude

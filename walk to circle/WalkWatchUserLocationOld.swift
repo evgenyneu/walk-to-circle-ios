@@ -5,13 +5,13 @@
 
 import Foundation
 
-public struct WalkWatchUserLocation {
-  public static var userLocation: WalkWatch_userLocationModel? {
+public struct WalkWatchUserLocationOld {
+  public static var userLocation: WalkWatch_userLocationModelOld? {
     if let currentLastLocation = WalkLocation.shared.lastLocation {
 
       if !isLocationFresh(currentLastLocation.timestamp) { return nil }
 
-      return WalkWatch_userLocationModel(
+      return WalkWatch_userLocationModelOld(
         latitude: currentLastLocation.coordinate.latitude,
         longitude: currentLastLocation.coordinate.longitude)
     }

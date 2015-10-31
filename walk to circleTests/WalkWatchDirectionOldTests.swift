@@ -17,7 +17,7 @@ class WalkWatchWalkDirectionTests: XCTestCase {
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.861644, 144.986903)
 
-    let result = WalkWatchDirection.get!
+    let result = WalkWatchDirectionOld.get!
 
     XCTAssertEqual(6, result)
   }
@@ -26,7 +26,7 @@ class WalkWatchWalkDirectionTests: XCTestCase {
     setTestUserLocation(CLLocationCoordinate2DMake(-37.847480, 144.969737))
     WalkCoordinate.clearCurrent() // No current circle
 
-    let result = WalkWatchDirection.get
+    let result = WalkWatchDirectionOld.get
 
     XCTAssert(result == nil)
   }
@@ -35,7 +35,7 @@ class WalkWatchWalkDirectionTests: XCTestCase {
     WalkLocation.shared.lastLocation = nil // No current user location
     WalkCoordinate.current = CLLocationCoordinate2DMake(-37.861644, 144.986903)
 
-    let result = WalkWatchDirection.get
+    let result = WalkWatchDirectionOld.get
 
     XCTAssert(result == nil)
   }
@@ -44,20 +44,20 @@ class WalkWatchWalkDirectionTests: XCTestCase {
   // ---------------
 
   func testDirectionForBearing() {
-    XCTAssertEqual(0, WalkWatchDirection.directionForBearing(0))
-    XCTAssertEqual(1, WalkWatchDirection.directionForBearing(22.5))
-    XCTAssertEqual(1, WalkWatchDirection.directionForBearing(30))
-    XCTAssertEqual(2, WalkWatchDirection.directionForBearing(40))
-    XCTAssertEqual(4, WalkWatchDirection.directionForBearing(90))
-    XCTAssertEqual(8, WalkWatchDirection.directionForBearing(180))
-    XCTAssertEqual(12, WalkWatchDirection.directionForBearing(270))
-    XCTAssertEqual(0, WalkWatchDirection.directionForBearing(359))
+    XCTAssertEqual(0, WalkWatchDirectionOld.directionForBearing(0))
+    XCTAssertEqual(1, WalkWatchDirectionOld.directionForBearing(22.5))
+    XCTAssertEqual(1, WalkWatchDirectionOld.directionForBearing(30))
+    XCTAssertEqual(2, WalkWatchDirectionOld.directionForBearing(40))
+    XCTAssertEqual(4, WalkWatchDirectionOld.directionForBearing(90))
+    XCTAssertEqual(8, WalkWatchDirectionOld.directionForBearing(180))
+    XCTAssertEqual(12, WalkWatchDirectionOld.directionForBearing(270))
+    XCTAssertEqual(0, WalkWatchDirectionOld.directionForBearing(359))
 
     // Edge cases
-    XCTAssertEqual(0, WalkWatchDirection.directionForBearing(360))
-    XCTAssertEqual(2, WalkWatchDirection.directionForBearing(405)) // 360 + 45 degrees
-    XCTAssertEqual(12, WalkWatchDirection.directionForBearing(-90)) // 270 degrees
-    XCTAssertEqual(12, WalkWatchDirection.directionForBearing(-450)) // 270 degrees
+    XCTAssertEqual(0, WalkWatchDirectionOld.directionForBearing(360))
+    XCTAssertEqual(2, WalkWatchDirectionOld.directionForBearing(405)) // 360 + 45 degrees
+    XCTAssertEqual(12, WalkWatchDirectionOld.directionForBearing(-90)) // 270 degrees
+    XCTAssertEqual(12, WalkWatchDirectionOld.directionForBearing(-450)) // 270 degrees
   }
 
   private func setTestUserLocation(coordinate: CLLocationCoordinate2D) {
