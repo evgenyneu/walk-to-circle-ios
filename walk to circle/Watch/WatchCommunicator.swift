@@ -4,11 +4,6 @@ import WatchConnectivity
 var walkWatchCommunicator = WatchCommunicator()
 
 class WatchCommunicator: NSObject, WCSessionDelegate {
-  static func reply(reply: (([String : AnyObject]) -> Void)) {
-    let data = ["hi": "hello"]
-    reply(data)
-  }
-  
   func activateWatchConnectivity() {
     if #available(iOS 9.0, *) {
       if !WCSession.isSupported() { return }
@@ -27,6 +22,6 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
   func session(session: WCSession, didReceiveMessage message: [String : AnyObject],
     replyHandler: ([String : AnyObject]) -> Void) {
       
-    WatchCommunicator.reply(replyHandler)
+    replyHandler(WatchParentReplyInfo.data)
   }
 }

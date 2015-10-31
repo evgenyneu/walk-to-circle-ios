@@ -137,11 +137,15 @@
 		2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7A5F31A5024FD00B8846E /* iiRandom.swift */; };
 		2BFCA84D1A4B904A0080C988 /* TegScrolledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */; };
 		7E234F561BACD38E00171A6B /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E234F551BACD38E00171A6B /* InitialViewController.swift */; };
+		7E6210671BE498C2006C30B9 /* WatchParentReplyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */; };
+		7E6210691BE49B24006C30B9 /* WatchWalkDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */; };
+		7E62106C1BE49B63006C30B9 /* WatchWalkDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */; };
 		7E6FED6F1BE490F800ACEF52 /* WatchToParentPinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED6E1BE490F800ACEF52 /* WatchToParentPinger.swift */; };
 		7E6FED711BE4918500ACEF52 /* WatchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED701BE4918500ACEF52 /* WatchCommunicator.swift */; };
 		7E6FED731BE4925B00ACEF52 /* AutocancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */; };
 		7E6FED741BE4926A00ACEF52 /* AutocancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */; };
 		7E6FED751BE4959E00ACEF52 /* WalkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70361A3431780026CDA9 /* WalkConstants.swift */; };
+		7E6FED791BE4987500ACEF52 /* WatchParentReplyInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED771BE4985400ACEF52 /* WatchParentReplyInfoTests.swift */; };
 		7E7510981BACC2900070CCAF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510961BACC2900070CCAF /* Interface.storyboard */; };
 		7E75109A1BACC2900070CCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510991BACC2900070CCAF /* Assets.xcassets */; };
 		7E7510A11BACC2900070CCAF /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E7510A01BACC2900070CCAF /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -382,9 +386,13 @@
 		2BFCA84C1A4B904A0080C988 /* TegScrolledContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegScrolledContent.swift; sourceTree = "<group>"; };
 		2BFCA84E1A4B90630080C988 /* README_scrolled_content.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_scrolled_content.md; sourceTree = "<group>"; };
 		7E234F551BACD38E00171A6B /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentReplyInfo.swift; sourceTree = "<group>"; };
+		7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchWalkDirection.swift; sourceTree = "<group>"; };
+		7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchWalkDirectionTests.swift; sourceTree = "<group>"; };
 		7E6FED6E1BE490F800ACEF52 /* WatchToParentPinger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchToParentPinger.swift; sourceTree = "<group>"; };
 		7E6FED701BE4918500ACEF52 /* WatchCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunicator.swift; sourceTree = "<group>"; };
 		7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocancellingTimer.swift; sourceTree = "<group>"; };
+		7E6FED771BE4985400ACEF52 /* WatchParentReplyInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentReplyInfoTests.swift; sourceTree = "<group>"; };
 		7E7510941BACC2900070CCAF /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7510971BACC2900070CCAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		7E7510991BACC2900070CCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -818,9 +826,10 @@
 		2BCF7B6A1A5136290007B062 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7E6FED761BE4983500ACEF52 /* Watch */,
+				2B5C2CA61AAFE0ED0077532D /* WatchOld */,
 				2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */,
 				2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */,
-				2B5C2CA61AAFE0ED0077532D /* WatchOld */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -893,6 +902,15 @@
 			name = ScrolledContent;
 			sourceTree = "<group>";
 		};
+		7E6FED761BE4983500ACEF52 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				7E6FED771BE4985400ACEF52 /* WatchParentReplyInfoTests.swift */,
+				7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
 		7E7510951BACC2900070CCAF /* Watch */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,6 +937,8 @@
 			isa = PBXGroup;
 			children = (
 				7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */,
+				7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */,
+				7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */,
 			);
 			path = Watch;
 			sourceTree = "<group>";
@@ -1207,7 +1227,9 @@
 				2BE4D71D1A54B35C006B600D /* CongratsSounds.swift in Sources */,
 				2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */,
 				2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */,
+				7E6210671BE498C2006C30B9 /* WatchParentReplyInfo.swift in Sources */,
 				2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */,
+				7E6210691BE49B24006C30B9 /* WatchWalkDirection.swift in Sources */,
 				2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
 				2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */,
@@ -1247,9 +1269,11 @@
 				2BE4D7471A54DA04006B600D /* WalkQuotePickerTests.swift in Sources */,
 				2B5503F91AB012EF00CD151C /* WalkWatchDataConsumerOldTests.swift in Sources */,
 				2B5C2CAC1AAFE1030077532D /* WalkWatchUserLocationOldTests.swift in Sources */,
+				7E62106C1BE49B63006C30B9 /* WatchWalkDirectionTests.swift in Sources */,
 				2B5C2CAB1AAFE1030077532D /* WalkWatchDataOldTests.swift in Sources */,
 				2B5C2CAA1AAFE1030077532D /* WalkWatchDirectionOldTests.swift in Sources */,
 				2B9BA3B5199709A0009C0DE0 /* ButtonOverlap.swift in Sources */,
+				7E6FED791BE4987500ACEF52 /* WatchParentReplyInfoTests.swift in Sources */,
 				2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */,
 				2BE7A5F51A50263500B8846E /* iiRandom.swift in Sources */,
 				2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */,
