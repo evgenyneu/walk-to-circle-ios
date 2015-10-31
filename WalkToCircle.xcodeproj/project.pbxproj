@@ -141,6 +141,7 @@
 		7E6FED711BE4918500ACEF52 /* WatchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED701BE4918500ACEF52 /* WatchCommunicator.swift */; };
 		7E6FED731BE4925B00ACEF52 /* AutocancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */; };
 		7E6FED741BE4926A00ACEF52 /* AutocancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */; };
+		7E6FED751BE4959E00ACEF52 /* WalkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70361A3431780026CDA9 /* WalkConstants.swift */; };
 		7E7510981BACC2900070CCAF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510961BACC2900070CCAF /* Interface.storyboard */; };
 		7E75109A1BACC2900070CCAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E7510991BACC2900070CCAF /* Assets.xcassets */; };
 		7E7510A11BACC2900070CCAF /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E7510A01BACC2900070CCAF /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -1269,6 +1270,7 @@
 			files = (
 				7E6FED711BE4918500ACEF52 /* WatchCommunicator.swift in Sources */,
 				7EB0A8431BD21B610009A39F /* WalkInterfaceControllers.swift in Sources */,
+				7E6FED751BE4959E00ACEF52 /* WalkConstants.swift in Sources */,
 				7E6FED6F1BE490F800ACEF52 /* WatchToParentPinger.swift in Sources */,
 				7EB0A83E1BD2197B0009A39F /* StartInterfaceController.swift in Sources */,
 				7EB0A83F1BD2197B0009A39F /* WalkInterfaceController.swift in Sources */,

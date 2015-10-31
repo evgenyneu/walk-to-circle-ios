@@ -40,6 +40,19 @@ public struct WalkConstants {
   public static let textFadeInDuration = 3.0
 
   public static let watchOld = WalkConstants_watchOld()
+  public static let watch = WalkConstants_watch()
+
+}
+
+public struct WalkConstants_watch {
+  public let commandKeyName = "command"
+  public let commands = WalkConstants_watchCommands()
+}
+
+public struct WalkConstants_watchCommands {
+  let start = "start"
+  let stop = "stop"
+  let getInfo = "get info"
 }
 
 public struct WalkConstants_watchOld {
