@@ -21,6 +21,6 @@ public struct WalkWatchUserLocation {
 
   public static func isLocationFresh(date: NSDate) -> Bool {
     let secondsUpdating = NSDate().timeIntervalSinceDate(date)
-    return secondsUpdating < WalkConstants.watch.userLocation.maxLocationAgeInSeconds
+    return secondsUpdating < WalkConstants.watchOld.userLocation.maxLocationAgeInSeconds
   }
 }

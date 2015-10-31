@@ -21,7 +21,13 @@
             <objects>
                 <controller spacing="0.0" id="AgC-eL-Hgc" customClass="StartInterfaceController" customModule="Watch_Extension">
                     <items>
-                        <imageView width="1" height="1" alignment="center" image="Watch_start" contentMode="scaleAspectFit" id="9sd-I7-l1y"/>
+                        <button alignment="left" id="aJO-fk-YP4">
+                            <group key="contentGroup" width="1" alignment="left" id="CY1-8v-JZu">
+                                <items>
+                                    <imageView width="1" height="1" alignment="center" image="Watch_start" contentMode="scaleAspectFit" id="djZ-hP-FFZ"/>
+                                </items>
+                            </group>
+                        </button>
                     </items>
                     <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
                     <connections>

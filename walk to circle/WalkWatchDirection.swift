@@ -27,7 +27,7 @@ public struct WalkWatchDirection {
 
     let direction = Int(round(normalizedBearing / degreesPerDirection))
 
-    return direction % WalkConstants.watch.numberOfDirections // Make it less than numberOfDirections
+    return direction % WalkConstants.watchOld.numberOfDirections // Make it less than numberOfDirections
   }
 
   private static var start: CLLocationCoordinate2D? {
@@ -39,6 +39,6 @@ public struct WalkWatchDirection {
   }
 
   private static var degreesPerDirection: Double {
-    return 360.0 / Double(WalkConstants.watch.numberOfDirections)
+    return 360.0 / Double(WalkConstants.watchOld.numberOfDirections)
   }
 }

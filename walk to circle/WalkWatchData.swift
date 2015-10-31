@@ -16,12 +16,12 @@ public struct WalkWatchData {
 
   public static func toDictionary(data: WalkWatch_directionModel) -> [String: AnyObject] {
     return [
-      WalkConstants.watch.userLocation.name: [
-        WalkConstants.watch.latitudeName: data.userLocation.latitude,
-        WalkConstants.watch.longitudeName: data.userLocation.longitude
+      WalkConstants.watchOld.userLocation.name: [
+        WalkConstants.watchOld.latitudeName: data.userLocation.latitude,
+        WalkConstants.watchOld.longitudeName: data.userLocation.longitude
       ],
 
-      WalkConstants.watch.circleDirectionName: data.circleDirection
+      WalkConstants.watchOld.circleDirectionName: data.circleDirection
     ]
   }
 

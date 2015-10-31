@@ -39,11 +39,11 @@ public struct WalkConstants {
 
   public static let textFadeInDuration = 3.0
 
-  public static let watch = WalkConstrants_watch()
+  public static let watchOld = WalkConstants_watchOld()
 }
 
-public struct WalkConstrants_watch {
-  public let userLocation = WalkConstrants_watch_userLocation()
+public struct WalkConstants_watchOld {
+  public let userLocation = WalkConstants_watch_userLocation()
   public let circleDirectionName = "circleDirection"
 
   public let latitudeName = "latitude"
@@ -68,7 +68,7 @@ public struct WalkConstrants_watch {
   public let minMapUpdateDistance_inMeters: CLLocationDistance = 30
 }
 
-public struct WalkConstrants_watch_userLocation {
+public struct WalkConstants_watch_userLocation {
   public let name = "userLocation"
 
   // Maximum age of current user location that is considered fresh, in seconds.
