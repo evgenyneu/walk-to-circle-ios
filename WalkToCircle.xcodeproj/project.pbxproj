@@ -157,7 +157,7 @@
 		7E8BFD961BE4AAE20081C166 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
 		7E9407041BC8EF7800BC8DB4 /* WatchParentCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */; };
 		7EB0A83E1BD2197B0009A39F /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */; };
-		7EB0A83F1BD2197B0009A39F /* WalkInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83D1BD2197B0009A39F /* WalkInterfaceController.swift */; };
+		7EB0A83F1BD2197B0009A39F /* DiagnoseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83D1BD2197B0009A39F /* DiagnoseInterfaceController.swift */; };
 		7EB0A8431BD21B610009A39F /* WalkInterfaceControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A8421BD21B610009A39F /* WalkInterfaceControllers.swift */; };
 /* End PBXBuildFile section */
 
@@ -407,7 +407,7 @@
 		7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
 		7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentCommunicator.swift; sourceTree = "<group>"; };
 		7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartInterfaceController.swift; sourceTree = "<group>"; };
-		7EB0A83D1BD2197B0009A39F /* WalkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkInterfaceController.swift; sourceTree = "<group>"; };
+		7EB0A83D1BD2197B0009A39F /* DiagnoseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseInterfaceController.swift; sourceTree = "<group>"; };
 		7EB0A8421BD21B610009A39F /* WalkInterfaceControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkInterfaceControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -959,7 +959,7 @@
 			isa = PBXGroup;
 			children = (
 				7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */,
-				7EB0A83D1BD2197B0009A39F /* WalkInterfaceController.swift */,
+				7EB0A83D1BD2197B0009A39F /* DiagnoseInterfaceController.swift */,
 			);
 			path = InterfaceControllers;
 			sourceTree = "<group>";
@@ -1310,7 +1310,7 @@
 				7E6FED751BE4959E00ACEF52 /* WalkConstants.swift in Sources */,
 				7E6FED6F1BE490F800ACEF52 /* WatchToParentPinger.swift in Sources */,
 				7EB0A83E1BD2197B0009A39F /* StartInterfaceController.swift in Sources */,
-				7EB0A83F1BD2197B0009A39F /* WalkInterfaceController.swift in Sources */,
+				7EB0A83F1BD2197B0009A39F /* DiagnoseInterfaceController.swift in Sources */,
 				7E7510A81BACC2900070CCAF /* ExtensionDelegate.swift in Sources */,
 				7E6FED731BE4925B00ACEF52 /* AutocancellingTimer.swift in Sources */,
 				7E8BFD961BE4AAE20081C166 /* iiQ.swift in Sources */,

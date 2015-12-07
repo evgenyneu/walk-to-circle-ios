@@ -2,7 +2,7 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 
-class WalkInterfaceController: WKInterfaceController {
+class DiagnoseInterfaceController: WKInterfaceController {
   
   @IBOutlet var walkLabel: WKInterfaceLabel!
   
