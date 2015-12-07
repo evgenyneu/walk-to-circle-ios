@@ -9,12 +9,9 @@
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
-  
-  let watchCommunicator = WatchCommunicator()
-  
+    
   func applicationDidFinishLaunching() {
-    watchCommunicator.activateWatchConnectivity()
-    watchToParentPinger.start()    
+    walkWatchCommunicator.activateWatchConnectivity()
   }
   
   func applicationDidBecomeActive() {

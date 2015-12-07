@@ -155,7 +155,7 @@
 		7E7510AE1BACC2900070CCAF /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7E7510941BACC2900070CCAF /* Watch.app */; };
 		7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */; };
 		7E8BFD961BE4AAE20081C166 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
-		7E9407041BC8EF7800BC8DB4 /* WatchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */; };
+		7E9407041BC8EF7800BC8DB4 /* WatchParentCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */; };
 		7EB0A83E1BD2197B0009A39F /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */; };
 		7EB0A83F1BD2197B0009A39F /* WalkInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83D1BD2197B0009A39F /* WalkInterfaceController.swift */; };
 		7EB0A8431BD21B610009A39F /* WalkInterfaceControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A8421BD21B610009A39F /* WalkInterfaceControllers.swift */; };
@@ -405,7 +405,7 @@
 		7E7510A91BACC2900070CCAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E7510AB1BACC2900070CCAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
-		7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunicator.swift; sourceTree = "<group>"; };
+		7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentCommunicator.swift; sourceTree = "<group>"; };
 		7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartInterfaceController.swift; sourceTree = "<group>"; };
 		7EB0A83D1BD2197B0009A39F /* WalkInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkInterfaceController.swift; sourceTree = "<group>"; };
 		7EB0A8421BD21B610009A39F /* WalkInterfaceControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkInterfaceControllers.swift; sourceTree = "<group>"; };
@@ -948,7 +948,7 @@
 		7E9407011BC8EE9500BC8DB4 /* Watch */ = {
 			isa = PBXGroup;
 			children = (
-				7E9407021BC8EEA400BC8DB4 /* WatchCommunicator.swift */,
+				7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */,
 				7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */,
 				7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */,
 			);
@@ -1219,7 +1219,7 @@
 				7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
 				2B5503F51AB012D300CD151C /* WalkWatchDataConsumerOld.swift in Sources */,
-				7E9407041BC8EF7800BC8DB4 /* WatchCommunicator.swift in Sources */,
+				7E9407041BC8EF7800BC8DB4 /* WatchParentCommunicator.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,

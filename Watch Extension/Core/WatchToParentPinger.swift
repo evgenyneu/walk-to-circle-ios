@@ -5,10 +5,10 @@ let watchToParentPinger = WatchToParentPinger()
 
 class WatchToParentPinger {
   var timer: AutoCancellingTimer?
-  var didUpdateDirection: ((Int)->())?
+  var didUpdateDirectionMainQueue: ((Int)->())?
   
   func start() {
-    timer = AutoCancellingTimer(interval: 1, repeats: true, callback: timerDidFired)
+    //timer = AutoCancellingTimer(interval: 1, repeats: true, callback: timerDidFired)
   }
   
   private func timerDidFired() {
@@ -16,21 +16,27 @@ class WatchToParentPinger {
 
     let session = WCSession.defaultSession()
 
-    print("Send message from child")
+    //print("Send message from child")
 
     let data = [WalkConstants.watch.commandKeyName: WalkConstants.watch.commands.getInfo]
     
     session.sendMessage(data,
-    replyHandler: { [weak self] reply in
-      print("Reply from parent \(reply)")
-      self?.didUpdateDirection?(43512)
-
-      if let direction = reply[WalkConstants.watch.replyKeys.walkDirection] as? Int {
-        self?.didUpdateDirection?(direction)
+      replyHandler: { reply in
+        iiQ.main { [weak self] in
+           self?.didReceiveReplyFromContainerAppMainQueue(reply)
+        }
+      },
+      errorHandler: { error in
+        print("Error connecting to parent \(error.description)")
       }
-    },
-    errorHandler: { error in
-      print("Error connecting to parent \(error.description)")
-    })
+    )
+  }
+  
+  private func didReceiveReplyFromContainerAppMainQueue(data: [String : AnyObject]) {
+    //print("Reply from parent \(data)")
+    
+    if let direction = data[WalkConstants.watch.replyKeys.walkDirection] as? Int {
+      didUpdateDirectionMainQueue?(direction)
+    }
   }
 }

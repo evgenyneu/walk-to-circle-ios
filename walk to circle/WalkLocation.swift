@@ -53,6 +53,10 @@ public class WalkLocation: NSObject, CLLocationManagerDelegate {
 
     locationManager.startUpdatingLocation()
     locationUpdateStarted = NSDate()
+    
+    if #available(iOS 9.0, *) {
+      locationManager.allowsBackgroundLocationUpdates = true
+    }
   }
 
   func stopUpdatingLocation() {

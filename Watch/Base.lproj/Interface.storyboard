@@ -10,9 +10,11 @@
             <objects>
                 <controller identifier="Walk" hidesWhenLoading="NO" id="WBC-Ov-C6Q" customClass="WalkInterfaceController" customModule="Watch_Extension">
                     <items>
-                        <label alignment="left" text="Walk" id="KR0-rp-mk0"/>
+                        <label alignment="left" text="Walk" numberOfLines="0" id="KR0-rp-mk0"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="GrH-D4-12k"/>
                     </items>
                     <connections>
+                        <outlet property="connectivityStatusLabel" destination="GrH-D4-12k" id="Kkz-h3-amf"/>
                         <outlet property="walkLabel" destination="KR0-rp-mk0" id="5tH-cO-LeQ"/>
                     </connections>
                 </controller>

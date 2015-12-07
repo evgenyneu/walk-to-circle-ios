@@ -6,15 +6,26 @@ class WalkInterfaceController: WKInterfaceController {
   
   @IBOutlet var walkLabel: WKInterfaceLabel!
   
+  @IBOutlet var connectivityStatusLabel: WKInterfaceLabel!
+  
   override func willActivate() {
     super.willActivate()
   
-    watchToParentPinger.didUpdateDirection = didUpdateDirection
+    walkWatchCommunicator.didUpdateDirectionMainQueue = didUpdateDirectionMainQueue
+    
+    updateConnectivityStatus()
+    walkWatchCommunicator.didUpdateStatusMainQueue = updateConnectivityStatus
   }
   
-  func didUpdateDirection(direction: Int) {
-    iiQ.main { [weak self] in
-      self?.walkLabel.setText("\(direction) \(NSDate().timeIntervalSince1970 * 1000)")
-    }
+  func didUpdateDirectionMainQueue(direction: Int) {
+    walkLabel.setText("\(direction) \(timeTicks)")
+  }
+  
+  func updateConnectivityStatus() {
+    connectivityStatusLabel.setText("\(walkWatchCommunicator.status) \(timeTicks)")
+  }
+  
+  var timeTicks: Double {
+    return NSDate().timeIntervalSince1970 * 1000
   }
 }

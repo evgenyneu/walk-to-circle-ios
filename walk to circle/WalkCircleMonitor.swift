@@ -14,6 +14,9 @@ private let walkCircleMonitor = WalkCircleMonitor()
 class WalkCircleMonitor: NSObject {
   private var region = CLCircularRegion()
   
+  // Used to send update of location to the Apple Watch app
+  var didReceiveLocationUpdate: (()->())?
+  
   class var shared: WalkCircleMonitor {
     return walkCircleMonitor
   }
@@ -49,6 +52,8 @@ class WalkCircleMonitor: NSObject {
   }
 
   func processLocationUpdate(location: CLLocation) -> Bool {
+    didReceiveLocationUpdate?()
+    
     if region.containsCoordinate(location.coordinate) {
       locationReached()
       return true

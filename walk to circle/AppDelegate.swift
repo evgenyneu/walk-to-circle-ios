@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     WalkLocation.shared.reactToCurrentAuthorizationStatus()
     WalkViewControllers.toBePresented.show()
     
-    walkWatchCommunicator.activateWatchConnectivity()
+    walkWatchParentCommunicator.activateWatchConnectivity()
     
     return true
   }
@@ -42,14 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-  }
-
-  func application(application: UIApplication,
-    handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?,
-    reply: (([NSObject : AnyObject]?) -> Void)) {
-
-    let replyData = WalkWatchDataOld.walkDirection
-    reply(replyData)
   }
 }
 
