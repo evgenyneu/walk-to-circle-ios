@@ -30,7 +30,13 @@
                             <items>
                                 <group width="1" height="1" alignment="center" backgroundImage="compass_arrow_" contentMode="scaleAspectFit" id="SuI-cC-ar0">
                                     <items>
-                                        <imageView width="1" height="1" alignment="center" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
+                                        <button alignment="left" accessibilityLabel="Information" id="bR2-cD-zdY">
+                                            <group key="contentGroup" alignment="left" id="6N5-Z8-kvt">
+                                                <items>
+                                                    <imageView alignment="left" image="watch_information" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
+                                                </items>
+                                            </group>
+                                        </button>
                                     </items>
                                 </group>
                             </items>
