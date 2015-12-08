@@ -12,7 +12,7 @@ class WatchParentCommunicator: NSObject, WCSessionDelegate {
       let session = WCSession.defaultSession()
       session.delegate = self
       session.activateSession()
-      WalkCircleMonitor.shared.didReceiveLocationUpdate = didReceiveLocationUpdate
+      WalkCircleMonitor.shared.didReceiveLocationUpdateForWatch = didReceiveLocationUpdate
       
     }
   }
