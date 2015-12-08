@@ -28,7 +28,11 @@
                     <items>
                         <group width="1" alignment="center" backgroundImage="watch_compass_background" contentMode="scaleAspectFit" id="IvX-p4-T9a">
                             <items>
-                                <imageView width="1" height="1" alignment="center" image="compass_arrow_0" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
+                                <group width="1" height="1" alignment="center" backgroundImage="compass_arrow_" contentMode="scaleAspectFit" id="SuI-cC-ar0">
+                                    <items>
+                                        <imageView width="1" height="1" alignment="center" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>

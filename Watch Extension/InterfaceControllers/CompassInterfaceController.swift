@@ -10,8 +10,8 @@ class CompassInterfaceController: WKInterfaceController {
   }
   
   func didUpdateDirectionMainQueue(direction: Int) {
-    let imageName = arrowFileName(direction)
-    arrowImage.setImageNamed(imageName)
+    //let imageName = arrowFileName(direction)
+    //arrowImage.setImageNamed(imageName)
   }
   
   private func arrowFileName(direction: Int) -> String {
