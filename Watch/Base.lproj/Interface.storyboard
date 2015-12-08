@@ -19,7 +19,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="373" y="95"/>
+            <point key="canvasLocation" x="543" y="95"/>
         </scene>
         <!--Compass Interface Controller-->
         <scene sceneID="hRw-r8-Ka3">
@@ -36,6 +36,9 @@
                                                     <imageView alignment="left" image="watch_help" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
                                                 </items>
                                             </group>
+                                            <connections>
+                                                <action selector="didTapHelpButton" destination="2XW-gs-aWx" id="qCj-5W-tCz"/>
+                                            </connections>
                                         </button>
                                     </items>
                                 </group>
@@ -44,18 +47,25 @@
                     </items>
                     <connections>
                         <outlet property="arrowImage" destination="F5j-GN-BMd" id="Wec-bc-oZ3"/>
-                        <segue destination="WBC-Ov-C6Q" kind="relationship" relationship="nextPage" id="9tW-KE-V2K"/>
+                        <segue destination="hXw-Wa-5YC" kind="relationship" relationship="nextPage" id="x5f-6A-fL3"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="202" y="95"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Help Interface Controller-->
         <scene sceneID="K9s-no-bkc">
             <objects>
-                <controller id="hXw-Wa-5YC"/>
+                <controller id="hXw-Wa-5YC" customClass="HelpInterfaceController" customModule="Watch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Walk in the direction of the arrow to reach your circle. Can you figure out where north, east, south, and west are?" textAlignment="center" numberOfLines="0" id="gjl-x1-Xep"/>
+                    </items>
+                    <connections>
+                        <segue destination="WBC-Ov-C6Q" kind="relationship" relationship="nextPage" id="uq6-jG-Zpu"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="198" y="318"/>
+            <point key="canvasLocation" x="370" y="95"/>
         </scene>
         <!--Start Interface Controller-->
         <scene sceneID="aou-V4-d1y">

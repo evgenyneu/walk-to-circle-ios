@@ -17,4 +17,9 @@ class CompassInterfaceController: WKInterfaceController {
   private func arrowFileName(direction: Int) -> String {
     return "compass_arrow_\(direction)"
   }
+  
+  @IBAction func didTapHelpButton() {
+    NSNotificationCenter.defaultCenter().postNotificationName(WalkConstants.watch.switchToHelpTab,
+      object: nil)
+  }
 }

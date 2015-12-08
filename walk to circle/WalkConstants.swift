@@ -41,7 +41,6 @@ public struct WalkConstants {
 
   public static let watchOld = WalkConstants_watchOld()
   public static let watch = WalkConstants_watch()
-
 }
 
 public struct WalkConstants_watch {
@@ -49,6 +48,7 @@ public struct WalkConstants_watch {
   public let commands = WalkConstants_watchCommands()
   public let replyKeys = WalkConstants_watchReplyKeys()
   public let walkDirectionUnkown: Int = -9973
+  public let switchToHelpTab = "SwitchToHelpWatchTab"
 }
 
 public struct WalkConstants_watchCommands {
