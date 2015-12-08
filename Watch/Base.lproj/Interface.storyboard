@@ -28,12 +28,12 @@
                     <items>
                         <group width="1" alignment="center" backgroundImage="watch_compass_background" contentMode="scaleAspectFit" id="IvX-p4-T9a">
                             <items>
-                                <group width="1" height="1" alignment="center" backgroundImage="compass_arrow_" contentMode="scaleAspectFit" id="SuI-cC-ar0">
+                                <group width="1" height="1" alignment="center" backgroundImage="compass_arrow_1" contentMode="scaleAspectFit" id="SuI-cC-ar0">
                                     <items>
                                         <button alignment="left" accessibilityLabel="Information" id="bR2-cD-zdY">
                                             <group key="contentGroup" alignment="left" id="6N5-Z8-kvt">
                                                 <items>
-                                                    <imageView alignment="left" image="watch_information" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
+                                                    <imageView alignment="left" image="watch_help" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
                                                 </items>
                                             </group>
                                         </button>
@@ -49,6 +49,13 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="202" y="95"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="K9s-no-bkc">
+            <objects>
+                <controller id="hXw-Wa-5YC"/>
+            </objects>
+            <point key="canvasLocation" x="198" y="318"/>
         </scene>
         <!--Start Interface Controller-->
         <scene sceneID="aou-V4-d1y">
