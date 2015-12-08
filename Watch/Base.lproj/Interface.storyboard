@@ -46,7 +46,7 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="arrowImage" destination="F5j-GN-BMd" id="Wec-bc-oZ3"/>
+                        <outlet property="arrowGroup" destination="SuI-cC-ar0" id="ZNB-wb-JQo"/>
                         <segue destination="hXw-Wa-5YC" kind="relationship" relationship="nextPage" id="x5f-6A-fL3"/>
                     </connections>
                 </controller>

@@ -1,8 +1,9 @@
 import WatchKit
 
 class CompassInterfaceController: WKInterfaceController {
-  @IBOutlet var arrowImage: WKInterfaceImage!
 
+  @IBOutlet var arrowGroup: WKInterfaceGroup!
+  
   override func willActivate() {
     super.willActivate()
     
@@ -10,8 +11,8 @@ class CompassInterfaceController: WKInterfaceController {
   }
   
   func didUpdateDirectionMainQueue(direction: Int) {
-    //let imageName = arrowFileName(direction)
-    //arrowImage.setImageNamed(imageName)
+    let imageName = arrowFileName(direction)
+    arrowGroup.setBackgroundImageNamed(imageName)
   }
   
   private func arrowFileName(direction: Int) -> String {
