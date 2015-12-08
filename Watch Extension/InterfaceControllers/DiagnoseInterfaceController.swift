@@ -11,10 +11,10 @@ class DiagnoseInterfaceController: WKInterfaceController {
   override func willActivate() {
     super.willActivate()
   
-    walkWatchCommunicator.didUpdateDirectionMainQueue = didUpdateDirectionMainQueue
+    walkWatchCommunicator.didUpdateDirectionDiagnoseMainQueue = didUpdateDirectionMainQueue
     
     updateConnectivityStatus()
-    walkWatchCommunicator.didUpdateStatusMainQueue = updateConnectivityStatus
+    walkWatchCommunicator.didUpdateStatusDiagnoseMainQueue = updateConnectivityStatus
   }
   
   func didUpdateDirectionMainQueue(direction: Int) {

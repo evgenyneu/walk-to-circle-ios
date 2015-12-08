@@ -6,7 +6,11 @@ let walkWatchCommunicator = WatchCommunicator()
 class WatchCommunicator: NSObject, WCSessionDelegate {
   
   var didUpdateStatusMainQueue: (()->())?
+  var didUpdateStatusDiagnoseMainQueue: (()->())?
+  
   var didUpdateDirectionMainQueue: ((Int)->())?
+  var didUpdateDirectionDiagnoseMainQueue: ((Int)->())?
+
   
   var status: String {
     get {
@@ -50,6 +54,7 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
     
     iiQ.main { [weak self] in
       self?.didUpdateStatusMainQueue?()
+      self?.didUpdateStatusDiagnoseMainQueue?()
     }
   }
   
@@ -59,8 +64,7 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
     iiQ.main { [weak self] in
       if let direction = applicationContext[WalkConstants.watch.replyKeys.walkDirection] as? Int {
         self?.didUpdateDirectionMainQueue?(direction)
-      } else {
-        self?.didUpdateDirectionMainQueue?(-34)
+        self?.didUpdateDirectionDiagnoseMainQueue?(direction)
       }
     }
   }

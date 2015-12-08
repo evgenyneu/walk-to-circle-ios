@@ -159,6 +159,7 @@
 		7EB0A83E1BD2197B0009A39F /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */; };
 		7EB0A83F1BD2197B0009A39F /* DiagnoseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A83D1BD2197B0009A39F /* DiagnoseInterfaceController.swift */; };
 		7EB0A8431BD21B610009A39F /* WalkInterfaceControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0A8421BD21B610009A39F /* WalkInterfaceControllers.swift */; };
+		7EF5BBE21C169CFF002A59C6 /* CompassInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5BBE11C169CFF002A59C6 /* CompassInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,6 +410,7 @@
 		7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartInterfaceController.swift; sourceTree = "<group>"; };
 		7EB0A83D1BD2197B0009A39F /* DiagnoseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseInterfaceController.swift; sourceTree = "<group>"; };
 		7EB0A8421BD21B610009A39F /* WalkInterfaceControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkInterfaceControllers.swift; sourceTree = "<group>"; };
+		7EF5BBE11C169CFF002A59C6 /* CompassInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -958,8 +960,9 @@
 		7EB0A83B1BD219650009A39F /* InterfaceControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */,
+				7EF5BBE11C169CFF002A59C6 /* CompassInterfaceController.swift */,
 				7EB0A83D1BD2197B0009A39F /* DiagnoseInterfaceController.swift */,
+				7EB0A83C1BD2197B0009A39F /* StartInterfaceController.swift */,
 			);
 			path = InterfaceControllers;
 			sourceTree = "<group>";
@@ -1307,6 +1310,7 @@
 			files = (
 				7E6FED711BE4918500ACEF52 /* WatchCommunicator.swift in Sources */,
 				7EB0A8431BD21B610009A39F /* WalkInterfaceControllers.swift in Sources */,
+				7EF5BBE21C169CFF002A59C6 /* CompassInterfaceController.swift in Sources */,
 				7E6FED751BE4959E00ACEF52 /* WalkConstants.swift in Sources */,
 				7E6FED6F1BE490F800ACEF52 /* WatchToParentPinger.swift in Sources */,
 				7EB0A83E1BD2197B0009A39F /* StartInterfaceController.swift in Sources */,

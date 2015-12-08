@@ -21,18 +21,19 @@
             </objects>
             <point key="canvasLocation" x="373" y="95"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Compass Interface Controller-->
         <scene sceneID="hRw-r8-Ka3">
             <objects>
-                <controller id="2XW-gs-aWx">
+                <controller id="2XW-gs-aWx" customClass="CompassInterfaceController" customModule="Watch_Extension">
                     <items>
                         <group width="1" alignment="center" backgroundImage="watch_compass_background" contentMode="scaleAspectFit" id="IvX-p4-T9a">
                             <items>
-                                <imageView width="1" height="1" alignment="center" image="compass_arrow_" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
+                                <imageView width="1" height="1" alignment="center" image="compass_arrow_0" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
                             </items>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="arrowImage" destination="F5j-GN-BMd" id="Wec-bc-oZ3"/>
                         <segue destination="WBC-Ov-C6Q" kind="relationship" relationship="nextPage" id="9tW-KE-V2K"/>
                     </connections>
                 </controller>
