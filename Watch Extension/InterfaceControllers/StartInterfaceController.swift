@@ -5,16 +5,24 @@ import WatchConnectivity
 
 class StartInterfaceController: WKInterfaceController {
   
+  @IBOutlet var noPhoneImage: WKInterfaceImage!
+  
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
+    
+    walkWatchCommunicator.didUpdateStatusStart = didUpdateStatus
   }
   
-  override func willActivate() {
-    super.willActivate()
-
+  override func didAppear() {
+    super.didAppear()
+    didUpdateStatus()
   }
   
-  override func didDeactivate() {
-    super.didDeactivate()
+  func didUpdateStatus() {
+    if WatchCommunicator.isReachable {
+      noPhoneImage.setImage(nil)
+    } else {
+      noPhoneImage.setImageNamed(WalkConstants.watch.images.noPhone)
+    }
   }
 }

@@ -30,16 +30,20 @@
                             <items>
                                 <group width="1" height="1" alignment="center" backgroundImage="compass_arrow_1" contentMode="scaleAspectFit" id="SuI-cC-ar0">
                                     <items>
-                                        <button alignment="left" accessibilityLabel="Information" id="bR2-cD-zdY">
-                                            <group key="contentGroup" alignment="left" id="6N5-Z8-kvt">
-                                                <items>
-                                                    <imageView alignment="left" image="watch_help" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
-                                                </items>
-                                            </group>
-                                            <connections>
-                                                <action selector="didTapHelpButton" destination="2XW-gs-aWx" id="qCj-5W-tCz"/>
-                                            </connections>
-                                        </button>
+                                        <group width="1" height="1" alignment="left" contentMode="center" id="L0y-iU-Ndd">
+                                            <items>
+                                                <button alignment="left" accessibilityLabel="Information" id="bR2-cD-zdY">
+                                                    <group key="contentGroup" alignment="left" id="6N5-Z8-kvt">
+                                                        <items>
+                                                            <imageView alignment="left" image="watch_help" contentMode="scaleAspectFit" id="F5j-GN-BMd"/>
+                                                        </items>
+                                                    </group>
+                                                    <connections>
+                                                        <action selector="didTapHelpButton" destination="2XW-gs-aWx" id="qCj-5W-tCz"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
                             </items>
@@ -47,6 +51,7 @@
                     </items>
                     <connections>
                         <outlet property="arrowGroup" destination="SuI-cC-ar0" id="ZNB-wb-JQo"/>
+                        <outlet property="noPhoneGroup" destination="L0y-iU-Ndd" id="kVe-yZ-wba"/>
                         <segue destination="hXw-Wa-5YC" kind="relationship" relationship="nextPage" id="x5f-6A-fL3"/>
                     </connections>
                 </controller>
@@ -61,6 +66,7 @@
                         <label alignment="center" verticalAlignment="center" text="Walk in the direction of the arrow to reach your circle. Can you figure out where north, east, south, and west are?" textAlignment="center" numberOfLines="0" id="gjl-x1-Xep"/>
                     </items>
                     <connections>
+                        <outlet property="messageLabel" destination="gjl-x1-Xep" id="MVi-Cb-zcw"/>
                         <segue destination="WBC-Ov-C6Q" kind="relationship" relationship="nextPage" id="uq6-jG-Zpu"/>
                     </connections>
                 </controller>
@@ -75,13 +81,18 @@
                         <button alignment="left" id="aJO-fk-YP4">
                             <group key="contentGroup" width="1" alignment="left" id="CY1-8v-JZu">
                                 <items>
-                                    <imageView width="1" height="1" alignment="center" image="Watch_start" contentMode="scaleAspectFit" id="djZ-hP-FFZ"/>
+                                    <group width="0.80000000000000004" height="1" alignment="center" verticalAlignment="center" backgroundImage="Watch_start" contentMode="scaleAspectFit" id="0hN-QJ-uIp">
+                                        <items>
+                                            <imageView width="1" height="1" alignment="center" contentMode="center" id="djZ-hP-FFZ"/>
+                                        </items>
+                                    </group>
                                 </items>
                             </group>
                         </button>
                     </items>
                     <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
                     <connections>
+                        <outlet property="noPhoneImage" destination="djZ-hP-FFZ" id="Cg8-zg-ZEX"/>
                         <segue destination="2XW-gs-aWx" kind="relationship" relationship="nextPage" id="KLz-zq-cPS"/>
                     </connections>
                 </controller>

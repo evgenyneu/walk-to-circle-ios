@@ -43,12 +43,39 @@ public struct WalkConstants {
   public static let watch = WalkConstants_watch()
 }
 
+
+
+public struct WalkConstants_watch_userLocation {
+  public let name = "userLocation"
+
+  // Maximum age of current user location that is considered fresh, in seconds.
+  public let maxLocationAgeInSeconds: NSTimeInterval = 30
+}
+
+// MARK: - Watch
+// -----------------------
+
 public struct WalkConstants_watch {
   public let commandKeyName = "command"
   public let commands = WalkConstants_watchCommands()
   public let replyKeys = WalkConstants_watchReplyKeys()
   public let walkDirectionUnkown: Int = -9973
   public let switchToHelpTab = "SwitchToHelpWatchTab"
+  public let images = WalkConstants_watchImages()
+  public let helpMessages = WalkConstants_watchHelpMessages()
+}
+
+public struct WalkConstants_watchImages {
+  public let noPhone = "watch_no_phone"
+  public let compassArrow = "compass_arrow_"
+}
+
+public struct WalkConstants_watchHelpMessages {
+  public let compassStartInstruction = "Tap the paw to start walking."
+
+  public let compassWalkInstruction = "Walk in the direction of the arrow to reach your circle. Can you figure out where north, east, south, and west are?"
+  
+  public let iPhoneUnreachable = "Apple Watch couldn't load your location because it couldn't connect to your iPhone."
 }
 
 public struct WalkConstants_watchCommands {
@@ -64,10 +91,10 @@ public struct WalkConstants_watchReplyKeys {
 public struct WalkConstants_watchOld {
   public let userLocation = WalkConstants_watch_userLocation()
   public let circleDirectionName = "circleDirection"
-
+  
   public let latitudeName = "latitude"
   public let longitudeName = "longitude"
-
+  
   // Number of directions.
   // Directions go from 0 to (numberOfDirections-1).
   // The values represent direction angle from North moving clockwise.
@@ -78,18 +105,11 @@ public struct WalkConstants_watchOld {
   //  2 - South
   //  3 - East
   public let numberOfDirections = 16
-
+  
   public let updateDirectionInterval_inSeconds:NSTimeInterval = 2
-
+  
   public let mapSpan_inDegrees: CLLocationDegrees = 0.004
-
+  
   // Number of meters we need to travel in order to update the map on the watch
   public let minMapUpdateDistance_inMeters: CLLocationDistance = 30
-}
-
-public struct WalkConstants_watch_userLocation {
-  public let name = "userLocation"
-
-  // Maximum age of current user location that is considered fresh, in seconds.
-  public let maxLocationAgeInSeconds: NSTimeInterval = 30
 }

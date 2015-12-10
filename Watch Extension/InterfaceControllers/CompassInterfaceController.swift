@@ -4,19 +4,35 @@ class CompassInterfaceController: WKInterfaceController {
 
   @IBOutlet var arrowGroup: WKInterfaceGroup!
   
+  @IBOutlet var noPhoneGroup: WKInterfaceGroup!
+  
   override func willActivate() {
     super.willActivate()
     
-    walkWatchCommunicator.didUpdateDirectionMainQueue = didUpdateDirectionMainQueue
+    walkWatchCommunicator.didUpdateDirectionMainQueue = didUpdateDirection
+    walkWatchCommunicator.didUpdateStatusCompass = didUpdateStatus
   }
   
-  func didUpdateDirectionMainQueue(direction: Int) {
+  override func didAppear() {
+    super.didAppear()
+    didUpdateStatus()
+  }
+  
+  func didUpdateDirection(direction: Int) {
     let imageName = arrowFileName(direction)
     arrowGroup.setBackgroundImageNamed(imageName)
   }
   
+  func didUpdateStatus() {
+    if WatchCommunicator.isReachable {
+      noPhoneGroup.setBackgroundImage(nil)
+    } else {
+      noPhoneGroup.setBackgroundImageNamed(WalkConstants.watch.images.noPhone)
+    }
+  }
+  
   private func arrowFileName(direction: Int) -> String {
-    return "compass_arrow_\(direction)"
+    return "\(WalkConstants.watch.images.compassArrow)\(direction)"
   }
   
   @IBAction func didTapHelpButton() {

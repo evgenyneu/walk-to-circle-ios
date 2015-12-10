@@ -11,13 +11,11 @@ class DiagnoseInterfaceController: WKInterfaceController {
   override func willActivate() {
     super.willActivate()
   
-    walkWatchCommunicator.didUpdateDirectionDiagnoseMainQueue = didUpdateDirectionMainQueue
-    
-    updateConnectivityStatus()
-    walkWatchCommunicator.didUpdateStatusDiagnoseMainQueue = updateConnectivityStatus
+    walkWatchCommunicator.didUpdateDirectionDiagnoseMainQueue = didUpdateDirection
+    walkWatchCommunicator.didUpdateStatusDiagnose = updateConnectivityStatus
   }
   
-  func didUpdateDirectionMainQueue(direction: Int) {
+  func didUpdateDirection(direction: Int) {
     walkLabel.setText("\(direction) \(timeTicks)")
   }
   

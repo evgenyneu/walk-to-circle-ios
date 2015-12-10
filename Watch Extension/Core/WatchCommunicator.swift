@@ -5,8 +5,9 @@ let walkWatchCommunicator = WatchCommunicator()
 
 class WatchCommunicator: NSObject, WCSessionDelegate {
   
-  var didUpdateStatusMainQueue: (()->())?
-  var didUpdateStatusDiagnoseMainQueue: (()->())?
+  var didUpdateStatusStart: (()->())?
+  var didUpdateStatusCompass: (()->())?
+  var didUpdateStatusDiagnose: (()->())?
   
   var didUpdateDirectionMainQueue: ((Int)->())?
   var didUpdateDirectionDiagnoseMainQueue: ((Int)->())?
@@ -16,6 +17,16 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
     get {
       return statusValues.joinWithSeparator(" ")
     }
+  }
+  
+  /// True if iPhone is reachable.
+  static var isReachable: Bool {
+    return WCSession.defaultSession().reachable
+  }
+  
+  /// True if the user has dropped the circle.
+  static var isWalking: Bool {
+    return true
   }
   
   var statusValues: [String] = []
@@ -53,8 +64,9 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
     }
     
     iiQ.main { [weak self] in
-      self?.didUpdateStatusMainQueue?()
-      self?.didUpdateStatusDiagnoseMainQueue?()
+      self?.didUpdateStatusStart?()
+      self?.didUpdateStatusCompass?()
+      self?.didUpdateStatusDiagnose?()
     }
   }
   
