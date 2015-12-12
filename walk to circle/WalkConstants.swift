@@ -66,6 +66,8 @@ public struct WalkConstants_watch {
 }
 
 public struct WalkConstants_watchImages {
+  public let startButton = "Watch_start"
+  public let stopButton = "Watch_stop"
   public let noPhone = "watch_no_phone"
   public let compassArrow = "compass_arrow_"
 }

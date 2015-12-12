@@ -9,6 +9,7 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
   var didUpdateStatusCompass: (()->())?
   var didUpdateStatusDiagnose: (()->())?
   
+  var didUpdateDirectionStart: (()->())?
   var didUpdateDirectionCompass: (()->())?
   var didUpdateDirectionDiagnose: (()->())?
   
@@ -80,6 +81,8 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
     iiQ.main { [weak self] in
       if let direction = applicationContext[WalkConstants.watch.replyKeys.walkDirection] as? Int {
         self?.lastWalkingDirection = direction
+        
+        self?.didUpdateDirectionStart?()
         self?.didUpdateDirectionCompass?()
         self?.didUpdateDirectionDiagnose?()
         self?.didUpdateStatusOrDirectionHelp?()

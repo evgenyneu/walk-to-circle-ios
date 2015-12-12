@@ -95,6 +95,7 @@
                     </items>
                     <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
                     <connections>
+                        <outlet property="buttonGroup" destination="0hN-QJ-uIp" id="wYD-tz-95e"/>
                         <outlet property="noPhoneImage" destination="djZ-hP-FFZ" id="Cg8-zg-ZEX"/>
                         <segue destination="2XW-gs-aWx" kind="relationship" relationship="nextPage" id="KLz-zq-cPS"/>
                     </connections>
