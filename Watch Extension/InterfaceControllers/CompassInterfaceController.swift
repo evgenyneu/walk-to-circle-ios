@@ -6,21 +6,18 @@ class CompassInterfaceController: WKInterfaceController {
   
   @IBOutlet var noPhoneGroup: WKInterfaceGroup!
   
-  override func willActivate() {
-    super.willActivate()
+  override func awakeWithContext(context: AnyObject?) {
+    super.awakeWithContext(context)
     
-    walkWatchCommunicator.didUpdateDirectionMainQueue = didUpdateDirection
+    walkWatchCommunicator.didUpdateDirectionCompass = didUpdateDirection
     walkWatchCommunicator.didUpdateStatusCompass = didUpdateStatus
   }
   
-  override func didAppear() {
-    super.didAppear()
+  override func willActivate() {
+    super.willActivate()
+    
+    didUpdateDirection()
     didUpdateStatus()
-  }
-  
-  func didUpdateDirection(direction: Int) {
-    let imageName = arrowFileName(direction)
-    arrowGroup.setBackgroundImageNamed(imageName)
   }
   
   func didUpdateStatus() {
@@ -28,6 +25,17 @@ class CompassInterfaceController: WKInterfaceController {
       noPhoneGroup.setBackgroundImage(nil)
     } else {
       noPhoneGroup.setBackgroundImageNamed(WalkConstants.watch.images.noPhone)
+    }
+  }
+  
+  func didUpdateDirection() {
+    let direction = walkWatchCommunicator.lastWalkingDirection
+    
+    if direction == WalkConstants.watch.walkDirectionUnkown {
+      arrowGroup.setBackgroundImage(nil)
+    } else {
+      let imageName = arrowFileName(direction)
+      arrowGroup.setBackgroundImageNamed(imageName)
     }
   }
   

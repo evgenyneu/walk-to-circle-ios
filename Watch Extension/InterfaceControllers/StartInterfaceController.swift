@@ -2,7 +2,6 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 
-
 class StartInterfaceController: WKInterfaceController {
   
   @IBOutlet var noPhoneImage: WKInterfaceImage!
@@ -13,8 +12,8 @@ class StartInterfaceController: WKInterfaceController {
     walkWatchCommunicator.didUpdateStatusStart = didUpdateStatus
   }
   
-  override func didAppear() {
-    super.didAppear()
+  override func willActivate() {
+    super.willActivate()
     didUpdateStatus()
   }
   
@@ -24,5 +23,8 @@ class StartInterfaceController: WKInterfaceController {
     } else {
       noPhoneImage.setImageNamed(WalkConstants.watch.images.noPhone)
     }
+  }
+  
+  @IBAction func didTouchButton() {
   }
 }

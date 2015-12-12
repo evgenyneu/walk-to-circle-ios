@@ -8,14 +8,21 @@ class DiagnoseInterfaceController: WKInterfaceController {
   
   @IBOutlet var connectivityStatusLabel: WKInterfaceLabel!
   
-  override func willActivate() {
-    super.willActivate()
-  
-    walkWatchCommunicator.didUpdateDirectionDiagnoseMainQueue = didUpdateDirection
+  override func awakeWithContext(context: AnyObject?) {
+    super.awakeWithContext(context)
+    walkWatchCommunicator.didUpdateDirectionDiagnose = didUpdateDirection
     walkWatchCommunicator.didUpdateStatusDiagnose = updateConnectivityStatus
   }
   
-  func didUpdateDirection(direction: Int) {
+  override func willActivate() {
+    super.willActivate()
+  
+    didUpdateDirection()
+    updateConnectivityStatus()
+  }
+  
+  func didUpdateDirection() {
+    let direction = walkWatchCommunicator.lastWalkingDirection
     walkLabel.setText("\(direction) \(timeTicks)")
   }
   

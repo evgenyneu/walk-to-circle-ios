@@ -9,9 +9,12 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
   var didUpdateStatusCompass: (()->())?
   var didUpdateStatusDiagnose: (()->())?
   
-  var didUpdateDirectionMainQueue: ((Int)->())?
-  var didUpdateDirectionDiagnoseMainQueue: ((Int)->())?
-
+  var didUpdateDirectionCompass: (()->())?
+  var didUpdateDirectionDiagnose: (()->())?
+  
+  var didUpdateStatusOrDirectionHelp: (()->())?
+  
+  var lastWalkingDirection: Int = WalkConstants.watch.walkDirectionUnkown
   
   var status: String {
     get {
@@ -25,8 +28,8 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
   }
   
   /// True if the user has dropped the circle.
-  static var isWalking: Bool {
-    return true
+  var isWalking: Bool {
+    return lastWalkingDirection != WalkConstants.watch.walkDirectionUnkown
   }
   
   var statusValues: [String] = []
@@ -67,6 +70,7 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
       self?.didUpdateStatusStart?()
       self?.didUpdateStatusCompass?()
       self?.didUpdateStatusDiagnose?()
+      self?.didUpdateStatusOrDirectionHelp?()
     }
   }
   
@@ -75,8 +79,10 @@ class WatchCommunicator: NSObject, WCSessionDelegate {
       
     iiQ.main { [weak self] in
       if let direction = applicationContext[WalkConstants.watch.replyKeys.walkDirection] as? Int {
-        self?.didUpdateDirectionMainQueue?(direction)
-        self?.didUpdateDirectionDiagnoseMainQueue?(direction)
+        self?.lastWalkingDirection = direction
+        self?.didUpdateDirectionCompass?()
+        self?.didUpdateDirectionDiagnose?()
+        self?.didUpdateStatusOrDirectionHelp?()
       }
     }
   }

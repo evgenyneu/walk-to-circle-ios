@@ -9,12 +9,22 @@ class HelpInterfaceController: WKInterfaceController {
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchToHelpTab:",
       name: WalkConstants.watch.switchToHelpTab, object: nil)
+    
+    walkWatchCommunicator.didUpdateStatusOrDirectionHelp = updateText
   }
   
-  override func didAppear() {
-    super.didAppear()
-    
-    var text = WatchCommunicator.isWalking ?
+  override func willActivate() {
+    super.willActivate()
+    updateText()
+  }
+  
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self,
+      name: WalkConstants.watch.switchToHelpTab, object: nil)
+  }
+  
+  private func updateText() {
+    var text = walkWatchCommunicator.isWalking ?
       WalkConstants.watch.helpMessages.compassWalkInstruction:
       WalkConstants.watch.helpMessages.compassStartInstruction
     
@@ -23,12 +33,6 @@ class HelpInterfaceController: WKInterfaceController {
     }
     
     messageLabel.setText(text)
-
-  }
-  
-  deinit {
-    NSNotificationCenter.defaultCenter().removeObserver(self,
-      name: WalkConstants.watch.switchToHelpTab, object: nil)
   }
   
   func switchToHelpTab(notification: NSNotification) {

@@ -88,6 +88,9 @@
                                     </group>
                                 </items>
                             </group>
+                            <connections>
+                                <action selector="didTouchButton" destination="AgC-eL-Hgc" id="HFp-lb-ceK"/>
+                            </connections>
                         </button>
                     </items>
                     <edgeInsets key="margins" left="1" right="1" top="0.0" bottom="0.0"/>
