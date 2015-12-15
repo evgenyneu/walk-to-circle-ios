@@ -32,8 +32,6 @@ public struct WalkConstants {
   public static let textFadeInDuration = 3.0
 }
 
-
-
 public struct WalkConstants_watch_userLocation {
   public let name = "userLocation"
 
