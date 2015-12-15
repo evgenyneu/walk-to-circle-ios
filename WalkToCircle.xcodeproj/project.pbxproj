@@ -14,21 +14,15 @@
 		2B1276371A453EE800F6ED44 /* RegionMonitoringUnavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276361A453EE800F6ED44 /* RegionMonitoringUnavailable.swift */; };
 		2B1276391A45448100F6ED44 /* iiViewPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276381A45448100F6ED44 /* iiViewPosition.swift */; };
 		2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12763A1A45450500F6ED44 /* iiAutolayoutConstraints.swift */; };
-		2B12763D1A47D93F00F6ED44 /* WalkCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12763C1A47D93F00F6ED44 /* WalkCoordinate.swift */; };
-		2B12763F1A47D9F900F6ED44 /* WalkUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */; };
 		2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276401A47EB2400F6ED44 /* iiUIColor.swift */; };
-		2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276421A47EB4B00F6ED44 /* WalkColors.swift */; };
 		2B1276471A47ECD600F6ED44 /* iiUIColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */; };
-		2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B143BF31A4E1CC800BDE4F4 /* WalkCircleMonitor.swift */; };
 		2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B143BF51A4E24AB00BDE4F4 /* iiCLErrorToString.swift */; };
 		2B23E82B1A525DA60062A01F /* CongratsPhrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E82A1A525DA60062A01F /* CongratsPhrase.swift */; };
 		2B23E82F1A52646D0062A01F /* CongratsPhraseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B23E82D1A5264670062A01F /* CongratsPhraseTests.swift */; };
 		2B3347E819F3775D008710E7 /* RewindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3347E719F3775D008710E7 /* RewindButton.swift */; };
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
-		2B5016DD1A57E60A00FD1297 /* WalkTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */; };
 		2B5338A11A5284AE0082DC93 /* WalkCirlesReachedTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */; };
-		2B5338A31A52855A0082DC93 /* WalkCirlesReachedToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */; };
 		2B5338A51A5289600082DC93 /* iiDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A41A5289600082DC93 /* iiDate.swift */; };
 		2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A71A52897E0082DC93 /* iiDateTests.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
@@ -37,10 +31,7 @@
 		2B6D35DA197A5970008DDAE4 /* iiGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D35D2197A581D008DDAE4 /* iiGeo.swift */; };
 		2B770A6019E8D7E100C28177 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B770A5F19E8D7E100C28177 /* Launch Screen.xib */; };
 		2B770A6319E8E09800C28177 /* iiQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B770A6219E8E09800C28177 /* iiQ.swift */; };
-		2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B702F1A342B010026CDA9 /* WalkNotification.swift */; };
 		2B7B70331A342E010026CDA9 /* CongratsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70321A342E010026CDA9 /* CongratsViewController.swift */; };
-		2B7B70371A3431780026CDA9 /* WalkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70361A3431780026CDA9 /* WalkConstants.swift */; };
-		2B7B70391A3432450026CDA9 /* WalkViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */; };
 		2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */; };
 		2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */; };
 		2B7C38E11A4ABAEB00C3FDA7 /* WalkQuotesLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */; };
@@ -74,7 +65,6 @@
 		2BA5551F1A58B96C00CA26BC /* rewind_arrows@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA5551C1A58B96C00CA26BC /* rewind_arrows@3x.png */; };
 		2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */; };
 		2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */; };
-		2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */; };
 		2BB8BC0A1A4BD1C10003814B /* branch_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8BC091A4BD1C10003814B /* branch_background.jpg */; };
 		2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB911968DC63005C4A47 /* AppDelegate.swift */; };
 		2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCDB931968DC63005C4A47 /* MapViewController.swift */; };
@@ -82,7 +72,6 @@
 		2BCCDB991968DC63005C4A47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BCCDB981968DC63005C4A47 /* Images.xcassets */; };
 		2BCCDBAF1968DD6B005C4A47 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */; };
 		2BCF7B6D1A5136C80007B062 /* WalkCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */; };
-		2BCF7B6F1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF7B6E1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift */; };
 		2BCFEF3619E9FFEA00062A99 /* iiSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */; };
 		2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */; };
 		2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCFEF3919EA000600062A99 /* iiTickTock.swift */; };
@@ -117,7 +106,6 @@
 		2BE4D73A1A54C578006B600D /* applause_7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7301A54C578006B600D /* applause_7.mp3 */; };
 		2BE4D73B1A54C578006B600D /* applause_9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7311A54C578006B600D /* applause_9.mp3 */; };
 		2BE4D73E1A54C578006B600D /* applause_20.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7341A54C578006B600D /* applause_20.mp3 */; };
-		2BE4D7401A54C782006B600D /* WalkSoundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4D73F1A54C782006B600D /* WalkSoundType.swift */; };
 		2BE4D7421A54D392006B600D /* applause_15.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7411A54D392006B600D /* applause_15.mp3 */; };
 		2BE4D7441A54D3D8006B600D /* applause_12.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE4D7431A54D3D8006B600D /* applause_12.mp3 */; };
 		2BE4D7471A54DA04006B600D /* WalkQuotePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE4D7451A54D9EC006B600D /* WalkQuotePickerTests.swift */; };
@@ -130,6 +118,18 @@
 		7E1C5F431C1FCE3F00172642 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F3A1C1FCE3F00172642 /* CutePossumParser.swift */; };
 		7E1C5F461C1FCE3F00172642 /* TegScrolledContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F3E1C1FCE3F00172642 /* TegScrolledContent.swift */; };
 		7E1C5F471C1FCE3F00172642 /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F401C1FCE3F00172642 /* iiFaderForAvAudioPlayer.swift */; };
+		7E1C5F561C1FCF4C00172642 /* WalkCircleMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F4A1C1FCF4C00172642 /* WalkCircleMonitor.swift */; };
+		7E1C5F571C1FCF4C00172642 /* WalkCirlesReachedToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F4B1C1FCF4C00172642 /* WalkCirlesReachedToday.swift */; };
+		7E1C5F581C1FCF4C00172642 /* WalkColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F4C1C1FCF4C00172642 /* WalkColors.swift */; };
+		7E1C5F591C1FCF4C00172642 /* WalkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F4D1C1FCF4C00172642 /* WalkConstants.swift */; };
+		7E1C5F5A1C1FCF4C00172642 /* WalkCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F4E1C1FCF4C00172642 /* WalkCoordinate.swift */; };
+		7E1C5F5B1C1FCF4C00172642 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F4F1C1FCF4C00172642 /* WalkCoordinateUserDefaultsSerializer.swift */; };
+		7E1C5F5C1C1FCF4C00172642 /* WalkLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F501C1FCF4C00172642 /* WalkLocation.swift */; };
+		7E1C5F5D1C1FCF4C00172642 /* WalkNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F511C1FCF4C00172642 /* WalkNotification.swift */; };
+		7E1C5F5E1C1FCF4C00172642 /* WalkSoundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F521C1FCF4C00172642 /* WalkSoundType.swift */; };
+		7E1C5F5F1C1FCF4C00172642 /* WalkTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F531C1FCF4C00172642 /* WalkTutorial.swift */; };
+		7E1C5F601C1FCF4C00172642 /* WalkUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F541C1FCF4C00172642 /* WalkUserDefaults.swift */; };
+		7E1C5F611C1FCF4C00172642 /* WalkViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F551C1FCF4C00172642 /* WalkViewControllers.swift */; };
 		7E234F561BACD38E00171A6B /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E234F551BACD38E00171A6B /* InitialViewController.swift */; };
 		7E6210701BE49C50006C30B9 /* TestLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62106E1BE49C16006C30B9 /* TestLocationHelper.swift */; };
 /* End PBXBuildFile section */
@@ -200,21 +200,15 @@
 		2B1276361A453EE800F6ED44 /* RegionMonitoringUnavailable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionMonitoringUnavailable.swift; sourceTree = "<group>"; };
 		2B1276381A45448100F6ED44 /* iiViewPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiViewPosition.swift; sourceTree = "<group>"; };
 		2B12763A1A45450500F6ED44 /* iiAutolayoutConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiAutolayoutConstraints.swift; sourceTree = "<group>"; };
-		2B12763C1A47D93F00F6ED44 /* WalkCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinate.swift; sourceTree = "<group>"; };
-		2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkUserDefaults.swift; sourceTree = "<group>"; };
 		2B1276401A47EB2400F6ED44 /* iiUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColor.swift; sourceTree = "<group>"; };
-		2B1276421A47EB4B00F6ED44 /* WalkColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkColors.swift; sourceTree = "<group>"; };
 		2B1276451A47ECCD00F6ED44 /* iiUIColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiUIColorTests.swift; sourceTree = "<group>"; };
-		2B143BF31A4E1CC800BDE4F4 /* WalkCircleMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCircleMonitor.swift; sourceTree = "<group>"; };
 		2B143BF51A4E24AB00BDE4F4 /* iiCLErrorToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiCLErrorToString.swift; sourceTree = "<group>"; };
 		2B23E82A1A525DA60062A01F /* CongratsPhrase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsPhrase.swift; sourceTree = "<group>"; };
 		2B23E82D1A5264670062A01F /* CongratsPhraseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsPhraseTests.swift; sourceTree = "<group>"; };
 		2B3347E719F3775D008710E7 /* RewindButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewindButton.swift; sourceTree = "<group>"; };
 		2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiScreenSize.swift; sourceTree = "<group>"; };
 		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
-		2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTutorial.swift; sourceTree = "<group>"; };
 		2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedTodayTests.swift; sourceTree = "<group>"; };
-		2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedToday.swift; sourceTree = "<group>"; };
 		2B5338A41A5289600082DC93 /* iiDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDate.swift; sourceTree = "<group>"; };
 		2B5338A71A52897E0082DC93 /* iiDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDateTests.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
@@ -224,10 +218,7 @@
 		2B6D35D2197A581D008DDAE4 /* iiGeo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiGeo.swift; sourceTree = "<group>"; };
 		2B770A5F19E8D7E100C28177 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		2B770A6219E8E09800C28177 /* iiQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiQ.swift; sourceTree = "<group>"; };
-		2B7B702F1A342B010026CDA9 /* WalkNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkNotification.swift; sourceTree = "<group>"; };
 		2B7B70321A342E010026CDA9 /* CongratsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratsViewController.swift; sourceTree = "<group>"; };
-		2B7B70361A3431780026CDA9 /* WalkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkConstants.swift; sourceTree = "<group>"; };
-		2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewControllers.swift; sourceTree = "<group>"; };
 		2B7C38D31A4AB92400C3FDA7 /* WalkQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuote.swift; sourceTree = "<group>"; };
 		2B7C38DB1A4ABA6900C3FDA7 /* iiJsonLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiJsonLoader.swift; sourceTree = "<group>"; };
 		2B7C38DF1A4ABAE700C3FDA7 /* WalkQuotesLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotesLoaderTests.swift; sourceTree = "<group>"; };
@@ -259,7 +250,6 @@
 		2BA5551C1A58B96C00CA26BC /* rewind_arrows@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind_arrows@3x.png"; sourceTree = "<group>"; };
 		2BAD4F381A33C0B400C3B5BD /* WalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
 		2BAD4F3A1A33C13400C3B5BD /* iiPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiPresentViewController.swift; sourceTree = "<group>"; };
-		2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkLocation.swift; sourceTree = "<group>"; };
 		2BB8BC091A4BD1C10003814B /* branch_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = branch_background.jpg; sourceTree = "<group>"; };
 		2BCCDB8C1968DC63005C4A47 /* WalkToCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkToCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -271,7 +261,6 @@
 		2BCCDBA31968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2BCF7B6B1A5136B80007B062 /* WalkCoordinateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinateTests.swift; sourceTree = "<group>"; };
-		2BCF7B6E1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinateUserDefaultsSerializer.swift; sourceTree = "<group>"; };
 		2BCFEF3519E9FFEA00062A99 /* iiSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSoundPlayer.swift; sourceTree = "<group>"; };
 		2BCFEF3719E9FFFD00062A99 /* iiSounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSounds.swift; sourceTree = "<group>"; };
 		2BCFEF3919EA000600062A99 /* iiTickTock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiTickTock.swift; sourceTree = "<group>"; };
@@ -306,7 +295,6 @@
 		2BE4D7301A54C578006B600D /* applause_7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_7.mp3; sourceTree = "<group>"; };
 		2BE4D7311A54C578006B600D /* applause_9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_9.mp3; sourceTree = "<group>"; };
 		2BE4D7341A54C578006B600D /* applause_20.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_20.mp3; sourceTree = "<group>"; };
-		2BE4D73F1A54C782006B600D /* WalkSoundType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkSoundType.swift; sourceTree = "<group>"; };
 		2BE4D7411A54D392006B600D /* applause_15.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_15.mp3; sourceTree = "<group>"; };
 		2BE4D7431A54D3D8006B600D /* applause_12.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause_12.mp3; sourceTree = "<group>"; };
 		2BE4D7451A54D9EC006B600D /* WalkQuotePickerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkQuotePickerTests.swift; sourceTree = "<group>"; };
@@ -321,6 +309,18 @@
 		7E1C5F3E1C1FCE3F00172642 /* TegScrolledContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegScrolledContent.swift; sourceTree = "<group>"; };
 		7E1C5F401C1FCE3F00172642 /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
 		7E1C5F411C1FCE3F00172642 /* README_sound_fader_ios.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_sound_fader_ios.md; sourceTree = "<group>"; };
+		7E1C5F4A1C1FCF4C00172642 /* WalkCircleMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCircleMonitor.swift; sourceTree = "<group>"; };
+		7E1C5F4B1C1FCF4C00172642 /* WalkCirlesReachedToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedToday.swift; sourceTree = "<group>"; };
+		7E1C5F4C1C1FCF4C00172642 /* WalkColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkColors.swift; sourceTree = "<group>"; };
+		7E1C5F4D1C1FCF4C00172642 /* WalkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkConstants.swift; sourceTree = "<group>"; };
+		7E1C5F4E1C1FCF4C00172642 /* WalkCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinate.swift; sourceTree = "<group>"; };
+		7E1C5F4F1C1FCF4C00172642 /* WalkCoordinateUserDefaultsSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCoordinateUserDefaultsSerializer.swift; sourceTree = "<group>"; };
+		7E1C5F501C1FCF4C00172642 /* WalkLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkLocation.swift; sourceTree = "<group>"; };
+		7E1C5F511C1FCF4C00172642 /* WalkNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkNotification.swift; sourceTree = "<group>"; };
+		7E1C5F521C1FCF4C00172642 /* WalkSoundType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkSoundType.swift; sourceTree = "<group>"; };
+		7E1C5F531C1FCF4C00172642 /* WalkTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTutorial.swift; sourceTree = "<group>"; };
+		7E1C5F541C1FCF4C00172642 /* WalkUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkUserDefaults.swift; sourceTree = "<group>"; };
+		7E1C5F551C1FCF4C00172642 /* WalkViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkViewControllers.swift; sourceTree = "<group>"; };
 		7E234F551BACD38E00171A6B /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		7E62106E1BE49C16006C30B9 /* TestLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLocationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -537,25 +537,6 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		2BAD4F3E1A33D29D00C3B5BD /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				2B143BF31A4E1CC800BDE4F4 /* WalkCircleMonitor.swift */,
-				2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */,
-				2B1276421A47EB4B00F6ED44 /* WalkColors.swift */,
-				2B7B70361A3431780026CDA9 /* WalkConstants.swift */,
-				2B12763C1A47D93F00F6ED44 /* WalkCoordinate.swift */,
-				2BCF7B6E1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift */,
-				2BAD4F3F1A33D2B600C3B5BD /* WalkLocation.swift */,
-				2B7B702F1A342B010026CDA9 /* WalkNotification.swift */,
-				2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */,
-				2BE4D73F1A54C782006B600D /* WalkSoundType.swift */,
-				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
-				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
 		2BCCDB831968DC63005C4A47 = {
 			isa = PBXGroup;
 			children = (
@@ -581,7 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				7E1C5F371C1FCE3F00172642 /* Components */,
-				2BAD4F3E1A33D29D00C3B5BD /* Core */,
+				7E1C5F491C1FCF4C00172642 /* Core */,
 				2B0E49D91970B6FE00B276B2 /* Images */,
 				2BAD4F351A33BDCF00C3B5BD /* Screens */,
 				2B99483419BBE56E00CB08AA /* Sounds */,
@@ -726,6 +707,25 @@
 				7E1C5F411C1FCE3F00172642 /* README_sound_fader_ios.md */,
 			);
 			path = SoundFader;
+			sourceTree = "<group>";
+		};
+		7E1C5F491C1FCF4C00172642 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7E1C5F4A1C1FCF4C00172642 /* WalkCircleMonitor.swift */,
+				7E1C5F4B1C1FCF4C00172642 /* WalkCirlesReachedToday.swift */,
+				7E1C5F4C1C1FCF4C00172642 /* WalkColors.swift */,
+				7E1C5F4D1C1FCF4C00172642 /* WalkConstants.swift */,
+				7E1C5F4E1C1FCF4C00172642 /* WalkCoordinate.swift */,
+				7E1C5F4F1C1FCF4C00172642 /* WalkCoordinateUserDefaultsSerializer.swift */,
+				7E1C5F501C1FCF4C00172642 /* WalkLocation.swift */,
+				7E1C5F511C1FCF4C00172642 /* WalkNotification.swift */,
+				7E1C5F521C1FCF4C00172642 /* WalkSoundType.swift */,
+				7E1C5F531C1FCF4C00172642 /* WalkTutorial.swift */,
+				7E1C5F541C1FCF4C00172642 /* WalkUserDefaults.swift */,
+				7E1C5F551C1FCF4C00172642 /* WalkViewControllers.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		7E62106D1BE49C01006C30B9 /* Helpers */ = {
@@ -902,58 +902,58 @@
 				2B1276351A450DA000F6ED44 /* iiOsVersion.swift in Sources */,
 				2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
-				2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */,
 				2B1276391A45448100F6ED44 /* iiViewPosition.swift in Sources */,
 				2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */,
-				2B12763D1A47D93F00F6ED44 /* WalkCoordinate.swift in Sources */,
 				2B8A353F1A292E820086634F /* CountdownDelegate.swift in Sources */,
 				7E1C5F471C1FCE3F00172642 /* iiFaderForAvAudioPlayer.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
+				7E1C5F601C1FCF4C00172642 /* WalkUserDefaults.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
-				2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
-				2B5338A31A52855A0082DC93 /* WalkCirlesReachedToday.swift in Sources */,
 				7E1C5F461C1FCE3F00172642 /* TegScrolledContent.swift in Sources */,
-				2B7B70391A3432450026CDA9 /* WalkViewControllers.swift in Sources */,
 				7E234F561BACD38E00171A6B /* InitialViewController.swift in Sources */,
+				7E1C5F5C1C1FCF4C00172642 /* WalkLocation.swift in Sources */,
+				7E1C5F5B1C1FCF4C00172642 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */,
+				7E1C5F5A1C1FCF4C00172642 /* WalkCoordinate.swift in Sources */,
+				7E1C5F571C1FCF4C00172642 /* WalkCirlesReachedToday.swift in Sources */,
 				7E1C5F361C1FCA5700172642 /* UnitTestAppDelegate.swift in Sources */,
-				2B7B70371A3431780026CDA9 /* WalkConstants.swift in Sources */,
 				2BCFEF3819E9FFFD00062A99 /* iiSounds.swift in Sources */,
 				2B87D7FD1A20672000CCE0B6 /* YiiButtons.swift in Sources */,
 				2B966A821A21A5AC00AAE8A4 /* YiiMap.swift in Sources */,
 				2BCFEF3A19EA000600062A99 /* iiTickTock.swift in Sources */,
-				2BE4D7401A54C782006B600D /* WalkSoundType.swift in Sources */,
+				7E1C5F5F1C1FCF4C00172642 /* WalkTutorial.swift in Sources */,
 				2B770A6319E8E09800C28177 /* iiQ.swift in Sources */,
 				2B7B70331A342E010026CDA9 /* CongratsViewController.swift in Sources */,
 				2B5338A51A5289600082DC93 /* iiDate.swift in Sources */,
 				2B9BA3B419970980009C0DE0 /* ButtonOverlap.swift in Sources */,
 				7E1C5F341C1FCA2600172642 /* AppDelegateFactory.swift in Sources */,
 				2BE4D71D1A54B35C006B600D /* CongratsSounds.swift in Sources */,
+				7E1C5F561C1FCF4C00172642 /* WalkCircleMonitor.swift in Sources */,
 				2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */,
+				7E1C5F581C1FCF4C00172642 /* WalkColors.swift in Sources */,
 				2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */,
 				2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */,
 				2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
+				7E1C5F5E1C1FCF4C00172642 /* WalkSoundType.swift in Sources */,
 				2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */,
-				2BCF7B6F1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
 				2B8A6E611A21BD09006351BA /* iiLayer.swift in Sources */,
+				7E1C5F5D1C1FCF4C00172642 /* WalkNotification.swift in Sources */,
 				2B1276411A47EB2400F6ED44 /* iiUIColor.swift in Sources */,
 				2BD21DBC197B5E3B00EBB29A /* Annotation.swift in Sources */,
+				7E1C5F611C1FCF4C00172642 /* WalkViewControllers.swift in Sources */,
 				2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */,
-				2B5016DD1A57E60A00FD1297 /* WalkTutorial.swift in Sources */,
 				2BE4D7491A54DA86006B600D /* WalkQuotePicker.swift in Sources */,
 				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
-				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* ShowUserLocationOnMap.swift in Sources */,
+				7E1C5F591C1FCF4C00172642 /* WalkConstants.swift in Sources */,
 				2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */,
-				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,
 				7E1C5F431C1FCE3F00172642 /* CutePossumParser.swift in Sources */,
 				2B6D35D3197A581D008DDAE4 /* iiGeo.swift in Sources */,
 				2B23E82B1A525DA60062A01F /* CongratsPhrase.swift in Sources */,
-				2B12763F1A47D9F900F6ED44 /* WalkUserDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
