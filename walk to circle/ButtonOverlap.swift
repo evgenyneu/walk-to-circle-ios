@@ -1,12 +1,3 @@
-//
-//  ButtonOverlap.swift
-//  
-//  Prevent placing pin over button
-//
-//  Created by Evgenii Neumerzhitckii on 10/08/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 class ButtonOverlap {

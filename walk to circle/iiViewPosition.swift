@@ -1,10 +1,3 @@
-//
-//  Helper functions to deal with view positioning.
-//
-//  Created by Evgenii Neumerzhitckii on 23/12/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 let iiHidingConstraintIdentifier = "zero height constraint for hiding view"

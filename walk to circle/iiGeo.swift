@@ -1,13 +1,3 @@
-//
-//  Geo.swift
-//  walk to circle
-//
-//  Helper methods for geo location calculations
-//
-//  Created by Evgenii Neumerzhitckii on 19/07/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import Foundation
 import CoreLocation
 import MapKit

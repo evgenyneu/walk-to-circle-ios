@@ -1,11 +1,3 @@
-//
-//  CongratsSounds.swift
-//  WalkToCircle
-//
-//  Created by Evgenii Neumerzhitckii on 1/01/2015.
-//  Copyright (c) 2015 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import Foundation
 
 public var walkCongratsSounds = [1, 2, 3, 4, 6, 7, 9, 12, 15, 20]

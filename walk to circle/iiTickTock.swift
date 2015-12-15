@@ -1,20 +1,3 @@
-//
-//  iiTickTock.swift
-//  
-//  Measures elapsed time 
-//
-//  Usage:
-//
-//    let timer = iiTickTock()
-//    ... code to measure execution time for
-//    timer.output()
-//
-//    Output: [TOCK] 10.2 ms
-//
-//  Created by Evgenii Neumerzhitckii on 11/10/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import Foundation
 
 class iiTickTock {

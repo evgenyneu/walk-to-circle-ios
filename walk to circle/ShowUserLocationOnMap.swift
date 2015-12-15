@@ -1,12 +1,3 @@
-//
-//  InitialMapZoom.swift
-//
-//  Class functions for loozing map at a specific location.
-//
-//  Created by Evgenii Neumerzhitckii on 12/10/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 import MapKit
 

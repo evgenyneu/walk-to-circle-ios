@@ -1,12 +1,3 @@
-//
-//  iiSounds.swift
-//
-//  Play sounds. It creates and caches sound players. Sounds are played asynchronously.
-//
-//  Created by Evgenii Neumerzhitckii on 11/10/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 private let _shared_iiSounds = iiSounds()

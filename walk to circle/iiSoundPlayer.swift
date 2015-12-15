@@ -1,12 +1,3 @@
-//
-//  iiSoundPlayer.swift
-//  
-//  Plays sounds
-//
-//  Created by Evgenii Neumerzhitckii on 11/10/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 

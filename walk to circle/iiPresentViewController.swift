@@ -1,10 +1,3 @@
-//  
-//  Present view controller modally using its storyboard ID.
-//
-//  Created by Evgenii Neumerzhitckii on 28/10/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 class iiPresentViewController {

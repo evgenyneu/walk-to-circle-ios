@@ -1,12 +1,3 @@
-//
-//  ScrollToAnnotation.swift
-//
-//  Helper functions for scrolling map view to view map annotation.
-//
-//  Created by Evgenii Neumerzhitckii on 10/08/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 import MapKit
 

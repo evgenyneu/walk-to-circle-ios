@@ -13,9 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     WalkLocation.shared.reactToCurrentAuthorizationStatus()
     WalkViewControllers.toBePresented.show()
-    
-    walkWatchParentCommunicator.activateWatchConnectivity()
-    
+        
     return true
   }
 

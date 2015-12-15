@@ -1,14 +1,5 @@
-//
-//  WalkCoordinateUserDefaultsSerializer.swift
-//  WalkToCircle
-//
-//  Created by Evgenii Neumerzhitckii on 29/12/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import Foundation
 import CoreLocation
-
 
 struct WalkCoordinateUserDefaultsSerializer {
   static func value(latitudeName: WalkUserDefaults, longitudeName: WalkUserDefaults)

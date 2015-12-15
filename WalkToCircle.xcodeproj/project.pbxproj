@@ -27,19 +27,13 @@
 		2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC971A4BE4CF00D89276 /* iiScreenSize.swift */; };
 		2B3EAC9C1A4C000600D89276 /* iiSettingsOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */; };
 		2B4980DA1AAFE6F900821F13 /* CutePossumParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */; };
-		2B4980DE1AAFE9C500821F13 /* WalkWatch_directionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */; };
-		2B4980E01AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */; };
 		2B5016DD1A57E60A00FD1297 /* WalkTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */; };
 		2B5338A11A5284AE0082DC93 /* WalkCirlesReachedTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */; };
 		2B5338A31A52855A0082DC93 /* WalkCirlesReachedToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */; };
 		2B5338A51A5289600082DC93 /* iiDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A41A5289600082DC93 /* iiDate.swift */; };
 		2B5338A91A5289B60082DC93 /* iiDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5338A71A52897E0082DC93 /* iiDateTests.swift */; };
-		2B5503F51AB012D300CD151C /* WalkWatchDataConsumerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5503F41AB012D300CD151C /* WalkWatchDataConsumerOld.swift */; };
 		2B5503F91AB012EF00CD151C /* WalkWatchDataConsumerOldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5503F61AB012EB00CD151C /* WalkWatchDataConsumerOldTests.swift */; };
 		2B5A5D6E19BC01D100E07F37 /* blop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A5D6D19BC01D100E07F37 /* blop.wav */; };
-		2B5C2CA31AAFE0DB0077532D /* WalkWatchDirectionOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA01AAFE0DB0077532D /* WalkWatchDirectionOld.swift */; };
-		2B5C2CA41AAFE0DB0077532D /* WalkWatchDataOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA11AAFE0DB0077532D /* WalkWatchDataOld.swift */; };
-		2B5C2CA51AAFE0DB0077532D /* WalkWatchUserLocationOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocationOld.swift */; };
 		2B5C2CAA1AAFE1030077532D /* WalkWatchDirectionOldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA71AAFE1030077532D /* WalkWatchDirectionOldTests.swift */; };
 		2B5C2CAB1AAFE1030077532D /* WalkWatchDataOldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA81AAFE1030077532D /* WalkWatchDataOldTests.swift */; };
 		2B5C2CAC1AAFE1030077532D /* WalkWatchUserLocationOldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C2CA91AAFE1030077532D /* WalkWatchUserLocationOldTests.swift */; };
@@ -140,14 +134,11 @@
 		7E1C5F341C1FCA2600172642 /* AppDelegateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F331C1FCA2600172642 /* AppDelegateFactory.swift */; };
 		7E1C5F361C1FCA5700172642 /* UnitTestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1C5F351C1FCA5700172642 /* UnitTestAppDelegate.swift */; };
 		7E234F561BACD38E00171A6B /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E234F551BACD38E00171A6B /* InitialViewController.swift */; };
-		7E6210671BE498C2006C30B9 /* WatchParentReplyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */; };
-		7E6210691BE49B24006C30B9 /* WatchWalkDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */; };
 		7E62106C1BE49B63006C30B9 /* WatchWalkDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */; };
 		7E6210701BE49C50006C30B9 /* TestLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62106E1BE49C16006C30B9 /* TestLocationHelper.swift */; };
 		7E6FED741BE4926A00ACEF52 /* AutocancellingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */; };
 		7E6FED791BE4987500ACEF52 /* WatchParentReplyInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6FED771BE4985400ACEF52 /* WatchParentReplyInfoTests.swift */; };
 		7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */; };
-		7E9407041BC8EF7800BC8DB4 /* WatchParentCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,20 +221,14 @@
 		2B3EAC9B1A4C000600D89276 /* iiSettingsOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiSettingsOpener.swift; sourceTree = "<group>"; };
 		2B4132BB1A54AA92005405D8 /* README_sound_fader_ios.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_sound_fader_ios.md; sourceTree = "<group>"; };
 		2B4980D91AAFE6F900821F13 /* CutePossumParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CutePossumParser.swift; sourceTree = "<group>"; };
-		2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatch_directionModel.swift; sourceTree = "<group>"; };
-		2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatch_userLocationModel.swift; sourceTree = "<group>"; };
 		2B5016DC1A57E60A00FD1297 /* WalkTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkTutorial.swift; sourceTree = "<group>"; };
 		2B53389F1A52848D0082DC93 /* WalkCirlesReachedTodayTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedTodayTests.swift; sourceTree = "<group>"; };
 		2B5338A21A52855A0082DC93 /* WalkCirlesReachedToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkCirlesReachedToday.swift; sourceTree = "<group>"; };
 		2B5338A41A5289600082DC93 /* iiDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDate.swift; sourceTree = "<group>"; };
 		2B5338A71A52897E0082DC93 /* iiDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiDateTests.swift; sourceTree = "<group>"; };
-		2B5503F41AB012D300CD151C /* WalkWatchDataConsumerOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDataConsumerOld.swift; sourceTree = "<group>"; };
 		2B5503F61AB012EB00CD151C /* WalkWatchDataConsumerOldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDataConsumerOldTests.swift; sourceTree = "<group>"; };
 		2B5A5D6D19BC01D100E07F37 /* blop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blop.wav; sourceTree = "<group>"; };
 		2B5A5D6F19BC02E700E07F37 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2B5C2CA01AAFE0DB0077532D /* WalkWatchDirectionOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDirectionOld.swift; sourceTree = "<group>"; };
-		2B5C2CA11AAFE0DB0077532D /* WalkWatchDataOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDataOld.swift; sourceTree = "<group>"; };
-		2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocationOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchUserLocationOld.swift; sourceTree = "<group>"; };
 		2B5C2CA71AAFE1030077532D /* WalkWatchDirectionOldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDirectionOldTests.swift; sourceTree = "<group>"; };
 		2B5C2CA81AAFE1030077532D /* WalkWatchDataOldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchDataOldTests.swift; sourceTree = "<group>"; };
 		2B5C2CA91AAFE1030077532D /* WalkWatchUserLocationOldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkWatchUserLocationOldTests.swift; sourceTree = "<group>"; };
@@ -347,14 +332,11 @@
 		7E1C5F331C1FCA2600172642 /* AppDelegateFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateFactory.swift; sourceTree = "<group>"; };
 		7E1C5F351C1FCA5700172642 /* UnitTestAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestAppDelegate.swift; sourceTree = "<group>"; };
 		7E234F551BACD38E00171A6B /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentReplyInfo.swift; sourceTree = "<group>"; };
-		7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchWalkDirection.swift; sourceTree = "<group>"; };
 		7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchWalkDirectionTests.swift; sourceTree = "<group>"; };
 		7E62106E1BE49C16006C30B9 /* TestLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLocationHelper.swift; sourceTree = "<group>"; };
 		7E6FED721BE4925B00ACEF52 /* AutocancellingTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocancellingTimer.swift; sourceTree = "<group>"; };
 		7E6FED771BE4985400ACEF52 /* WatchParentReplyInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentReplyInfoTests.swift; sourceTree = "<group>"; };
 		7E7826DA1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iiFaderForAvAudioPlayer.swift; sourceTree = "<group>"; };
-		7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchParentCommunicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,27 +425,6 @@
 				2B4132BB1A54AA92005405D8 /* README_sound_fader_ios.md */,
 			);
 			name = SoundFaderIOS;
-			sourceTree = "<group>";
-		};
-		2B4980DC1AAFE9A200821F13 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2B4980DD1AAFE9C500821F13 /* WalkWatch_directionModel.swift */,
-				2B4980DF1AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		2B5C2C9F1AAFE0CD0077532D /* WatchOld */ = {
-			isa = PBXGroup;
-			children = (
-				2B4980DC1AAFE9A200821F13 /* Model */,
-				2B5C2CA01AAFE0DB0077532D /* WalkWatchDirectionOld.swift */,
-				2B5C2CA11AAFE0DB0077532D /* WalkWatchDataOld.swift */,
-				2B5503F41AB012D300CD151C /* WalkWatchDataConsumerOld.swift */,
-				2B5C2CA21AAFE0DB0077532D /* WalkWatchUserLocationOld.swift */,
-			);
-			name = WatchOld;
 			sourceTree = "<group>";
 		};
 		2B5C2CA61AAFE0ED0077532D /* WatchOld */ = {
@@ -645,8 +606,6 @@
 				2BE4D73F1A54C782006B600D /* WalkSoundType.swift */,
 				2B12763E1A47D9F900F6ED44 /* WalkUserDefaults.swift */,
 				2B7B70381A3432450026CDA9 /* WalkViewControllers.swift */,
-				7E9407011BC8EE9500BC8DB4 /* Watch */,
-				2B5C2C9F1AAFE0CD0077532D /* WatchOld */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -810,16 +769,6 @@
 			children = (
 				7E6FED771BE4985400ACEF52 /* WatchParentReplyInfoTests.swift */,
 				7E62106A1BE49B56006C30B9 /* WatchWalkDirectionTests.swift */,
-			);
-			path = Watch;
-			sourceTree = "<group>";
-		};
-		7E9407011BC8EE9500BC8DB4 /* Watch */ = {
-			isa = PBXGroup;
-			children = (
-				7E9407021BC8EEA400BC8DB4 /* WatchParentCommunicator.swift */,
-				7E6210661BE498C2006C30B9 /* WatchParentReplyInfo.swift */,
-				7E6210681BE49B24006C30B9 /* WatchWalkDirection.swift */,
 			);
 			path = Watch;
 			sourceTree = "<group>";
@@ -992,16 +941,12 @@
 				2B7C38DC1A4ABA6900C3FDA7 /* iiJsonLoader.swift in Sources */,
 				2B9BA3E819974654009C0DE0 /* ScrollToAnnotation.swift in Sources */,
 				2BAD4F401A33D2B600C3B5BD /* WalkLocation.swift in Sources */,
-				2B4980E01AAFE9DE00821F13 /* WalkWatch_userLocationModel.swift in Sources */,
 				2B1276391A45448100F6ED44 /* iiViewPosition.swift in Sources */,
 				2BCCDB941968DC63005C4A47 /* MapViewController.swift in Sources */,
 				2B12763D1A47D93F00F6ED44 /* WalkCoordinate.swift in Sources */,
-				2B4980DE1AAFE9C500821F13 /* WalkWatch_directionModel.swift in Sources */,
 				2B8A353F1A292E820086634F /* CountdownDelegate.swift in Sources */,
 				7E7826DB1BACFC1B0072C63B /* iiFaderForAvAudioPlayer.swift in Sources */,
 				2BAD4F391A33C0B400C3B5BD /* WalkViewController.swift in Sources */,
-				2B5503F51AB012D300CD151C /* WalkWatchDataConsumerOld.swift in Sources */,
-				7E9407041BC8EF7800BC8DB4 /* WatchParentCommunicator.swift in Sources */,
 				2BCCDB921968DC63005C4A47 /* AppDelegate.swift in Sources */,
 				2B143BF41A4E1CC800BDE4F4 /* WalkCircleMonitor.swift in Sources */,
 				2BD21DBE197B5E5D00EBB29A /* Annotations.swift in Sources */,
@@ -1023,14 +968,11 @@
 				2BE4D71D1A54B35C006B600D /* CongratsSounds.swift in Sources */,
 				2B3EAC981A4BE4CF00D89276 /* iiScreenSize.swift in Sources */,
 				2B7C38D41A4AB92400C3FDA7 /* WalkQuote.swift in Sources */,
-				7E6210671BE498C2006C30B9 /* WatchParentReplyInfo.swift in Sources */,
 				2B080B3C1A21A9960073E1E3 /* YiiMapDelegate.swift in Sources */,
-				7E6210691BE49B24006C30B9 /* WatchWalkDirection.swift in Sources */,
 				2BAD4F3B1A33C13400C3B5BD /* iiPresentViewController.swift in Sources */,
 				2BCFEF4219EA542B00062A99 /* DropPin.swift in Sources */,
 				2B12763B1A45450500F6ED44 /* iiAutolayoutConstraints.swift in Sources */,
 				2BCF7B6F1A513C1E0007B062 /* WalkCoordinateUserDefaultsSerializer.swift in Sources */,
-				2B5C2CA41AAFE0DB0077532D /* WalkWatchDataOld.swift in Sources */,
 				2B99483119BBE4B800CB08AA /* iiAnimator.swift in Sources */,
 				2B8A353D1A292CE00086634F /* Countdown.swift in Sources */,
 				7E6FED741BE4926A00ACEF52 /* AutocancellingTimer.swift in Sources */,
@@ -1043,8 +985,6 @@
 				2B7C38E31A4ABB8D00C3FDA7 /* WalkQuotesLoader.swift in Sources */,
 				2B7B70301A342B010026CDA9 /* WalkNotification.swift in Sources */,
 				2BCFEF4019EA504A00062A99 /* ShowUserLocationOnMap.swift in Sources */,
-				2B5C2CA31AAFE0DB0077532D /* WalkWatchDirectionOld.swift in Sources */,
-				2B5C2CA51AAFE0DB0077532D /* WalkWatchUserLocationOld.swift in Sources */,
 				2B143BF61A4E24AB00BDE4F4 /* iiCLErrorToString.swift in Sources */,
 				2B1276431A47EB4B00F6ED44 /* WalkColors.swift in Sources */,
 				2B87D7F91A20232700CCE0B6 /* SpringAnimation.swift in Sources */,

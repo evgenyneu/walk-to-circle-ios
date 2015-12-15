@@ -1,11 +1,3 @@
-//
-//  iiScreen.swift
-//  WalkToCircle
-//
-//  Created by Evgenii Neumerzhitckii on 25/12/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 
 let iiScreenSizeBounds = UIScreen.mainScreen().bounds
