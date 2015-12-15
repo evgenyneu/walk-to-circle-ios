@@ -1,13 +1,6 @@
-//
-//  iiGeoTests.swift
-//  walk to circle
-//
-//  Created by Evgenii Neumerzhitckii on 19/07/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import XCTest
 import CoreLocation
+@testable import WalkToCircle
 
 class iiGeoTests: XCTestCase {
 

@@ -1,11 +1,3 @@
-//
-//  scrollToAnnotationTests.swift
-//  walk to circle
-//
-//  Created by Evgenii Neumerzhitckii on 10/08/2014.
-//  Copyright (c) 2014 Evgenii Neumerzhitckii. All rights reserved.
-//
-
 import UIKit
 import XCTest
 @testable import WalkToCircle
