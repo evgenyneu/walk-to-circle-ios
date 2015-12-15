@@ -40,6 +40,8 @@ enum WalkViewControllers: String {
   }
 
   private func presentViewController(animate: Bool = true) {
+    
+    if AppDelegateFactory.isUnitTesting { return }
 
     if WalkViewControllers.anyControllerPresentedYet && animate {
 

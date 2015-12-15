@@ -45,6 +45,8 @@ class iiPresentViewController {
   }
 
   class func setRootViewController(viewControllerId: String) {
+    if AppDelegateFactory.isUnitTesting { return }
+    
     if let newViewController = instantiateViewControllerWithIdentifier(viewControllerId) {
       let window = UIApplication.sharedApplication().windows[0] as UIWindow
       window.rootViewController = newViewController
