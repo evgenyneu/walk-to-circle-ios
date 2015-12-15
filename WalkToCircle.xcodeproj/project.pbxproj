@@ -204,7 +204,6 @@
 		2B9BA3B819970EA3009C0DE0 /* ButtonOverlapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonOverlapTests.swift; sourceTree = "<group>"; };
 		2B9BA3E519974555009C0DE0 /* scrollToAnnotationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scrollToAnnotationTests.swift; sourceTree = "<group>"; };
 		2BCCDB8C1968DC63005C4A47 /* WalkToCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkToCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BCCDB901968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDB9E1968DC63005C4A47 /* WalkToCircleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkToCircleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCCDBA31968DC63005C4A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCCDBAE1968DD6B005C4A47 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -413,19 +412,10 @@
 				7E1C60A11C1FD45C00172642 /* Images */,
 				7E1C5F971C1FD1BF00172642 /* Screens */,
 				7E1C5FC41C1FD29700172642 /* Sounds */,
-				2BCCDB8F1968DC63005C4A47 /* Supporting Files */,
 				7E1C5FE61C1FD2DA00172642 /* Utils */,
 				7E1C600F1C1FD31000172642 /* ViewControllers */,
 			);
 			path = "walk to circle";
-			sourceTree = "<group>";
-		};
-		2BCCDB8F1968DC63005C4A47 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2BCCDB901968DC63005C4A47 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2BCCDBA11968DC63005C4A47 /* walk to circleTests */ = {
