@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+@testable import WalkToCircle
 
 class ButtonOverlapTests: XCTestCase {
 

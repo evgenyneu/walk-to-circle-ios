@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+@testable import WalkToCircle
 
 class scrollToAnnotationTests: XCTestCase {
   func testGetScroll_NoScroll() {
