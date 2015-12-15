@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TQL-qV-S3z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TQL-qV-S3z">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -22,18 +22,15 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_background_1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="EQ4-bT-itd">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_scren_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vlo-Vg-RkH">
                                 <rect key="frame" x="200" y="200" width="200" height="200"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vlo-Vg-RkH" secondAttribute="height" multiplier="1:1" id="8tt-qj-KXc"/>
                                     <constraint firstAttribute="width" constant="200" id="fp4-1Z-TNo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.47592381075602652" green="0.49573338360840824" blue="0.70571485584365323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vlo-Vg-RkH" firstAttribute="centerY" secondItem="2eI-8U-YjA" secondAttribute="centerY" id="6uV-by-f1X"/>
@@ -63,18 +60,15 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-cz-MaM">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <animations/>
                             </mapView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVb-gS-cVf">
                                 <rect key="frame" x="15" y="28" width="100" height="20.5"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-Gm-ry7">
                                 <rect key="frame" x="254" y="498" width="92" height="92"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.89707423050000001" blue="0.1886660412" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Play" image="play.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,7 +79,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-dd-eb2" customClass="RewindButton" customModule="WalkToCircle" customModuleProvider="target">
                                 <rect key="frame" x="253.5" y="498" width="92" height="92"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.89707423050000001" blue="0.1886660412" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Rewind" image="rewind.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,7 +88,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.36862745098039218" green="0.3843137254901961" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BVb-gS-cVf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0oK-Na-J73"/>
@@ -145,7 +137,6 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOQ-av-wGk">
                                 <rect key="frame" x="20" y="219" width="560" height="82.5"/>
-                                <animations/>
                                 <string key="text">"Walk to Circle" needs access to your location in order to notify you when you reach a circle on the map.
 
 Your location info never leaves your phone and stays private.</string>
@@ -155,7 +146,6 @@ Your location info never leaves your phone and stays private.</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9FK-8X-uyD">
                                 <rect key="frame" x="238" y="380" width="124" height="32"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Change settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,13 +156,11 @@ Your location info never leaves your phone and stays private.</string>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enable location services in Settings &gt; Privacy &gt; Location Services." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-Ln-TdQ">
                                 <rect key="frame" x="20" y="331" width="560" height="19.5"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="9FK-8X-uyD" secondAttribute="centerX" id="D9H-ZY-cAm"/>
@@ -208,7 +196,6 @@ Your location info never leaves your phone and stays private.</string>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uls-x2-LLy">
                                 <rect key="frame" x="254" y="498" width="92" height="92"/>
-                                <animations/>
                                 <state key="normal" image="stop.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -222,7 +209,6 @@ Your location info never leaves your phone and stays private.</string>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzg-S6-Tfr">
                                         <rect key="frame" x="10" y="61" width="110" height="30"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -231,7 +217,6 @@ Your location info never leaves your phone and stays private.</string>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-MG-D7n">
                                         <rect key="frame" x="10" y="0.0" width="110" height="41"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -239,7 +224,6 @@ Your location info never leaves your phone and stays private.</string>
                                         <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="tzg-S6-Tfr" firstAttribute="top" secondItem="HFa-MG-D7n" secondAttribute="bottom" constant="20" id="Ig3-ET-1c9"/>
                                     <constraint firstAttribute="bottom" secondItem="tzg-S6-Tfr" secondAttribute="bottom" constant="20" id="Nuu-do-UIj"/>
@@ -251,7 +235,6 @@ Your location info never leaves your phone and stays private.</string>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.36862745098039218" green="0.3843137254901961" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uls-x2-LLy" firstAttribute="top" secondItem="zmT-gg-3Vr" secondAttribute="bottom" constant="10" id="bqp-9V-j8r"/>
@@ -291,13 +274,11 @@ Your location info never leaves your phone and stays private.</string>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unfortunately the app won't work on your device because it can not monitor geo regions. I am sorry for that. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-pU-kPR">
                                 <rect key="frame" x="20" y="279" width="560" height="41"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="3pm-pU-kPR" secondAttribute="trailing" id="AfX-2T-MaJ"/>
@@ -324,11 +305,9 @@ Your location info never leaves your phone and stays private.</string>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen_background_1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="pHq-Qa-Q3O">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP1-gW-zfc">
                                 <rect key="frame" x="20" y="221" width="560" height="49"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -337,7 +316,6 @@ Your location info never leaves your phone and stays private.</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 circles reached today" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4s-aw-DLv">
                                 <rect key="frame" x="30" y="278" width="540" height="33"/>
-                                <animations/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -346,7 +324,6 @@ Your location info never leaves your phone and stays private.</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="92" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgJ-VH-MF5">
                                 <rect key="frame" x="254" y="498" width="92" height="92"/>
-                                <animations/>
                                 <state key="normal" image="continue.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -357,7 +334,6 @@ Your location info never leaves your phone and stays private.</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JP1-gW-zfc" secondAttribute="trailing" constant="20" id="0H8-Vx-CZp"/>
