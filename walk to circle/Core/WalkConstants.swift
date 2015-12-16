@@ -31,11 +31,3 @@ public struct WalkConstants {
 
   public static let textFadeInDuration = 3.0
 }
-
-public struct WalkConstants_watch_userLocation {
-  public let name = "userLocation"
-
-  // Maximum age of current user location that is considered fresh, in seconds.
-  public let maxLocationAgeInSeconds: NSTimeInterval = 30
-}
-
