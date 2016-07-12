@@ -4,7 +4,7 @@ The purpose of the game is to encourage walking and discover new places around y
 
 <a href='https://itunes.apple.com/us/app/walk-to-circle/id955310614' title='Download on App Store'><img src='https://raw.githubusercontent.com/evgenyneu/walk-to-circle-ios/master/graphics/readme/appstore_badge.png' height="60" alt='Download Walk to Circle on App Store' class='AppStoreBadge'></a>
 
-Walk to Circle is [also available](https://play.google.com/store/apps/details?id=com.evgenii.walktocircle/) on Android.
+Walk to Circle is [also available](https://play.google.com/store/apps/details?id=com.evgenii.walktocircle) on Android.
 
 
 <img src="https://raw.githubusercontent.com/evgenyneu/walk-to-circle-ios/master/graphics/readme/walk_to_circle_map_screnshot.png" alt="Walk to Circle iOS game screenshot" width="320">
