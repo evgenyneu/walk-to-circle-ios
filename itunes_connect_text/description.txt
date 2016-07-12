@@ -6,8 +6,6 @@ Your task is to then walk to the circle, guided only by your memory of its where
 
 I love walking and exploring my city and Walk to Circle has led me to many places just a stone’s throw from my house that I had never been to before. For those that like to walk, or who maybe want a reason to get out and walk more, this app is great for taking you away from the same old familiar routes and helping you to discover new places in your town or city.
 
-If you have an Apple Watch the app will show your walking direction as you travel, bringing an added dimension to the game.
-
-Note: Continued use of GPS running in the background can dramatically decrease the battery life of your device. Walk to Circle will help preserve your battery life by automatically stopping GPS monitoring after one hour.
-
 I wish you happy and safe walking. I’d love to hear how you get on and welcome all feedback on the app. Drop me a message at evgenii.com.
+
+Walk to Circle is open source. Get its source code on walktocircle.com.
