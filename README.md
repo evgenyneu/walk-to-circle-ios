@@ -1,13 +1,13 @@
-# Walk to Circle map exploration iOS game
+# Walk to Circle map exploration iOS app
 
-The purpose of the game is to encourage walking and discover new places around you.
+The purpose of the app is to encourage walking and discover new places around you.
 
 <a href='https://itunes.apple.com/us/app/walk-to-circle/id955310614' title='Download on App Store'><img src='https://raw.githubusercontent.com/evgenyneu/walk-to-circle-ios/master/graphics/readme/appstore_badge.png' height="60" alt='Download Walk to Circle on App Store' class='AppStoreBadge'></a>
 
 Walk to Circle is [also available](https://github.com/evgenyneu/walk-to-circle-android) on Android.
 
 
-<img src="https://raw.githubusercontent.com/evgenyneu/walk-to-circle-ios/master/graphics/readme/walk_to_circle_map_screnshot.png" alt="Walk to Circle iOS game screenshot" width="320">
+<img src="https://raw.githubusercontent.com/evgenyneu/walk-to-circle-ios/master/graphics/readme/walk_to_circle_map_screnshot.png" alt="Walk to Circle iOS app screenshot" width="320">
 
 ## Credit
 
